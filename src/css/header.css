@@ -91,22 +91,25 @@ a, a:visited, a:hover, a:active {
 .Dropdown {
     display: none;
     color: #E7E5DF;
-    font-size: x-large;
+    font-size: bolder;
     background-color: #0A2239;
+    padding: 25px;
+
 }
 
 .Dropdown.show {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 80%;
     align-self: center;
     z-index: 1;
     justify-content: center;
+    height: 100%;
 
 }
 
 .Cines{
-    padding: 20px;
+    margin-bottom: 30px;
 }
 
 .Cines ul{
@@ -120,20 +123,24 @@ a, a:visited, a:hover, a:active {
     text-align: center;
 }
 
-.Nav{
-    padding: 20px;
-}
-
 .Nav ul{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    margin-bottom: 20px;
 
 }
 
-.Nav ul li{
-text-align: center;
+.Nav  li{
+    text-align: center;
+    white-space: nowrap;
+}
 
+.Nav li button{
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #E7E5DF;
+    padding: 5px;
 }
 
 @media (min-width: 768px) {
@@ -231,6 +238,20 @@ text-align: center;
 
     .Logo{
         width: 100px;
+    }
+
+    .Dropdown{
+        font-size: small;
+    }
+
+    .Nav ul{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .Cines ul{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 
     .MenuButton svg{
