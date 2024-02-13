@@ -1,0 +1,20 @@
+:root {
+    --mainColor: rgba(250, 0, 71, 1);
+    --backgroundColor: rgba(255, 255, 255, 1);
+    --unselectedText: rgba(117, 120, 123, 1);
+    --tertiaryColor: rgba(10, 34, 57, 0.25);
+    --pendingColor: rgba(185, 214, 242, 1);
+    --elementColor: rgba(222, 229, 229, 1);
+    --mainTextWhite: rgba(255, 255, 255, 1);
+    --secondaryText: rgba(255, 255, 255, 1);
+    --importantText: rgba(255, 177, 0, 1);
+    --elementExtraColor: rgba(76, 112, 146, 1);
+    --iconColor: rgba(0, 0, 0, 1);
+    --mainTextBlack: rgba(0, 0, 0, 1);
+    --secondaryColor: rgba(179, 179, 179, 0.47);
+    --mainColorDarker: rgba(175, 0, 50, 1);
+    --darkElementText: rgba(38, 38, 38, 1);
+    --brightIconColor: rgba(255, 255, 255, 1);
+    --darkBackgroundColor: rgba(26, 26, 26, 1);
+    --darkUnselectedText: rgba(174, 174, 174, 1);
+}
