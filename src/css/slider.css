@@ -10,7 +10,7 @@
 .slider-container img{
     width: 100%;
     max-height: 50vh;
-    object-fit: cover;
+    height: auto;
 }
 
 .slider-controls  {
