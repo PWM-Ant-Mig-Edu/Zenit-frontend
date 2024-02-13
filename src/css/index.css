@@ -18,3 +18,35 @@
     font-weight: 700;
     color: #0A2239;
 }
+
+.StatsGrid{
+    display: grid;
+    width: 100%;
+    gap: 32px;
+    /*max-width: max-content;*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.Stat{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #0A2239;
+}
+
+.Stat h1{
+    font-size: xxx-large;
+}
+
+.Stat h2{
+    font-size: 1.15rem;
+    margin-top: 8px;
+}
+
+.Stat h3{
+    font-size: 0.75rem;
+    margin-top: 8px;
+    color: grey;
+}

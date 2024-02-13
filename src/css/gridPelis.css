@@ -21,5 +21,8 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.FilmsGrid#type1 img{
     cursor: pointer;
 }
