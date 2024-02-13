@@ -27,7 +27,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 html{
-    background-color: #E7E5DF;
+    background-color: var(--backgroundColor);;
 }
 
 body {

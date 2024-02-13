@@ -16,7 +16,7 @@
 .TextContainer h1{
     font-size: xxx-large;
     font-weight: 700;
-    color: #0A2239;
+    color: var(--mainColor);
 }
 
 .StatsGrid{
@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: #0A2239;
+    color: var(--mainColor);
     text-align: center;
 }
 

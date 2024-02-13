@@ -64,6 +64,7 @@ footer {
 
 /* Estilos para la sección de contacto */
 .contact {
+    margin-top: 20px;
     text-align: end;
     line-height: 1.5;
     background-color: var(--elementExtraColor); /* Cambia el color de fondo según tus preferencias */

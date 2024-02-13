@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('colors.css');
 
 .bodyHeader{
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
-    background-color: #E7E5DF;
+    background-color: var(--mainTextWhite);
     height: auto ;
     overflow: hidden;
     align-items: center;
@@ -21,8 +22,8 @@
     display: flex;
     font-size: large;
     align-items: center;
-    background-color: #E7E5DF;
-    color: #0A2239;
+    background-color: var(--mainTextWhite);
+    color: var(--mainColor);
 }
 
 a, a:visited, a:hover, a:active {
@@ -53,9 +54,8 @@ a, a:visited, a:hover, a:active {
 }
 
 .Logo{
-    width: 162px;
-    margin-left: 30px;
-    margin-right: 50px;
+    width: 160px;
+    margin: 20px 50px 20px 30px;
 }
 
 .ButtonContainer{
@@ -76,21 +76,21 @@ a, a:visited, a:hover, a:active {
 }
 
 .ButtonContainer button:nth-child(1){
-    background-color: #0A2239;
+    background-color: var(--mainColor);
     color: white;
     margin-right: 24px;
 }
 
 .ButtonContainer button:nth-child(2){
-    background-color: rgba(10, 34, 57, 0.25);
-    color: #0A2239;
+    background-color: var(--elementColor);
+    color: var(--mainTextBlack);
 }
 
 .Dropdown {
     display: none;
-    color: #E7E5DF;
-    font-size: bolder;
-    background-color: #0A2239;
+    color: var(--mainTextWhite);;
+    font-weight: bolder;
+    background-color: var(--mainColor);
     padding: 25px;
     margin-left: auto;
     margin-right: auto;
@@ -140,7 +140,7 @@ a, a:visited, a:hover, a:active {
 .Nav li button{
     width: 100%;
     margin-bottom: 15px;
-    background-color: #E7E5DF;
+    background-color: var(--mainTextWhite);;
     padding: 5px;
 }
 
@@ -164,6 +164,7 @@ a, a:visited, a:hover, a:active {
 
     .NavList > *:not(:nth-child(1)) {
         margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
@@ -173,7 +174,7 @@ a, a:visited, a:hover, a:active {
     }
 
     .Logo{
-        width: 150px;
+        width: 100px;
         margin-right: 20px;
     }
 
@@ -187,7 +188,7 @@ a, a:visited, a:hover, a:active {
 
     .Logo{
         width: 100px;
-        margin-right: 0px;
+        margin-right: 20px;
     }
 
     .ButtonContainer button{
