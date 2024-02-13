@@ -1,16 +1,6 @@
 /* Importar el archivo de colores */
 @import url('colors.css');
 
-mainFooter {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-bodyFooter {
-    font-family: 'Inter', sans-serif;
-}
-
 footer {
     background-color: var(--mainColorDarker);
     color: var(--mainTextWhite);
@@ -29,18 +19,27 @@ footer {
     flex-wrap: wrap;
 }
 
+.footer-copyright{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .footer-section {
     flex: 1;
     text-align: center;
 }
 
 .footer-section h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
     font-size: 20px;
 }
 
 .footer-section p {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 2;
 }
 .footer-section p:hover {
     text-decoration: underline;
@@ -66,10 +65,11 @@ footer {
 /* Estilos para la sección de contacto */
 .contact {
     text-align: end;
+    line-height: 1.5;
     background-color: var(--elementExtraColor); /* Cambia el color de fondo según tus preferencias */
     border-top-left-radius: 90px; /* Redondea el borde inferior izquierdo */
     border-bottom-right-radius: 90px; /* Redondea el borde superior derecho */
-    padding: 15px 30px 15px 10px; /* TOP RIGHT BOTTOM LEFT */
+    padding: 15px 30px 25px 0px; /* TOP RIGHT BOTTOM LEFT */
 }
 
 /* Media queries para hacer el footer responsive */
