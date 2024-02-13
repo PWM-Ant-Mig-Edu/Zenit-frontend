@@ -3,6 +3,25 @@
 <head>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/formalizer.css">
+    <script>
+        function toggleMenu() {
+            var element = document.querySelector(".Dropdown");
+            element.classList.toggle("show");
+            var height = document.body.scrollHeight;
+            window.parent.postMessage({ type: 'resize', height: height }, '*');
+        }
+
+        function checkWidthAndAdjust() {
+            var element = document.querySelector(".Dropdown");
+            if (window.innerWidth > 767 && element.classList.contains("show")) {
+                element.classList.remove("show");
+
+                var height = document.body.scrollHeight + 5;
+                window.parent.postMessage({ type: 'resize', height: height }, '*');
+            }
+        }
+        window.addEventListener('resize', checkWidthAndAdjust);
+    </script>
 </head>
 <body class="bodyHeader">
     <header class="HeaderContainer">
@@ -58,25 +77,5 @@
             <li>¿Ya está registrado?<a target="_parent" href="../../public/index.html"> Inicie sesión</a></li>
         </div>
     </div>
-
-    <script>
-        function toggleMenu() {
-            var element = document.querySelector(".Dropdown");
-            element.classList.toggle("show");
-            var height = document.body.scrollHeight;
-            window.parent.postMessage({ type: 'resize', height: height }, '*');
-        }
-
-        function checkWidthAndAdjust() {
-            var element = document.querySelector(".Dropdown");
-            if (window.innerWidth > 767 && element.classList.contains("show")) {
-                element.classList.remove("show");
-
-                var height = document.body.scrollHeight + 5;
-                window.parent.postMessage({ type: 'resize', height: height }, '*');
-            }
-        }
-        window.addEventListener('resize', checkWidthAndAdjust);
-    </script>
 </body>
 </html>
