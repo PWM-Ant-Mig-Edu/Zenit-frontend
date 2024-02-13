@@ -8,20 +8,39 @@
     <meta name="author" content="Zenit">
     <title>Zenit</title>
     <link rel="stylesheet" href="../src/css/index.css">
+    <link rel="stylesheet" href="../src/css/slider.css">
     <link rel="stylesheet" href="../src/css/formalizer.css">
-
+    <script src="../src/js/index.js"></script>
     <script>
-        window.addEventListener('message', function(event) {
-            if (event.data.type === 'resize') {
-                var iframe = document.getElementById('HeaderFrame');
-                iframe.style.height = event.data.height + 'px';
-            }
-        }, false);
-     </script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('../src/components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+        });
+    </script>
+
 </head>
 <body>
-
-    <iframe id="HeaderFrame" src="../src/components/header.html" width="100%" frameborder="0"></iframe>
+    <div id="header"></div>
+    <div class="slider-container">
+        <div class="slider-content">
+            <div class="slider-item">
+                <img src="../src/assets/img/banner1.jpg" alt="slider1" class="slider-img">
+            </div>
+            <div class="slider-item">
+                <img src="../src/assets/img/banner2.jpg" alt="slider2" class="slider-img">
+            </div>
+            <div class="slider-item">
+                <img src="../src/assets/img/banner3.jpeg" alt="slider3" class="slider-img">
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-control" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="slider-control" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+    </div>
 
 </body>
 </html>
