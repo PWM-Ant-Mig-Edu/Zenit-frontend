@@ -23,26 +23,3 @@ document.addEventListener("DOMContentLoaded", function() {
     showSlides(slideIndex);
 });
 
-
-
-function loadPage(url) {
-    fetch(url)
-        .then(response => response.text())
-        .then(data => {
-            const contentContainer = document.getElementById('Header');
-            contentContainer.innerHTML = data;
-            // Encuentra los scripts en el contenido
-            const scripts = contentContainer.querySelectorAll('script');
-            scripts.forEach(script => {
-                const src = script.getAttribute('src');
-                if (src) {
-                    // Crea un nuevo script y añádelo al documento
-                    const newScript = document.createElement('script');
-                    newScript.src = src;
-                    document.body.appendChild(newScript);
-                }
-            });
-        })
-        .catch(error => console.error('Error al cargar la página', error));
-}
-loadPage("../src/components/header.html");
