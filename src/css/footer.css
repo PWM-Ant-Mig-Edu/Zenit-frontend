@@ -1,0 +1,80 @@
+/* Importar el archivo de colores */
+@import url('colors.css');
+
+mainFooter {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+bodyFooter {
+    font-family: 'Inter', sans-serif;
+}
+
+footer {
+    background-color: var(--mainColorDarker);
+    color: var(--mainTextWhite);
+    padding: 50px 20px;
+}
+
+.container-footer {
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-section h2 {
+    font-size: 20px;
+}
+
+.footer-section p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.footer-section p:hover {
+    text-decoration: underline;
+}
+
+.footer-section.schedule p:hover {
+    text-decoration: none;
+}
+
+
+.footer-section a {
+    font-size: 16px;
+    line-height: 1.5;
+    color: inherit; /* Hereda el color del texto del contenedor */
+    text-decoration: none; /* Quita la subrayado predeterminado */
+}
+
+.footer-section.contact a[href^="mailto"] {
+    color: var(--importantText); /* Cambia el color del enlace de correo electrónico a naranja */
+}
+
+
+/* Estilos para la sección de contacto */
+.contact {
+    text-align: end;
+    background-color: var(--elementExtraColor); /* Cambia el color de fondo según tus preferencias */
+    border-top-left-radius: 90px; /* Redondea el borde inferior izquierdo */
+    border-bottom-right-radius: 90px; /* Redondea el borde superior derecho */
+    padding: 15px 30px 15px 10px; /* TOP RIGHT BOTTOM LEFT */
+}
+
+/* Media queries para hacer el footer responsive */
+@media screen and (max-width: 768px) {
+    .footer-section {
+        flex-basis: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+    }
+}
