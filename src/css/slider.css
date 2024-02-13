@@ -10,7 +10,7 @@
 .slider-container img{
     width: 100%;
     max-height: 50vh;
-    object-fit: cover;
+    object-fit: auto;
 }
 
 .slider-controls  {
@@ -29,7 +29,6 @@
     color: white; 
     font-size: 1.2rem;
 }
-
 
 .slider-controls button:hover {
     background-color: rgba(255, 255, 255, 0.2); 
