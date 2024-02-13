@@ -1,0 +1,38 @@
+.promocionesContainerAll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.promocionesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.promocionesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 5fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.promocionesGrid img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.promocionesGrid#type1 img {
+    cursor: pointer;
+}

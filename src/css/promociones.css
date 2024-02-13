@@ -1,0 +1,22 @@
+.promocionesTitleContainer {
+    margin-left: 16px;
+    margin-top: 8px;
+    width: 80%;
+    margin-bottom: 8px
+}
+
+.promocionesTitleContainer .title {
+    font-size: xx-large;
+    margin-bottom: 4px;
+}
+
+.promocionesContainerAll {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.promocionesContainerAll .title {
+    font-size: x-large;
+    margin-bottom: 4px;
+    justify-self: center;
+}
