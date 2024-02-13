@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.body{
+    margin: 0;
+    padding: 0;
+    background-color: #E7E5DF;
+    height: auto ;
+    overflow: hidden;
+}
+
+.HeaderContainer{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 6vh;
+    z-index: 999999999999;
+    display: flex;
+    font-size: large;
+    align-items: center;
+    padding: 48px;
+    justify-content: space-between;
+    background-color: #E7E5DF;
+    color: #0A2239;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.LeftSideContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.NavList{
+    display: flex;
+    flex-direction: row; 
+    white-space: nowrap;
+
+}
+
+.NavList li{
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.NavList ul > *:not(:nth-child(1)) {
+    margin-left: 50px;
+}
+
+.Logo{
+    width: 192px;
+    padding: 10px;
+    margin-right: 50px;
+}
+
+.ButtonContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ButtonContainer button{
+    cursor: pointer;
+    padding: 15px 25px;
+    font-size: medium;
+    font-weight: bolder;
+    white-space: nowrap;
+    border-style: hidden;
+    border-radius: 10px;
+}
+
+.ButtonContainer button:nth-child(1){
+    background-color: #0A2239;
+    color: white;
+    margin-right: 24px;
+}
+
+.ButtonContainer button:nth-child(2){
+    background-color: rgba(10, 34, 57, 0.25);
+    color: #0A2239;
+}
+
+.Dropdown {
+    display: none;
+    color: #E7E5DF;
+    font-size: x-large;
+    background-color: #0A2239;
+}
+
+.Dropdown.show {
+    display: flex;
+    width: 100%;
+    align-self: center;
+    z-index: 1;
+    justify-content: center;
+
+}
+
+@media (min-width: 768px) {
+    .MenuButton {
+        display: none;
+    }
+
+    .MenuContent {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1600px) {
+    .HeaderContainer{
+        font-size: medium;
+    }
+
+    .NavList > *:not(:nth-child(1)) {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .HeaderContainer{
+        font-size: small;
+    }
+
+    .Logo{
+        width: 150px;
+        margin-right: 20px;
+    }
+
+    .ButtonContainer button{
+        padding: 5px 15px;
+        font-size: small;
+    }
+}
+
+@media (max-width: 991px) {
+    .HeaderContainer{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .Logo{
+        width: 100px;
+        margin-right: 0px;
+    }
+
+    .ButtonContainer button{
+        font-size: x-small;
+    }
+
+    .ButtonContainer button:nth-child(1){
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+    .MenuContent {
+        display: none;
+    }
+
+    .MenuButton {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .MenuButton svg{
+        align-self: center;
+    }
+
+    .Logo{
+        width: 150px;
+    }
+
+    .ButtonContainer{
+        display: none;
+    }
+}
+
+@media (max-width: 479px) {
+
+    .HeaderContainer{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .Logo{
+        width: 100px;
+    }
+
+    .MenuButton svg{
+        width: 20px;
+        height: 20px;
+    }
+}
