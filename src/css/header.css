@@ -144,7 +144,7 @@ a, a:visited, a:hover, a:active {
     padding: 5px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
     .MenuButton {
         display: none;
     }
@@ -186,6 +186,7 @@ a, a:visited, a:hover, a:active {
 
 @media (max-width: 991px) {
 
+
     .Logo{
         width: 100px;
         margin-right: 20px;
@@ -197,6 +198,10 @@ a, a:visited, a:hover, a:active {
 
     .ButtonContainer button:nth-child(1){
         margin-right: 8px;
+    }
+
+    .NavList > *:not(:nth-child(1)) {
+        margin-right: 0px;
     }
 }
 
