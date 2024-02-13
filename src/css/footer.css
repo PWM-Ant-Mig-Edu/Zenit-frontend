@@ -74,8 +74,23 @@ footer {
 }
 
 /* Media queries para hacer el footer responsive */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1150px) {
     .footer-section {
-        flex-basis: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+        flex: 1 1 calc(33.33% - 20px); /* Distribuye el espacio disponible en tres columnas y deja un margen entre ellas */
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .footer-section:nth-child(3) {
+        margin-right: 0; /* Elimina el margen derecho del tercer elemento para que esté en línea */
+    }
+    
+    .footer-section.contact {
+        flex-basis: calc(100% - 20px); /* El cuarto hijo ocupa todo el ancho disponible */
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .footer-section {
+        flex-basis: 100%;
     }
 }
