@@ -30,3 +30,14 @@ document.addEventListener("DOMContentLoaded", function() {
     showSlides(slideIndex);
 });
 
+function ajustarAlturaObjeto() {
+    var miObject = document.getElementById('Header');
+    miObject.style.height = miObject.contentDocument.documentElement.scrollHeight + 'px';
+}
+
+// Ajustar la altura inicialmente
+window.addEventListener('DOMContentLoaded', ajustarAlturaObjeto);
+
+// Ajustar la altura cuando se redimensiona la ventana
+window.addEventListener('resize', ajustarAlturaObjeto);
+

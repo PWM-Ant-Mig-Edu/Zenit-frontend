@@ -17,12 +17,10 @@
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: row;
-    height: 6vh;
     z-index: 999999999999;
     display: flex;
     font-size: large;
     align-items: center;
-    padding: 48px;
     background-color: #E7E5DF;
     color: #0A2239;
 }
@@ -50,13 +48,13 @@ a, a:visited, a:hover, a:active {
     font-weight: 800;
 }
 
-.NavList ul > *:not(:nth-child(1)) {
+.NavList > *:not(:nth-child(1)) {
     margin-left: 50px;
 }
 
 .Logo{
-    width: 192px;
-    padding: 10px;
+    width: 162px;
+    padding-left: 10px;
     margin-right: 50px;
 }
 
@@ -183,10 +181,6 @@ a, a:visited, a:hover, a:active {
 }
 
 @media (max-width: 991px) {
-    .HeaderContainer{
-        padding-left: 32px;
-        padding-right: 32px;
-    }
 
     .Logo{
         width: 100px;
@@ -230,11 +224,6 @@ a, a:visited, a:hover, a:active {
 }
 
 @media (max-width: 479px) {
-
-    .HeaderContainer{
-        padding-left: 16px;
-        padding-right: 16px;
-    }
 
     .Logo{
         width: 100px;
