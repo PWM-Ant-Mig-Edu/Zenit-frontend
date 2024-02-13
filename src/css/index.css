@@ -23,7 +23,6 @@
     display: grid;
     width: 100%;
     gap: 32px;
-    /*max-width: max-content;*/
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 80px;
     margin-bottom: 80px;
@@ -34,6 +33,7 @@
     align-items: center;
     flex-direction: column;
     color: #0A2239;
+    text-align: center;
 }
 
 .Stat h1{
@@ -49,4 +49,60 @@
     font-size: 0.75rem;
     margin-top: 8px;
     color: grey;
+}
+
+
+
+@media (max-width: 1600px) {
+    .StatsGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .Stat h1{
+        font-size: xx-large;
+    }
+
+    .Stat h2{
+        font-size: 1.15rem;
+    }
+
+    .Stat h3{
+        font-size: 0.75rem;
+    }
+    .TextContainer h1{
+        font-size: xx-large;
+    }
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+    .StatsGrid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 479px) {
+    .TextContainer h1{
+        font-size: x-large;
+    }
+
+    .Stat h1{
+        font-size: x-large;
+    }
+
+    .Stat h2{
+        font-size: 1.05rem;
+    }
+
+    .Stat h3{
+        font-size: 0.55rem;
+    }
+
+
 }
