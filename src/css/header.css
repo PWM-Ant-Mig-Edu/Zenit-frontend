@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-.body{
+.bodyHeader{
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     background-color: #E7E5DF;
     height: auto ;
     overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .HeaderContainer{
+    width: 100%;
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: row;
@@ -18,7 +23,6 @@
     font-size: large;
     align-items: center;
     padding: 48px;
-    justify-content: space-between;
     background-color: #E7E5DF;
     color: #0A2239;
 }
@@ -60,6 +64,7 @@ a, a:visited, a:hover, a:active {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-right: 30px;
 }
 
 .ButtonContainer button{
@@ -92,10 +97,42 @@ a, a:visited, a:hover, a:active {
 
 .Dropdown.show {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    width: 90%;
     align-self: center;
     z-index: 1;
     justify-content: center;
+
+}
+
+.Cines{
+    padding: 20px;
+}
+
+.Cines ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+}
+
+.Cines ul li{
+    text-align: center;
+}
+
+.Nav{
+    padding: 20px;
+}
+
+.Nav ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+}
+
+.Nav ul li{
+text-align: center;
 
 }
 
@@ -169,6 +206,7 @@ a, a:visited, a:hover, a:active {
         width: 100%;
         justify-content: space-between;
         position: relative;
+        margin-right: 30px;
     }
 
     .MenuButton svg{
