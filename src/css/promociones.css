@@ -1,8 +1,6 @@
 .promocionesTitleContainer {
     margin-left: 28px;
-    margin-top: 8px;
     width: 80%;
-    margin-bottom: 8px
 }
 
 .promocionesTitleContainer .title {
@@ -11,12 +9,11 @@
 }
 
 .promocionesContainerAll {
-    margin-top: 16px;
     text-align: center;
+    margin-top: 30px;
 }
 
 .promocionesContainerAll .title {
     font-size: x-large;
-    margin-bottom: 4px;
     justify-self: center;
 }
