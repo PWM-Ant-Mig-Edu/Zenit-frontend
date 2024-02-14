@@ -24,6 +24,7 @@
     cursor: pointer;
 }
 
+
 @media (max-width: 1920px) {
     .promocionesGrid{
         grid-template-columns: repeat(5, 1fr);
