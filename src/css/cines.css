@@ -1,25 +1,48 @@
+@import url('colors.css');
+
 .content-container {
     display: flex;
     flex-direction: row;
     width: 90%;
-    flex: 1;
+    height: 100%;
     justify-content: center;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--mainColor);
 }
 .title {
     text-align: center;
     width: 100%;
     font-weight: 800;
     font-size: xxx-large;
-    color: rgb(10, 34, 57);
     text-decoration: underline;
     margin-bottom: 16px;
+}
+
+.ubicacion {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 .contacto {
     text-align: start;
     justify-content: center;
     font-weight: 400;
+}
+
+.contacto h2{
+    margin-top: 20px;
+}
+
+.contacto > div:nth-child(2){
+    color: black;
+}
+
+.ubicacion iframe {
+    width: 100%;
+    height: 350px;
 }
 
 .contacto-titleContacto {
@@ -29,11 +52,52 @@
 .datosCine  {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    gap: 20px;
 }
+
 
 .FilmsContainer {
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
+}
 
-    align-items: center;
+@media screen and (max-width: 1150px) {
+
+    .ubicacion iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .ubicacion iframe {
+        width: 80%;
+        height: 300px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .contacto {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: xx-large;
+    }
+    
+}
+
+@media (max-width: 479px) {
+    .title {
+        font-size: x-large;
+    }
 }
