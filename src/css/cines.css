@@ -9,7 +9,7 @@
     margin-left: auto;
     margin-right: auto;
     color: var(--mainColor);
-
+    
     flex: 1;
     overflow-y: auto;
 }

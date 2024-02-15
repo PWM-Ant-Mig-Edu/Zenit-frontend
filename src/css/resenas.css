@@ -72,11 +72,54 @@
 
 .sinopsisContainer {
     display: flex;
-    align-items: flex-start;
-    flex: 0 0 auto;
-    align-self: flex-start;
-    margin-top: 8px;
+    align-items: center;
+    align-self: center;
+    margin-top: 16px;
     flex-direction: column;
-    
-    
+    width: 80%;
+}
+
+.input {
+    border: 2px solid transparent;
+    width: 80%;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #E7E5DF;
+    border-radius: 10px;
+    transition: all 0.5s;
+    color: black;
+}
+
+.input:hover, .input:focus {
+    border: 2px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+}
+.opiniones-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.opiniones-container button {
+    cursor: pointer;
+    padding: 15px 25px;
+    white-space: nowrap;
+    border-style: hidden;
+    border-radius: 10px;
+    padding-bottom: 15px  25px;
+    font-weight: bolder;
+    color: #000000;
+    background-color: #E7E5DF;
+}
+
+.escribir-reseña-container {
+    display: flex;
+    justify-content: space-around;
+    justify-self: self-start;
+    width: 80%;
 }
