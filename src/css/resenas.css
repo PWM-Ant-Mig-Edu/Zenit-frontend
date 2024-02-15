@@ -1,3 +1,5 @@
+@import url('colors.css');
+
 .title-container .title {
     text-align: center;
     width: 100%;
@@ -10,11 +12,14 @@
     display: flex;
     flex-direction: column;
     align-items: center; 
-    width: 100%;
+    width: 90%;
     flex: 1;
     margin-bottom: 20px;
     margin-top: 16px;
     position: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--mainColor);
 }
 
 .peliculaPanel  {
@@ -26,7 +31,6 @@
     background-color: var(--mainColor);
     color: #ffffff;
     border-radius: 8px;
-    width: 60%;
 }
 .peliculaPanel img {
     max-width: 20%; 
@@ -72,11 +76,18 @@
 
 .sinopsisContainer {
     display: flex;
-    align-items: center;
     align-self: center;
     margin-top: 16px;
     flex-direction: column;
-    width: 80%;
+}
+
+.sinopsisContainer h1{
+    margin-bottom: 16px;
+    font-size: x-large;
+}
+
+.sinopsisContainer span{
+    color: #000000;
 }
 
 .input {
@@ -101,7 +112,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin-top: 16px;
 }
 
@@ -119,7 +129,12 @@
 
 .escribir-reseña-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     justify-self: self-start;
-    width: 80%;
+    width: 100%;
+}
+
+.opiniones-container h1{
+    font-size: x-large;
+    margin-bottom: 16px;
 }
