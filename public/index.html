@@ -14,120 +14,128 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../src/css/slider.css">
     <link rel="stylesheet" href="../src/css/gridPelis.css">
+    <link rel="stylesheet" href="../src/css/register.css">
     <script src="../src/js/index.js"></script>
     <script src="../src/js/header.js"></script>
     <script src="../src/js/footer.js"></script>
+    <script src="../src/js/register.js"></script>
 
 
 </head>
 <body>
-    <div id="header-component"></div>
+    <div id="popups" style="display: none;">
+        <div id="register-component"></div>
+    </div>
+    <div class="home-container">
+        <div id="header-component"></div>
 
-    <div class="slider-container">
-        <div class="slider-content">
-            <div class="slider-item">
-                <img src="../src/assets/img/banner1.jpg" alt="slider1" class="slider-img">
+        <div class="slider-container">
+            <div class="slider-content">
+                <div class="slider-item">
+                    <img src="../src/assets/img/banner1.jpg" alt="slider1" class="slider-img">
+                </div>
+                <div class="slider-item">
+                    <img src="../src/assets/img/banner2.jpg" alt="slider2" class="slider-img">
+                </div>
+                <div class="slider-item">
+                    <img src="../src/assets/img/banner3.jpeg" alt="slider3" class="slider-img">
+                </div>
             </div>
-            <div class="slider-item">
-                <img src="../src/assets/img/banner2.jpg" alt="slider2" class="slider-img">
-            </div>
-            <div class="slider-item">
-                <img src="../src/assets/img/banner3.jpeg" alt="slider3" class="slider-img">
+            <div class="slider-controls">
+                <button class="slider-control" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="slider-control" onclick="plusSlides(1)">&#10095;</button>
             </div>
         </div>
-        <div class="slider-controls">
-            <button class="slider-control" onclick="plusSlides(-1)">&#10094;</button>
-            <button class="slider-control" onclick="plusSlides(1)">&#10095;</button>
+
+        <div class="TextContainer">
+            <h1>CARTELERA ZENIT</h1>
         </div>
-    </div>
 
-    <div class="TextContainer">
-        <h1>CARTELERA ZENIT</h1>
-    </div>
-
-    <div class="FilmsContainer">
-        <div class="FilmsGrid" id="type1">
-            <div class="film-item">
-                <div class="film-img">
-                    <img src="../src/assets/img/película1.jpg" alt="peli1">
-                    <div class="overlay">
-                        <button><i class="fas fa-shopping-cart"></i>Reservar</button>
-                        <button><i class="fas fa-search"></i>Ver detalles</button>
+        <div class="FilmsContainer">
+            <div class="FilmsGrid" id="type1">
+                <div class="film-item">
+                    <div class="film-img">
+                        <img src="../src/assets/img/película1.jpg" alt="peli1">
+                        <div class="overlay">
+                            <button><i class="fas fa-shopping-cart"></i>Reservar</button>
+                            <button><i class="fas fa-search"></i>Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="film-img">
+                        <img src="../src/assets/img/película2.jpg" alt="peli2">
+                        <div class="overlay">
+                            <button><i class="fas fa-shopping-cart"></i>Reservar</button>
+                            <button><i class="fas fa-search"></i>Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="film-img">
+                        <img src="../src/assets/img/película3.jpg" alt="peli3">
+                        <div class="overlay">
+                            <button><i class="fas fa-shopping-cart"></i>Reservar</button>
+                            <button><i class="fas fa-search"></i>Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="film-item">
+                    <div class="film-img">
+                        <img src="../src/assets/img/película4.jpg" alt="peli4">
+                        <div class="overlay">
+                            <button><i class="fas fa-shopping-cart"></i>Reservar</button>
+                            <button><i class="fas fa-search"></i>Ver detalles</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="film-item">
-                <div class="film-img">
-                    <img src="../src/assets/img/película2.jpg" alt="peli2">
-                    <div class="overlay">
-                        <button><i class="fas fa-shopping-cart"></i>Reservar</button>
-                        <button><i class="fas fa-search"></i>Ver detalles</button>
-                    </div>
+        </div>
+
+        <div class="TextContainer">
+            <h1>PRÓXIMOS ESTRENOS</h1>
+        </div>
+
+        <div class="FilmsContainer">
+            <div class="FilmsGrid" id="type2">
+                <div class="film-item">
+                    <img src="../src/assets/img/película9.jpg" alt="film9">
                 </div>
-            </div>
-            <div class="film-item">
-                <div class="film-img">
-                    <img src="../src/assets/img/película3.jpg" alt="peli3">
-                    <div class="overlay">
-                        <button><i class="fas fa-shopping-cart"></i>Reservar</button>
-                        <button><i class="fas fa-search"></i>Ver detalles</button>
-                    </div>
+                <div class="film-item">
+                    <img src="../src/assets/img/película10.jpg" alt="film10">
                 </div>
-            </div>
-            <div class="film-item">
-                <div class="film-img">
-                    <img src="../src/assets/img/película4.jpg" alt="peli4">
-                    <div class="overlay">
-                        <button><i class="fas fa-shopping-cart"></i>Reservar</button>
-                        <button><i class="fas fa-search"></i>Ver detalles</button>
-                    </div>
+                <div class="film-item">
+                    <img src="../src/assets/img/película11.jpg" alt="film11">
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="TextContainer">
-        <h1>PRÓXIMOS ESTRENOS</h1>
-    </div>
-
-    <div class="FilmsContainer">
-        <div class="FilmsGrid" id="type2">
-            <div class="film-item">
-                <img src="../src/assets/img/película9.jpg" alt="film9">
+        <div class="StatsGrid">
+            <div class="Stat">
+                <h1>9.5/10</h1>
+                <h2>Valoración</h2>
+                <h3>Nuestros clientes valoran positivamente la atención.</h3>
             </div>
-            <div class="film-item">
-                <img src="../src/assets/img/película10.jpg" alt="film10">
+            <div class="Stat">
+                <h1>NOVEDAD</h1>
+                <h2>Cartelera Actualizada</h2>
+                <h3>Nuestra cartelera está constantemente actualizada.</h3>
             </div>
-            <div class="film-item">
-                <img src="../src/assets/img/película11.jpg" alt="film11">
+            <div class="Stat">
+                <h1>PROMOCIONES</h1>
+                <h2>¡Precios de cine!</h2>
+                <h3>Aprovecha los asombrosos descuentos de los Martes Locos.</h3>
+            </div>
+            <div class="Stat">
+                <h1>24/7</h1>
+                <h2>Soporte</h2>
+                <h3>Servicio constante de soporte y ayuda al cliente.</h3>
             </div>
         </div>
+
+        <div id="footer-component"></div>
     </div>
 
-    <div class="StatsGrid">
-        <div class="Stat">
-            <h1>9.5/10</h1>
-            <h2>Valoración</h2>
-            <h3>Nuestros clientes valoran positivamente la atención.</h3>
-        </div>
-        <div class="Stat">
-            <h1>NOVEDAD</h1>
-            <h2>Cartelera Actualizada</h2>
-            <h3>Nuestra cartelera está constantemente actualizada.</h3>
-        </div>
-        <div class="Stat">
-            <h1>PROMOCIONES</h1>
-            <h2>¡Precios de cine!</h2>
-            <h3>Aprovecha los asombrosos descuentos de los Martes Locos.</h3>
-        </div>
-        <div class="Stat">
-            <h1>24/7</h1>
-            <h2>Soporte</h2>
-            <h3>Servicio constante de soporte y ayuda al cliente.</h3>
-        </div>
-    </div>
-
-   <div id="footer-component"></div>
    
 
 </body>
