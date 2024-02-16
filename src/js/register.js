@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", loadHeaderComponent);
 function showRegister() {
     var registerComponent = document.getElementById("register-component");
     var popupsContainer = document.getElementById("popups");
-    var homeContainer = document.querySelector(".home-container");
+    var homeContainer = document.querySelector(".wrapper-container");
   
     // Agrega una clase al contenedor de popups para aplicar el fondo borroso
     homeContainer.classList.add("blurred-background");
@@ -27,7 +27,7 @@ function showRegister() {
 function hideRegister() {
     var registerComponent = document.getElementById("register-component");
     var popupsContainer = document.getElementById("popups");
-    var homeContainer = document.querySelector(".home-container");
+    var homeContainer = document.querySelector(".wrapper-container");
   
     // Agrega una clase al contenedor de popups para aplicar el fondo borroso
     homeContainer.classList.remove("blurred-background");
