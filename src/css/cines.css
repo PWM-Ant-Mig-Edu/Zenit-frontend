@@ -57,6 +57,7 @@
     height: 100%;
     justify-content: center;
     gap: 20px;
+    margin: 50px 0px;
 }
 
 
@@ -79,15 +80,20 @@
         flex-direction: column;
     }
 
+    .datosCine  {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 0px;
+    }
+
     .ubicacion iframe {
         width: 80%;
         height: 300px;
         margin-right: auto;
         margin-left: auto;
-    }
-
-    .contacto {
-        margin-bottom: 50px;
     }
 }
 
