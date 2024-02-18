@@ -16,7 +16,7 @@
     color: #000;
 }
 
-.promocionesTitleContainer .title {
+.promocionesTitleContainer .titlePromociones {
     font-size: xxx-large;
     margin-bottom: 4px;
 }
@@ -29,7 +29,7 @@
     margin-right: auto;
 }
 
-.promocionesContainerAll .title {
+.promocionesContainerAll .titlePromociones {
     font-size: xx-large;
     justify-self: center;
 }
