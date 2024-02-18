@@ -13,130 +13,138 @@
     <link rel="stylesheet" href="../src/css/formalizer.css">
     <link rel="stylesheet" href="../src/css/footer.css">
     <link rel="stylesheet" href="../src/css/gridPelis.css">
+    <link rel="stylesheet" href="../src/css/register.css">
     <script src="../src/js/header.js"></script>
     <script src="../src/js/footer.js"></script>
+    <script src="../src/js/register.js"></script>
+    
 </head>
 <body style="display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden;">
     
-    <div id="header-component"></div>
+    <div id="popups" style="display: none;">
+        <div id="register-component"></div>
+    </div>
+    <div class="wrapper-container">
+        <div id="header-component"></div>
 
-    <div class="content-container">
-        <div class="title-container"> 
-            <h1 class="title">[Nombre de la  pelicula]</h1>
-        </div>
-        <div class="peliculaPanel">
-            <img src="../src/assets/img/película11.jpg"/>
-            <div class="datosPelicula">
-                    <span>2 de febrero de 2024 en cines | 2h 20min | Acción, Espionaje, Suspense</span>
-                    <br></br>
-                    <span>Dirigida por Matthew Vaughn | Guion Jason Fuchs</span>   
-                    <br></br>
-                    <span>Reparto Bryce Dallas Howard, Sam Rockwell, Henry Cavill</span>    
-                    <div class="rating">
-                        <input value="5" name="rate" id="star5" type="radio">
-                        <label title="text" for="star5"></label>
-                        <input value="4" name="rate" id="star4" type="radio">
-                        <label title="text" for="star4"></label>
-                        <input value="3" name="rate" id="star3" type="radio" checked>
-                        <label title="text" for="star3"></label>
-                        <input value="2" name="rate" id="star2" type="radio">
-                        <label title="text" for="star2"></label>
-                        <input value="1" name="rate" id="star1" type="radio">
-                        <label title="text" for="star1"></label>
-                    </div>
+        <div class="content-container">
+            <div class="title-container"> 
+                <h1 class="title">[Nombre de la  pelicula]</h1>
             </div>
-            <button>
-                Comprar Entrada
-            </button>
-        </div>
-        <div class="sinopsisContainer">
-            <h1>Sinopsis</h1>
-            <span>
-                Thriller de espías con mucha acción y toques de humor que nos presenta a Argylle (Henry Cavill), un súper espía de fama mundial. 
-                La creadora de este personaje es la introvertida escritora Elly Conway (Bryce Dallas Howard), una mujer solitaria autora de una 
-                serie de novelas de espionaje superventas.Todo se pondrá patas arriba cuando la trama de uno de sus libros, sobre el agente 
-                secreto Argylle, empiece a ser un reflejo real, y se revelen los secretos de un grupo internacional de espías. La línea que separa 
-                la realidad y la ficción se borrará inesperadamente, y será entonces cuando Argylle se verá envuelto en una aventura alrededor de 
-                todo el planeta. Su objetivo: sacar a la luz un sindicato del crimen que opera a nivel global.
-            </span>
-        </div>
-
-        <div class="opiniones-container">
-            <h1>Reseñas</h1>
-            <div class="escribir-reseña-container">
-                <input class="input" placeholder="Danos tu opinión">
+            <div class="peliculaPanel">
+                <img src="../src/assets/img/película11.jpg"/>
+                <div class="datosPelicula">
+                        <span>2 de febrero de 2024 en cines | 2h 20min | Acción, Espionaje, Suspense</span>
+                        <br></br>
+                        <span>Dirigida por Matthew Vaughn | Guion Jason Fuchs</span>   
+                        <br></br>
+                        <span>Reparto Bryce Dallas Howard, Sam Rockwell, Henry Cavill</span>    
+                        <div class="rating">
+                            <input value="5" name="rate" id="star5" type="radio">
+                            <label title="text" for="star5"></label>
+                            <input value="4" name="rate" id="star4" type="radio">
+                            <label title="text" for="star4"></label>
+                            <input value="3" name="rate" id="star3" type="radio" checked>
+                            <label title="text" for="star3"></label>
+                            <input value="2" name="rate" id="star2" type="radio">
+                            <label title="text" for="star2"></label>
+                            <input value="1" name="rate" id="star1" type="radio">
+                            <label title="text" for="star1"></label>
+                        </div>
+                </div>
                 <button>
-                    Enviar
+                    Comprar Entrada
                 </button>
             </div>
-            <div class="posts">
-                <div class="post">
-                    <div class="post-header">
-                        <img src="../src/assets/img/image_aca.jpg" alt="Imagen de perfil" class="profile-image">
-                        <h1>Usuario</h1>
-                    </div>
-                    <div class="post-content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis nec felis elementum facilisis.
-                        Proin et mi id nisl mollis efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada
-                        fames ac turpis egestas. Vestibulum non malesuada odio. Aliquam vel neque quis dui suscipit fringilla ut at
-                        nulla. Proin efficitur velit a urna fermentum, nec sollicitudin nulla luctus. Sed in fringilla tortor.
-                        Nullam et velit a nulla placerat lacinia. Phasellus accumsan tellus vitae felis rhoncus, at congue mi
-                        aliquam. Ut rhoncus leo ut orci consequat, eu lobortis ex bibendum. Fusce commodo, orci ac commodo
-                        vestibulum, turpis mauris fermentum odio, at volutpat libero eros non magna.
-                    </div>
-                    <div class="footer-container-post">
-                        <span>3 days ago</span>
-                        <div class="rating">
-                            <input value="5" name="rate" id="star5" type="radio">
-                            <label title="text" for="star5"></label>
-                            <input value="4" name="rate" id="star4" type="radio">
-                            <label title="text" for="star4"></label>
-                            <input value="3" name="rate" id="star3" type="radio" checked>
-                            <label title="text" for="star3"></label>
-                            <input value="2" name="rate" id="star2" type="radio">
-                            <label title="text" for="star2"></label>
-                            <input value="1" name="rate" id="star1" type="radio">
-                            <label title="text" for="star1"></label>
-                        </div>
-                    </div>
-                </div>
+            <div class="sinopsisContainer">
+                <h1>Sinopsis</h1>
+                <span>
+                    Thriller de espías con mucha acción y toques de humor que nos presenta a Argylle (Henry Cavill), un súper espía de fama mundial. 
+                    La creadora de este personaje es la introvertida escritora Elly Conway (Bryce Dallas Howard), una mujer solitaria autora de una 
+                    serie de novelas de espionaje superventas.Todo se pondrá patas arriba cuando la trama de uno de sus libros, sobre el agente 
+                    secreto Argylle, empiece a ser un reflejo real, y se revelen los secretos de un grupo internacional de espías. La línea que separa 
+                    la realidad y la ficción se borrará inesperadamente, y será entonces cuando Argylle se verá envuelto en una aventura alrededor de 
+                    todo el planeta. Su objetivo: sacar a la luz un sindicato del crimen que opera a nivel global.
+                </span>
+            </div>
 
-                <div class="post">
-                    <div class="post-header">
-                        <img src="../src/assets/img/image_aca.jpg" alt="Imagen de perfil" class="profile-image">
-                        <h1>Usuario</h1>
-                    </div>
-                    <div class="post-content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis nec felis elementum facilisis.
-                        Proin et mi id nisl mollis efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada
-                        fames ac turpis egestas. Vestibulum non malesuada odio. Aliquam vel neque quis dui suscipit fringilla ut at
-                        nulla. Proin efficitur velit a urna fermentum, nec sollicitudin nulla luctus. Sed in fringilla tortor.
-                        Nullam et velit a nulla placerat lacinia. Phasellus accumsan tellus vitae felis rhoncus, at congue mi
-                        aliquam. Ut rhoncus leo ut orci consequat, eu lobortis ex bibendum. Fusce commodo, orci ac commodo
-                        vestibulum, turpis mauris fermentum odio, at volutpat libero eros non magna.
-                    </div>
-                    <div class="footer-container-post">
-                        <span>3 days ago</span>
-                        <div class="rating">
-                            <input value="5" name="rate" id="star5" type="radio">
-                            <label title="text" for="star5"></label>
-                            <input value="4" name="rate" id="star4" type="radio">
-                            <label title="text" for="star4"></label>
-                            <input value="3" name="rate" id="star3" type="radio" checked>
-                            <label title="text" for="star3"></label>
-                            <input value="2" name="rate" id="star2" type="radio">
-                            <label title="text" for="star2"></label>
-                            <input value="1" name="rate" id="star1" type="radio">
-                            <label title="text" for="star1"></label>
+            <div class="opiniones-container">
+                <h1>Reseñas</h1>
+                <div class="escribir-reseña-container">
+                    <input class="input" placeholder="Danos tu opinión">
+                    <button>
+                        Enviar
+                    </button>
+                </div>
+                <div class="posts">
+                    <div class="post">
+                        <div class="post-header">
+                            <img src="../src/assets/img/image_aca.jpg" alt="Imagen de perfil" class="profile-image">
+                            <h1>Usuario</h1>
+                        </div>
+                        <div class="post-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis nec felis elementum facilisis.
+                            Proin et mi id nisl mollis efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                            fames ac turpis egestas. Vestibulum non malesuada odio. Aliquam vel neque quis dui suscipit fringilla ut at
+                            nulla. Proin efficitur velit a urna fermentum, nec sollicitudin nulla luctus. Sed in fringilla tortor.
+                            Nullam et velit a nulla placerat lacinia. Phasellus accumsan tellus vitae felis rhoncus, at congue mi
+                            aliquam. Ut rhoncus leo ut orci consequat, eu lobortis ex bibendum. Fusce commodo, orci ac commodo
+                            vestibulum, turpis mauris fermentum odio, at volutpat libero eros non magna.
+                        </div>
+                        <div class="footer-container-post">
+                            <span>3 days ago</span>
+                            <div class="rating">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked>
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="ver-mas-container">
-                    <button>Ver más mensajes</button>
+
+                    <div class="post">
+                        <div class="post-header">
+                            <img src="../src/assets/img/image_aca.jpg" alt="Imagen de perfil" class="profile-image">
+                            <h1>Usuario</h1>
+                        </div>
+                        <div class="post-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac turpis nec felis elementum facilisis.
+                            Proin et mi id nisl mollis efficitur. Pellentesque habitant morbi tristique senectus et netus et malesuada
+                            fames ac turpis egestas. Vestibulum non malesuada odio. Aliquam vel neque quis dui suscipit fringilla ut at
+                            nulla. Proin efficitur velit a urna fermentum, nec sollicitudin nulla luctus. Sed in fringilla tortor.
+                            Nullam et velit a nulla placerat lacinia. Phasellus accumsan tellus vitae felis rhoncus, at congue mi
+                            aliquam. Ut rhoncus leo ut orci consequat, eu lobortis ex bibendum. Fusce commodo, orci ac commodo
+                            vestibulum, turpis mauris fermentum odio, at volutpat libero eros non magna.
+                        </div>
+                        <div class="footer-container-post">
+                            <span>3 days ago</span>
+                            <div class="rating">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked>
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ver-mas-container">
+                        <button>Ver más mensajes</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <div id="footer-component"></div>
     </div>
-    <div id="footer-component"></div>
 </body>
 </html>
