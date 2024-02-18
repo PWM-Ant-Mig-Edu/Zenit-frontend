@@ -2,14 +2,13 @@
 .content-container {
     flex: 1;
 }
-/* Estilos para el contenedor de filtros */
+
 .filmsFilterContainer {
     display: flex;
     justify-content: space-around;
     margin: 8px;
 }
 
-/* Estilos para cada elemento select y su respectiva etiqueta */
 .filmsFilterContainer div {
     margin-bottom: 10px;
 }

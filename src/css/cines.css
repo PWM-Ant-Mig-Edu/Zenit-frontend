@@ -11,7 +11,8 @@
     color: var(--mainColor);
     flex: 1;    
 }
-.title {
+
+.titleCine {
     text-align: center;
     width: 100%;
     font-weight: 800;
@@ -96,14 +97,14 @@
 }
 
 @media (max-width: 767px) {
-    .title {
+    .titleCine {
         font-size: xx-large;
     }
     
 }
 
 @media (max-width: 479px) {
-    .title {
+    .titleCine {
         font-size: x-large;
     }
 }
