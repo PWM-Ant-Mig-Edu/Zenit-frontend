@@ -1,7 +1,6 @@
 
 .content-container {
     flex: 1;
-    overflow-y: auto;
 }
 /* Estilos para el contenedor de filtros */
 .filmsFilterContainer {
