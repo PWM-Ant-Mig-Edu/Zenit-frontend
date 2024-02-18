@@ -1,0 +1,96 @@
+/* Estilos CSS para el formulario de comprobación de reserva */
+@import url('colors.css');
+
+
+
+.comprobar-main-container {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: flex-start;
+    margin: 20px;
+    padding: 20px;
+}
+
+.comprobar-text-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.comprobar-form-container {
+    flex: 1;
+    flex-direction: column;
+    align-self: center;
+    max-width: 50%;
+}
+
+
+.comprobar-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comprobar-container-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.comprobar-container-text {
+    margin-bottom: 10px;
+}
+
+.comprobar-container-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.detalles-reserva-container {
+    align-self: center;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 100px;
+    padding: 20px;
+    background-color: var(--backgroundColor); /* Fondo claro para el contenedor */
+}
+
+.detalles-reserva-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--mainTextBlack);
+}
+
+.detalles-reserva-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.detalles-reserva-content p strong {
+    color: var(--mainTextBlack);
+}
+
+.detalles-reserva-footer {
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .comprobar-main-container {
+        flex-direction: column;
+    }
+
+    .comprobar-text-container,
+    .comprobar-form-container {
+        max-width: 100%;
+    }
+}
+
+

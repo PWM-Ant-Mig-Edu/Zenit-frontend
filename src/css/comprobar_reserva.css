@@ -1,0 +1,203 @@
+/* Estilos CSS para el formulario de comprobación de reserva */
+@import url('colors.css');
+
+
+
+.comprobar-main-container {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: flex-start;
+    margin: 20px;
+    padding: 20px;
+}
+
+.comprobar-text-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.comprobar-form-container {
+    flex: 1;
+    flex-direction: column;
+    align-self: center;
+    max-width: 50%;
+}
+
+
+.comprobar-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comprobar-container-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.comprobar-container-text {
+    margin-bottom: 10px;
+}
+
+.comprobar-container-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+/* Estilos CSS para el formulario de comprobación */
+.comprobar-form-group {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.comprobar-form-group .comprobar-input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #0A2239;
+    background: transparent;
+}
+
+
+.comprobar-form-group .comprobar-input:focus {
+    outline: none;
+}
+
+.comprobar-form-group .comprobar-label {
+    color: #0A2239;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+}
+
+.comprobar-form-group .label-char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+}
+
+.comprobar-form-group .comprobar-input:focus ~ .comprobar-label .label-char,
+.comprobar-form-group .comprobar-input:valid ~ .comprobar-label .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #0A2239;
+}
+
+.comprobar-form-group .comprobar-bar {
+    position: relative;
+    display: block;
+}
+
+/* Estilos para el label cuando el select tiene una opción seleccionada */
+.comprobar-label.active .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #0A2239;
+}
+
+
+.comprobar-form-group .comprobar-bar:before, .comprobar-form-group .comprobar-bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #0A2239;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.comprobar-form-group .comprobar-bar:before {
+    left: 0%;
+}
+
+.comprobar-form-group .comprobar-bar:after {
+    right: 17%;
+}
+
+.comprobar-form-group .comprobar-input:focus ~ .comprobar-bar:before,
+.comprobar-form-group .comprobar-input:focus ~ .comprobar-bar:after {
+    width: 50%;
+}
+
+
+
+/* Ocultar la opción "Select an option" */
+.comprobar-form-group .select option[disabled] {
+    display: none;
+}
+
+.comprobar-form-group .select {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 80%;
+    border: 0px; /* Eliminamos el borde */
+    border-bottom: 1px solid #0A2239;
+    background: transparent;
+    outline:none;
+}
+
+.comprobar-form-group .select:focus {
+    outline: none;
+}
+
+
+.comprobar-button {
+    width: 80%;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    text-align: center; /* Centrar el texto horizontalmente */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--mainColor);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+
+.comprobar-button:hover {
+    background-color: var(--mainColorDark);
+}
+
+.comprobar-button span {
+    vertical-align: middle;
+}
+
+
+
+@media (max-width: 768px) {
+    .comprobar-main-container {
+        flex-direction: column;
+    }
+
+    .comprobar-text-container,
+    .comprobar-form-container {
+        max-width: 100%;
+    }
+}
+
+
+
+@media screen and (min-width: 1200px) {
+    .wave-group .select {
+        width: 100%;
+    }
+}
