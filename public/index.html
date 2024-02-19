@@ -16,17 +16,20 @@
     <link rel="stylesheet" href="../src/css/gridPelis.css">
     <link rel="stylesheet" href="../src/css/register.css">
     <link rel="stylesheet" href="../src/css/login.css">
+    <link rel="stylesheet" href="../src/css/reserva_proyeccion.css">
     <script src="../src/js/index.js"></script>
     <script src="../src/js/header.js"></script>
     <script src="../src/js/footer.js"></script>
     <script src="../src/js/register.js"></script>
     <script src="../src/js/login.js"></script>
+    <script src="../src/js/reservar.js"></script>
 
 </head>
 <body>
     <div id="popups" style="display: none;">
         <div id="register-component"></div>
         <div id="login-component"></div>
+        <div id="reservar-component"></div>
     </div>
     <div class="wrapper-container">
         <div id="header-component"></div>
@@ -59,7 +62,7 @@
                     <div class="film-img">
                         <img src="../src/assets/img/película1.jpg" alt="peli1">
                         <div class="overlay">
-                            <button><i class="fas fa-shopping-cart"></i>Reservar</button>
+                            <button onclick="showReservar()"><i class="fas fa-shopping-cart"></i>Reservar</button>
                             <button><i class="fas fa-search"></i>Ver detalles</button>
                         </div>
                     </div>
@@ -68,7 +71,7 @@
                     <div class="film-img">
                         <img src="../src/assets/img/película2.jpg" alt="peli2">
                         <div class="overlay">
-                            <button><i class="fas fa-shopping-cart"></i>Reservar</button>
+                            <button onclick="showReservar()"><i class="fas fa-shopping-cart"></i>Reservar</button>
                             <button><i class="fas fa-search"></i>Ver detalles</button>
                         </div>
                     </div>
@@ -77,7 +80,7 @@
                     <div class="film-img">
                         <img src="../src/assets/img/película3.jpg" alt="peli3">
                         <div class="overlay">
-                            <button><i class="fas fa-shopping-cart"></i>Reservar</button>
+                            <button onclick="showReservar()"><i class="fas fa-shopping-cart"></i>Reservar</button>
                             <button><i class="fas fa-search"></i>Ver detalles</button>
                         </div>
                     </div>
@@ -86,7 +89,7 @@
                     <div class="film-img">
                         <img src="../src/assets/img/película4.jpg" alt="peli4">
                         <div class="overlay">
-                            <button><i class="fas fa-shopping-cart"></i>Reservar</button>
+                            <button onclick="showReservar()"><i class="fas fa-shopping-cart"></i>Reservar</button>
                             <button><i class="fas fa-search"></i>Ver detalles</button>
                         </div>
                     </div>
