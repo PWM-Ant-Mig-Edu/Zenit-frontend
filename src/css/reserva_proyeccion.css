@@ -31,10 +31,9 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    width: 50%;
     border-radius: 30px;
     justify-content: space-between;
-    color: black;
+    color: var(--mainColor);
     align-items: center;
     font-weight: 600;
     margin-top: 16px;
@@ -50,7 +49,7 @@
     flex: 0 0 auto;
     align-items: center;
     font-size: xx-large;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--mainColor);
     padding: 20px 30px;
 }
 .proyeccion-container-header button {
@@ -58,6 +57,8 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: var(--mainColor);
+    margin-left: 20px;
 }
 
 .proyeccion-container-header h1 {
@@ -102,7 +103,6 @@
 }
 .grid-container-proyeccion {
     display: grid;
-    width: 80%;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     grid-auto-rows: 5vh;
@@ -120,6 +120,8 @@
     padding: 10px;
     text-align: center;
     background-color: #E7E5DF;
+    cursor: pointer;
+    color: #000;
 }
 .botones-proyeccion {
     margin-top: 16px;
@@ -128,5 +130,6 @@
 .botones-proyeccion button{
     background-color:#E7E5DF;
     border: 0px solid white;
+    cursor: pointer;
 }
 
