@@ -35,9 +35,8 @@ z-index: 9999; /* Asegura que esté encima de otros elementos */
   padding: 20px 30px; /* Agregar relleno lateral de 30px */
   border-radius: 20px;
   position: relative;
-  background-color: white;
+  background-color: var(--mainColorDarker);
   color: #fff;
-  border: 1px solid #333;
 }
 
 
@@ -49,7 +48,7 @@ z-index: 9999; /* Asegura que esté encima de otros elementos */
   display: flex;
   align-items: center;
   padding-left: 30px;
-  color: #0b2741;
+  color: white;
 }
 
 .title::before {
@@ -71,13 +70,13 @@ z-index: 9999; /* Asegura que esté encima de otros elementos */
   width: 16px;
   border-radius: 50%;
   left: 0px;
-  background-color: #0b2741;
+  background-color: white;
 }
 
 .message, 
 .signin {
   font-size: 14.5px;
-  color: #0b2741;
+  color: white;
 }
 
 .signin {
@@ -85,11 +84,11 @@ z-index: 9999; /* Asegura que esté encima de otros elementos */
 }
 
 .signin a:hover {
-  text-decoration: underline royalblue;
+  text-decoration: underline white;
 }
 
 .signin a {
-  color: #0b2741;
+  color: white;
 }
 
 .flex {
@@ -130,7 +129,7 @@ z-index: 9999; /* Asegura que esté encima de otros elementos */
 .form label .input:focus + span,
 .form label .input:valid + span {
   color: #00bfff;
-  top: 0px;
+  top: 4px;
   font-size: 0.7em;
   font-weight: 600;
 }
@@ -144,14 +143,15 @@ z-index: 9999; /* Asegura que esté encima de otros elementos */
   outline: none;
   padding: 10px;
   border-radius: 10px;
-  color: #fff;
+  color: white;
   font-size: 16px;
   transform: .3s ease;
-  background-color: #0b2741;
+  background-color: var(--mainColor);
 }
 
 .submit:hover {
-  background-color: #00bfff96;
+  background-color: white;
+  color: var(--mainColor);
 }
 
 .close-button {
@@ -162,7 +162,7 @@ z-index: 9999; /* Asegura que esté encima de otros elementos */
   border: none;
   cursor: pointer;
   font-size: 16px;
-  color: #333;
+  color: white;
 }
 
 @keyframes pulse {
