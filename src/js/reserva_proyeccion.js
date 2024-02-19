@@ -9,6 +9,8 @@ function loadHeaderComponent() {
 document.addEventListener("DOMContentLoaded", loadHeaderComponent);
 
 
+
+
 function showReservar() {
     var registerComponent = document.getElementById("reservar-component");
     var registerComponent2 = document.getElementById("reservar-component2");
@@ -35,27 +37,50 @@ function hideReservar() {
     popupsContainer.style.display = "none";
 }
 
-function mostrarHoras(dia) {
-    // Oculta todos los grupos de horas
-    var gruposHoras = document.querySelectorAll('.grid-container-horas');
-    gruposHoras.forEach(function(grupo) {
-        grupo.style.display = 'none';
+function mostrarHoras(dia, elemento) {
+    // Ocultar todas las horas primero
+    var horasGrid = document.querySelectorAll('.grid-container-horas');
+    var horas = document.querySelectorAll('.proyeccion-hora-container');
+    var horasDia = document.getElementById('horas-' + dia);
+    var dias = document.querySelectorAll('.proyeccion-dia-container');
+
+    horasGrid.forEach(function(hora) {
+        hora.style.display = 'none';
     });
 
-    // Muestra el grupo de horas correspondiente al día seleccionado
-    var grupoHorasSeleccionado = document.getElementById('horas-' + dia);
-    if (grupoHorasSeleccionado) {
-        grupoHorasSeleccionado.style.display = 'grid';
+    horas.forEach(function(hora) {
+        hora.classList.remove('selected');
+    });
+    
+    if (horasDia) {
+        horasDia.style.display = 'grid';
     }
+    
+    dias.forEach(function(dia) {
+        dia.classList.remove('selected');
+    });
+
+    elemento.classList.add('selected');
 }
 
-function seleccionarHora(horaSeleccionada) {
-    // Remueve la clase 'selected' de todas las horas
+function seleccionarHora(elemento) {
+    // Quitar la clase 'selected' de todas las horas
     var horas = document.querySelectorAll('.proyeccion-hora-container');
-    horas.forEach(function(h) {
-        h.classList.remove('selected');
+    horas.forEach(function(hora) {
+        hora.classList.remove('selected');
     });
 
-    // Agrega la clase 'selected' a la hora seleccionada
-    horaSeleccionada.classList.add('selected');
+    // Agregar la clase 'selected' a la hora seleccionada
+    elemento.classList.add('selected');
+}
+
+function checkSelection() {
+    var selectedDia = document.querySelector('.proyeccion-dia-container.selected');
+    var selectedHora = document.querySelector('.proyeccion-hora-container.selected');
+
+    if (selectedDia && selectedHora) {
+        window.location.href = "./cines.html";
+    } else {
+        alert('Por favor selecciona un día y una hora');
+    }
 }

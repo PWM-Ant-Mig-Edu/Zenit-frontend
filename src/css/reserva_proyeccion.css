@@ -1,14 +1,9 @@
 
-/* Estilo para el fondo borroso solo al contenedor de popups */
 .blurred-background{
-    filter: blur(5px); /* Ajusta el valor de blur según tus preferencias */
-    transition: filter 0.3s ease; /* Agrega una transición suave */
+    filter: blur(5px);
+    transition: filter 0.3s ease;
 }
 
-.selected {
-    background-color: darkgrey; /* Puedes ajustar el color oscuro según tus preferencias */
-    color: white; /* Ajusta el color del texto para que sea legible */
-}
 
 #popups {
     position: fixed;
@@ -22,23 +17,14 @@
     z-index: 999;
 }
 
-#reservar-component {
+#reservar-component, #reservar-component2 {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: default;
-    z-index: 9999;
-}
-#reservar-component2{
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: default;
-    z-index: 9999;
+    width: 50%;
 }
 
 .proyeccion-container {
@@ -50,10 +36,7 @@
     color: white;
     align-items: center;
     font-weight: 600;
-    margin-top: 16px;
-    margin-bottom: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
 }
 .proyeccion-container-header {
     display: flex;
@@ -93,6 +76,7 @@
     align-items: center;
     justify-content: space-between;
     flex: 1;
+    width: 100%;
 }
 
 .proyeccion-horas-container {
@@ -115,7 +99,7 @@
     align-self: center;
     text-decoration: underline;
 }
-.grid-container-proyeccion {
+.grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -125,27 +109,7 @@
     overflow-x: hidden;
 }
 
-.grid-container-dias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    grid-auto-rows: 5vh;
-    max-height: 15vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-.grid-container-horas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    grid-auto-rows: 5vh;
-    max-height: 15vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-.proyeccion-dia-container {
+.proyeccion-dia-container, .proyeccion-hora-container {
     display: flex;
     flex-direction: column;
     background-size: 100% 100%;
@@ -159,18 +123,9 @@
     border: 1px solid white;
 }
 
-.proyeccion-hora-container {
-    display: flex;
-    flex-direction: column;
-    background-size: 100% 100%;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px;
-    text-align: center;
-    background-color: var(--mainColor);
-    cursor: pointer;
-    color: white;
-    border: 1px solid white;
+.proyeccion-dia-container.selected, .proyeccion-hora-container.selected {
+    background-color: white;
+    color: var(--mainColor);
 }
 
 .botones-proyeccion {
@@ -187,5 +142,106 @@
     padding: 10px;
     font-weight: bolder;
     border: 1px solid white;
+}
+
+@media (max-width: 1400px) {
+    .proyeccion-horas-container{
+        margin-right: 10px;
+    }
+    .proyeccion-img{
+        margin-right: 10px;
+        width: 30%;
+    }
+
+    #reservar-component, #reservar-component2 {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1200px) {
+    #reservar-component, #reservar-component2 {
+        width: 70%;
+    }
+}
+
+@media (max-width: 991px) {
+    #reservar-component, #reservar-component2 {
+        width: 80%;
+    }
+
+    .grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .proyeccion-horas-container h1{
+        padding: 20px 0px;
+    }
+}
+
+@media (max-width: 767px) {
+    .proyeccion-container-header {
+        font-size: x-large;
+    }
+
+    .proyeccion-horas-container h1 {
+        font-size: large;
+    }
+
+    .proyeccion-dia-container, .proyeccion-hora-container {
+        font-size: small;
+    }
+
+    .proyeccion-container-body {
+        flex-direction: column;
+    }
+
+    .proyeccion-img{
+        margin: 0px;
+        margin-top: 20px;
+    }
+
+    .grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .proyeccion-container-header {
+        font-size: large;
+    }
+
+    .grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .botones-proyeccion button{
+        font-size: small;
+        padding: 5px;
+    }
+
+    .botones-proyeccion{
+        gap: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-height: 250px) and (max-height: 900px){
+    .proyeccion-horas-container h1, .proyeccion-horas-container h2{
+        padding: 10px;
+    }
+}
+
+@media (min-height: 250px) and (max-height: 900px) and (max-width: 500px){
+
+    .grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
