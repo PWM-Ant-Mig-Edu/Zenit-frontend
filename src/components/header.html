@@ -15,7 +15,16 @@
             <img onclick="window.location.href = '../public/index.html'" src="../src/assets/img/logo-zenit.svg" alt="Zenit logo" class="Logo">
             <nav>
                 <ul class="NavList">
-                    <li class="NavItem"><a href="../public/cines.html" class="NavLink">Cines ▼</a></li>
+                    <li class="NavItem">
+                        <a href="#" class="NavLink">Cines ▼</a>
+                        <ul class="DropdownMenu">
+                            <li><a href="../public/cines.html">LAS PALMAS</a></li>
+                            <li><a href="../public/cines.html">TELDE</a></li>
+                            <li><a href="../public/cines.html">TEROR</a></li>
+                            <li><a href="../public/cines.html">VECINDARIO</a></li>
+                            <li><a href="../public/cines.html">MASPALOMAS</a></li>
+                        </ul>
+                    </li>
                     <li class="NavItem"><a href="../public/cartelera.html" class="NavLink">Cartelera</a></li>
                     <li class="NavItem"><a href="../public/promociones.html" class="NavLink">Promociones</a></li>
                     <li class="NavItem"><a href="../public/comprobar_reserva.html" class="NavLink">Comprobar Ticket</a></li>
@@ -47,7 +56,7 @@
             <li><a target="_parent" href="../public/promociones.html">Promociones</a></li>
             <li><a target="_parent" href="../public/comprobar_reserva.html">Comprobar Ticket</a></li>
         </ul>
-        <li><button>Iniciar Sesión</button></li>
+        <li><button onclick="showRegister()">Registrarse</button></li>
         <li>¿Ya está registrado?<a target="_parent" href="../public/index.html"> Inicie sesión</a></li>
     </div>
 </div>

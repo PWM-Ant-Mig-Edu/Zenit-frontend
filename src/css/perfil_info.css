@@ -1,0 +1,210 @@
+@import url('colors.css');
+
+.perfil-container {
+    display: flex;
+    min-height: 100vh;
+    width: 80%; /* Puedes ajustar el ancho según tus necesidades */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+    border-radius: 10px;
+    background-color: var(--darkUnselectedText);
+    margin-bottom: 20px;
+}
+
+.menu-bar-container{
+    display: table-row;
+}
+
+.opciones-menu-container{
+    display: flex;
+    padding: 10%;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid black;
+    border-bottom: 1px  solid  black;
+}
+
+#active {
+    border-right: 4px solid var(--mainColor);
+}
+
+.configuracion-perfil-container {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: var(--darkUnselectedText);
+}
+
+.cabecera-perfil-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.cabecera-perfil-container h1 {
+    font-size: x-large;
+}
+
+.imagen-perfil {
+    width: 60px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.imagen-perfil img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.datos-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.datos-personales-container {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+
+.button-disconnect {
+    align-self: flex-end;
+    margin: 8px;
+}
+
+.button-disconnect button {
+    color: white;
+    cursor: pointer;
+    padding: 15px 25px;
+    font-size: medium;
+    font-weight: bolder;
+    white-space: nowrap;
+    border-style: hidden;
+    border-radius: 10px;
+    background-color: var(--mainColor);
+}
+
+.fila {
+    display: flex;
+    justify-content: flex-start;
+    margin: 4px
+}
+
+.datos span {
+    margin-right: 4px
+}
+
+.datos input {
+    margin-right: 8px;
+}
+
+.datos-contrasena-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.inputs-container {
+    width: 50%; 
+    margin-right: 16px;
+}
+
+.informacion-contrasena-container {
+    width: 50%;
+    border-left: 4px solid black;
+    padding: 20px;
+}
+
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 16px;    
+}
+
+
+.inputs-contrasena {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+.inputs-contrasena h1 {
+    font-size: x-large;
+    white-space: nowrap;
+}
+
+.inputs-contrasena input {
+    margin-top: 4px;
+    font-size: small;
+    width: 40%;
+}
+
+
+/* PAGO*/
+
+.datos-pago-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.tarjetas-contaiener {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.seccion-tarjeta button{
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: medium;
+    font-weight: bolder;
+    white-space: nowrap;
+    border-style: hidden;
+    border-radius: 10px;
+    background-color:var(--mainColor);
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.tarjeta-imagen-container {
+    width: 60%;
+    border-left: 4px  solid black;
+}
+
+.tarjeta-imagen-container img {
+    max-width: 100%; /* La imagen tendrá como máximo el ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente según el ancho */
+}
+
+
+/* HISTORIAL DE  COMPRAS */
+
+.datos-container-compras table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.datos-container-compras th,
+.datos-container-compras td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.datos-container-compras th {
+    background-color: #f0f0f0;
+}
