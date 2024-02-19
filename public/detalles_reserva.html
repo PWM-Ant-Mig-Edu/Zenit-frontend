@@ -24,42 +24,45 @@
 
 </head>
 <body>
-<div id="popups" style="display: none;">
-    <div id="register-component"></div>
-    <div id="login-component"></div>
-</div>
-
-<div id="header-component"></div>
-
-<div class="comprobar-main-container">
-    <div class="comprobar-text-container">
-        <h2 class="comprobar-container-title">Comprueba tu reserva</h2>
-        <p class="comprobar-container-text">¡Comprueba tu compra y obtén una copia ahora!</p>
-        <p class="comprobar-container-text">¿Recuerdas la fecha en la que hiciste tu compra en nuestro cine? Genial!
-            Estás a solo unos pasos de acceder a tus entradas y disfrutar de una experiencia cinematográfica única.</p>
-        <p class="comprobar-container-text">Una vez que hayas proporcionado la información requerida, podrás ver tus
-            compras en pantalla. Simplemente haz clic en cualquiera de ellas para acceder a los detalles de tu compra y
-            obtener una copia que podrás utilizar en el cine.</p>
-        <img src="../src/assets/img/cine-600w.png" alt="image" class="comprobar-container-image"/>
+    <div id="popups" style="display: none;">
+        <div id="register-component"></div>
+        <div id="login-component"></div>
     </div>
-    <div class="detalles-reserva-container">
-        <h2 class="detalles-reserva-title">Detalles de su reserva</h2>
-        <div class="detalles-reserva-content">
-            <p><strong>Película:</strong> xxxxxxxxxx</p>
-            <p><strong>Actores:</strong> xxxxxxx, xxxxxx, xxxxx</p>
-            <p><strong>Fecha:</strong> xx/xx/xx</p>
-            <p><strong>Hora:</strong> xxxx</p>
-            <p><strong>Cantidad:</strong> xx</p>
-            <p><strong>Butacas:</strong> xx, xx, xx, xx</p>
-            <p><strong>Sala:</strong> xxx</p>
-            <p><strong>Precio:</strong> xx$</p>
+
+    <div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
+
+        <div id="header-component"></div>
+
+        <div class="comprobar-main-container">
+            <div class="comprobar-text-container">
+                <h2 class="comprobar-container-title">Comprueba tu reserva</h2>
+                <p class="comprobar-container-text">¡Comprueba tu compra y obtén una copia ahora!</p>
+                <p class="comprobar-container-text">¿Recuerdas la fecha en la que hiciste tu compra en nuestro cine? Genial!
+                    Estás a solo unos pasos de acceder a tus entradas y disfrutar de una experiencia cinematográfica única.</p>
+                <p class="comprobar-container-text">Una vez que hayas proporcionado la información requerida, podrás ver tus
+                    compras en pantalla. Simplemente haz clic en cualquiera de ellas para acceder a los detalles de tu compra y
+                    obtener una copia que podrás utilizar en el cine.</p>
+                <img src="../src/assets/img/cine-600w.png" alt="image" class="comprobar-container-image"/>
+            </div>
+            <div class="detalles-reserva-container">
+                <h2 class="detalles-reserva-title">Detalles de su reserva</h2>
+                <div class="detalles-reserva-content">
+                    <p><strong>Película:</strong> xxxxxxxxxx</p>
+                    <p><strong>Actores:</strong> xxxxxxx, xxxxxx, xxxxx</p>
+                    <p><strong>Fecha:</strong> xx/xx/xx</p>
+                    <p><strong>Hora:</strong> xxxx</p>
+                    <p><strong>Cantidad:</strong> xx</p>
+                    <p><strong>Butacas:</strong> xx, xx, xx, xx</p>
+                    <p><strong>Sala:</strong> xxx</p>
+                    <p><strong>Precio:</strong> xx$</p>
+                </div>
+                <p class="detalles-reserva-footer">¡Gracias por elegir Zenit! Disfrute de la función.</p>
+            </div>
         </div>
-        <p class="detalles-reserva-footer">¡Gracias por elegir Zenit! Disfrute de la función.</p>
+
+
+        <div id="footer-component"></div>
     </div>
-</div>
-
-
-<div id="footer-component"></div>
 </body>
 </html>
 

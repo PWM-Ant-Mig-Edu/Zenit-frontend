@@ -5,24 +5,31 @@
 
 .comprobar-main-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     border: 1px solid #ccc;
     border-radius: 5px;
-    align-items: flex-start;
+    align-items: center;
     margin: 20px;
     padding: 20px;
+    flex: 1;
+    width: 40%;
+    align-self: center;
+    justify-content: center;
 }
 
 .comprobar-text-container {
-    flex: 1;
-    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .comprobar-form-container {
-    flex: 1;
+    display: flex;
     flex-direction: column;
     align-self: center;
-    max-width: 50%;
+    justify-content: center;
+    width: 100%;
 }
 
 
@@ -35,12 +42,14 @@
 }
 
 .comprobar-container-title {
-    font-size: 24px;
+    font-size: xxx-large;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .comprobar-container-text {
     margin-bottom: 10px;
+    font-size:  larger;
 }
 
 .comprobar-container-image {
@@ -48,19 +57,18 @@
     margin: 20px auto;
     max-width: 100%;
 }
-
-/* Estilos CSS para el formulario de comprobación */
 .comprobar-form-group {
     position: relative;
     margin-top: 20px;
-    width: 100%;
+    width: 80%;
+    align-self: center;
 }
 
 .comprobar-form-group .comprobar-input {
     font-size: 16px;
     padding: 10px 10px 10px 5px;
     display: block;
-    width: 80%;
+    width: 40%;
     border: none;
     border-bottom: 1px solid #0A2239;
     background: transparent;
@@ -143,7 +151,7 @@
     font-size: 16px;
     padding: 10px 10px 10px 5px;
     display: block;
-    width: 80%;
+    width: 40%;
     border: 0px; /* Eliminamos el borde */
     border-bottom: 1px solid #0A2239;
     background: transparent;

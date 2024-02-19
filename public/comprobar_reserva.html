@@ -9,7 +9,6 @@
     <meta name="author" content="Zenit">
     <title>Zenit</title>
     <link rel="stylesheet" href="../src/css/formalizer.css">
-    <link rel="stylesheet" href="../src/css/index.css">
     <link rel="stylesheet" href="../src/css/header.css">
     <link rel="stylesheet" href="../src/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -25,92 +24,94 @@
 
 </head>
 <body>
-<div id="popups" style="display: none;">
-    <div id="register-component"></div>
-    <div id="login-component"></div>
-</div>
-
-<div id="header-component"></div>
-
-<div class="comprobar-main-container">
-    <div class="comprobar-text-container">
-        <h2 class="comprobar-container-title">Comprueba tu reserva</h2>
-        <p class="comprobar-container-text">¡Comprueba tu compra y obtén una copia ahora!</p>
-        <p class="comprobar-container-text">¿Recuerdas la fecha en la que hiciste tu compra en nuestro cine? Genial!
-            Estás a solo unos pasos de acceder a tus entradas y disfrutar de una experiencia cinematográfica única.</p>
-        <p class="comprobar-container-text">Una vez que hayas proporcionado la información requerida, podrás ver tus
-            compras en pantalla. Simplemente haz clic en cualquiera de ellas para acceder a los detalles de tu compra y
-            obtener una copia que podrás utilizar en el cine.</p>
-        <img src="../src/assets/img/cine-600w.png" alt="image" class="comprobar-container-image"/>
+    <div id="popups" style="display: none;">
+        <div id="register-component"></div>
+        <div id="login-component"></div>
     </div>
-    <div class="comprobar-form-container">
-        <div class="comprobar-form-group">
-            <select required="" class="select">
-                <option value="" disabled selected hidden></option>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
-            <span class="comprobar-bar"></span>
-            <label class="comprobar-label">
-                <span class="label-char" style="--index: 0">C</span>
-                <span class="label-char" style="--index: 1">i</span>
-                <span class="label-char" style="--index: 2">n</span>
-                <span class="label-char" style="--index: 3">e</span>
-            </label>
+
+    <div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
+        <div id="header-component"></div>
+
+        <div class="comprobar-main-container">
+            <div class="comprobar-text-container">
+                <h2 class="comprobar-container-title">Comprueba tu reserva</h2>
+                <p class="comprobar-container-text">¡Comprueba tu compra y obtén una copia ahora!</p>
+                <p class="comprobar-container-text">¿Recuerdas la fecha en la que hiciste tu compra en nuestro cine? Genial!
+                    Estás a solo unos pasos de acceder a tus entradas y disfrutar de una experiencia cinematográfica única.</p>
+                <p class="comprobar-container-text">Una vez que hayas proporcionado la información requerida, podrás ver tus
+                    compras en pantalla. Simplemente haz clic en cualquiera de ellas para acceder a los detalles de tu compra y
+                    obtener una copia que podrás utilizar en el cine.</p>
+                <img src="../src/assets/img/cine-600w.png" alt="" style="height: auto; width: 40%; align-self: center;">
+            </div>
+            <div class="comprobar-form-container">
+                <div class="comprobar-form-group">
+                    <select required="" class="select">
+                        <option value="" disabled selected hidden></option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                    <span class="comprobar-bar"></span>
+                    <label class="comprobar-label">
+                        <span class="label-char" style="--index: 0">C</span>
+                        <span class="label-char" style="--index: 1">i</span>
+                        <span class="label-char" style="--index: 2">n</span>
+                        <span class="label-char" style="--index: 3">e</span>
+                    </label>
+                </div>
+                <div class="comprobar-form-group">
+                    <input required="" type="text" class="comprobar-input">
+                    <span class="comprobar-bar"></span>
+                    <label class="comprobar-label">
+                        <span class="label-char" style="--index: 0">C</span>
+                        <span class="label-char" style="--index: 1">o</span>
+                        <span class="label-char" style="--index: 2">r</span>
+                        <span class="label-char" style="--index: 3">r</span>
+                        <span class="label-char" style="--index: 4">e</span>
+                        <span class="label-char" style="--index: 5">o</span>
+                        <span class="label-char" style="--index: 6">&nbsp(</span>
+                        <span class="label-char" style="--index: 7">O</span>
+                        <span class="label-char" style="--index: 8">p</span>
+                        <span class="label-char" style="--index: 9">c</span>
+                        <span class="label-char" style="--index: 10">i</span>
+                        <span class="label-char" style="--index: 11">o</span>
+                        <span class="label-char" style="--index: 12">n</span>
+                        <span class="label-char" style="--index: 13">a</span>
+                        <span class="label-char" style="--index: 14">l</span>
+                        <span class="label-char" style="--index: 15">)</span>
+                    </label>
+                </div>
+                <div class="comprobar-form-group">
+                    <input required="" type="text" class="comprobar-input">
+                    <span class="comprobar-bar"></span>
+                    <label class="comprobar-label">
+                        <span class="label-char" style="--index: 0">T</span>
+                        <span class="label-char" style="--index: 1">i</span>
+                        <span class="label-char" style="--index: 2">c</span>
+                        <span class="label-char" style="--index: 3">k</span>
+                        <span class="label-char" style="--index: 4">e</span>
+                        <span class="label-char" style="--index: 5">t</span>
+                        <span class="label-char" style="--index: 6">&nbsp(</span>
+                        <span class="label-char" style="--index: 7">O</span>
+                        <span class="label-char" style="--index: 8">p</span>
+                        <span class="label-char" style="--index: 9">c</span>
+                        <span class="label-char" style="--index: 10">i</span>
+                        <span class="label-char" style="--index: 11">o</span>
+                        <span class="label-char" style="--index: 12">n</span>
+                        <span class="label-char" style="--index: 13">a</span>
+                        <span class="label-char" style="--index: 14">l</span>
+                        <span class="label-char" style="--index: 15">)</span>
+                    </label>
+                </div>
+                <button class="comprobar-button">
+                    <span>Enviar</span>
+                </button>
+            </div>
         </div>
-        <div class="comprobar-form-group">
-            <input required="" type="text" class="comprobar-input">
-            <span class="comprobar-bar"></span>
-            <label class="comprobar-label">
-                <span class="label-char" style="--index: 0">C</span>
-                <span class="label-char" style="--index: 1">o</span>
-                <span class="label-char" style="--index: 2">r</span>
-                <span class="label-char" style="--index: 3">r</span>
-                <span class="label-char" style="--index: 4">e</span>
-                <span class="label-char" style="--index: 5">o</span>
-                <span class="label-char" style="--index: 6">&nbsp(</span>
-                <span class="label-char" style="--index: 7">O</span>
-                <span class="label-char" style="--index: 8">p</span>
-                <span class="label-char" style="--index: 9">c</span>
-                <span class="label-char" style="--index: 10">i</span>
-                <span class="label-char" style="--index: 11">o</span>
-                <span class="label-char" style="--index: 12">n</span>
-                <span class="label-char" style="--index: 13">a</span>
-                <span class="label-char" style="--index: 14">l</span>
-                <span class="label-char" style="--index: 15">)</span>
-            </label>
-        </div>
-        <div class="comprobar-form-group">
-            <input required="" type="text" class="comprobar-input">
-            <span class="comprobar-bar"></span>
-            <label class="comprobar-label">
-                <span class="label-char" style="--index: 0">T</span>
-                <span class="label-char" style="--index: 1">i</span>
-                <span class="label-char" style="--index: 2">c</span>
-                <span class="label-char" style="--index: 3">k</span>
-                <span class="label-char" style="--index: 4">e</span>
-                <span class="label-char" style="--index: 5">t</span>
-                <span class="label-char" style="--index: 6">&nbsp(</span>
-                <span class="label-char" style="--index: 7">O</span>
-                <span class="label-char" style="--index: 8">p</span>
-                <span class="label-char" style="--index: 9">c</span>
-                <span class="label-char" style="--index: 10">i</span>
-                <span class="label-char" style="--index: 11">o</span>
-                <span class="label-char" style="--index: 12">n</span>
-                <span class="label-char" style="--index: 13">a</span>
-                <span class="label-char" style="--index: 14">l</span>
-                <span class="label-char" style="--index: 15">)</span>
-            </label>
-        </div>
-        <button class="comprobar-button">
-            <span>Enviar</span>
-        </button>
+
+
+        <div id="footer-component"></div>
     </div>
-</div>
-
-
-<div id="footer-component"></div>
 </body>
 </html>
 
