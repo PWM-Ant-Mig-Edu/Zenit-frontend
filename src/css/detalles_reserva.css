@@ -5,74 +5,60 @@
 
 .comprobar-main-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     border: 1px solid #ccc;
     border-radius: 5px;
-    align-items: flex-start;
+    align-items: center;
     margin: 20px;
     padding: 20px;
     flex: 1;
-}
-
-.comprobar-text-container {
-    flex: 1;
-    max-width: 50%;
+    width: 40%;
+    align-self: center;
+    justify-content: center;
 }
 
 .comprobar-form-container {
-    flex: 1;
+    display: flex;
     flex-direction: column;
     align-self: center;
-    max-width: 50%;
-}
-
-
-.comprobar-container {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 600px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    justify-content: center;
+    width: 100%;
 }
 
 .comprobar-container-title {
-    font-size: 24px;
+    font-size: xx-large;
     margin-bottom: 10px;
+    color: var(--mainColor);
 }
 
-.comprobar-container-text {
-    margin-bottom: 10px;
+.comprobar-text-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .comprobar-container-image {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
+    height: auto; 
+    width: 40%; 
+    align-self: center;
 }
 
 .detalles-reserva-container {
     align-self: center;
-
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-left: 100px;
-    padding: 20px;
-    background-color: var(--backgroundColor); /* Fondo claro para el contenedor */
+    width: 100%;
 }
 
 .detalles-reserva-title {
-    font-size: 24px;
+    font-size: xx-large;
     margin-bottom: 10px;
-    color: var(--mainTextBlack);
+    color: var(--mainColor);
 }
 
 .detalles-reserva-content p {
     margin-bottom: 10px;
     line-height: 1.5;
-}
-
-.detalles-reserva-content p strong {
-    color: var(--mainTextBlack);
+    font-size: large;
 }
 
 .detalles-reserva-footer {
@@ -80,18 +66,22 @@
     font-style: italic;
     font-weight: bold;
     text-align: center;
+    color: var(--mainColor);
 }
 
 
 @media (max-width: 768px) {
     .comprobar-main-container {
-        flex-direction: column;
+        width: 80%;
+    }
+    .comprobar-text-container img{
+        display: none;
     }
 
-    .comprobar-text-container,
-    .comprobar-form-container {
-        max-width: 100%;
+    .detalles-reserva-container{
+        margin-top: 20px;
     }
+
 }
 
 
