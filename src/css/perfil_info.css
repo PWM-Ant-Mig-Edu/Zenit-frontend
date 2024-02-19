@@ -2,11 +2,12 @@
 
 .perfil-container {
     display: flex;
-    height: 100%;
+    min-height: 80vh;
     width: 80%; /* Puedes ajustar el ancho según tus necesidades */
     margin: 0 auto; /* Centra horizontalmente el contenedor */
     border-radius: 10px;
     background-color: var(--darkUnselectedText);
+    margin-bottom: 20px;
 }
 
 .menu-bar-container{
