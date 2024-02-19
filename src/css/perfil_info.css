@@ -189,3 +189,22 @@
     max-width: 100%; /* La imagen tendrá como máximo el ancho del contenedor */
     height: auto; /* La altura se ajustará automáticamente según el ancho */
 }
+
+
+/* HISTORIAL DE  COMPRAS */
+
+.datos-container-compras table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.datos-container-compras th,
+.datos-container-compras td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.datos-container-compras th {
+    background-color: #f0f0f0;
+}
