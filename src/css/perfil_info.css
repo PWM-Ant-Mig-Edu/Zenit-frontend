@@ -1,0 +1,103 @@
+@import url('colors.css');
+
+.perfil-container {
+    display: flex;
+    height: 100%;
+    width: 80%; /* Puedes ajustar el ancho según tus necesidades */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+    border-radius: 10px;
+    background-color: var(--darkUnselectedText);
+}
+
+.menu-bar-container{
+    display: table-row;
+}
+
+.opciones-menu-container{
+    display: flex;
+    padding: 10%;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid black;
+    border-bottom: 1px  solid  black;
+}
+
+#active {
+    border-right: 4px solid var(--mainColor);
+}
+
+.configuracion-perfil-container {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: var(--darkUnselectedText);
+}
+
+.cabecera-perfil-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.cabecera-perfil-container h1 {
+    font-size: x-large;
+}
+
+.imagen-perfil {
+    width: 60px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.imagen-perfil img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.datos-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.datos-personales-container {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+}
+
+.button-disconnect {
+    align-self: flex-end;
+    margin: 8px;
+}
+
+.button-disconnect button {
+    color: white;
+    cursor: pointer;
+    padding: 15px 25px;
+    font-size: medium;
+    font-weight: bolder;
+    white-space: nowrap;
+    border-style: hidden;
+    border-radius: 10px;
+    background-color: var(--mainColor);
+}
+
+.fila {
+    display: flex;
+    justify-content: flex-start;
+    margin: 4px
+}
+
+.datos span {
+    margin-right: 4px
+}
+
+.datos input {
+    margin-right: 8px;
+}
