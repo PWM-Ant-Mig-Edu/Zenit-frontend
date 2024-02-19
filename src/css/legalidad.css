@@ -1,11 +1,11 @@
 .container-politica {
+    flex: 1;
     margin: 0 auto;
     text-align: justify;
     padding: 20px;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     width: 50%;
-    height: auto;
 }
 
 .container-politica h1 {
