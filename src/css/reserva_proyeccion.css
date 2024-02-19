@@ -1,0 +1,132 @@
+
+/* Estilo para el fondo borroso solo al contenedor de popups */
+.blurred-background{
+    filter: blur(5px); /* Ajusta el valor de blur según tus preferencias */
+    transition: filter 0.3s ease; /* Agrega una transición suave */
+}
+
+#popups {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#reservar-component {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: default;
+    z-index: 9999; /* Asegura que esté encima de otros elementos */
+    /* Agrega cualquier estilo adicional que desees para el componente de registro */
+}
+.proyeccion-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 30px;
+    justify-content: space-between;
+    color: black;
+    align-items: center;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+.proyeccion-container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    flex: 0 0 auto;
+    align-items: center;
+    font-size: xx-large;
+    border-bottom: 2px solid black;
+    padding: 20px 30px;
+}
+.proyeccion-container-header button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.proyeccion-container-header h1 {
+    margin-left: 8px;
+}
+.proyeccion-img {
+    width: 30%;
+    object-fit: cover;
+    margin-left: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.proyeccion-container-body {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.proyeccion-horas-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    margin-right: 24px;
+    align-items: center;
+    margin-bottom: 16px;    
+}
+.proyeccion-horas-container h1 {
+    padding: 20px;
+    align-self: center;
+    font-size: x-large;
+}
+
+.proyeccion-horas-container h2 {
+    padding: 20px;
+    align-self: center;
+    text-decoration: underline;
+}
+.grid-container-proyeccion {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: 5vh;
+    max-height: 15vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.proyeccion-dia-container {
+    display: flex;
+    flex-direction: column;
+    background-size: 100% 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    text-align: center;
+    background-color: #E7E5DF;
+}
+.botones-proyeccion {
+    margin-top: 16px;
+}
+
+.botones-proyeccion button{
+    background-color:#E7E5DF;
+    border: 0px solid white;
+}
+
