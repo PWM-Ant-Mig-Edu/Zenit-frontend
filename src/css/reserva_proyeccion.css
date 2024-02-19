@@ -5,6 +5,11 @@
     transition: filter 0.3s ease; /* Agrega una transición suave */
 }
 
+.selected {
+    background-color: darkgrey; /* Puedes ajustar el color oscuro según tus preferencias */
+    color: white; /* Ajusta el color del texto para que sea legible */
+}
+
 #popups {
     position: fixed;
     top: 0;
@@ -24,16 +29,25 @@
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: default;
-    z-index: 9999; /* Asegura que esté encima de otros elementos */
-    /* Agrega cualquier estilo adicional que desees para el componente de registro */
+    z-index: 9999;
 }
+#reservar-component2{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: default;
+    z-index: 9999;
+}
+
 .proyeccion-container {
-    background-color: white;
+    background-color: var(--mainColorDarker);
     display: flex;
     flex-direction: column;
     border-radius: 30px;
     justify-content: space-between;
-    color: var(--mainColor);
+    color: white;
     align-items: center;
     font-weight: 600;
     margin-top: 16px;
@@ -45,31 +59,31 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: auto;
-    flex: 0 0 auto;
+    width: 100%;
     align-items: center;
     font-size: xx-large;
-    border-bottom: 2px solid var(--mainColor);
-    padding: 20px 30px;
+    border-bottom: 2px solid white;
+    padding: 20px 0px;
 }
 .proyeccion-container-header button {
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--mainColor);
-    margin-left: 20px;
+    color: white;
+    margin-right: 20px;
 }
 
 .proyeccion-container-header h1 {
-    margin-left: 8px;
+    margin-left: 20px;
+    
 }
 .proyeccion-img {
     width: 30%;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
     object-fit: cover;
-    margin-left: 24px;
-    margin-top: 16px;
-    margin-bottom: 16px;
 }
 
 .proyeccion-container-body {
@@ -84,11 +98,11 @@
 .proyeccion-horas-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
     height: 50%;
-    margin-right: 24px;
+    flex: 1;
     align-items: center;
-    margin-bottom: 16px;    
+    margin-bottom: 30px;
+    margin-right: 30px; 
 }
 .proyeccion-horas-container h1 {
     padding: 20px;
@@ -111,6 +125,26 @@
     overflow-x: hidden;
 }
 
+.grid-container-dias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: 5vh;
+    max-height: 15vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.grid-container-horas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: 5vh;
+    max-height: 15vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .proyeccion-dia-container {
     display: flex;
     flex-direction: column;
@@ -119,17 +153,39 @@
     justify-content: space-around;
     padding: 10px;
     text-align: center;
-    background-color: #E7E5DF;
+    background-color: var(--mainColor);
     cursor: pointer;
-    color: #000;
+    color: white;
+    border: 1px solid white;
 }
+
+.proyeccion-hora-container {
+    display: flex;
+    flex-direction: column;
+    background-size: 100% 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--mainColor);
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+}
+
 .botones-proyeccion {
+    display: flex;
     margin-top: 16px;
+    gap: 50px;
 }
 
 .botones-proyeccion button{
-    background-color:#E7E5DF;
+    background-color:var(--mainColor);
     border: 0px solid white;
     cursor: pointer;
+    color: white;
+    padding: 10px;
+    font-weight: bolder;
+    border: 1px solid white;
 }
 
