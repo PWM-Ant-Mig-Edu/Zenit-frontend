@@ -28,23 +28,23 @@ z-index: 9999; /* Asegura que esté encima de otros elementos */
 }
 
 .form-container-login {
-width: 350px;
 height: 500px;
-background-color: #fff;
+background-color: var(--mainColorDarker);
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 border-radius: 10px;
 box-sizing: border-box;
 padding: 20px 30px;
+position: relative;
 }
 
 .title-login {
 text-align: center;
 font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-margin: 10px 0 30px 0;
+margin: 30px 0 30px 0;
 font-size: 28px;
 font-weight: 800;
-color: #0b2741;
+color: white;
 }
 
 .form-login {
@@ -57,20 +57,19 @@ margin-bottom: 15px;
 
 .input-login {
 border-radius: 20px;
-border: 1px solid #0b2741;
+border: 1px solid white;
 outline: 0 !important;
 box-sizing: border-box;
 padding: 12px 15px;
-color: #0b2741;
+color: white;
 }
 
 .page-link-login {
-text-decoration: underline;
 margin: 0;
 text-align: end;
-color: #747474;
-text-decoration-color: #747474;
+color: white;
 }
+
 
 .page-link-label-login {
 cursor: pointer;
@@ -78,7 +77,7 @@ font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 font-size: 9px;
 font-weight: 700;
-color: #0b2741;
+color: white;
 }
 
 .page-link-label-login:hover {
@@ -92,8 +91,8 @@ font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
 border-radius: 20px;
 border: 0 !important;
 outline: 0 !important;
-background: #0b2741;
-color: white;
+background: white;
+color: black;
 cursor: pointer;
 box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -105,7 +104,7 @@ box-shadow: none;
 .sign-up-label-login {
 margin: 0;
 font-size: 10px;
-color: #747474;
+color: white;
 font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -114,8 +113,8 @@ font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
 margin-left: 1px;
 font-size: 11px;
 text-decoration: underline;
-text-decoration-color: #0b2741;
-color: #0b2741;
+text-decoration-color: white;
+color: white;
 cursor: pointer;
 font-weight: 800;
 font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -151,11 +150,10 @@ gap: 5px;
 .apple-login-button-login {
 background-color: #000;
 color: #fff;
-border: 2px solid #000;
 }
 
 .google-login-button-login {
-border: 2px solid #747474;
+background-color: white;
 }
 
 .apple-icon-login,
@@ -172,5 +170,5 @@ background-color: transparent;
 border: none;
 cursor: pointer;
 font-size: 16px;
-color: #333;
+color: white;
 }
