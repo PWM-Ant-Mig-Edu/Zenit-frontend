@@ -53,6 +53,52 @@ a, a:visited, a:hover, a:active {
     margin-left: 50px;
 }
 
+.NavMenu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.NavLink {
+    text-decoration: none;
+    color: var(--mainColor);
+    padding: 10px;
+    display: block;
+}
+
+.NavItem {
+    position: relative;
+    display: inline-block;
+}
+
+
+.DropdownMenu {
+    display: none;
+    position: absolute;
+    background-color: #fff; 
+    border: 1px solid #ccc; 
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.DropdownMenu li {
+    display: block;
+    padding: 8px 12px; 
+    color: var(--mainColor);
+    transition: background-color 0.3s; 
+}
+
+
+.DropdownMenu li:hover {
+    background-color: #ebe1e1; 
+}
+
+/* Mostrar el menú desplegable cuando se pasa el cursor sobre el elemento principal */
+.NavItem:hover .DropdownMenu {
+    display: block;
+}
+
+
 .Logo{
     width: 160px;
     margin: 20px 50px 20px 30px;
@@ -110,6 +156,7 @@ a, a:visited, a:hover, a:active {
     height: 100%;
 
 }
+
 
 .Cines{
     margin-bottom: 30px;
