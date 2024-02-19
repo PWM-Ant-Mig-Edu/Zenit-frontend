@@ -1,6 +1,6 @@
 @import url('colors.css');
 
-.title-container .title {
+.title-container .title-resena {
     text-align: center;
     width: 100%;
     font-weight: 800;
@@ -141,11 +141,6 @@
     margin-bottom: 16px;
 }
 
-@media (max-width: 991px) {
-
-
-}
-
 .post {
     border: 1px solid #E7E5DF;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -196,3 +191,24 @@
 }
 
 
+@media (max-width: 767px) {
+    .peliculaPanel {
+        flex-direction: column;
+    }
+    .peliculaPanel img {
+        width: 40%;
+        align-self: center;
+        margin-bottom: 16px;
+    }
+    .title-container .title-resena {
+        width: 85%;
+        font-size: x-large;
+    }
+}
+
+@media (max-width: 991px) {
+    .title-container .title-resena {
+        width: 85%;
+        font-size: xx-large;
+    }
+}
