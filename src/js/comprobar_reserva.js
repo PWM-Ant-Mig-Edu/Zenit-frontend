@@ -10,3 +10,26 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    var selectElement = document.querySelector('.select');
+    var cineSelect = document.getElementById('comprobar-ticket-cine');
+    var correoInput = document.getElementById('comprobar-ticket-correo');
+    var numeroInput = document.getElementById('comprobar-ticket-numero');
+    var enviarButton = document.querySelector('.comprobar-button');
+
+    enviarButton.addEventListener('click', function (event) {
+        event.preventDefault(); 
+
+        if (cineSelect.selectedIndex === 0) {
+            alert('Debes seleccionar el cine.');
+            return;
+        }
+
+        if ((selectElement.selectedIndex > 0 && correoInput.value.trim() !== '') || numeroInput.value.trim() !== '') {
+        } else {
+            alert('Debes seleccionar el tipo de ticket y llenar al menos uno de los campos (correo o número).');
+        }
+    });
+});
+
