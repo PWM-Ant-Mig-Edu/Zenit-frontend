@@ -33,13 +33,13 @@
 }
 
 
-.comprobar-container-title {
+.comprobar-text-container h2 {
     font-size: xx-large;
     margin-bottom: 10px;
     color: var(--mainColor);
 }
 
-.comprobar-container-text {
+.comprobar-text-container p {
     margin-bottom: 10px;
     font-size:  large;
 }
