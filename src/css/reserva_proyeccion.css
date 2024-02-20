@@ -86,7 +86,7 @@
     flex: 1;
     align-items: center;
     margin-bottom: 30px;
-    margin-right: 30px; 
+    margin-right: 30px;
 }
 .proyeccion-horas-container h1 {
     padding: 20px;
@@ -104,7 +104,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     grid-auto-rows: 5vh;
-    max-height: 15vh;
+    max-height: 20vh;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -241,6 +241,7 @@
 
     .grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
         grid-template-columns: repeat(2, 1fr);
+        max-height: 15vh;
     }
 
     .botones-proyeccion button{
