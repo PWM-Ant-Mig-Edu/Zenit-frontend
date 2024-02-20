@@ -67,7 +67,7 @@
     color: white;
 }
 
-.button-link {
+.overlay .button-link {
     margin: 5px;
     padding: 10px 20px;
     background-color: transparent;
@@ -78,7 +78,7 @@
     transition: background-color 0.3s ease;
 }
 
-.button-link:hover {
+.overlay .button-link:hover {
     background-color: var(--mainColor);
     color: white;
 }
