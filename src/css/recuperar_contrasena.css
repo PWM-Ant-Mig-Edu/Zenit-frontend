@@ -51,7 +51,7 @@ padding: 20px 30px;
 .title-recuperar-contrasena {
 text-align: center;
 font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-margin: 10px 0 30px 0;
+margin: 30px 0 30px 0;
 font-size: 28px;
 font-weight: 800;
 color: white;
@@ -82,10 +82,7 @@ cursor: pointer;
 
 .form-btn-recuperar-contrasena:active {
 box-shadow: none;
-<<<<<<< HEAD
 }
-
-
 
 .buttons-container {
 width: 100%;
@@ -97,6 +94,3 @@ gap: 15px;
 }
 
 
-=======
-}
->>>>>>> c3bbb54896c1251164228b804b713bb26f487dcc
