@@ -82,10 +82,7 @@ cursor: pointer;
 
 .form-btn-recuperar-contrasena:active {
 box-shadow: none;
-<<<<<<< HEAD
 }
-
-
 
 .buttons-container {
 width: 100%;
@@ -97,6 +94,3 @@ gap: 15px;
 }
 
 
-=======
-}
->>>>>>> c3bbb54896c1251164228b804b713bb26f487dcc
