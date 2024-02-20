@@ -182,6 +182,49 @@
 }
 
 
+.detalles-reserva-container {
+    align-self: center;
+    width: 100%;
+}
+
+.detalles-reserva-container h2 {
+    font-size: xx-large;
+    margin-bottom: 10px;
+    color: var(--mainColor);
+}
+
+.detalles-reserva-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: large;
+}
+
+.detalles-reserva-footer {
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: var(--mainColor);
+}
+
+
+@media (max-width: 768px) {
+    .comprobar-main-container {
+        width: 80%;
+    }
+    .comprobar-text-container img{
+        display: none;
+    }
+
+    .detalles-reserva-container{
+        margin-top: 20px;
+    }
+
+}
+
+
+
+
 
 @media (max-width: 768px) {
     .comprobar-main-container {
