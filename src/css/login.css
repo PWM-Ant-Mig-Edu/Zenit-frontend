@@ -113,12 +113,15 @@ font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
 margin-left: 1px;
 font-size: 11px;
 text-decoration: underline;
-text-decoration-color: white;
 color: white;
 cursor: pointer;
 font-weight: 800;
 font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.sign-up-link-login:hover {
+color: #000;
 }
 
 .buttons-container-login {

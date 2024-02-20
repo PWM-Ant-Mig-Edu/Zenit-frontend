@@ -1,3 +1,5 @@
+@import url('colors.css');
+
 .blurred-background {
 filter: blur(5px); /* Ajusta el valor de blur según tus preferencias */
 transition: filter 0.3s ease; /* Agrega una transición suave */
@@ -15,6 +17,17 @@ align-items: center;
 z-index: 999;
 }
 
+.close-recuperar-button {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    }
+
 #recuperar-contrasena-component {
 display: none;
 position: fixed;
@@ -27,9 +40,8 @@ z-index: 99999; /* Asegura que esté encima de otros elementos */
 }
 
 .form-container-recuperar-contrasena {
-width: 350px;
 height: auto;
-background-color: #fff;
+background-color: var(--mainColorDark);
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 border-radius: 10px;
 box-sizing: border-box;
@@ -42,7 +54,7 @@ font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans
 margin: 10px 0 30px 0;
 font-size: 28px;
 font-weight: 800;
-color: #0b2741;
+color: white;
 }
 
 .form-recuperar-contrasena {
@@ -54,48 +66,23 @@ margin-bottom: 15px;
 }
 
 .input-recuperar-contrasena {
-border-radius: 20px;
-border: 1px solid #0b2741;
-outline: 0 !important;
-box-sizing: border-box;
 padding: 12px 15px;
-color: #0b2741;
-}
-
-.page-link {
-text-decoration: underline;
-margin: 0;
-text-align: end;
-color: #747474;
-text-decoration-color: #747474;
-}
-
-.page-link-label {
-cursor: pointer;
-font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-font-size: 9px;
-font-weight: 700;
-color: #0b2741;
-}
-
-.page-link-label:hover {
-color: #000;
+color: white;
 }
 
 .form-btn-recuperar-contrasena {
 padding: 10px 15px;
 font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-border-radius: 20px;
 border: 0 !important;
 outline: 0 !important;
-background: #0b2741;
+background: var(--mainColor);
 color: white;
 cursor: pointer;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .form-btn-recuperar-contrasena:active {
 box-shadow: none;
+<<<<<<< HEAD
 }
 
 
@@ -110,3 +97,6 @@ gap: 15px;
 }
 
 
+=======
+}
+>>>>>>> c3bbb54896c1251164228b804b713bb26f487dcc
