@@ -2,12 +2,15 @@
 
 .perfil-container {
     display: flex;
-    min-height: 100vh;
     width: 80%; /* Puedes ajustar el ancho según tus necesidades */
-    margin: 0 auto; /* Centra horizontalmente el contenedor */
     border-radius: 10px;
-    background-color: var(--darkUnselectedText);
-    margin-bottom: 20px;
+    background-color: white;
+    margin: 30px auto;
+    padding: 0px 10px 10px 0px;
+    flex: 1;
+    color: black;
+    /* border gris flojo difuminado */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .menu-bar-container{
@@ -18,33 +21,39 @@
     display: flex;
     padding: 10%;
     align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     justify-content: center;
-    border-right: 1px solid black;
-    border-bottom: 1px  solid  black;
+    border-right: 1px solid rgb(181, 181, 181);
+    border-bottom: 1px  solid rgb(181, 181, 181);
+    font-weight: bolder;
+    color: grey
 }
 
 #active {
     border-right: 4px solid var(--mainColor);
+    color: var(--mainColor);
 }
 
 .configuracion-perfil-container {
     display: flex;
-    flex-direction: column; /* Organiza los elementos verticalmente */
+    flex-direction: column;
     width: 80%;
     margin: 0 auto;
     border-radius: 10px;
-    background-color: var(--darkUnselectedText);
+    margin: 20px 0px 0px 40px;
 }
 
 .cabecera-perfil-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 8px;
+    margin-bottom: 20px;
 }
 
 .cabecera-perfil-container h1 {
     font-size: x-large;
+    color: var(--grayProfile);
 }
 
 .imagen-perfil {
@@ -75,7 +84,8 @@
 
 .button-disconnect {
     align-self: flex-end;
-    margin: 8px;
+    margin-bottom: 8px;
+    margin-top: auto;
 }
 
 .button-disconnect button {
