@@ -1,0 +1,76 @@
+@import url('colors.css');
+
+.admin-title-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.admin-title-container h1 {
+    font-size: xxx-large;
+    align-self: center;
+}
+
+.opciones-admin-container {
+    margin-top: 16px;
+    background-color: var(--mainColorDarker);
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 16px;
+    padding: 20px;
+    align-self: center;
+    font-weight: 800;
+    width: 90%;
+}
+.dashboard-admin-container  {
+    display: flex;
+    justify-content: center;
+    display: 1;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.dashboard-admin-container h2 {
+    align-self: center;
+    font-size: xx-large;
+    margin-bottom: 8px;
+}
+
+
+.estadisticas-admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+}
+
+.estadistica {
+    background-color: var(--mainColorDarker);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    align-self: flex-start;
+    width: 40%;
+}
+
+
+@media (max-width: 500px) {
+    .admin-title-container h1 {
+        font-size: x-large;
+    }
+}
+@media (max-width: 800px) {
+    .admin-title-container h1 {
+        font-size: x-large;
+    }
+    .opciones-admin-container {
+        flex-direction: column;
+    }
+    .opciones-admin-container a {
+        margin-bottom: 4px;
+        margin-top: 4px;
+    }
+}
