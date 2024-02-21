@@ -85,20 +85,19 @@
     display: flex;
 }
 
-.inputs-anadir {
+.inputs-anadir-pelicula {
     margin: auto;
     width: 50%;
     color: white;
+}
+.input-anadir select, .input-anadir input{
+    width: 50%;
 }
 
 .input-anadir {
     display: flex;
     justify-content:  space-between;
     margin-bottom: 8px;
-}
-
-.input-anadir select{
-    width: 47%;
 }
 
 .datos-pelicula-container img {
@@ -119,12 +118,12 @@
     height: 5vh;
 }
 
-.terminar-button {
+.botones-admin {
     align-self: flex-end; 
     margin:  16px 30px 16px 0;
 }
 
-.terminar-button button{
+.botones-admin button{
     padding: 15px 25px;
     white-space: nowrap;
     border-style: hidden;
@@ -132,6 +131,24 @@
     color: white;
     font-weight: bolder;
     background-color: var(--mainColorDarker);
+}
+
+.datos-sesion-container {
+    color: white;
+}
+
+.datos-sesion-container select {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.datos-sesion-container h2 {
+    margin-bottom: 4px;
+}
+
+.botones-admin-sesion {
+    display: flex;
+    align-self: flex-end;
 }
 
 @media (max-width: 500px) {
