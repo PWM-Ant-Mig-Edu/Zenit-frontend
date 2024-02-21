@@ -85,7 +85,7 @@
     display: flex;
 }
 
-.inputs-anadir-pelicula {
+.inputs-anadir {
     margin: auto;
     width: 50%;
     color: white;
@@ -95,6 +95,10 @@
     display: flex;
     justify-content:  space-between;
     margin-bottom: 8px;
+}
+
+.input-anadir select{
+    width: 47%;
 }
 
 .datos-pelicula-container img {
