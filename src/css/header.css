@@ -138,10 +138,11 @@ a, a:visited, a:hover, a:active {
     display: none;
     color: var(--mainTextWhite);;
     font-weight: bolder;
-    background-color: var(--mainColor);
+    background-color: var(--mainColorDarker);
     padding: 25px;
     margin-left: auto;
     margin-right: auto;
+
     margin-bottom: 25px;
 
 }
@@ -154,9 +155,7 @@ a, a:visited, a:hover, a:active {
     z-index: 1;
     justify-content: center;
     height: 100%;
-
 }
-
 
 .Cines{
     margin-bottom: 30px;
@@ -166,7 +165,7 @@ a, a:visited, a:hover, a:active {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-
+    font-size: xx-large;
 }
 
 .Cines ul li{
@@ -174,8 +173,9 @@ a, a:visited, a:hover, a:active {
 }
 
 .Nav ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
     gap: 10px;
     margin-bottom: 20px;
 
@@ -292,7 +292,6 @@ a, a:visited, a:hover, a:active {
     }
 
     .Nav ul{
-        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
 
