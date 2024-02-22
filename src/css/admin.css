@@ -61,7 +61,7 @@
     width: 40%;
 }
 
-.peliculas-admin-container  {
+.gestion-admin-container  {
     display: flex;
     flex: 1;
     align-items: center;
@@ -74,18 +74,18 @@
 }
 
 
-.anadir-pelicula-container {
+.anadir-container {
     background-color: var(--mainColorDarker);
     border-radius: 8px;   
     padding: 20px;
     margin-top: 16px;
     width: 40%;
 }
-.datos-pelicula-container  {
+.datos-container  {
     display: flex;
 }
 
-.inputs-anadir-pelicula {
+.inputs-anadir {
     margin: auto;
     width: 50%;
     color: white;
@@ -100,7 +100,7 @@
     margin-bottom: 8px;
 }
 
-.datos-pelicula-container img {
+.datos-container img {
     width: 30%;
 }
 
