@@ -19,7 +19,7 @@
 
 .opciones-menu-container{
     display: flex;
-    padding: 10%;
+    padding: 10px 10px;
     align-items: center;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -218,4 +218,68 @@
 
 .datos-container-compras th {
     background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 1155px) {
+    .configuracion-perfil-container {
+        min-height: 50vh;
+    }
+}   
+
+
+@media screen and (max-width: 800px) {
+    .fila {
+        flex-direction: column;
+    }
+    
+    .datos {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .datos input {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 551px) {
+    .perfil-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .cabecera-perfil-container {
+        margin: 0px;
+    }
+    .opciones-menu-container {
+        border-radius: 0%;
+        border-right: 0px;
+    }
+    #active {
+        color: var(--mainColor);
+        border-right: 0px;
+    }
+    .fila {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .configuracion-perfil-container {
+        margin-left: 8px;
+    }
+    .datos {
+        display: flex;
+        flex-direction: column;
+    }
+    .button-disconnect button {
+        font-size: medium;
+    }
+    .cabecera-perfil-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .cabecera-perfil-container h1 {
+        font-size: large ;
+    }
 }
