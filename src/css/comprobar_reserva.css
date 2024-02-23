@@ -1,8 +1,6 @@
 /* Estilos CSS para el formulario de comprobación de reserva */
 @import url('colors.css');
 
-
-
 .comprobar-main-container {
     display: flex;
     flex-direction: column;
@@ -33,13 +31,13 @@
 }
 
 
-.comprobar-container-title {
+.comprobar-text-container h2 {
     font-size: xx-large;
     margin-bottom: 10px;
     color: var(--mainColor);
 }
 
-.comprobar-container-text {
+.comprobar-text-container p {
     margin-bottom: 10px;
     font-size:  large;
 }
@@ -106,34 +104,6 @@
     color: #0A2239;
 }
 
-
-.comprobar-form-group .comprobar-bar:before, .comprobar-form-group .comprobar-bar:after {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 1px;
-    position: absolute;
-    background: #0A2239;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-.comprobar-form-group .comprobar-bar:before {
-    left: 0%;
-}
-
-.comprobar-form-group .comprobar-bar:after {
-    right: 17%;
-}
-
-.comprobar-form-group .comprobar-input:focus ~ .comprobar-bar:before,
-.comprobar-form-group .comprobar-input:focus ~ .comprobar-bar:after {
-    width: 50%;
-}
-
-
-
 /* Ocultar la opción "Select an option" */
 .comprobar-form-group .select option[disabled] {
     display: none;
@@ -180,6 +150,50 @@
 .comprobar-button span {
     vertical-align: middle;
 }
+
+
+.detalles-reserva-container {
+    align-self: center;
+    width: 100%;
+}
+
+.detalles-reserva-container h2 {
+    font-size: xx-large;
+    margin-bottom: 10px;
+    color: var(--mainColor);
+}
+
+.detalles-reserva-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: large;
+}
+
+.detalles-reserva-footer {
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: var(--mainColor);
+}
+
+
+
+@media (max-width: 768px) {
+    .comprobar-main-container {
+        width: 80%;
+    }
+    .comprobar-text-container img{
+        display: none;
+    }
+
+    .detalles-reserva-container{
+        margin-top: 20px;
+    }
+
+}
+
+
 
 
 

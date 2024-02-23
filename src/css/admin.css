@@ -1,0 +1,170 @@
+@import url('colors.css');
+
+.admin-title-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.admin-title-container h1 {
+    font-size: xxx-large;
+    align-self: center;
+}
+
+.opciones-admin-container {
+    margin-top: 16px;
+    background-color: var(--mainColorDarker);
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 16px;
+    padding: 20px;
+    align-self: center;
+    font-weight: 800;
+    width: 90%;
+}
+.dashboard-admin-container  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: 1;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.dashboard-admin-container h2 {
+    align-self: center;
+    font-size: xx-large;
+    margin-bottom: 8px;
+}
+
+.nosecomollamarle {
+    display: flex;
+    flex-direction: row;
+}
+.estadisticas-admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
+}
+
+.estadistica {
+    background-color: var(--mainColorDarker);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    align-self: flex-start;
+    width: 40%;
+}
+
+.gestion-admin-container  {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    align-items: flex-start;
+    border-radius: 16px;
+    margin-bottom: 16px;
+
+}
+
+
+.anadir-container {
+    background-color: var(--mainColorDarker);
+    border-radius: 8px;   
+    padding: 20px;
+    margin-top: 16px;
+    width: 40%;
+}
+.datos-container  {
+    display: flex;
+}
+
+.inputs-anadir {
+    margin: auto;
+    width: 50%;
+    color: white;
+}
+.input-anadir select, .input-anadir input{
+    width: 50%;
+}
+
+.input-anadir {
+    display: flex;
+    justify-content:  space-between;
+    margin-bottom: 8px;
+}
+
+.datos-container img {
+    width: 30%;
+}
+
+.datos-largos-container {
+    margin-top: 8px;
+    color: white;
+}
+
+.datos-largos-container h2 {
+    font-size: large;
+}
+.datos-largos-container input{  
+    margin-top: 4px;
+    width: 100%;
+    height: 5vh;
+}
+
+.botones-admin {
+    align-self: flex-end; 
+    margin:  16px 30px 16px 0;
+}
+
+.botones-admin button{
+    padding: 15px 25px;
+    white-space: nowrap;
+    border-style: hidden;
+    border-radius: 10px;
+    color: white;
+    font-weight: bolder;
+    background-color: var(--mainColorDarker);
+}
+
+.datos-sesion-container {
+    color: white;
+}
+
+.datos-sesion-container select {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.datos-sesion-container h2 {
+    margin-bottom: 4px;
+}
+
+.botones-admin-sesion {
+    display: flex;
+    align-self: flex-end;
+}
+
+@media (max-width: 500px) {
+    .admin-title-container h1 {
+        font-size: x-large;
+    }
+}
+@media (max-width: 800px) {
+    .admin-title-container h1 {
+        font-size: x-large;
+    }
+    .opciones-admin-container {
+        flex-direction: column;
+    }
+    .opciones-admin-container a {
+        margin-bottom: 4px;
+        margin-top: 4px;
+    }
+}

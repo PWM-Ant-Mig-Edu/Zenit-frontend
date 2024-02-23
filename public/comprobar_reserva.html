@@ -9,13 +9,8 @@
     <meta name="author" content="Zenit">
     <title>Zenit</title>
     <link rel="stylesheet" href="../src/css/formalizer.css">
-    <link rel="stylesheet" href="../src/css/header.css">
-    <link rel="stylesheet" href="../src/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../src/css/comprobar_reserva.css">
-    <link rel="stylesheet" href="../src/css/register.css">
-    <link rel="stylesheet" href="../src/css/login.css">
-    <link rel="stylesheet" href="../src/css/reserva_proyeccion.css">
     <script src="../src/js/header.js"></script>
     <script src="../src/js/footer.js"></script>
     <script src="../src/js/register.js"></script>
@@ -36,18 +31,22 @@
 
         <div class="comprobar-main-container">
             <div class="comprobar-text-container">
-                <h2 class="comprobar-container-title">Comprueba tu reserva</h2>
-                <p class="comprobar-container-text">¡Comprueba tu compra y obtén una copia ahora!</p>
-                <p class="comprobar-container-text">¿Recuerdas la fecha en la que hiciste tu compra en nuestro cine? Genial!
-                    Estás a solo unos pasos de acceder a tus entradas y disfrutar de una experiencia cinematográfica única.</p>
-                <p class="comprobar-container-text">Una vez que hayas proporcionado la información requerida, podrás ver tus
+                <h2>Comprueba tu reserva</h2>
+                <p>¡Comprueba tu compra y obtén una copia ahora!</p>
+                <p>
+                    ¿Recuerdas la fecha en la que hiciste tu compra en nuestro cine? Genial!
+                    Estás a solo unos pasos de acceder a tus entradas y disfrutar de una experiencia cinematográfica única.
+                </p>
+                <p>
+                    Una vez que hayas proporcionado la información requerida, podrás ver tus
                     compras en pantalla. Simplemente haz clic en cualquiera de ellas para acceder a los detalles de tu compra y
-                    obtener una copia que podrás utilizar en el cine.</p>
+                    obtener una copia que podrás utilizar en el cine.
+                </p>
                 <img src="../src/assets/img/cine-600w.png" alt="" style="height: auto; width: 40%; align-self: center;">
             </div>
             <div class="comprobar-form-container">
                 <div class="comprobar-form-group">
-                    <select required="" class="select">
+                    <select required="" class="select" id="comprobar-ticket-cine">
                         <option value="" disabled selected hidden></option>
                         <option value="option1">Option 1</option>
                         <option value="option2">Option 2</option>
@@ -62,7 +61,7 @@
                     </label>
                 </div>
                 <div class="comprobar-form-group">
-                    <input required="" type="text" class="comprobar-input">
+                    <input required="" type="text" class="comprobar-input" id="comprobar-ticket-correo">
                     <span class="comprobar-bar"></span>
                     <label class="comprobar-label">
                         <span class="label-char" style="--index: 0">C</span>
@@ -84,7 +83,7 @@
                     </label>
                 </div>
                 <div class="comprobar-form-group">
-                    <input required="" type="text" class="comprobar-input">
+                    <input required="" type="text" class="comprobar-input" id="comprobar-ticket-numero">
                     <span class="comprobar-bar"></span>
                     <label class="comprobar-label">
                         <span class="label-char" style="--index: 0">T</span>
