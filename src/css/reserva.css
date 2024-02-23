@@ -1,0 +1,189 @@
+@import url('colors.css');
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* -----------------------------PROGRESS BAR--------------------------------- */
+.progress-container {
+    width: 100%;
+    background-color: var(--backgroundColor);
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.progress-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 20px;
+}
+
+.progress-line-inner {
+    width: 100%;
+    height: 2px;
+    background-color: #a7a7a7;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 0; /* Coloca la línea interna detrás de todo */
+}
+
+.progress-step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Coloca los círculos por encima de la línea interna */
+}
+
+.progress-step {
+    width: 10px;
+    height: 10px;
+    background-color: var(--backgroundColor);
+    border: 2px solid #a7a7a7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0B2741;
+    position: relative;
+    z-index: 1; /* Coloca los círculos por encima de la línea interna */
+}
+
+
+.progress-step.current + .step-name {
+    color: red; /* Color de texto rojo para el nombre del paso actual */
+}
+
+
+
+
+.progress-step.completed {
+    width: 10px;
+    height: 10px;
+    background-color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.progress-step.current {
+    width: 20px;
+    height: 20px;
+    background-color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.progress-step.not-completed {
+    width: 10px;
+    height: 10px;
+    background-color: #a7a7a7;
+    border: 2px solid #a7a7a7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a7a7a7;
+}
+
+.progress-bar {
+    width: 0;
+    height: 2px;
+    background-color: var(--mainColor);
+    position: absolute;
+    top: 50%; /* Alinea la barra de progreso verticalmente en el centro */
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 2; /* Coloca la barra de progreso encima de todo */
+}
+
+
+button {
+    margin-top: 10px;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: var(--mainColor);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* -----------------------------RESERVA-TYPES--------------------------------- */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.tickets-section {
+    width: 60%;
+}
+
+.ticket-option {
+    background-color: #f0f0f0; /* Color de fondo para las opciones de ticket */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.ticket-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.ticket-row span {
+
+}
+
+.ticket-row button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: var(--mainColor);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* -----------------------------SUMMARY--------------------------------- */
+
+.summary-section {
+    width: 35%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.summary-section h2 {
+    color: var(--mainColor);
+}
+
+.summary-section p {
+    margin: 10px 0;
+}
+
+.summary-section img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
