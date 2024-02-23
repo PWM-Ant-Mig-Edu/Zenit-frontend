@@ -121,12 +121,12 @@
 }
 
 .inputs-container {
-    width: 50%; 
+    width: auto; 
     margin-right: 16px;
 }
 
 .informacion-contrasena-container {
-    width: 50%;
+    width: auto;
     border-left: 4px solid black;
     padding: 20px;
 }
@@ -224,6 +224,13 @@
     .configuracion-perfil-container {
         min-height: 50vh;
     }
+    .datos-contrasena-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .informacion-contrasena-container{
+        border-left: 0px;
+    }
 }   
 
 
@@ -261,6 +268,9 @@
     }
     .fila {
         font-size: small;
+    }
+    .inputs-contrasena h1 {
+        font-size: medium;
     }
 }
 
