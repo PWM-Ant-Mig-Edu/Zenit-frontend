@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/reserva.css">
+    <title>Barra de Progreso</title>
+</head>
+<body>
+<div class="progress-container">
+    <div class="progress-line">
+        <div class="progress-step-container">
+            <div class="progress-step current"></div>
+            <span class="step-name">Entradas</span>
+        </div>
+        <div class="progress-step-container">
+            <div class="progress-step"></div>
+            <span class="step-name">Comida</span>
+        </div>
+        <div class="progress-step-container">
+            <div class="progress-step"></div>
+            <span class="step-name">Butacas</span>
+        </div>
+        <div class="progress-step-container">
+            <div class="progress-step"></div>
+            <span class="step-name">Datos Cliente</span>
+        </div>
+        <div class="progress-step-container">
+            <div class="progress-step"></div>
+            <span class="step-name">Pago</span>
+        </div>
+        <div class="progress-line-inner"></div> <!-- Línea que conecta los puntos -->
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="tickets-section">
+        <div class="ticket-option">
+            <h2>Entrada Básica</h2>
+            <div class="ticket-row">
+                <span>Niños (menor 8 años)</span>
+                <button onclick="decrement('niños')">-</button>
+                <span id="cantidad_niños">0</span>
+                <button onclick="increment('niños')">+</button>
+            </div>
+            <div class="ticket-row">
+                <span>Jóvenes (entre 8-18 años)</span>
+                <button onclick="decrement('jóvenes')">-</button>
+                <span id="cantidad_jóvenes">0</span>
+                <button onclick="increment('jóvenes')">+</button>
+            </div>
+            <div class="ticket-row">
+                <span>Adultos (entre 18-65 años)</span>
+                <button onclick="decrement('adultos')">-</button>
+                <span id="cantidad_adultos">0</span>
+                <button onclick="increment('adultos')">+</button>
+            </div>
+            <div class="ticket-row">
+                <span>Ancianos (mayor de 65 años)</span>
+                <button onclick="decrement('ancianos')">-</button>
+                <span id="cantidad_ancianos">0</span>
+                <button onclick="increment('ancianos')">+</button>
+            </div>
+        </div>
+        <div class="ticket-option">
+            <h2>Entrada Premium</h2>
+            <!-- Otras filas para Entrada Premium si es necesario -->
+        </div>
+    </div>
+    <div class="summary-section">
+        <h2>Resumen</h2>
+        <p><strong>Película:</strong> Torrente 5</p>
+        <p><strong>Cantidad de Entradas:</strong> <span id="total_entradas">0</span></p>
+        <p><strong>Sala:</strong> 11</p>
+        <p><strong>Butacas:</strong> F2A5, F3A6, F3A7, ...</p>
+        <p><strong>Precio:</strong> <span id="precio_total">0</span> €</p>
+        <!-- Imagen de la película -->
+        <img src="path_to_your_movie_poster.jpg" alt="Poster de Torrente 5">
+    </div>
+</div>
+
+<button onclick="back()">Retroceder</button>
+<button onclick="advance()">Avanzar</button>
+
+<script src="../src/js/reserva.js"></script>
+</body>
+</html>

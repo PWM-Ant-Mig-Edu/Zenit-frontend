@@ -1,8 +1,6 @@
 /* Estilos CSS para el formulario de comprobación de reserva */
 @import url('colors.css');
 
-
-
 .comprobar-main-container {
     display: flex;
     flex-direction: column;
@@ -105,34 +103,6 @@
     font-size: 14px;
     color: #0A2239;
 }
-
-
-.comprobar-form-group .comprobar-bar:before, .comprobar-form-group .comprobar-bar:after {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 1px;
-    position: absolute;
-    background: #0A2239;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-.comprobar-form-group .comprobar-bar:before {
-    left: 0%;
-}
-
-.comprobar-form-group .comprobar-bar:after {
-    right: 17%;
-}
-
-.comprobar-form-group .comprobar-input:focus ~ .comprobar-bar:before,
-.comprobar-form-group .comprobar-input:focus ~ .comprobar-bar:after {
-    width: 50%;
-}
-
-
 
 /* Ocultar la opción "Select an option" */
 .comprobar-form-group .select option[disabled] {
