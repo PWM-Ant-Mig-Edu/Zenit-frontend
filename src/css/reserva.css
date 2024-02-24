@@ -121,34 +121,26 @@ body {
 }
 
 
-button {
-    margin-top: 10px;
-    height: fit-content;
-    width: fit-content;
-    padding: 10px 20px;
-    background-color: var(--mainColor);
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
 /* -----------------------------RESERVA-TYPES--------------------------------- */
-.container {
+.reserva-container {
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
 
 .tickets-section {
+    display: flex;
     width: 60%;
+    background-color: #f0f0f0; /* Color de fondo para las opciones de ticket */
+    border-radius: 10px;
+    
 }
 
 .ticket-option {
-    background-color: #f0f0f0; /* Color de fondo para las opciones de ticket */
-    border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
+    width: 50%;
+    
 }
 
 .ticket-row {
@@ -158,8 +150,11 @@ button {
     margin: 10px 0;
 }
 
-.ticket-row span {
-
+.entradas-input {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .ticket-row button {
@@ -178,7 +173,6 @@ button {
     width: 35%;
     background-color: #f0f0f0;
     padding: 20px;
-    border-radius: 10px;
 }
 
 .summary-section h2 {
@@ -195,6 +189,24 @@ button {
     margin-top: 20px;
 }
 
+.botones-reserva {
+    display: flex;
+    margin-bottom: 24px;
+    justify-content: flex-end; 
+    margin-right: 24px;  
+    gap: 20px;
+}
+
+.botones-reserva button  {
+    padding: 10px 20px;
+    background-color: var(--mainColor);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
 @media screen and (max-width: 768px) {
     /* Estilos para tabletas */
     .progress-container {
@@ -202,7 +214,7 @@ button {
         margin: 20px auto; /* Centrar la barra de progreso */
     }
 
-    .container {
+    .reserva-container {
         flex-direction: column;
         padding: 10px;
     }

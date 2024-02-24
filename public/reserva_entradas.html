@@ -10,6 +10,7 @@
     <script src="../src/js/footer.js"></script>
     <script src="../src/js/register.js"></script>
     <script src="../src/js/login.js"></script>
+    <script src="../src/js/reserva.js"></script>
 
     <title>Barra de Progreso</title>
 </head>
@@ -21,7 +22,7 @@
     <div id="reservar-component" style="display: none;"></div>
     <div id="reservar-component2" style="display: none;"></div>
 </div>
-<div class="wrapper-container">
+<div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
     <div id="header-component"></div>
 
     <div class="progress-container">
@@ -52,56 +53,100 @@
 
     </div>
 
-    <button onclick="back()">Retroceder</button>
-    <button onclick="advance()">Avanzar</button>
 
-    <div class="container">
+
+    <div class="reserva-container">
         <div class="tickets-section">
             <div class="ticket-option">
                 <h2>Entrada Básica</h2>
                 <div class="ticket-row">
                     <span>Niños (menor 8 años)</span>
-                    <button onclick="decrement('niños')">-</button>
-                    <span id="cantidad_niños">0</span>
-                    <button onclick="increment('niños')">+</button>
+                    <div class="entradas-input">
+                        <button onclick="decrement('niños')">-</button>
+                        <span id="cantidad_niños">0</span>
+                        <button onclick="increment('niños')">+</button>
+                    </div>
+                    
                 </div>
                 <div class="ticket-row">
                     <span>Jóvenes (entre 8-18 años)</span>
-                    <button onclick="decrement('jóvenes')">-</button>
-                    <span id="cantidad_jóvenes">0</span>
-                    <button onclick="increment('jóvenes')">+</button>
+                    <div class="entradas-input">
+                        <button onclick="decrement('jóvenes')">-</button>
+                        <span id="cantidad_jóvenes">0</span>
+                        <button onclick="increment('jóvenes')">+</button>
+                    </div>
+                    
                 </div>
                 <div class="ticket-row">
                     <span>Adultos (entre 18-65 años)</span>
-                    <button onclick="decrement('adultos')">-</button>
-                    <span id="cantidad_adultos">0</span>
-                    <button onclick="increment('adultos')">+</button>
+                    <div class="entradas-input">
+                        <button onclick="decrement('adultos')">-</button>
+                        <span id="cantidad_adultos">0</span>
+                        <button onclick="increment('adultos')">+</button>
+                    </div>
                 </div>
                 <div class="ticket-row">
                     <span>Ancianos (mayor de 65 años)</span>
-                    <button onclick="decrement('ancianos')">-</button>
-                    <span id="cantidad_ancianos">0</span>
-                    <button onclick="increment('ancianos')">+</button>
+                    <div class="entradas-input">
+                        <button onclick="decrement('ancianos')">-</button>
+                        <span id="cantidad_ancianos">0</span>
+                        <button onclick="increment('ancianos')">+</button>
+                    </div>
                 </div>
             </div>
             <div class="ticket-option">
                 <h2>Entrada Premium</h2>
-                <!-- Otras filas para Entrada Premium si es necesario -->
+                <div class="ticket-row">
+                    <span>Niños (menor 8 años)</span>
+                    <div class="entradas-input">
+                        <button onclick="decrement('niños')">-</button>
+                        <span id="cantidad_niños">0</span>
+                        <button onclick="increment('niños')">+</button>
+                    </div>
+                    
+                </div>
+                <div class="ticket-row">
+                    <span>Jóvenes (entre 8-18 años)</span>
+                    <div class="entradas-input">
+                        <button onclick="decrement('jóvenes')">-</button>
+                        <span id="cantidad_jóvenes">0</span>
+                        <button onclick="increment('jóvenes')">+</button>
+                    </div>
+                    
+                </div>
+                <div class="ticket-row">
+                    <span>Adultos (entre 18-65 años)</span>
+                    <div class="entradas-input">
+                        <button onclick="decrement('adultos')">-</button>
+                        <span id="cantidad_adultos">0</span>
+                        <button onclick="increment('adultos')">+</button>
+                    </div>
+                </div>
+                <div class="ticket-row">
+                    <span>Ancianos (mayor de 65 años)</span>
+                    <div class="entradas-input">
+                        <button onclick="decrement('ancianos')">-</button>
+                        <span id="cantidad_ancianos">0</span>
+                        <button onclick="increment('ancianos')">+</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="summary-section">
             <h2>Resumen</h2>
             <p><strong>Película:</strong> Torrente 5</p>
-            <p><strong>Cantidad de Entradas:</strong> <span id="total_entradas">0</span></p>
             <p><strong>Sala:</strong> 11</p>
-            <p><strong>Butacas:</strong> F2A5, F3A6, F3A7, ...</p>
-            <p><strong>Precio:</strong> <span id="precio_total">0</span> €</p>
             <!-- Imagen de la película -->
-            <img src="path_to_your_movie_poster.jpg" alt="Poster de Torrente 5">
+            <img src="path_to_your_movie_poster.jpg" alt="">
         </div>
     </div>
+    <div class="botones-reserva">
+        <button onclick="back()">Retroceder</button>
+        <button onclick="advance()">Avanzar</button>
+    </div>
+    
     <div id="footer-component"></div>
 </div>
-<script src="../src/js/reserva.js"></script>
+
 </body>
 </html>
