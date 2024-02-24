@@ -9,14 +9,15 @@ body {
 
 /* -----------------------------PROGRESS BAR--------------------------------- */
 .progress-container {
-    width: 100%;
+    width: 50%;
     background-color: var(--backgroundColor);
     text-align: center;
     padding: 20px 0;
+    margin: 20px;
 }
 
 
-.progress-line {
+.progress-steps {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,18 +25,7 @@ body {
     height: 20px;
 }
 
-.progress-line-inner {
-    width: 100%;
-    height: 2px;
-    background-color: #a7a7a7;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    z-index: 0; /* Coloca la línea interna detrás de todo */
-}
-
-.progress-step-container {
+.step-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +33,7 @@ body {
     z-index: 1; /* Coloca los círculos por encima de la línea interna */
 }
 
-.progress-step {
+.step {
     width: 10px;
     height: 10px;
     background-color: var(--backgroundColor);
@@ -58,14 +48,11 @@ body {
 }
 
 
-.progress-step.current + .step-name {
+.step.current + .step-name {
     color: red; /* Color de texto rojo para el nombre del paso actual */
 }
 
-
-
-
-.progress-step.completed {
+.step.completed {
     width: 10px;
     height: 10px;
     background-color: var(--mainColor);
@@ -77,7 +64,7 @@ body {
     color: white;
 }
 
-.progress-step.current {
+.step.current {
     width: 20px;
     height: 20px;
     background-color: var(--mainColor);
@@ -89,7 +76,11 @@ body {
     color: white;
 }
 
-.progress-step.not-completed {
+.step-name.current {
+    color: var(--mainColor);;
+}
+
+.step.not-completed {
     width: 10px;
     height: 10px;
     background-color: #a7a7a7;
@@ -101,7 +92,18 @@ body {
     color: #a7a7a7;
 }
 
-.progress-bar {
+.base-line {
+    width: 99%;
+    height: 2px;
+    background-color: #a7a7a7;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 0; /* Coloca la línea interna detrás de todo */
+}
+
+.progress-line {
     width: 0;
     height: 2px;
     background-color: var(--mainColor);

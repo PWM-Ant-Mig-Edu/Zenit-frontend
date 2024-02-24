@@ -1,6 +1,7 @@
 var currentStep = 0;
-var steps = document.querySelectorAll('.progress-step');
-var progressBar = document.querySelector('.progress-bar');
+var steps = document.querySelectorAll('.step');
+var step_names = document.querySelectorAll('.step-name');
+var progressBar = document.querySelector('.progress-line');
 
 // Variables para llevar el seguimiento de la cantidad de entradas y el precio total
 let cantidadNiños = 0;
@@ -89,14 +90,23 @@ function updateProgressBar() {
             steps[i].classList.remove('current');
             steps[i].classList.remove('not-completed');
             steps[i].classList.add('completed');
+            step_names[i].classList.remove('current');
+            step_names[i].classList.remove('not-completed');
+            step_names[i].classList.add('completed');
         } else if (i === currentStep) {
             steps[i].classList.remove('completed');
             steps[i].classList.remove('not-completed');
             steps[i].classList.add('current');
+            step_names[i].classList.remove('completed');
+            step_names[i].classList.remove('not-completed');
+            step_names[i].classList.add('current');
         } else {
             steps[i].classList.remove('completed');
             steps[i].classList.remove('current');
             steps[i].classList.add('not-completed');
+            step_names[i].classList.remove('completed');
+            step_names[i].classList.remove('current');
+            step_names[i].classList.add('not-completed');
         }
     }
 }
