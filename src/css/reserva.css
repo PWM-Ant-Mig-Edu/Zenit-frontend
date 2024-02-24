@@ -16,7 +16,6 @@ body {
     margin: 20px;
 }
 
-
 .progress-steps {
     display: flex;
     justify-content: space-between;
@@ -28,18 +27,20 @@ body {
 .step-container {
     display: flex;
     flex-direction: column;
+    font-size: 11px;
+    font-weight: normal;
     align-items: center;
     position: relative;
     z-index: 1; /* Coloca los círculos por encima de la línea interna */
 }
 
 .step {
+    display: flex;
     width: 10px;
     height: 10px;
     background-color: var(--backgroundColor);
     border: 2px solid #a7a7a7;
     border-radius: 50%;
-    display: flex;
     align-items: center;
     justify-content: center;
     color: #0B2741;
@@ -47,37 +48,41 @@ body {
     z-index: 1; /* Coloca los círculos por encima de la línea interna */
 }
 
+.step-name {
+    margin-block: 10px;
+}
 
 .step.current + .step-name {
     color: red; /* Color de texto rojo para el nombre del paso actual */
 }
 
 .step.completed {
+    display: flex;
     width: 10px;
     height: 10px;
     background-color: var(--mainColor);
     border: 2px solid var(--mainColor);
     border-radius: 50%;
-    display: flex;
     align-items: center;
     justify-content: center;
     color: white;
 }
 
 .step.current {
+    display: flex;
     width: 20px;
     height: 20px;
     background-color: var(--mainColor);
     border: 2px solid var(--mainColor);
     border-radius: 50%;
-    display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+
 }
 
 .step-name.current {
-    color: var(--mainColor);;
+    color: var(--mainColor);
 }
 
 .step.not-completed {
@@ -92,14 +97,15 @@ body {
     color: #a7a7a7;
 }
 
+
 .base-line {
-    width: 99%;
+    width: 94%;
     height: 2px;
     background-color: #a7a7a7;
     position: absolute;
     top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    left: 4%;
+    transform: translateY(-16px);
     z-index: 0; /* Coloca la línea interna detrás de todo */
 }
 
@@ -109,10 +115,9 @@ body {
     background-color: var(--mainColor);
     position: absolute;
     top: 50%; /* Alinea la barra de progreso verticalmente en el centro */
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 2; /* Coloca la barra de progreso encima de todo */
+    left: 4%;
+    transform: translateY(-16px);
+    z-index: 0; /* Coloca la barra de progreso encima de todo */
 }
 
 
@@ -188,4 +193,55 @@ button {
     width: 100%;
     border-radius: 10px;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    /* Estilos para tabletas */
+    .progress-container {
+        width: 70%; /* Hacer la barra de progreso más ancha en tabletas */
+        margin: 20px auto; /* Centrar la barra de progreso */
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .tickets-section, .summary-section {
+        width: 100%; /* Ocupar el ancho completo en dispositivos más pequeños */
+    }
+
+    .summary-section {
+        margin-top: 20px; /* Espacio adicional entre las secciones en dispositivos más pequeños */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Estilos para teléfonos móviles */
+    .progress-container {
+        width: 90%; /* Hacer la barra de progreso aún más ancha en teléfonos */
+    }
+
+    .progress-steps {
+    }
+
+    .step-container {
+        margin-bottom: 10px; /* Espacio entre pasos cuando están en columna */
+    }
+
+    .base-line, .progress-line {
+
+    }
+
+    button {
+        padding: 5px 10px; /* Reducir el tamaño de los botones en móviles */
+    }
+
+    .ticket-row {
+        flex-direction: column;
+    }
+
+    .ticket-row button {
+        margin-top: 10px; /* Espacio adicional para botones en dispositivos móviles */
+    }
 }

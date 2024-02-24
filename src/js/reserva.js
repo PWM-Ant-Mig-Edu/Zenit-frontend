@@ -83,30 +83,22 @@ function back() {
 }
 
 function updateProgressBar() {
-    progressBar.style.width = (currentStep / (steps.length - 1) * 100) + '%';
+    progressBar.style.width = (currentStep / (steps.length - 1) * 92) + '%';
     console.log(progressBar.style.width);
     for (var i = 0; i < steps.length; i++) {
         if (i < currentStep) {
             steps[i].classList.remove('current');
             steps[i].classList.remove('not-completed');
             steps[i].classList.add('completed');
-            step_names[i].classList.remove('current');
-            step_names[i].classList.remove('not-completed');
-            step_names[i].classList.add('completed');
+
         } else if (i === currentStep) {
             steps[i].classList.remove('completed');
             steps[i].classList.remove('not-completed');
             steps[i].classList.add('current');
-            step_names[i].classList.remove('completed');
-            step_names[i].classList.remove('not-completed');
-            step_names[i].classList.add('current');
         } else {
             steps[i].classList.remove('completed');
             steps[i].classList.remove('current');
             steps[i].classList.add('not-completed');
-            step_names[i].classList.remove('completed');
-            step_names[i].classList.remove('current');
-            step_names[i].classList.add('not-completed');
         }
     }
 }
