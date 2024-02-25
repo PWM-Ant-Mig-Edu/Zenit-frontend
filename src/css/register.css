@@ -81,6 +81,7 @@ z-index: 9999; /* Asegura que esté encima de otros elementos */
 
 .signin {
   text-align: center;
+  cursor: pointer;
 }
 
 .signin a:hover {
