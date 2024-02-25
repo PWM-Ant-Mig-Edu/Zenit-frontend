@@ -12,7 +12,7 @@ let precioTotal = 0;
 
 // Función para incrementar la cantidad de entradas
 function increment(tipo) {
-    switch(tipo) {
+    switch (tipo) {
         case 'niños':
             cantidadNiños++;
             break;
@@ -31,7 +31,7 @@ function increment(tipo) {
 
 // Función para decrementar la cantidad de entradas
 function decrement(tipo) {
-    switch(tipo) {
+    switch (tipo) {
         case 'niños':
             if (cantidadNiños > 0) cantidadNiños--;
             break;
@@ -83,7 +83,7 @@ function back() {
 }
 
 function updateProgressBar() {
-    progressBar.style.width = (currentStep / (steps.length - 1) * 92) + '%';
+    progressBar.style.width = (currentStep / (steps.length - 1) * 100) + '%';
     console.log(progressBar.style.width);
     for (var i = 0; i < steps.length; i++) {
         if (i < currentStep) {
