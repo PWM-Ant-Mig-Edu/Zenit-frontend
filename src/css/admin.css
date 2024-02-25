@@ -108,6 +108,9 @@
     margin-top: 16px;
     width: 40%;
 }
+.anadir-container img {
+    width: 40%;
+}
 .datos-container  {
     display: flex;
 }

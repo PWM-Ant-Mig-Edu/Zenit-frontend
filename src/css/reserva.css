@@ -231,7 +231,7 @@ h1 {
 
 
 .summary-section img {
-    width: 50%;
+    width: 60%;
     border-radius: 10px;
     margin-top: 20px;
     align-self: center;
@@ -255,6 +255,25 @@ h1 {
 
 }
 
+
+/* BUTACAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 16px; 
+}
+th, td {
+    border: 1px solid #0A2239;
+    padding: 8px; 
+    text-align: center;
+}
+.si-glyph-chair-1 {
+width: 50px;
+height: 30px;
+fill: #434343;
+}
+
 @media screen and (max-width: 768px) {
     /* Estilos para tabletas */
     .progress-container {
@@ -267,6 +286,10 @@ h1 {
         padding: 10px;
     }
 
+    .summary-section img {
+        width: 40%;
+    }
+
     .tickets-section, .summary-section {
         width: 100%; /* Ocupar el ancho completo en dispositivos más pequeños */
     }
@@ -274,6 +297,14 @@ h1 {
     .summary-section {
         margin-top: 20px; /* Espacio adicional entre las secciones en dispositivos más pequeños */
     }
+    table {
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      .si-glyph-chair-1 {
+        width: 30px;
+        height: auto;
+      }
 }
 
 @media screen and (max-width: 480px) {
