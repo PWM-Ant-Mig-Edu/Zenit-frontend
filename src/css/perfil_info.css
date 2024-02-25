@@ -27,7 +27,7 @@
     border-right: 1px solid rgb(181, 181, 181);
     border-bottom: 1px  solid rgb(181, 181, 181);
     font-weight: bolder;
-    color: grey
+    color: grey;
 }
 
 #active {
@@ -181,45 +181,137 @@
 
 
 /* PAGO*/
-
-.datos-pago-container {
+.añadir-tarjeta-container{
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-left: 20px;
+    margin-top: 40px;
+    padding: 15px;
+    border: 1px solid var(--mainColor);
+    width: auto;
+    gap: 50px;
 }
 
-.tarjetas-contaiener {
-    width: 40%;
+.añadir-tarjeta-container h3{
+    color: var(--grayProfile);
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.añadir-tarjeta-text div{
+    display: flex;
+    gap: 10px;
+}
+
+.añadir-tarjeta-container button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--mainColor);
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-style: hidden;
+    width: 20%;
+    font-size: large;
+    white-space: nowrap;
+}
+
+.añadir-tarjeta-container button:hover {
+    background-color: var(--mainColorDark);
+}
+
+.tarjetas-activas-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+.tarjeta-credito {
+    width: 370px;
+    height: 270px;
+    background: linear-gradient(to bottom right, #0047ab, #00a4e4);
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    color: white;
+    position: relative;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.tarjeta-credito .chip {
+    width: 60px;
+    height: 40px;
+    background: linear-gradient(to bottom right, #ddd, #ccc);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 5px;
+}
+
+.tarjeta-credito .cinta {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom right, #ffcc00, #ff9900);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    border-radius: 0 0 15px 15px;
+}
+
+.tarjeta-credito .datos {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 }
 
-.seccion-tarjeta button{
-    color: white;
-    cursor: pointer;
+.tarjeta-credito .fila {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tarjeta-credito .columna {
+    display: flex;
+    flex: 1;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.tarjeta-credito label {
+    margin-right: 10px;
+}
+
+.tarjeta-credito label {
+    font-size: 12px;
+}
+
+.tarjeta-credito input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    color: #333;
+}
+
+.eliminar-tarjeta-button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     padding: 10px 20px;
-    font-size: medium;
-    font-weight: bolder;
-    white-space: nowrap;
-    border-style: hidden;
     border-radius: 10px;
-    background-color:var(--mainColor);
-    margin-top: 4px;
-    margin-bottom: 8px;
+    background-color: #ffcc00;
+    color: #333;
+    font-weight: bolder;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-style: hidden;
+    font-size: medium;
 }
-
-.tarjeta-imagen-container {
-    width: 60%;
-    border-left: 4px  solid black;
-}
-
-.tarjeta-imagen-container img {
-    max-width: 100%;
-    height: auto; 
-}
-
 
 /* HISTORIAL DE  COMPRAS */
 .datos-container-compras {
@@ -249,13 +341,41 @@
     background-color: #f0f0f0;
 }
 
+@media screen and (max-width: 2000px){
+    .tarjetas-activas-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .datos-personales-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .añadir-tarjeta-container button{
+        width: 60%;
+    }
+
+    .tarjetas-activas-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .tarjeta-credito {
+        width: 300px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .eliminar-tarjeta-button{
+        bottom: 10px;
+    }
 }   
 
 @media screen and (max-width: 1155px) {
+    .añadir-tarjeta-container{
+        flex-direction: column;
+        align-items: center;
+    }
     .configuracion-perfil-container {
         min-height: 50vh;
     }
@@ -292,6 +412,11 @@
         font-size: x-large;
         margin-bottom: 10px;
     }
+
+
+    .añadir-tarjeta-container button{
+        width: 80%;
+    }
     
     .inputs-contrasena h2 {
         font-size: large;
@@ -310,6 +435,19 @@
     }
 }
 
+@media screen and (max-width: 700px) {
+    .tarjetas-activas-grid{
+        
+    }
+
+    .tarjeta-credito {
+        width: 230px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    
+}
+
 @media screen and (max-width: 551px) {
     .configuracion-perfil-container{
         width: 80%;
@@ -318,6 +456,11 @@
         display: flex;
         flex-direction: column;
         padding: 0px;
+    }
+
+    .añadir-tarjeta-container button{
+        width: 100%;
+        font-size: medium;
     }
 
     .button{
@@ -344,6 +487,31 @@
         color: var(--mainColor);
         border-right: 0px;
     }
+
+    .tarjetas-activas-grid{
+        width: 100%;
+    }
+
+    .tarjeta-credito{
+        width: 200px;
+        height: 400px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .tarjeta-credito label {
+        margin-bottom: 10px;
+    }
+
+    .tarjeta-credito .fila {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tarjeta-credito .columna {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -356,5 +524,32 @@
     }
     .inputs-container input {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .tarjeta-credito {
+        width: 120px;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    .tarjeta-credito .fila {
+        align-items: flex-start;
+    }
+
+    .tarjeta-credito .columna {
+        align-items: flex-start;
+    }
+
+    .tarjeta-credito .eliminar-tarjeta-button {
+        bottom: 10px;
+        right: auto ;
+        left: auto;
+        padding: 5px 10px;
+    }
+
+    .añadir-tarjeta-container button {
+        font-size: small;
     }
 }

@@ -94,7 +94,7 @@ a, a:visited, a:hover, a:active {
 
 .DropdownMenu li {
     display: block;
-    padding: 8px 12px; 
+    padding: 8px 12px;
     color: var(--mainColor);
     transition: background-color 0.3s; 
 }
