@@ -124,7 +124,7 @@ body {
 /* -----------------------------RESERVA-TYPES--------------------------------- */
 .reserva-container {
     display: flex;
-    flex:1;
+    flex: 1;
     justify-content: space-between;
     padding: 20px;
     height: auto;
@@ -134,14 +134,14 @@ body {
     display: flex;
     height: auto;
     width: 60%;
-    background-color: #f0f0f0; /* Color de fondo para las opciones de ticket */
+    background-color: #f0f0f0; 
     border-radius: 10px;
-    margin: 0 auto;
+    margin: auto;
 }
+
 
 .ticket-option {
     padding: 20px;
-    margin-bottom: 20px;
     width: 50%;
     height: auto;
 }
@@ -177,20 +177,24 @@ body {
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .summary-section h2 {
     color: var(--mainColor);
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 8px
 }
 
-.summary-section p {
-    margin: 10px 0;
-}
+
 
 .summary-section img {
-    width: 30%;
+    width: 50%;
     border-radius: 10px;
     margin-top: 20px;
+    align-self: center;
 }
 
 .botones-reserva {
