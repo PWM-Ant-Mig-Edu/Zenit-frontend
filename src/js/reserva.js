@@ -3,70 +3,107 @@ var steps = document.querySelectorAll('.step');
 var step_names = document.querySelectorAll('.step-name');
 var progressBar = document.querySelector('.progress-line');
 
-// Variables para llevar el seguimiento de la cantidad de entradas y el precio total
-let cantidadNiños = 0;
-let cantidadJóvenes = 0;
-let cantidadAdultos = 0;
-let cantidadAncianos = 0;
-let precioTotal = 0;
+// Variables to keep track of the quantity of tickets and the total price
+let quantityChildrenBasic = 0;
+let quantityYouthsBasic = 0;
+let quantityAdultsBasic = 0;
+let quantitySeniorsBasic = 0;
 
-// Función para incrementar la cantidad de entradas
-function increment(tipo) {
-    switch(tipo) {
-        case 'niños':
-            cantidadNiños++;
+let quantityChildrenPremium = 0;
+let quantityYouthsPremium = 0;
+let quantityAdultsPremium = 0;
+let quantitySeniorsPremium = 0;
+
+let totalPrice = 0;
+
+// Function to increment the quantity of tickets
+function increment(type) {
+    switch (type) {
+        case 'children-basic':
+            quantityChildrenBasic++;
             break;
-        case 'jóvenes':
-            cantidadJóvenes++;
+        case 'youths-basic':
+            quantityYouthsBasic++;
             break;
-        case 'adultos':
-            cantidadAdultos++;
+        case 'adults-basic':
+            quantityAdultsBasic++;
             break;
-        case 'ancianos':
-            cantidadAncianos++;
+        case 'seniors-basic':
+            quantitySeniorsBasic++;
+            break;
+        case 'children-premium':
+            quantityChildrenPremium++;
+            break;
+        case 'youths-premium':
+            quantityYouthsPremium++;
+            break;
+        case 'adults-premium':
+            quantityAdultsPremium++;
+            break;
+        case 'seniors-premium':
+            quantitySeniorsPremium++;
             break;
     }
-    actualizarResumen();
+    updateSummary();
 }
 
-// Función para decrementar la cantidad de entradas
-function decrement(tipo) {
-    switch(tipo) {
-        case 'niños':
-            if (cantidadNiños > 0) cantidadNiños--;
+// Function to decrement the quantity of tickets
+function decrement(type) {
+    switch (type) {
+        case 'children-basic':
+            if (quantityChildrenBasic > 0) quantityChildrenBasic--;
             break;
-        case 'jóvenes':
-            if (cantidadJóvenes > 0) cantidadJóvenes--;
+        case 'youths-basic':
+            if (quantityYouthsBasic > 0) quantityYouthsBasic--;
             break;
-        case 'adultos':
-            if (cantidadAdultos > 0) cantidadAdultos--;
+        case 'adults-basic':
+            if (quantityAdultsBasic > 0) quantityAdultsBasic--;
             break;
-        case 'ancianos':
-            if (cantidadAncianos > 0) cantidadAncianos--;
+        case 'seniors-basic':
+            if (quantitySeniorsBasic > 0) quantitySeniorsBasic--;
+            break;
+        case 'children-premium':
+            if (quantityChildrenPremium > 0) quantityChildrenPremium--;
+            break;
+        case 'youths-premium':
+            if (quantityYouthsPremium > 0) quantityYouthsPremium--;
+            break;
+        case 'adults-premium':
+            if (quantityAdultsPremium > 0) quantityAdultsPremium--;
+            break;
+        case 'seniors-premium':
+            if (quantitySeniorsPremium > 0) quantitySeniorsPremium--;
             break;
     }
-    actualizarResumen();
+    updateSummary();
 }
 
-// Función para actualizar el resumen de la compra
-function actualizarResumen() {
-    let totalEntradas = cantidadNiños + cantidadJóvenes + cantidadAdultos + cantidadAncianos;
-    document.getElementById('cantidad_niños').textContent = cantidadNiños;
-    document.getElementById('cantidad_jóvenes').textContent = cantidadJóvenes;
-    document.getElementById('cantidad_adultos').textContent = cantidadAdultos;
-    document.getElementById('cantidad_ancianos').textContent = cantidadAncianos;
-    document.getElementById('total_entradas').textContent = totalEntradas;
+// Function to update the ticket summary
+function updateSummary() {
+    let totalTicketsBasic = quantityChildrenBasic + quantityYouthsBasic + quantityAdultsBasic + quantitySeniorsBasic;
+    let totalTicketsPremium = quantityChildrenPremium + quantityYouthsPremium + quantityAdultsPremium + quantitySeniorsPremium;
 
-    // Cálculo del precio total
-    precioTotal = cantidadNiños * precioNiños + cantidadJóvenes * precioJóvenes + cantidadAdultos * precioAdultos + cantidadAncianos * precioAncianos;
-    document.getElementById('precio_total').textContent = precioTotal.toFixed(2);
+    document.getElementById('quantity_children_basic').textContent = quantityChildrenBasic;
+    document.getElementById('quantity_youths_basic').textContent = quantityYouthsBasic;
+    document.getElementById('quantity_adults_basic').textContent = quantityAdultsBasic;
+    document.getElementById('quantity_seniors_basic').textContent = quantitySeniorsBasic;
+    document.getElementById('total_tickets_basic').textContent = totalTicketsBasic;
+
+    document.getElementById('quantity_children_premium').textContent = quantityChildrenPremium;
+    document.getElementById('quantity_youths_premium').textContent = quantityYouthsPremium;
+    document.getElementById('quantity_adults_premium').textContent = quantityAdultsPremium;
+    document.getElementById('quantity_seniors_premium').textContent = quantitySeniorsPremium;
+    document.getElementById('total_tickets_premium').textContent = totalTicketsPremium;
+    // Calculation of the total price
+    totalPrice = (quantityChildrenBasic + quantityYouthsBasic + quantityAdultsBasic + quantitySeniorsBasic) * priceBasic +
+        (quantityChildrenPremium + quantityYouthsPremium + quantityAdultsPremium + quantitySeniorsPremium) * pricePremium;
+    document.getElementById('total_price').textContent = totalPrice.toFixed(2);
 }
 
-// Definir los precios por tipo de entrada (ajustar según sea necesario)
-const precioNiños = 5.00;
-const precioJóvenes = 10.00;
-const precioAdultos = 15.00;
-const precioAncianos = 10.00;
+// Define the prices per ticket type (adjust as necessary)
+const priceBasic = 5.00;
+const pricePremium = 10.00;
+
 
 function advance() {
     if (currentStep < steps.length - 1) {
@@ -83,7 +120,7 @@ function back() {
 }
 
 function updateProgressBar() {
-    progressBar.style.width = (currentStep / (steps.length - 1) * 92) + '%';
+    progressBar.style.width = (currentStep / (steps.length - 1) * 100) + '%';
     console.log(progressBar.style.width);
     for (var i = 0; i < steps.length; i++) {
         if (i < currentStep) {

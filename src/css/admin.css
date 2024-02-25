@@ -1,9 +1,19 @@
 @import url('colors.css');
 
+
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
 .admin-title-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .admin-title-container h1 {
@@ -23,42 +33,59 @@
     align-self: center;
     font-weight: 800;
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
 }
 .dashboard-admin-container  {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: 1;
-    margin-bottom: 16px;
     margin-top: 16px;
+    width: 80%;
+    margin-left: 10px auto;
+    flex: 1;
 }
 
 .dashboard-admin-container h2 {
     align-self: center;
     font-size: xx-large;
-    margin-bottom: 8px;
 }
 
-.nosecomollamarle {
+.dashboard-admin-content {
     display: flex;
     flex-direction: row;
+    margin: 20px 0px;
+    flex: 1;
+    justify-content: center;
 }
+
 .estadisticas-admin-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 40px;
    
 }
 
 .estadistica {
+    display: flex;
+    flex-direction: column;
     background-color: var(--mainColorDarker);
     color: white;
-    padding: 20px;
     border-radius: 8px;
     margin-bottom: 8px;
     align-self: flex-start;
-    width: 40%;
+    width: 100%;
+    padding: 20px 0px;
+    gap: 5px;
+    text-align: center;
+}
+
+.estadistica span {
+    margin: 0px 10px;
+}
+
+.estadistica > *:nth-child(1){
+    font-weight: 800;
 }
 
 .gestion-admin-container  {
@@ -100,9 +127,6 @@
     margin-bottom: 8px;
 }
 
-.datos-container img {
-    width: 30%;
-}
 
 .datos-largos-container {
     margin-top: 8px;
@@ -151,20 +175,71 @@
     align-self: flex-end;
 }
 
-@media (max-width: 500px) {
-    .admin-title-container h1 {
-        font-size: x-large;
-    }
+.grafico-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: aliceblue;
 }
+
+
+.custom-chart {
+    height: 20px;
+    margin-left: 50px;
+    width: 100%;
+
+}
+
+.canvasjs-chart-credit{
+    display: none;
+}
+
+
 @media (max-width: 800px) {
     .admin-title-container h1 {
         font-size: x-large;
     }
-    .opciones-admin-container {
-        flex-direction: column;
-    }
+
     .opciones-admin-container a {
         margin-bottom: 4px;
         margin-top: 4px;
+    }
+
+    .opciones-admin-container{
+        font-size: small;
+    }
+
+    .dashboard-admin-content {
+        flex-direction: column;
+    }
+
+    .custom-chart {
+        margin-left: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .estadisticas-admin-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .admin-title-container h1 {
+        font-size: x-large;
+    }
+
+    .opciones-admin-container {
+        width: 80%;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .estadisticas-admin-container {
+        display: flex;
+        flex-direction: column;
     }
 }

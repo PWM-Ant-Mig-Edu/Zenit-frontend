@@ -7,6 +7,7 @@
     --elementColor: rgba(222, 229, 229, 1);
     --mainTextWhite: rgba(255, 255, 255, 1);
     --secondaryText: rgba(255, 255, 255, 1);
+    --grayText: #a7a7a7;
     --importantText: rgba(255, 177, 0, 1);
     --elementExtraColor: rgba(76, 112, 146, 1);
     --iconColor: rgba(0, 0, 0, 1);
@@ -19,4 +20,5 @@
     --darkBackgroundColor: rgba(26, 26, 26, 1);
     --darkUnselectedText: rgba(174, 174, 174, 1);
     --grayProfile: rgb(88, 85, 85);
+
 }

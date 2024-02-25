@@ -6,10 +6,50 @@ body {
     margin: 0;
     padding: 0;
 }
+/* -----------------------------LEFT SECTION--------------------------------- */
+.left-section {
+    flex: 0 0 75%; /* El div ocupa el 75% del espacio de su div padre */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+}
+
+
+
+/* -----------------------------RETURN BUTTON--------------------------------- */
+.return-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.round-button {
+    width: 25px;
+    height: 25px;
+    background-color: var(--elementColor);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 9px solid var(--unselectedText);
+}
+
+h1 {
+    font-size: 20px;
+    color: #000000;
+    margin: 0;
+}
 
 /* -----------------------------PROGRESS BAR--------------------------------- */
 .progress-container {
-    width: 50%;
+    width: 80%;
     background-color: var(--backgroundColor);
     text-align: center;
     padding: 20px 0;
@@ -24,36 +64,32 @@ body {
     height: 20px;
 }
 
-.step-container {
-    display: flex;
-    flex-direction: column;
-    font-size: 11px;
-    font-weight: normal;
-    align-items: center;
-    position: relative;
-    z-index: 1; /* Coloca los círculos por encima de la línea interna */
-}
-
 .step {
     display: flex;
     width: 10px;
     height: 10px;
     background-color: var(--backgroundColor);
-    border: 2px solid #a7a7a7;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    color: #0B2741;
     position: relative;
     z-index: 1; /* Coloca los círculos por encima de la línea interna */
 }
 
 .step-name {
     margin-block: 10px;
+    transform: translateY(30px);
+    font-size: 11px;
+    font-weight: 500;
 }
 
-.step.current + .step-name {
+.step.current > .step-name {
     color: red; /* Color de texto rojo para el nombre del paso actual */
+}
+
+.step.completed > .step-name,
+.step.not-completed > .step-name {
+    color: var(--grayText);
 }
 
 .step.completed {
@@ -70,26 +106,21 @@ body {
 
 .step.current {
     display: flex;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     background-color: var(--mainColor);
     border: 2px solid var(--mainColor);
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    color: white;
-
 }
 
-.step-name.current {
-    color: var(--mainColor);
-}
 
 .step.not-completed {
     width: 10px;
     height: 10px;
-    background-color: #a7a7a7;
-    border: 2px solid #a7a7a7;
+    background-color: var(--pendingColor);
+    border: 2px solid var(--pendingColor);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -99,13 +130,12 @@ body {
 
 
 .base-line {
-    width: 94%;
+    width: 100%;
     height: 2px;
-    background-color: #a7a7a7;
+    background-color: var(--pendingColor);
     position: absolute;
     top: 50%;
-    left: 4%;
-    transform: translateY(-16px);
+    left: 0%;
     z-index: 0; /* Coloca la línea interna detrás de todo */
 }
 
@@ -115,8 +145,7 @@ body {
     background-color: var(--mainColor);
     position: absolute;
     top: 50%; /* Alinea la barra de progreso verticalmente en el centro */
-    left: 4%;
-    transform: translateY(-16px);
+    left: 0%;
     z-index: 0; /* Coloca la barra de progreso encima de todo */
 }
 
@@ -128,12 +157,13 @@ body {
     justify-content: space-between;
     padding: 20px;
     height: auto;
+    gap: 20px;
 }
 
 .tickets-section {
     display: flex;
     height: auto;
-    width: 60%;
+    width: 100%;
     background-color: #f0f0f0; 
     border-radius: 10px;
     margin: auto;
@@ -191,6 +221,13 @@ body {
     margin-bottom: 8px
 }
 
+#summary-price-container {
+    align-self: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Color de texto */
+    margin-top: 40px; /* Espacio superior */
+}
 
 
 .summary-section img {
@@ -203,9 +240,9 @@ body {
 .botones-reserva {
     display: flex;
     margin-bottom: 24px;
-    justify-content: flex-end; 
-    margin-right: 24px;  
-    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+
 }
 
 .botones-reserva button  {
@@ -248,9 +285,6 @@ body {
     .progress-steps {
     }
 
-    .step-container {
-        margin-bottom: 10px; /* Espacio entre pasos cuando están en columna */
-    }
 
     .base-line, .progress-line {
 
