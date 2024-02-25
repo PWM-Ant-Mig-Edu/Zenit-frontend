@@ -142,7 +142,7 @@
 .datos-largos-container input{  
     margin-top: 4px;
     width: 100%;
-    height: 5vh;
+    min-height: 3vh;
 }
 
 .botones-admin {
@@ -196,6 +196,26 @@
 .canvasjs-chart-credit{
     display: none;
 }
+
+@media (max-width: 992px){
+    .anadir-container {
+        width: 80%;
+    }
+
+    .datos-container {
+        flex-direction: column;
+    }
+
+    .datos-container img{
+        align-self: center;
+        margin-bottom: 20px;
+    }
+
+    .inputs-anadir{
+        width: auto;
+    }
+}
+    
 
 
 @media (max-width: 800px) {
