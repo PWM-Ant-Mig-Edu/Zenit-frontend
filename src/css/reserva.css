@@ -139,6 +139,9 @@ body {
     margin: auto;
 }
 
+#premium {
+    border-left: 4px solid  var(--secondaryColor);
+}
 
 .ticket-option {
     padding: 20px;
