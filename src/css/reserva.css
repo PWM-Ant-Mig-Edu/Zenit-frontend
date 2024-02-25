@@ -6,6 +6,14 @@ body {
     margin: 0;
     padding: 0;
 }
+/* -----------------------------LEFT SECTION--------------------------------- */
+.left-section {
+    flex: 0 0 75%; /* El div ocupa el 75% del espacio de su div padre */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+}
+
+
 
 /* -----------------------------RETURN BUTTON--------------------------------- */
 .return-button-container {
@@ -41,7 +49,7 @@ h1 {
 
 /* -----------------------------PROGRESS BAR--------------------------------- */
 .progress-container {
-    width: 50%;
+    width: 80%;
     background-color: var(--backgroundColor);
     text-align: center;
     padding: 20px 0;
@@ -149,12 +157,13 @@ h1 {
     justify-content: space-between;
     padding: 20px;
     height: auto;
+    gap: 20px;
 }
 
 .tickets-section {
     display: flex;
     height: auto;
-    width: 60%;
+    width: 100%;
     background-color: #f0f0f0; 
     border-radius: 10px;
     margin: auto;
@@ -209,6 +218,13 @@ h1 {
     margin-bottom: 8px
 }
 
+#summary-price-container {
+    align-self: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Color de texto */
+    margin-top: 40px; /* Espacio superior */
+}
 
 
 .summary-section img {
@@ -221,9 +237,9 @@ h1 {
 .botones-reserva {
     display: flex;
     margin-bottom: 24px;
-    justify-content: flex-end; 
-    margin-right: 24px;  
-    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+
 }
 
 .botones-reserva button  {
