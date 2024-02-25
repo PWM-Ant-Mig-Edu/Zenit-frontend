@@ -16,6 +16,7 @@
     <script src="../src/js/register.js"></script>
     <script src="../src/js/login.js"></script>
     <script src="../src/js/reservar.js"></script>
+    <script src="../src/js/perfil_contrasena.js"></script>
 
 </head>
 <body>
@@ -62,20 +63,35 @@
                     <div class="datos-contrasena-container">
                         <div class="inputs-container">
                             <div class="inputs-contrasena">
-                                <h1>Contraseña Actual</h1>
-                                <input type="text" placeholder="Contraseña actual">
+                                <h2>Contraseña Actual</h1>
+                                <div>
+                                    <input type="password" placeholder="Contraseña actual">
+                                    <span class="toggle-password" onclick="togglePasswordVisibility(this)">
+                                        <i id="toggleIcon" class="fas fa-eye"></i>
+                                    </span>
+                                </div>
                             </div>
                             <div class="inputs-contrasena">
-                                <h1>Nueva Contraseña</h1>
-                                <input type="text" placeholder="Nueva Contraseña">
+                                <h2>Nueva Contraseña</h1>
+                                <div>
+                                    <input type="password" placeholder="Nueva Contraseña">
+                                    <span class="toggle-password" onclick="togglePasswordVisibility(this)">
+                                        <i id="toggleIcon" class="fas fa-eye"></i>
+                                    </span>
+                                </div>
                             </div>
                             <div class="inputs-contrasena">
-                                <h1>Confirmar Contraseña</h1>
-                                <input type="text" placeholder="Confirmar Contraseña">
+                                <h2>Confirmar Contraseña</h1>
+                                <div>
+                                    <input type="password" placeholder="Confirmar Contraseña">
+                                    <span class="toggle-password" onclick="togglePasswordVisibility(this)">
+                                        <i id="toggleIcon" class="fas fa-eye"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="informacion-contrasena-container">
-                            <h1>Tu contraseña</h1>
+                            <h2>Tu contraseña</h1>
                             <ul>
                                 <li>Debe tener al menos 8 caracteres.</li>
                                 <li>Debe contener al menos una letra mayúscula.</li>
@@ -85,7 +101,10 @@
                             </ul>
                         </div>  
                 </div>
-                <button class="button-disconnect">Desconectar</button>
+                <div class="button-container">
+                    <button class="button">Aplicar cambios</button>
+                    <button class="button">Desconectar</button>
+                </div>
             </div>
         </div>
 
