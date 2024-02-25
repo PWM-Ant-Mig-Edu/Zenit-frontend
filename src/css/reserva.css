@@ -327,6 +327,61 @@ fill: #434343;
 
 
 
+/*
+====================================================================
+========================RESERVA-PROMOTIONS==========================
+====================================================================
+*/
+
+/* Estilos para las secciones de promociones */
+.promotions-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Estilos para cada opción de promoción */
+.promotion-option {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Estilos para cada elemento de promoción */
+.promotion-item {
+    margin-bottom: 20px;
+}
+
+/* Estilos para la imagen de la promoción */
+.promotion-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Estilos para la sección de entrada de cantidad */
+.menu-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Estilos para los botones de incremento y decremento de cantidad */
+.menu-input button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: var(--mainColor);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Estilos para la cantidad */
+.menu-input span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
 @media screen and (max-width: 768px) {
     /* Estilos para tabletas */
     .progress-container {
