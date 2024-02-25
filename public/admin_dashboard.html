@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="../src/css/admin.css">
     <script src="../src/js/header.js"></script>
     <script src="../src/js/footer.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="../src/js/admin.js"></script>
 
 
 </head>
@@ -28,54 +30,52 @@
 
         <div id="header-component"></div>
 
-        <div class="admin-title-container">
-            <h1>Plataforma  de administración</h1>
-            <div class="opciones-admin-container">
-                <a href="#">Estadísticas</a>
-                <a href="../public/anadir_pelicula.html">Añadir Película</a>
-                <a href="../public/anadir_promocion.html">Añadir Promoción</a>
-                <a href="../public/admin_gestionar_cartelera.html">Gestionar Cartelera</a>
-                <a href="#">Gestionar Promociones</a>
-            </div>
-        </div>
-        <div class="dashboard-admin-container">
-            <div>
-                <h2>Estadísticas</h2>
-            </div>
-            <div class="nosecomollamarle">
-                <div class="estadisticas-admin-container">
-                    <div class="estadistica">
-                        <span>Usuarios Registrados</span>
-                        <span>200</span>
-                    </div>
-                    <div class="estadistica">
-                        <span>Publicaciones</span>
-                        <span>500</span>
-                    </div>
-                    <div class="estadistica">
-                        <span>Comentarios</span>
-                        <span>1000</span>
-                    </div>
-                    <div class="estadistica">
-                        <span>Me gusta</span>
-                        <span>300</span>
-                    </div>
-                    <div class="estadistica">
-                        <span>Seguidores</span>
-                        <span>1000</span>
-                    </div>
-                    <div class="estadistica">
-                        <span>Visitantes Únicos</span>
-                        <span>1500</span>
-                    </div>
-                </div>
-                <div class="imagen-container">
-                    <img src="../src/assets/img/example-visual-line-chart.png" alt="">
+        <div class="admin-container">
+            <div class="admin-title-container">
+                <h1>Plataforma  de administración</h1>
+                <div class="opciones-admin-container">
+                    <a href="#">Estadísticas</a>
+                    <a href="../public/anadir_pelicula.html">Añadir Película</a>
+                    <a href="../public/anadir_promocion.html">Añadir Promoción</a>
+                    <a href="../public/admin_gestionar_cartelera.html">Gestionar Cartelera</a>
+                    <a href="#">Gestionar Promociones</a>
                 </div>
             </div>
+            <div class="dashboard-admin-container">
+                <div>
+                    <h2>Estadísticas</h2>
+                </div>
+                <div class="dashboard-admin-content">                 
+                    <div class="estadisticas-admin-container">
+                        <div class="estadistica">
+                            <span>Usuarios Registrados</span>
+                            <span>200</span>
+                        </div>
+                        <div class="estadistica">
+                            <span>Publicaciones</span>
+                            <span>500</span>
+                        </div>
+                        <div class="estadistica">
+                            <span>Comentarios</span>
+                            <span>1000</span>
+                        </div>
+                        <div class="estadistica">
+                            <span>Me gusta</span>
+                            <span>300</span>
+                        </div>
+                        <div class="estadistica">
+                            <span>Seguidores</span>
+                            <span>1000</span>
+                        </div>
+                        <div class="estadistica">
+                            <span>Visitantes Únicos</span>
+                            <span>1500</span>
+                        </div>
+                    </div>
+                    <div id="grafico" class="custom-chart"></div>
+                </div>
+            </div>
         </div>
-        
-
         <div id="footer-component"></div>
     </div>
 </body>
