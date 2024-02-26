@@ -242,12 +242,8 @@ h1 {
     display: flex;
     margin-bottom: 24px;
     justify-content: space-between;
-<<<<<<< HEAD
-    margin-top: auto;
-    color: white;
-=======
-    margin-top: 20px;  
->>>>>>> ee65a4e4ea6f10affcc1227d0a1e4bf75b01a345
+    margin-top: 20px; 
+    color: white; 
 }
 
 .botones-reserva a {
