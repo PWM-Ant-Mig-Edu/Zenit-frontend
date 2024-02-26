@@ -410,13 +410,21 @@ fill: #434343;
 /*  Detalles  de compra*/
 .detalles-compra-container {
     display: flex;
-    height: auto;
-    width: 100%;
-    background-color: #f0f0f0; 
+    flex-direction: column;
+    background-color: var(--backgroundColor);
+    width: 90%;
     border-radius: 10px;
-    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    padding: 15px 25px;
+    gap: 20px;
 }
-
+.detalles-compra-container  h2 {
+    color: var(--mainColor);
+    font-size: x-large;
+}
+.dato-compra {
+    margin-bottom: 10px;;
+}
 @media screen and (max-width: 768px) {
     /* Estilos para tabletas */
     .progress-container {
