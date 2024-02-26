@@ -336,18 +336,28 @@ fill: #434343;
 /* Estilos para las secciones de promociones */
 .promotions-section {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 20px;
 }
 
+/* Estilos para las secciones de promociones */
+.promotions-section h2{
+    margin-bottom: 20px;
+}
+
 /* Estilos para cada opción de promoción */
 .promotion-option {
+    display: flex;
+    flex-direction: row;
     flex: 1;
     margin-right: 20px;
 }
 
 /* Estilos para cada elemento de promoción */
 .promotion-item {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
 }
 
@@ -370,16 +380,24 @@ fill: #434343;
     width: 30px;
     height: 30px;
     border: none;
-    background-color: var(--mainColor);
-    color: white;
+    background-color: transparent;
     border-radius: 15px;
     cursor: pointer;
 }
 
+/* Estilos para las imágenes dentro de los botones */
+.menu-input button img {
+    width: 100%; /* Ajusta el ancho según tu diseño */
+    height: 100%; /* Ajusta la altura según tu diseño */
+    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+    align-self: center;
+}
+
 /* Estilos para la cantidad */
 .menu-input span {
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: normal;
+    font-size: 12px;
+    margin: 0 10px; /*TOP && BOTTOM  LEFT && RIGHT*/
 }
 
 @media screen and (max-width: 768px) {
@@ -416,6 +434,29 @@ fill: #434343;
       }
 }
 
+@media screen and (max-width: 638px) {
+    .promotion-option {
+        flex-direction: column;
+    }
+
+    .menu-input button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .promotion-item img {
+        width: 60%;
+        align-self: center;
+        border-radius: 5px;
+    }
+
+    .menu-input span {
+        font-size: 20px;
+        margin: 0 20px; /*TOP && BOTTOM  LEFT && RIGHT*/
+    }
+
+}
+
 @media screen and (max-width: 480px) {
     /* Estilos para teléfonos móviles */
     .progress-container {
@@ -430,9 +471,12 @@ fill: #434343;
 
     }
 
-    button {
-        padding: 5px 10px; /* Reducir el tamaño de los botones en móviles */
+    .promotion-item img {
+        width: 80%;
+        align-self: center;
+        border-radius: 5px;
     }
+
 
     .ticket-row {
         flex-direction: column;

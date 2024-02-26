@@ -57,49 +57,115 @@
             </div>
 
             <div class="promotions-section">
+                <h2>Nuestros Menús</h2>
                 <div class="promotion-option">
-                    <h2>Promociones</h2>
                     <!-- Primer promoción -->
                     <div class="promotion-item">
-                        <img src="ruta-a-la-imagen-promocion1.jpg" alt="Promoción 1">
+                        <img src="../src/assets/img/menu-1.png" alt="Promoción 1">
                         <div class="menu-input">
-                            <button onclick="decrement('promotion1')">-</button>
+                            <button onclick="decrement('promotion1')">
+                                <img src="../src/assets/img/lessButton.svg" alt="Less Button">
+                            </button>
                             <span id="quantity_promotion1">0</span>
-                            <button onclick="increment('promotion1')">+</button>
+                            <button onclick="increment('promotion1')">
+                                <img src="../src/assets/img/moreButton.svg" alt="More Button">
+                            </button>
                         </div>
                     </div>
                     <!-- Segunda promoción -->
                     <div class="promotion-item">
-                        <img src="ruta-a-la-imagen-promocion2.jpg" alt="Promoción 2">
+                        <img src="../src/assets/img/menu-2.png" alt="Promoción 2">
                         <div class="menu-input">
-                            <button onclick="decrement('promotion2')">-</button>
+                            <button onclick="decrement('promotion2')">
+                                <img src="../src/assets/img/lessButton.svg" alt="Less Button">
+                            </button>
                             <span id="quantity_promotion2">0</span>
-                            <button onclick="increment('promotion2')">+</button>
+                            <button onclick="increment('promotion2')">
+                                <img src="../src/assets/img/moreButton.svg" alt="More Button">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-3.png" alt="Promoción 3">
+                        <div class="menu-input">
+                            <button onclick="decrement('promotion3')">
+                                <img src="../src/assets/img/lessButton.svg" alt="Less Button">
+                            </button>
+                            <span id="quantity_promotion3">0</span>
+                            <button onclick="increment('promotion3')">
+                                <img src="../src/assets/img/moreButton.svg" alt="More Button">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-4.png" alt="Promoción 3">
+                        <div class="menu-input">
+                            <button onclick="decrement('promotion4')">
+                                <img src="../src/assets/img/lessButton.svg" alt="Less Button">
+                            </button>
+                            <span id="quantity_promotion4">0</span>
+                            <button onclick="increment('promotion4')">
+                                <img src="../src/assets/img/moreButton.svg" alt="More Button">
+                            </button>
                         </div>
                     </div>
                     <!-- Agregar más promociones según sea necesario -->
                 </div>
+
                 <div class="promotion-option">
-                    <h2>Menús</h2>
-                    <!-- Primer menú -->
-                    <div class="menu-item">
-                        <img src="ruta-a-la-imagen-menu1.jpg" alt="Menú 1">
+                    <!-- Primer promoción -->
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-1.png" alt="Promoción 1">
                         <div class="menu-input">
-                            <button onclick="decrement('menu1')">-</button>
-                            <span id="quantity_menu1">0</span>
-                            <button onclick="increment('menu1')">+</button>
+                            <button onclick="decrement('promotion5')">
+                                <img src="../src/assets/img/lessButton.svg" alt="Less Button">
+                            </button>
+                            <span id="quantity_promotion5">0</span>
+                            <button onclick="increment('promotion5')">
+                                <img src="../src/assets/img/moreButton.svg" alt="More Button">
+                            </button>
                         </div>
                     </div>
-                    <!-- Segundo menú -->
-                    <div class="menu-item">
-                        <img src="ruta-a-la-imagen-menu2.jpg" alt="Menú 2">
+                    <!-- Segunda promoción -->
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-2.png" alt="Promoción 2">
                         <div class="menu-input">
-                            <button onclick="decrement('menu2')">-</button>
-                            <span id="quantity_menu2">0</span>
-                            <button onclick="increment('menu2')">+</button>
+                            <button onclick="decrement('promotion6')">
+                                <img src="../src/assets/img/lessButton.svg" alt="Less Button">
+                            </button>
+                            <span id="quantity_promotion6">0</span>
+                            <button onclick="increment('promotion6')">
+                                <img src="../src/assets/img/moreButton.svg" alt="More Button">
+                            </button>
                         </div>
                     </div>
-                    <!-- Agregar más menús según sea necesario -->
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-3.png" alt="Promoción 3">
+                        <div class="menu-input">
+                            <button onclick="decrement('promotion7')">
+                                <img src="../src/assets/img/lessButton.svg" alt="Less Button">
+                            </button>
+                            <span id="quantity_promotion7">0</span>
+                            <button onclick="increment('promotion7')">
+                                <img src="../src/assets/img/moreButton.svg" alt="More Button">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-4.png" alt="Promoción 3">
+                        <div class="menu-input">
+                            <button onclick="decrement('promotion8')">
+                                <img src="../src/assets/img/lessButton.svg" alt="Less Button">
+                            </button>
+                            <span id="quantity_promotion8">0</span>
+                            <button onclick="increment('promotion8')">
+                                <img src="../src/assets/img/moreButton.svg" alt="More Button">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Agregar más promociones según sea necesario -->
                 </div>
             </div>
             <div class="botones-reserva">
@@ -110,12 +176,14 @@
 
         <div class="summary-section">
             <h2>Resumen</h2>
-            <br>reserva_entradas.html
+            <br>
             <p><strong>Película:</strong> Torrente 5</p>
             <br>
             <p><strong>Cantidad Básias:</strong> <span id="total_tickets_basic">0</span> </p>
             <br>
             <p><strong>Cantidad Premium:</strong> <span id="total_tickets_premium">0</span></p>
+            <br>
+            <p><strong>Cantidad Menús:</strong> <span id="total_menus">0</span></p>
             <br>
             <p><strong>Sala:</strong> 11</p>
             <img src="../src/assets/img/película1.jpg" alt="">
@@ -129,6 +197,6 @@
     <div id="footer-component"></div>
 </div>
 
-<script src="../src/js/reserva.js"></script>
+<script src="../src/js/reserva_promociones.js"></script>
 </body>
 </html>
