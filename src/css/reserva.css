@@ -242,16 +242,16 @@ h1 {
     margin-bottom: 24px;
     justify-content: space-between;
     margin-top: 20px;
+    color: white;
 }
 
-.botones-reserva button  {
+.botones-reserva a {
     padding: 10px 20px;
     background-color: var(--mainColor);
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 10px;
-
 }
 
 
