@@ -244,17 +244,16 @@ h1 {
     display: flex;
     margin-bottom: 24px;
     justify-content: space-between;
-    margin-top: 20px;  
+    margin-top: 20px; 
+    color: white; 
 }
 
-.botones-reserva button  {
+.botones-reserva a {
     padding: 10px 20px;
     background-color: var(--mainColor);
-    color: white;
     border: none;
     cursor: pointer;
     border-radius: 10px;
-
 }
 
 
@@ -406,6 +405,16 @@ fill: #434343;
     margin: 0 10px; /*TOP && BOTTOM  LEFT && RIGHT*/
 }
 
+@media screen and (max-width: 2000px){
+    .datos-cliente-container {
+        flex-direction: column;
+    }
+
+    .direccion-envio-container, .pago-container {
+        width: 90%;
+    }
+}
+
 @media screen and (max-width: 1024px){
     .ticket-row{
         flex-direction: column;
@@ -415,6 +424,24 @@ fill: #434343;
     }
 }
 
+/*  Detalles  de compra*/
+.detalles-compra-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundColor);
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    padding: 15px 25px;
+    gap: 20px;
+}
+.detalles-compra-container  h2 {
+    color: var(--mainColor);
+    font-size: x-large;
+}
+.dato-compra {
+    margin-bottom: 10px;;
+}
 @media screen and (max-width: 768px) {
     /* Estilos para tabletas */
     .progress-container {
@@ -455,6 +482,10 @@ fill: #434343;
 @media screen and (max-width: 638px) {
     .promotion-option {
         flex-direction: column;
+    }
+
+    .grid-container-datos-pago {
+        grid-template-columns: 1fr;
     }
 
     .menu-input button {
@@ -511,7 +542,7 @@ fill: #434343;
     }
 
     .datos-cliente-container div{
-        width: 80%;
+        width: 100%;
     }
 
     .direccion-envio-container, .pago-container {
