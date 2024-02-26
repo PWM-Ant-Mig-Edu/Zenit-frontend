@@ -437,11 +437,12 @@ fill: #434343;
     table {
         overflow-x: auto;
         white-space: nowrap;
-      }
-      .si-glyph-chair-1 {
+    }
+
+    .si-glyph-chair-1 {
         width: 30px;
         height: auto;
-      }
+    }
 }
 
 @media screen and (max-width: 638px) {
@@ -486,5 +487,14 @@ fill: #434343;
 
     .ticket-row button {
         margin-top: 10px; /* Espacio adicional para botones en dispositivos móviles */
+    }
+
+    .datos-cliente-container {
+        flex-direction: column;
+        margin: 0px auto;
+    }
+
+    .datos-cliente-container div{
+        width: 80%;
     }
 }
