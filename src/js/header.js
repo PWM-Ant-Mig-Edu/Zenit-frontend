@@ -1,4 +1,3 @@
-
 function toggleMenu() {
     var element = document.querySelector(".Dropdown");
     element.classList.toggle("show");
@@ -25,7 +24,12 @@ function loadHeaderComponent() {
         })
         .catch(error => console.error('Error loading the header:', error));
 }
+
 document.addEventListener("DOMContentLoaded", loadHeaderComponent);
+
+
+
+
 
 
 

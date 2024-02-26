@@ -1,66 +1,71 @@
+<!doctype html>
+<html lang="en">
 <head> 
     <link rel="stylesheet" href="../src/css/header.css">
 </head>
-<header class="HeaderContainer">
+<body>
+    <header class="HeaderContainer">
     
-    <div class="MenuButton" onclick="toggleMenu()">
-        <img src="../src/assets/img/logo-zenit.svg" alt="Zenit logo" class="Logo">
-        <svg viewBox="0 0 100 80" width="40" height="40" fill="#000">
-            <rect width="100" height="20"></rect>
-            <rect y="30" width="100" height="20"></rect>
-            <rect y="60" width="100" height="20"></rect>
-        </svg>
-    </div>
-
-    <div class="MenuContent">
-        <div class="LeftSideContainer">
-            <img onclick="window.location.href = '../public/index.html'" src="../src/assets/img/logo-zenit.svg" alt="Zenit logo" class="Logo">
-            <nav>
-                <ul class="NavList" id="simple">
-                    <li class="NavItem">
-                        <a href="#" class="NavLink">Cines ▼</a>
-                        <ul class="DropdownMenu">
-                            <li><a href="../public/cines.html">LAS PALMAS</a></li>
-                            <li><a href="../public/cines.html">TELDE</a></li>
-                            <li><a href="../public/cines.html">TEROR</a></li>
-                            <li><a href="../public/cines.html">VECINDARIO</a></li>
-                            <li><a href="../public/cines.html">MASPALOMAS</a></li>
-                        </ul>
-                    </li>
-                    <li class="NavItem"><a href="../public/cartelera.html" class="NavLink">Cartelera</a></li>
-                    <li class="NavItem"><a href="../public/promociones.html" class="NavLink">Promociones</a></li>
-                    <li class="NavItem"><a href="../public/comprobar_reserva.html" class="NavLink">Comprobar Ticket</a></li>
-                </ul>
-            </nav>
+        <div class="MenuButton" onclick="toggleMenu()">
+            <img src="../src/assets/img/logo-zenit.svg" alt="Zenit logo" class="Logo">
+            <svg viewBox="0 0 100 80" width="40" height="40" fill="#000">
+                <rect width="100" height="20"></rect>
+                <rect y="30" width="100" height="20"></rect>
+                <rect y="60" width="100" height="20"></rect>
+            </svg>
         </div>
-        <div class="ButtonContainer">
-            <button onclick="showLogin()">Iniciar Sesión</button>
-            <button onclick="showRegister()">Register</button>
+    
+        <div class="MenuContent">
+            <div class="LeftSideContainer">
+                <img onclick="window.location.href = '../public/index.html'" src="../src/assets/img/logo-zenit.svg" alt="Zenit logo" class="Logo">
+                <nav>
+                    <ul class="NavList" id="simple">
+                        <li class="NavItem">
+                            <a href="#" class="NavLink">Cines ▼</a>
+                            <ul class="DropdownMenu">
+                                <li><a href="../public/cines.html">LAS PALMAS</a></li>
+                                <li><a href="../public/cines.html">TELDE</a></li>
+                                <li><a href="../public/cines.html">TEROR</a></li>
+                                <li><a href="../public/cines.html">VECINDARIO</a></li>
+                                <li><a href="../public/cines.html">MASPALOMAS</a></li>
+                            </ul>
+                        </li>
+                        <li class="NavItem"><a href="../public/cartelera.html" class="NavLink">Cartelera</a></li>
+                        <li class="NavItem"><a href="../public/promociones.html" class="NavLink">Promociones</a></li>
+                        <li class="NavItem"><a href="../public/comprobar_reserva.html" class="NavLink">Comprobar Ticket</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="ButtonContainer">
+                <button onclick="showLogin()">Iniciar Sesión</button>
+                <button onclick="showRegister()">Register</button>
+            </div>
+        </div>
+    
+    </header>
+    
+    
+    <div class="Dropdown">
+        <div class="Nav">
+            <ul class="NavList" id="mobile">
+                <li class="NavItem">
+                    <a href="#" class="NavLink">Cines ▼</a>
+                    <ul class="DropdownMenu">
+                        <li><a href="../public/cines.html">LAS PALMAS</a></li>
+                        <li><a href="../public/cines.html">TELDE</a></li>
+                        <li><a href="../public/cines.html">TEROR</a></li>
+                        <li><a href="../public/cines.html">VECINDARIO</a></li>
+                        <li><a href="../public/cines.html">MASPALOMAS</a></li>
+                    </ul>
+                </li>
+                <li><a target="_parent" href="../public/cartelera.html">Cartelera</a></li>
+                <li><a target="_parent" href="../public/promociones.html">Promociones</a></li>
+                <li><a target="_parent" href="../public/comprobar_reserva.html">Comprobar Ticket</a></li>
+            </ul>
+            <li><button onclick="showRegister()">Registrarse</button></li>
+            <li>¿Ya está registrado?<a target="_parent" href="../public/index.html"> Inicie sesión</a></li>
         </div>
     </div>
-
-</header>
-
-
-<div class="Dropdown">
-    <div class="Nav">
-        <ul class="NavList" id="mobile">
-            <li class="NavItem">
-                <a href="#" class="NavLink">Cines ▼</a>
-                <ul class="DropdownMenu">
-                    <li><a href="../public/cines.html">LAS PALMAS</a></li>
-                    <li><a href="../public/cines.html">TELDE</a></li>
-                    <li><a href="../public/cines.html">TEROR</a></li>
-                    <li><a href="../public/cines.html">VECINDARIO</a></li>
-                    <li><a href="../public/cines.html">MASPALOMAS</a></li>
-                </ul>
-            </li>
-            <li><a target="_parent" href="../public/cartelera.html">Cartelera</a></li>
-            <li><a target="_parent" href="../public/promociones.html">Promociones</a></li>
-            <li><a target="_parent" href="../public/comprobar_reserva.html">Comprobar Ticket</a></li>
-        </ul>
-        <li><button onclick="showRegister()">Registrarse</button></li>
-        <li>¿Ya está registrado?<a target="_parent" href="../public/index.html"> Inicie sesión</a></li>
-    </div>
-</div>
+</body>
+</html>
 
