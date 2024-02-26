@@ -313,7 +313,7 @@ fill: #434343;
     display: flex;
     flex-direction: column;
     background-color: var(--backgroundColor);
-    width: 40%;
+    width: 50%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
     padding: 15px 25px;
@@ -478,7 +478,12 @@ fill: #434343;
 @media screen and (max-width: 480px) {
     /* Estilos para teléfonos móviles */
     .progress-container {
-        width: 90%; /* Hacer la barra de progreso aún más ancha en teléfonos */
+        width: 80%; /* Hacer la barra de progreso aún más ancha en teléfonos */
+        margin: 20px 20px;
+    }
+
+    .reserva-container {
+        padding: 0px;
     }
 
     .promotion-item img {
@@ -507,5 +512,14 @@ fill: #434343;
 
     .datos-cliente-container div{
         width: 80%;
+    }
+
+    .direccion-envio-container, .pago-container {
+        padding: 15px;
+    }
+
+    .botones-reserva {
+        width: 90%;
+        margin: 20px auto;
     }
 }
