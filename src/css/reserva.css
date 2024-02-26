@@ -164,10 +164,9 @@ h1 {
 .tickets-section {
     display: flex;
     height: auto;
-    width: 100%;
+    width: auto;
     background-color: #f0f0f0; 
     border-radius: 10px;
-    margin: auto;
 }
 
 #premium {
@@ -188,15 +187,14 @@ h1 {
 }
 
 .entradas-input {
-    width: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
 .ticket-row button {
-    width: 30px;
-    height: 30px;
+    padding: 5px 10px;
     border: none;
     background-color: var(--mainColor);
     color: white;
@@ -408,6 +406,15 @@ fill: #434343;
     margin: 0 10px; /*TOP && BOTTOM  LEFT && RIGHT*/
 }
 
+@media screen and (max-width: 1024px){
+    .ticket-row{
+        flex-direction: column;
+    }
+    .ticket-row button{
+        margin-top: 10px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     /* Estilos para tabletas */
     .progress-container {
@@ -478,6 +485,10 @@ fill: #434343;
         width: 80%;
         align-self: center;
         border-radius: 5px;
+    }
+
+    .ticket-option {
+        padding: 10px;
     }
 
 
