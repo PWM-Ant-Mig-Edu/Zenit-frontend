@@ -100,6 +100,8 @@ function updateSummary() {
     document.getElementById('total_price').textContent = totalPrice.toFixed(2);
 }
 
+
+
 // Define the prices per ticket type (adjust as necessary)
 const priceBasic = 5.00;
 const pricePremium = 10.00;
