@@ -11,9 +11,10 @@ document.addEventListener("DOMContentLoaded", loadPerfilBotonesComponent);
 
 function setActive(num) {
     let elements = document.getElementsByClassName("opciones-menu-container");
+    console.log(elements.length);
     while (elements.length > 0) {
         elements[id].classList.remove("active");
-        if(elements[id].id === id){
+        if(elements[id].id === num){
             elements[0].classList.add("active");
         }
     }
