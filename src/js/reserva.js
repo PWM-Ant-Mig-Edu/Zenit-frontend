@@ -1,7 +1,3 @@
-var currentStep = 0;
-var steps = document.querySelectorAll('.step');
-var step_names = document.querySelectorAll('.step-name');
-var progressBar = document.querySelector('.progress-line');
 
 // Variables to keep track of the quantity of tickets and the total price
 let quantityChildrenBasic = 0;
@@ -107,40 +103,3 @@ const priceBasic = 5.00;
 const pricePremium = 10.00;
 
 
-function advance() {
-    if (currentStep < steps.length - 1) {
-        currentStep++;
-        updateProgressBar();
-    }
-}
-
-function back() {
-    if (currentStep > 0) {
-        currentStep--;
-        updateProgressBar();
-    }
-}
-
-function updateProgressBar() {
-    progressBar.style.width = (currentStep / (steps.length - 1) * 100) + '%';
-    console.log(progressBar.style.width);
-    for (var i = 0; i < steps.length; i++) {
-        if (i < currentStep) {
-            steps[i].classList.remove('current');
-            steps[i].classList.remove('not-completed');
-            steps[i].classList.add('completed');
-
-        } else if (i === currentStep) {
-            steps[i].classList.remove('completed');
-            steps[i].classList.remove('not-completed');
-            steps[i].classList.add('current');
-        } else {
-            steps[i].classList.remove('completed');
-            steps[i].classList.remove('current');
-            steps[i].classList.add('not-completed');
-        }
-    }
-}
-
-
-updateProgressBar(); // Para inicializar la barra de progreso al cargar la página

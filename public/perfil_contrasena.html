@@ -17,6 +17,7 @@
     <script src="../src/js/login.js"></script>
     <script src="../src/js/reservar.js"></script>
     <script src="../src/js/perfil_contrasena.js"></script>
+    <script src="../src/js/perfil.js"></script>
 
 </head>
 <body>
@@ -31,28 +32,7 @@
         <div id="header-component"></div>
 
         <div class="perfil-container">
-            <div class="menu-bar-container">
-                <div class="opciones-menu-container" id="noactive">
-                    <a href="../public/perfil_info.html">
-                        <p>Información Perfil</p>
-                    </a>
-                </div>
-                <div class="opciones-menu-container" id="active">
-                    <a href=".#">
-                        <p>Seguridad y Contraseña</p>
-                    </a>
-                </div>
-                <div class="opciones-menu-container" id="noactive">
-                    <a href="../public/perfil_pago.html">
-                        <p>Información de Pago</p>
-                    </a>
-                </div>
-                <div class="opciones-menu-container" id="noactive">
-                    <a href="../public/perfil_compras.html">
-                        <p>Historial de Compras</p>
-                    </a>
-                </div>
-            </div>
+            <div id="botones-perfil-component"></div>
             <div class="configuracion-perfil-container">
                 <div class="cabecera-perfil-container">
                     <h1>Seguridad  y Contraseña</h1>
@@ -63,35 +43,35 @@
                     <div class="datos-contrasena-container">
                         <div class="inputs-container">
                             <div class="inputs-contrasena">
-                                <h2>Contraseña Actual</h1>
+                                <h2>Contraseña Actual</h2>
                                 <div>
                                     <input type="password" placeholder="Contraseña actual">
                                     <span class="toggle-password" onclick="togglePasswordVisibility(this)">
-                                        <i id="toggleIcon" class="fas fa-eye"></i>
+                                        <i class="toggleIcon" class="fas fa-eye"></i>
                                     </span>
                                 </div>
                             </div>
                             <div class="inputs-contrasena">
-                                <h2>Nueva Contraseña</h1>
+                                <h2>Nueva Contraseña</h2>
                                 <div>
                                     <input type="password" placeholder="Nueva Contraseña">
                                     <span class="toggle-password" onclick="togglePasswordVisibility(this)">
-                                        <i id="toggleIcon" class="fas fa-eye"></i>
+                                        <i class="toggleIcon" class="fas fa-eye"></i>
                                     </span>
                                 </div>
                             </div>
                             <div class="inputs-contrasena">
-                                <h2>Confirmar Contraseña</h1>
+                                <h2>Confirmar Contraseña</h2>
                                 <div>
                                     <input type="password" placeholder="Confirmar Contraseña">
                                     <span class="toggle-password" onclick="togglePasswordVisibility(this)">
-                                        <i id="toggleIcon" class="fas fa-eye"></i>
+                                        <i class="toggleIcon" class="fas fa-eye"></i>
                                     </span>
                                 </div>
                             </div>
                         </div>
                         <div class="informacion-contrasena-container">
-                            <h2>Tu contraseña</h1>
+                            <h2>Tu contraseña</h2>
                             <ul>
                                 <li>Debe tener al menos 8 caracteres.</li>
                                 <li>Debe contener al menos una letra mayúscula.</li>
