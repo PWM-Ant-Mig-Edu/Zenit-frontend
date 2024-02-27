@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="../src/css/gridPromociones.css">
     <script src="../src/js/header.js"></script>
     <script src="../src/js/footer.js"></script>
+    <script src="../src/js/adminBotones.js"></script>
+    <script src="../src/js/promociones.js"></script>
 
 
 </head>
@@ -30,48 +32,32 @@
         <div id="header-component"></div>
 
         <div class="admin-title-container">
-            <h1>Plataforma  de administración</h1>
-            <div class="opciones-admin-container">
-                <a href="../public/admin_dashboard.html">Estadísticas</a>
-                <a href="../public/anadir_pelicula.html">Añadir Película</a>
-                <a href="../public/anadir_promocion.html">Añadir Promoción</a>
-                <a href="../public/admin_gestionar_cartelera.html">Gestionar Cartelera</a>
-                <a href="../public/admin_gestionar_promociones.html">Gestionar Promociones</a>
-            </div>
+            <div id="admin-botones"></div>
         </div>
         
         <div  class="promocionesContainerAll">
             <h1 class="titlePromociones">Promociones de la Semana</h1>
             <div class="promocionesContainer">
-                <div class="promocionesGrid" id="type1">
-                    <img src="../src/assets/img/promocion1.jpg" alt="promocion1">
-                    <img src="../src/assets/img/promocion2.jpg" alt="promocion2">
-                    
-                </div>
-            </div>
-            <h1 class="titlePromociones">Promociones especiales</h1>
-            <div class="promocionesContainer">
-                <div class="promocionesGrid" id="type1">
-                    <img src="../src/assets/img/promocion1.jpg" alt="promocion1">
-                    <img src="../src/assets/img/promocion2.jpg" alt="promocion2">
-                    <img src="../src/assets/img/promocion2.jpg" alt="promocion2">
-                    <img src="../src/assets/img/promocion2.jpg" alt="promocion2">
-                    <img src="../src/assets/img/promocion2.jpg" alt="promocion2">
-                    <img src="../src/assets/img/promocion2.jpg" alt="promocion2">
-                </div>
-            </div>
-            <h1 class="titlePromociones">Próximas promociones</h1>
-            <div class="promocionesContainer">
-                <div class="promocionesGrid" id="type1">
-                    <img src="../src/assets/img/promocion1.jpg" alt="promocion1">
-                    <img src="../src/assets/img/promocion2.jpg" alt="promocion2">
-                    <img src="../src/assets/img/promocion2.jpg" alt="promocion2">
-                    <img src="../src/assets/img/promocion2.jpg" alt="promocion2">
-                    <img src="../src/assets/img/promocion2.jpg" alt="promocion2">
-                    <img src="../src/assets/img/promocion2.jpg" alt="promocion2">
-                </div>
+                <div class="promocionesGrid" id="type1"></div>
             </div>
         </div>
+        
+
+        <div  class="promocionesContainerAll">
+            <h1 class="titlePromociones">Promociones Especiales</h1>
+            <div class="promocionesContainer">
+                <div class="promocionesGrid" id="type2"></div>
+            </div>
+        </div>
+        
+            
+        <div  class="promocionesContainerAll">
+            <h1 class="titlePromociones">Próximas promociones</h1>
+            <div class="promocionesContainer">
+                <div class="promocionesGrid" id="type3"></div>
+            </div>
+        </div>
+        
        
 
         <div id="footer-component"></div>
