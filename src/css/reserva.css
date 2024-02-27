@@ -121,26 +121,7 @@ h1 {
 }
 
 
-/* BUTACAS */
-.table-container{
-    overflow-x: auto;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: auto;
-    font-size: 16px; 
-}
-th, td {
-    border: 1px solid #0A2239;
-    padding: 8px; 
-    text-align: center;
-}
-.si-glyph-chair-1 {
-width: 50px;
-height: 30px;
-fill: #434343;
-}
+
 
 /* Datos */
 
