@@ -32,27 +32,7 @@
             <div class="return-button-container">
                 <h1>Proceso de Compra</h1>
             </div>
-            <div class="progress-container">
-                <div class="progress-steps">
-                    <div class="step current">
-                        <div class="step-name">Entradas</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-name">Comidas</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-name">Butacas</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-name">Pago</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-name">Detalles</div>
-                    </div>
-                    <div class="base-line"></div> <!-- Línea que conecta los puntos -->
-                    <div class="progress-line"></div>
-                </div>
-            </div>
+            <div id="progressBar-component"></div>
 
             <div class="tickets-section">
                 <div class="ticket-option">
@@ -159,7 +139,7 @@
 
 
 <script>
-    updateProgressBar(0); // Por ejemplo, inicializar en el paso 5
+    loadProgressBarComponent(0); // Por ejemplo, inicializar en el paso 5
 </script>
 
 </body>
