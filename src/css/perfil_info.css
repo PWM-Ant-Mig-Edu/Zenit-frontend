@@ -319,25 +319,25 @@
     margin-bottom: 20px;
 }
 
-.tabla{
+#tabla-compras{
     overflow-x: auto;
 }
 
-.datos-container-compras table {
+#tabla-compras table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
 }
 
-.datos-container-compras th,
-.datos-container-compras td {
+#tabla-compras th,
+#tabla-compras td {
     padding: 8px;
     border: 1px solid #ddd;
     text-align: left;
 }
 
-.datos-container-compras th {
+#tabla-compras th {
     background-color: #f0f0f0;
 }
 

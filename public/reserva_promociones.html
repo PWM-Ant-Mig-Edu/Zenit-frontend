@@ -10,6 +10,9 @@
     <script src="../src/js/footer.js"></script>
     <script src="../src/js/register.js"></script>
     <script src="../src/js/login.js"></script>
+    <script src="../src/js/reserva_promociones.js"></script>
+    <script src="../src/js/reservaProgressBar.js"></script>
+    <script src="../src/js/summaryReserva.js"></script>
 
     <title>Selección de Promociones y Menús</title>
 
@@ -29,27 +32,8 @@
             <div class="return-button-container">
                 <h1>Proceso de Compra</h1>
             </div>
-            <div class="progress-container">
-                <div class="progress-steps">
-                    <div class="step current">
-                        <div class="step-name">Entradas</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-name">Comidas</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-name">Butacas</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-name">Pago</div>
-                    </div>
-                    <div class="step">
-                        <div class="step-name">Detalles</div>
-                    </div>
-                    <div class="base-line"></div> <!-- Línea que conecta los puntos -->
-                    <div class="progress-line"></div>
-                </div>
-            </div>
+
+            <div id="progressBar-component"></div>
 
             <div class="promotions-section">
                 <div class="promotions-grid">
@@ -127,33 +111,21 @@
             </div>
             <div class="botones-reserva">
                 <a href="../public/reserva_entradas.html" onclick="back()">Retroceder</a>
-                <a href="../public/reserva_butacas.html" onclick="back()">Avanzar</a>
+                <a href="../public/reserva_butacas.html" onclick="advance()">Avanzar</a>
             </div>
         </div>
 
-        <div class="summary-section">
-            <h2>Resumen</h2>
-            <br>
-            <p><strong>Película:</strong> Torrente 5</p>
-            <br>
-            <p><strong>Cantidad Básias:</strong> <span id="total_tickets_basic">0</span> </p>
-            <br>
-            <p><strong>Cantidad Premium:</strong> <span id="total_tickets_premium">0</span></p>
-            <br>
-            <p><strong>Cantidad Menús:</strong> <span id="total_menus">0</span></p>
-            <br>
-            <p><strong>Sala:</strong> 11</p>
-            <img src="../src/assets/img/película1.jpg" alt="">
-            <div id="summary-price-container">
-                <span id="total_price">0</span> €
-            </div>
-        </div>
+        <div id="summary-component"></div>
     </div>
 
 
     <div id="footer-component"></div>
 </div>
 
-<script src="../src/js/reserva_promociones.js"></script>
+
+<script>
+    loadProgressBarComponent(1); // Por ejemplo, inicializar en el paso 5
+</script>
+
 </body>
 </html>
