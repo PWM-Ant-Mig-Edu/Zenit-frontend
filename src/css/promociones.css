@@ -17,9 +17,10 @@
     font-size: x-large;
 }
 
-.promocionesTitleContainer .titlePromociones {
-    font-size: xxx-large;
+.titlePromociones {
+    font-size: xx-large;
     margin-bottom: 4px;
+    color: var(--mainColor);
 }
 
 .promocionesContainerAll {
