@@ -130,8 +130,5 @@ document.addEventListener('DOMContentLoaded', function() {
         cargarPromociones();
         cargarPromocionesEspeciales();
         cargarPromocionesProximas();
-    }
-
-
-    
+    }    
 });

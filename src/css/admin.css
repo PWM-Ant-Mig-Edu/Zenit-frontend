@@ -1,5 +1,8 @@
 @import url('colors.css');
 
+#admin-botones{
+    width: 100%;
+}
 
 .admin-container {
     display: flex;
