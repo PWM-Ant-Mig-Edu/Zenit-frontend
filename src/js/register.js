@@ -32,23 +32,3 @@ function hideRegister() {
     popupsContainer.style.display = "none";
     registerComponent.style.display = "none";
 }
-
-function successLogin() {
-
-    var loginComponent = document.getElementById("login-component");
-    var loginImg = document.querySelector(".imagen-header");
-
-    var loginButton = document.querySelector(".ButtonContainer");
-    var popupsContainer = document.getElementById("popups");
-    var homeContainer = document.querySelector(".wrapper-container");
-  
-    homeContainer.classList.remove("blurred-background");
-    console.log(loginButton);
-  
-    popupsContainer.style.display = "none";
-    loginComponent.style.display = "none";
-    loginButton.style.display = "none";
-    loginImg.style.display = "block";
-
-
-}

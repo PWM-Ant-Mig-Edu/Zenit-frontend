@@ -102,20 +102,35 @@ function successLogin() {
     var loginComponent = document.getElementById("login-component");
     var loginImg = document.querySelector(".imagen-header");
 
-    var loginButton = document.querySelector(".ButtonContainer");
+    var loginButtonMenuContent = document.querySelector(".MenuContent .ButtonContainer");
+    var loginButtonDropdown = document.querySelector(".Dropdown li");
+
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
-  
-    // Quita la clase del contenedor de popups para quitar el fondo borroso
+
     homeContainer.classList.remove("blurred-background");
-    console.log(loginButton);
-  
-    // Oculta el componente de login
-    popupsContainer.style.display = "none";
-    loginComponent.style.display = "none";
-    loginButton.style.display = "none";
-    loginImg.style.display = "block";
 
+    if (loginButtonMenuContent) {
+        popupsContainer.style.display = "none";
+        loginComponent.style.display = "none";
+        loginButtonMenuContent.style.display = "none";
+        loginImg.style.display = "block";
+    }
 
+    if (loginButtonDropdown) {
+        var liPerfil = document.getElementById("li Perfil");
+        if (liPerfil) {
+            liPerfil.style.display = "block";
+        }
+
+        var registerButtonDropdown = document.querySelector(".registerMobile");
+        var loginLinkDropdown = document.querySelector(".loginMobile");
+        if (registerButtonDropdown && loginLinkDropdown) {
+            registerButtonDropdown.style.display = "none";
+            loginLinkDropdown.style.display = "none";
+        }
+    }
 }
+
+
 
