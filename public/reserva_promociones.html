@@ -10,6 +10,8 @@
     <script src="../src/js/footer.js"></script>
     <script src="../src/js/register.js"></script>
     <script src="../src/js/login.js"></script>
+    <script src="../src/js/reserva_promociones.js"></script>
+    <script src="../src/js/reservaProgressBar.js"></script>
 
     <title>Selección de Promociones y Menús</title>
 
@@ -129,7 +131,7 @@
             </div>
             <div class="botones-reserva">
                 <a href="../public/reserva_entradas.html" onclick="back()">Retroceder</a>
-                <a href="../public/reserva_butacas.html" onclick="back()">Avanzar</a>
+                <a href="../public/reserva_butacas.html" onclick="advance()">Avanzar</a>
             </div>
         </div>
 
@@ -156,6 +158,10 @@
     <div id="footer-component"></div>
 </div>
 
-<script src="../src/js/reserva_promociones.js"></script>
+
+<script>
+    updateProgressBar(1); // Por ejemplo, inicializar en el paso 5
+</script>
+
 </body>
 </html>
