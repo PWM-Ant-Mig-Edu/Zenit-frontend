@@ -11,46 +11,101 @@ const estrenos = [
     { img: "../src/assets/img/película11.jpg", alt: "film11" },
 ];
 
-function cargarPeliculas() {
+function cargarPeliculas(rol) {
     const contenedor = document.getElementById('type1');
     contenedor.innerHTML = '';
 
     peliculas.forEach(pelicula => {
-        const peliculaHTML = `
-        <div class="film-item">
-            <div class="film-img">
-            <img src="${pelicula.img}" alt="${pelicula.alt}">
-            <div class="overlay">
-                <button onclick="showReservar()"><i class="fas fa-shopping-cart"></i>Reservar</button>
-                <a href="${pelicula.resenas}" class="button-link">
-                <i class="fas fa-search"></i> Ver detalles
-                </a>
-            </div>
-            </div>
-        </div>
-        `;
+        let peliculaHTML = ' ';
+
+        switch (rol) {
+            case 'admin':
+                peliculaHTML = `
+                <div class="film-item">
+                    <div class="film-img">
+                    <img src="${pelicula.img}" alt="${pelicula.alt}">
+                    <div class="overlay">
+                        <button onclick="showReservar()"><i class="fas fa-trash"></i>Eliminar</button>
+                        <a href="${pelicula.resenas}" class="button-link">
+                        <i class="fas fa-pencil"></i> Editar
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                `;
+                
+                break;
+            default:
+                peliculaHTML = `
+                <div class="film-item">
+                    <div class="film-img">
+                    <img src="${pelicula.img}" alt="${pelicula.alt}">
+                    <div class="overlay">
+                        <button onclick="showReservar()"><i class="fas fa-shopping-cart"></i>Reservar</button>
+                        <a href="${pelicula.resenas}" class="button-link">
+                        <i class="fas fa-search"></i> Ver detalles
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                `;
+                break;
+        }
         contenedor.innerHTML += peliculaHTML;
     });
 }
 
-function cargarEstrenos() {
+function cargarEstrenos(rol) {
     const contenedor = document.getElementById('type2');
 
     if (contenedor) {
         contenedor.innerHTML = '';
     
         estrenos.forEach(pelicula => {
-            const peliculaHTML = `
+            let peliculaHTML = ' ';
+
+        switch (rol) {
+            case 'admin':
+                peliculaHTML = `
                 <div class="film-item">
-                <img src="${pelicula.img}" alt="${pelicula.alt}">
+                    <div class="film-img">
+                    <img src="${pelicula.img}" alt="${pelicula.alt}">
+                    <div class="overlay">
+                        <button onclick="showReservar()"><i class="fas fa-trash"></i>Eliminar</button>
+                        <a href="${pelicula.resenas}" class="button-link">
+                        <i class="fas fa-pencil"></i> Editar
+                        </a>
+                    </div>
+                    </div>
                 </div>
-            `;
-            contenedor.innerHTML += peliculaHTML;
+                `;
+                
+                break;
+            default:
+                peliculaHTML = `
+                <div class="film-item">
+                    <img src="${pelicula.img}" alt="${pelicula.alt}">
+                </div>
+                `;
+                break;
+        }
+        contenedor.innerHTML += peliculaHTML;
         });
     } else {
         return
     }
 }
 
-document.addEventListener('DOMContentLoaded', cargarPeliculas);
-document.addEventListener('DOMContentLoaded', cargarEstrenos);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const url = window.location.href;
+
+    if (url.includes('admin_gestionar_cartelera.html')) {
+        cargarPeliculas('admin');
+        cargarEstrenos('admin');
+    } else {
+        cargarPeliculas();
+        cargarEstrenos();
+    }
+});
