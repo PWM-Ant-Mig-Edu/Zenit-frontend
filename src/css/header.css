@@ -80,6 +80,36 @@ a, a:visited, a:hover, a:active {
     display: inline-block;
 }
 
+.imagen-header {
+    width: 50px; /* Tamaño del contenedor que define el tamaño del círculo */
+    height: 50px; /* Igual al ancho para un círculo perfecto */
+    overflow: hidden;
+    border-radius: 50%; /* Esto crea la forma redonda */
+    display: flex; /* Centra la imagen en el contenedor */
+    justify-content: center;
+    align-items: center;
+    /* Asegúrate de que el contenedor tenga posición relativa si planeas usar posición absoluta en la imagen */
+    position: relative; 
+    margin: auto;
+    margin-right: 20px;
+    display: none;
+}
+
+.imagen-header img {
+    /* Se ajusta para cubrir completamente el espacio del círculo */
+    width: 100%; /* Asegura que la imagen pueda expandirse para cubrir el ancho */
+    height: 100%; /* Asegura que la imagen pueda expandirse para cubrir la altura */
+    object-fit: cover; /* Esto asegura que la imagen cubra completamente el círculo, recortándose adecuadamente sin distorsión */
+    /* Centra la imagen dentro del círculo */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-self: flex-end;
+    cursor: pointer;
+}
+
+
 
 .DropdownMenu {
     display: none;

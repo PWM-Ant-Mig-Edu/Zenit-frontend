@@ -15,10 +15,8 @@ function showRegister() {
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
   
-    // Agrega una clase al contenedor de popups para aplicar el fondo borroso
     homeContainer.classList.add("blurred-background");
   
-    // Muestra el componente de registro
     registerComponent.style.display = "block";
     popupsContainer.style.display = "block";
 
@@ -29,10 +27,28 @@ function hideRegister() {
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
   
-    // Agrega una clase al contenedor de popups para aplicar el fondo borroso
     homeContainer.classList.remove("blurred-background");
   
-    // Muestra el componente de registro
     popupsContainer.style.display = "none";
     registerComponent.style.display = "none";
+}
+
+function successLogin() {
+
+    var loginComponent = document.getElementById("login-component");
+    var loginImg = document.querySelector(".imagen-header");
+
+    var loginButton = document.querySelector(".ButtonContainer");
+    var popupsContainer = document.getElementById("popups");
+    var homeContainer = document.querySelector(".wrapper-container");
+  
+    homeContainer.classList.remove("blurred-background");
+    console.log(loginButton);
+  
+    popupsContainer.style.display = "none";
+    loginComponent.style.display = "none";
+    loginButton.style.display = "none";
+    loginImg.style.display = "block";
+
+
 }
