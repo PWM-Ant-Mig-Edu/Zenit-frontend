@@ -41,7 +41,6 @@ a, a:visited, a:hover, a:active {
     display: flex;
     flex-direction: row; 
     white-space: nowrap;
-
 }
 
 .NavList#mobile{
@@ -202,6 +201,7 @@ a, a:visited, a:hover, a:active {
     padding: 5px;
 }
 
+
 @media (min-width: 767px) {
     .MenuButton {
         display: none;
@@ -260,6 +260,17 @@ a, a:visited, a:hover, a:active {
 
     .NavList#simple > *:not(:nth-child(1)) {
         margin-right: 0px;
+    }
+}
+
+@media (max-width: 890px) {
+    .HeaderContainer{
+        font-size: x-small;
+    }
+
+    .ButtonContainer{
+        margin-right: 20px;
+    
     }
 }
 

@@ -137,7 +137,7 @@
     padding: 20px;
 }
 
-.informacion-contrasena-container h2, li{
+.informacion-contrasena-container h2, .informacion-contrasena-container li{
     margin-bottom: 10px;
 }
 
