@@ -43,6 +43,5 @@ function loadContent(content, language) {
 
 // Llamar a la función para cargar el contenido según el idioma seleccionado al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
-    // Por ejemplo, cargar el contenido en español al cargar la página
-    loadLanguageFromJSON('adminDashboard', 'en');
+    loadLanguageFromJSON('adminDashboard', 'es');
 });
