@@ -16,8 +16,6 @@ function setActive(num) {
     for (var i = 0; i < hijos.length; i++) {
         if (i === num) {
             hijos[i].id = "active";
-        } else {
-
         }
     }
 }
