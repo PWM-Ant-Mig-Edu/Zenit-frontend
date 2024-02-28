@@ -16,7 +16,6 @@ function setActive(num) {
     var hijos = padre.children;
 
     for (var i = 0; i < hijos.length; i++) {
-        // Verifica si el número de iteración coincide con el número proporcionado
         if (i === num) {
             hijos[i].id = "active";
         } else {
