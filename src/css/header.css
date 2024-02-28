@@ -254,6 +254,11 @@ a, a:visited, a:hover, a:active {
         margin-left: 20px;
         margin-right: 20px;
     }
+
+    .ButtonContainer button{
+        padding: 8px 18px;
+        font-size: small;
+    }
 }
 
 @media (max-width: 1200px) {
