@@ -101,6 +101,7 @@ function successLogin() {
 
     var loginComponent = document.getElementById("login-component");
     var loginImg = document.querySelector(".imagen-header");
+    console.log(loginImg);
 
     var loginButtonMenuContent = document.querySelector(".MenuContent .ButtonContainer");
     var loginButtonDropdown = document.querySelector(".Dropdown li");

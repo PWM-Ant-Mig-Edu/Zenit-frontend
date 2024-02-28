@@ -40,6 +40,9 @@
                 <button onclick="showLogin()">Iniciar Sesión</button>
                 <button onclick="showRegister()">Registro</button>
             </div>
+            <div class="imagen-header">
+                <img src="../src/assets/img/image_aca.jpg">
+            </div>
         </div>
     
     </header>
@@ -61,9 +64,10 @@
                 <li><a target="_parent" href="../public/billboard.html">Cartelera</a></li>
                 <li><a target="_parent" href="../public/promotions.html">Promociones</a></li>
                 <li><a target="_parent" href="../public/checkReservation.html">Comprobar Ticket</a></li>
+                <li id="li Perfil" style="display: none;"><a target="_parent" href="../public/perfil_info.html">Perfil</a></li>
             </ul>
-            <li><button onclick="showRegister()">Registro</button></li>
-            <li>¿Ya está registrado?<a target="_parent" href="../public/index.html"> Inicie sesión</a></li>
+            <li class="registerMobile"><button onclick="showRegister()">Registrarse</button></li>
+            <li class="loginMobile" style="cursor: pointer;">¿Ya está registrado?<a target="_parent" onclick="showLogin()"> Inicie sesión</a></li>
         </div>
     </div>
 
