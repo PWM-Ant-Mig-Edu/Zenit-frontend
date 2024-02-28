@@ -4,14 +4,14 @@
 <div class="form-container-login">
   <button class="close-button-login" onclick="hideLogin()">X</button>
     <p class="title-login">¡Bienvenido de nuevo!</p>
-    <form class="form-login">
+    <div class="form-login">
       <input type="email" class="input-login" placeholder="Email">
       <input type="password" class="input-login" placeholder="Contraseña">
       <p class="page-link-login">
         <span  onclick="hideLogin(); showRecuperarContrasena();" class="page-link-label-login">¿Olvidaste la contraseña?</span>
       </p>
-      <button class="form-btn-login">Iniciar Sesión</button>
-    </form>
+      <button class="form-btn-login" onclick="successLogin()">Iniciar Sesión</button>
+    </div>
     <p class="sign-up-label-login">
       ¿No tienes cuenta? <span onclick="hideLogin(); showRegister();" class="sign-up-link-login">Registrarse</span>
     </p>
