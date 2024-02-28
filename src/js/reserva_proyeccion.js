@@ -79,7 +79,7 @@ function checkSelection() {
     var selectedHora = document.querySelector('.proyeccion-hora-container.selected');
 
     if (selectedDia && selectedHora) {
-        window.location.href = "./cines.html";
+        window.location.href = "../../public/cinemas.html";
     } else {
         alert('Por favor selecciona un día y una hora');
     }

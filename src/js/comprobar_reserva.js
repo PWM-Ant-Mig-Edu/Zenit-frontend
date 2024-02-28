@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (selectElement.selectedIndex > 0 && (correoInput.value.trim() !== '' || numeroInput.value.trim() !== '')) {
             // haz un salto a otra página
-            window.location.href = 'detalles_reserva.html';
+            window.location.href = 'bookingDetails.html';
         } else {
             alert('Debes seleccionar el tipo de ticket y llenar al menos uno de los campos (correo o número).');
         }

@@ -7,7 +7,7 @@
           content="Zenit ofrece la mejor experiencia cinematográfica con sonido envolvente y asientos cómodos. Ven y disfruta de los últimos estrenos con nosotros.">
     <meta name="keywords" content="cine, películas, estrenos, entretenimiento, películas en alta definición.">
     <meta name="author" content="Zenit">
-    <title>Zenit</title>
+    <title>admin_dashboard</title>
     <link rel="stylesheet" href="../src/css/formalizer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../src/css/admin.css">
@@ -16,6 +16,7 @@
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="../src/js/admin.js"></script>
     <script src="../src/js/adminBotones.js"></script>
+    <script src="../src/js/language.js"></script>
 
 
 </head>
@@ -34,36 +35,36 @@
             <div id="admin-botones"></div>
             <div class="dashboard-admin-container">
                 <div>
-                    <h2>Estadísticas</h2>
+                    <h2 id="statistics_title"></h2>
                 </div>
-                <div class="dashboard-admin-content">                 
-                    <div class="estadisticas-admin-container">
-                        <div class="estadistica">
-                            <span>Usuarios Registrados</span>
+                <div class="dashboard-admin-content">
+                    <div class="statistics-admin-container">
+                        <div class="statistic">
+                            <span id="users_registered"></span>
                             <span>200</span>
                         </div>
-                        <div class="estadistica">
-                            <span>Publicaciones</span>
+                        <div class="statistic">
+                            <span id="posts"></span>
                             <span>500</span>
                         </div>
-                        <div class="estadistica">
-                            <span>Comentarios</span>
+                        <div class="statistic">
+                            <span id="comments"></span>
                             <span>1000</span>
                         </div>
-                        <div class="estadistica">
-                            <span>Me gusta</span>
+                        <div class="statistic">
+                            <span id="likes"></span>
                             <span>300</span>
                         </div>
-                        <div class="estadistica">
-                            <span>Seguidores</span>
+                        <div class="statistic">
+                            <span id="followers"></span>
                             <span>1000</span>
                         </div>
-                        <div class="estadistica">
-                            <span>Visitantes Únicos</span>
+                        <div class="statistic">
+                            <span id="unique_visitors"></span>
                             <span>1500</span>
                         </div>
                     </div>
-                    <div id="grafico" class="custom-chart"></div>
+                    <div id="graph" class="custom-chart"></div>
                 </div>
             </div>
         </div>

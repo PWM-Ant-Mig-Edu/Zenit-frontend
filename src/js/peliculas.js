@@ -1,8 +1,8 @@
 const peliculas = [
-    { img: "../src/assets/img/película1.jpg", alt: "peli1", resenas: "../public/resenas.html" },
-    { img: "../src/assets/img/película2.jpg", alt: "peli2", resenas: "../public/resenas.html" },
-    { img: "../src/assets/img/película3.jpg", alt: "peli3", resenas: "../public/resenas.html" },
-    { img: "../src/assets/img/película4.jpg", alt: "peli4", resenas: "../public/resenas.html" },
+    { img: "../src/assets/img/película1.jpg", alt: "peli1", resenas: "../public/reviews.html" },
+    { img: "../src/assets/img/película2.jpg", alt: "peli2", resenas: "../public/reviews.html" },
+    { img: "../src/assets/img/película3.jpg", alt: "peli3", resenas: "../public/reviews.html" },
+    { img: "../src/assets/img/película4.jpg", alt: "peli4", resenas: "../public/reviews.html" },
 ];
 
 const estrenos = [
@@ -101,7 +101,7 @@ function cargarEstrenos(rol) {
 document.addEventListener('DOMContentLoaded', function() {
     const url = window.location.href;
 
-    if (url.includes('admin_gestionar_cartelera.html')) {
+    if (url.includes('adminManageBillboard.html')) {
         cargarPeliculas('admin');
         cargarEstrenos('admin');
     } else {

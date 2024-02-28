@@ -122,7 +122,7 @@ function cargarPromocionesProximas(rol) {
 document.addEventListener('DOMContentLoaded', function() {
     const url = window.location.href;
 
-    if (url.includes('admin_gestionar_promociones.html')) {
+    if (url.includes('adminManagePromotions.html')) {
         cargarPromociones('admin');
         cargarPromocionesEspeciales('admin');
         cargarPromocionesProximas('admin');

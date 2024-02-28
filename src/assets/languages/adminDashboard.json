@@ -1,0 +1,30 @@
+{
+  "en": {
+    "header": {
+      "title": "Zenit"
+    },
+    "admin": {
+      "statistics_title": "Statistics",
+      "users_registered": "Registered Users",
+      "posts": "Posts",
+      "comments": "Comments",
+      "likes": "Likes",
+      "followers": "Followers",
+      "unique_visitors": "Unique Visitors"
+    }
+  },
+  "es": {
+    "header": {
+      "title": "Zenit"
+    },
+    "admin": {
+      "statistics_title": "Estadísticas",
+      "users_registered": "Usuarios Registrados",
+      "posts": "Publicaciones",
+      "comments": "Comentarios",
+      "likes": "Me gusta",
+      "followers": "Seguidores",
+      "unique_visitors": "Visitantes Únicos"
+    }
+  }
+}

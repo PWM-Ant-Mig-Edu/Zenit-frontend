@@ -9,10 +9,10 @@ window.onload = function () {
         { label: "Domingo", y: 25 }
     ];
 
-    var chartContainer = document.getElementById("grafico");
+    var chartContainer = document.getElementById("graph");
     chartContainer.style.height = "50vh";
 
-    var chart = new CanvasJS.Chart("grafico", {
+    var chart = new CanvasJS.Chart("graph", {
         animationEnabled: true,
         theme: "light2",
         title: {
