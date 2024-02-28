@@ -3,8 +3,6 @@ function loadPerfilBotonesComponent() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('botones-perfil-component').innerHTML += data;
-
-
         })
         .catch(error => console.error('Error cargando los botones del perfil:', error));
 }
