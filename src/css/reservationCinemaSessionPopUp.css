@@ -17,7 +17,7 @@
     z-index: 999;
 }
 
-#reservar-component, #reservar-component2 {
+#make-reservation-component, #reservar-component2 {
     display: none;
     position: fixed;
     top: 50%;
@@ -181,19 +181,19 @@
         width: 30%;
     }
 
-    #reservar-component, #reservar-component2 {
+    #make-reservation-component, #reservar-component2 {
         width: 80%;
     }
 }
 
 @media (max-width: 1200px) {
-    #reservar-component, #reservar-component2 {
+    #make-reservation-component, #reservar-component2 {
         width: 70%;
     }
 }
 
 @media (max-width: 991px) {
-    #reservar-component, #reservar-component2 {
+    #make-reservation-component, #reservar-component2 {
         width: 80%;
     }
 

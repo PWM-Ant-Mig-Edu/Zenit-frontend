@@ -2,7 +2,7 @@ function loadHeaderComponent() {
     fetch("../src/components/reservationChooseCinema.html")
         .then(response => response.text())
         .then(data => {
-            document.getElementById('reservar-component').innerHTML += data;
+            document.getElementById('make-reservation-component').innerHTML += data;
         })
         .catch(error => console.error('Error loading the header:', error));
 }
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", loadHeaderComponent);
 
 
 function showReservar() {
-    var registerComponent = document.getElementById("reservar-component");
+    var registerComponent = document.getElementById("make-reservation-component");
     var registerComponent2 = document.getElementById("reservar-component2");
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
@@ -27,7 +27,7 @@ function showReservar() {
 }
   
 function hideReservar() {
-    var registerComponent = document.getElementById("reservar-component");
+    var registerComponent = document.getElementById("make-reservation-component");
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
   
