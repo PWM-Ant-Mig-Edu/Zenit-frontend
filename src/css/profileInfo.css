@@ -314,30 +314,30 @@
 }
 
 /* HISTORIAL DE  COMPRAS */
-.data-container-compras {
+.data-container-purchases {
     overflow-x: hidden;
     margin-bottom: 20px;
 }
 
-#tabla-compras{
+#purchase-history-table{
     overflow-x: auto;
 }
 
-#tabla-compras table {
+#purchase-history-table table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
 }
 
-#tabla-compras th,
-#tabla-compras td {
+#purchase-history-table th,
+#purchase-history-table td {
     padding: 8px;
     border: 1px solid #ddd;
     text-align: left;
 }
 
-#tabla-compras th {
+#purchase-history-table th {
     background-color: #f0f0f0;
 }
 
