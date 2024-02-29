@@ -254,7 +254,7 @@ h1 {
     color: var(--mainColor);
     font-size: x-large;
 }
-.dato-compra {
+.purchase-data {
     margin-bottom: 10px;;
 }
 @media screen and (max-width: 768px) {
