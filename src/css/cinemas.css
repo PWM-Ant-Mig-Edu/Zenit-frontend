@@ -27,17 +27,17 @@
     margin-top: 20px;
 }
 
-.contact {
+.content-cinema-contact {
     text-align: start;
     justify-content: center;
     font-weight: 400;
 }
 
-.contact h2{
+.content-cinema-contact h2{
     margin-top: 20px;
 }
 
-.contact > div:nth-child(2){
+.content-cinema-contact > div:nth-child(2){
     color: black;
 }
 
@@ -46,7 +46,7 @@
     height: 350px;
 }
 
-.contact-titleContact {
+.content-cinema-contact-titlecontent-cinema-contact {
     font-weight: 800;
 }
 
