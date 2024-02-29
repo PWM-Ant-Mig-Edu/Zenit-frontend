@@ -12,7 +12,7 @@
     flex: 1;    
 }
 
-.titleCine {
+.title-cinema {
     text-align: center;
     width: 100%;
     font-weight: 800;
@@ -21,36 +21,36 @@
     margin-bottom: 16px;
 }
 
-.ubicacion {
+.location {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
 
-.contacto {
+.contact {
     text-align: start;
     justify-content: center;
     font-weight: 400;
 }
 
-.contacto h2{
+.contact h2{
     margin-top: 20px;
 }
 
-.contacto > div:nth-child(2){
+.contact > div:nth-child(2){
     color: black;
 }
 
-.ubicacion iframe {
+.location iframe {
     width: 100%;
     height: 350px;
 }
 
-.contacto-titleContacto {
+.contact-titleContact {
     font-weight: 800;
 }
 
-.datosCine  {
+.cinemaInfo  {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -68,7 +68,7 @@
 
 @media screen and (max-width: 1150px) {
 
-    .ubicacion iframe {
+    .location iframe {
         width: 100%;
         height: 300px;
     }
@@ -79,7 +79,7 @@
         flex-direction: column;
     }
 
-    .datosCine  {
+    .cinemaInfo  {
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -88,7 +88,7 @@
         margin-top: 0px;
     }
 
-    .ubicacion iframe {
+    .location iframe {
         width: 80%;
         height: 300px;
         margin-right: auto;
@@ -97,14 +97,14 @@
 }
 
 @media (max-width: 767px) {
-    .titleCine {
+    .title-cinema {
         font-size: xx-large;
     }
     
 }
 
 @media (max-width: 479px) {
-    .titleCine {
+    .title-cinema {
         font-size: x-large;
     }
 }
