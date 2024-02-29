@@ -1,5 +1,5 @@
 function loadPerfilBotonesComponent() {
-    fetch("../src/components/perfilBotones.html")
+    fetch("../src/components/profileButtons.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById('buttons-profile-component').innerHTML += data;

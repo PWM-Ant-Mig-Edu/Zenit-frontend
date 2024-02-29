@@ -8,7 +8,7 @@ function loadHeaderComponent() {
         .catch(error => console.error('Error loading the header:', error));
 
     // Carga el componente de recuperar contraseña
-    fetch("../src/components/recuperar_contrasena.html")
+    fetch("../src/components/resetPassword.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById('reset-password-component').innerHTML += data;

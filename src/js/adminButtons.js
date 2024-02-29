@@ -1,5 +1,5 @@
 function loadAdminBotonesComponent() {
-    fetch("../src/components/adminBotones.html")
+    fetch("../src/components/adminButtons.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById('admin-buttons').innerHTML += data;

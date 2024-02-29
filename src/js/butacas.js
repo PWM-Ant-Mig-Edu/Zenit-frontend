@@ -1,5 +1,5 @@
 function loadButacas() {
-    fetch("../src/components/butacas.html")
+    fetch("../src/components/seats.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById('table-container').innerHTML += data;

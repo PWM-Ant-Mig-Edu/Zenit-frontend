@@ -1,5 +1,5 @@
 function loadTablaCompras() {
-    fetch("../src/components/tablaCompras.html")
+    fetch("../src/components/purchasesTable.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById('purchase-history-table').innerHTML += data;

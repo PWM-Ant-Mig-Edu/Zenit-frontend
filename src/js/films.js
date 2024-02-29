@@ -1,4 +1,4 @@
-const peliculas = [
+const films = [
     { img: "../src/assets/img/película1.jpg", alt: "peli1", resenas: "../public/reviews.html" },
     { img: "../src/assets/img/película2.jpg", alt: "peli2", resenas: "../public/reviews.html" },
     { img: "../src/assets/img/película3.jpg", alt: "peli3", resenas: "../public/reviews.html" },
@@ -15,7 +15,7 @@ function cargarPeliculas(rol) {
     const contenedor = document.getElementById('type1');
     contenedor.innerHTML = '';
 
-    peliculas.forEach(pelicula => {
+    films.forEach(pelicula => {
         let peliculaHTML = ' ';
 
         switch (rol) {

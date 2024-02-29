@@ -1,4 +1,4 @@
-const promociones = [
+const promotions = [
     { img: "../src/assets/img/menu-1.png", alt: "promocion1", resenas: "../public/admin_anadir_promociones.html" },
     { img: "../src/assets/img/menu-2.png", alt: "promocion1", resenas: "../public/admin_anadir_promociones.html" },
 ];
@@ -17,7 +17,7 @@ function cargarPromociones(rol) {
     const contenedor = document.getElementById('type1');
     contenedor.innerHTML = '';
 
-    promociones.forEach(promocion => {
+    promotions.forEach(promocion => {
         let promocionesHTML = '';
 
         switch (rol) {

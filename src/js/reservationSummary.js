@@ -1,5 +1,5 @@
 function loadSummaryReserva() {
-    fetch("../src/components/summaryReserva.html")
+    fetch("../src/components/reservationSummary.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById('summary-component').innerHTML += data;
