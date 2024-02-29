@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var selectElement = document.querySelector('.comprobar-form-group .select');
-    var label = selectElement.nextElementSibling.nextElementSibling; // Asumiendo que el label sigue al span .comprobar-bar
+    var selectElement = document.querySelector('.check-form-group .select');
+    var label = selectElement.nextElementSibling.nextElementSibling; // Asumiendo que el label sigue al span .check-bar
 
     selectElement.addEventListener('change', function () {
         if (this.selectedIndex > 0) { // Si se selecciona una opción válida (no la predeterminada)
@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     var selectElement = document.querySelector('.select');
-    var cineSelect = document.getElementById('comprobar-ticket-cine');
-    var correoInput = document.getElementById('comprobar-ticket-correo');
-    var numeroInput = document.getElementById('comprobar-ticket-numero');
+    var cineSelect = document.getElementById('check-cinema-ticket');
+    var correoInput = document.getElementById('check-ticket-email');
+    var numeroInput = document.getElementById('check-ticket-number');
     var enviarButton = document.querySelector('.comprobar-button');
 
     enviarButton.addEventListener('click', function (event) {

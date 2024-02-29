@@ -16,13 +16,13 @@
     justify-content: center;
 }
 
-.comprobar-text-container {
+.check-text-container {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.comprobar-form-container {
+.check-form-container {
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -31,13 +31,13 @@
 }
 
 
-.comprobar-text-container h2 {
+.check-text-container h2 {
     font-size: xx-large;
     margin-bottom: 10px;
     color: var(--mainColor);
 }
 
-.comprobar-text-container p {
+.check-text-container p {
     margin-bottom: 10px;
     font-size:  large;
 }
@@ -47,14 +47,14 @@
     margin: 20px auto;
     max-width: 100%;
 }
-.comprobar-form-group {
+.check-form-group {
     position: relative;
     margin-top: 20px;
     width: 80%;
     align-self: center;
 }
 
-.comprobar-form-group .comprobar-input {
+.check-form-group .check-input {
     font-size: 16px;
     padding: 10px 10px 10px 5px;
     display: block;
@@ -65,11 +65,11 @@
 }
 
 
-.comprobar-form-group .comprobar-input:focus {
+.check-form-group .check-input:focus {
     outline: none;
 }
 
-.comprobar-form-group .comprobar-label {
+.check-form-group .check-label {
     color: #0A2239;
     font-size: 18px;
     font-weight: normal;
@@ -80,36 +80,36 @@
     display: flex;
 }
 
-.comprobar-form-group .label-char {
+.check-form-group .label-char {
     transition: 0.2s ease all;
     transition-delay: calc(var(--index) * .05s);
 }
 
-.comprobar-form-group .comprobar-input:focus ~ .comprobar-label .label-char,
-.comprobar-form-group .comprobar-input:valid ~ .comprobar-label .label-char {
+.check-form-group .check-input:focus ~ .check-label .label-char,
+.check-form-group .check-input:valid ~ .check-label .label-char {
     transform: translateY(-20px);
     font-size: 14px;
     color: #0A2239;
 }
 
-.comprobar-form-group .comprobar-bar {
+.check-form-group .check-bar {
     position: relative;
     display: block;
 }
 
 /* Estilos para el label cuando el select tiene una opción seleccionada */
-.comprobar-label.active .label-char {
+.check-label.active .label-char {
     transform: translateY(-20px);
     font-size: 14px;
     color: #0A2239;
 }
 
 /* Ocultar la opción "Select an option" */
-.comprobar-form-group .select option[disabled] {
+.check-form-group .select option[disabled] {
     display: none;
 }
 
-.comprobar-form-group .select {
+.check-form-group .select {
     font-size: 16px;
     padding: 10px 10px 10px 5px;
     display: block;
@@ -120,7 +120,7 @@
     outline:none;
 }
 
-.comprobar-form-group .select:focus {
+.check-form-group .select:focus {
     outline: none;
 }
 
@@ -183,7 +183,7 @@
     .check-main-container {
         width: 80%;
     }
-    .comprobar-text-container img{
+    .check-text-container img{
         display: none;
     }
 
@@ -201,11 +201,11 @@
     .check-main-container {
         width: 80%;
     }
-    .comprobar-text-container img{
+    .check-text-container img{
         display: none;
     }
 
-    .comprobar-label span {
+    .check-label span {
         font-size: small;
     }
 }
