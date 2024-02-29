@@ -51,7 +51,7 @@ h1 {
 
 
 /* -----------------------------RESERVA-TYPES--------------------------------- */
-.reserva-container {
+.reservation-container {
     display: flex;
     flex: 1;
     justify-content: space-between;
@@ -104,7 +104,7 @@ h1 {
     font-weight: bold;
 }
 
-.botones-reserva {
+.reservation-buttons {
     display: flex;
     margin-bottom: 24px;
     justify-content: space-between;
@@ -112,7 +112,7 @@ h1 {
     color: white; 
 }
 
-.botones-reserva a {
+.reservation-buttons a {
     padding: 10px 20px;
     background-color: var(--mainColor);
     border: none;
@@ -125,18 +125,18 @@ h1 {
 
 /* Datos */
 
-.data-cliente-container {
+.customer-data-container {
     display: flex;
     gap: 40px;
     margin: 0px auto;
     width: 100%;
     justify-content: space-between;
 }
-.data-cliente-container h2 {
+.customer-data-container h2 {
     color: var(--mainColor);
     margin-bottom: 24px;;
 }
-.direccion-envio-container {
+.shipping-address-container {
     display: flex;
     flex-direction: column;
     background-color: var(--backgroundColor);
@@ -151,12 +151,12 @@ h1 {
     margin-bottom: 16px;
     gap: 4px;
 }
-.grid-container-data-pago {
+.grid-container-additional-data {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
-.pago-container {
+.payment-container {
     display: flex;
     flex-direction: column;
     background-color: var(--backgroundColor);
@@ -166,7 +166,7 @@ h1 {
     padding: 15px 25px;
 }
 
-.pago-container button {
+.payment-container button {
     cursor: pointer;
     width: 40%;
     padding: 5px;
@@ -217,11 +217,11 @@ h1 {
 }
 
 @media screen and (max-width: 2000px){
-    .data-cliente-container {
+    .customer-data-container {
         flex-direction: column;
     }
 
-    .direccion-envio-container, .pago-container {
+    .shipping-address-container, .payment-container {
         width: 90%;
     }
 }
@@ -264,7 +264,7 @@ h1 {
         margin: 20px auto; /* Centrar la barra de progreso */
     }
 
-    .reserva-container {
+    .reservation-container {
         width: auto;
         flex-direction: column;
         padding: 10px;
@@ -315,7 +315,7 @@ h1 {
         margin-right: auto;
     }
 
-    .grid-container-data-pago {
+    .grid-container-additional-data {
         display: flex;
         flex-direction: column; 
     }
@@ -329,7 +329,7 @@ h1 {
         margin: 0 20px; /*TOP && BOTTOM  LEFT && RIGHT*/
     }
 
-    .direccion-envio-container, .pago-container {
+    .shipping-address-container, .payment-container {
         width: 70%;
         margin: 0px auto;
     }
@@ -343,7 +343,7 @@ h1 {
         margin: 20px auto;
     }
 
-    .reserva-container {
+    .reservation-container {
         padding: 0px;
     }
     
@@ -365,16 +365,16 @@ h1 {
         margin-top: 10px; /* Espacio adicional para botones en dispositivos móviles */
     }
 
-    .data-cliente-container {
+    .customer-data-container {
         flex-direction: column;
         margin: 0px auto;
     }
 
-    .direccion-envio-container, .pago-container {
+    .shipping-address-container, .payment-container {
         padding: 15px;
     }
 
-    .botones-reserva {
+    .reservation-buttons {
         width: 90%;
         margin: 20px auto;
     }

@@ -26,7 +26,7 @@ function loadProgressBarComponent(n) {
     fetch("../src/components/progressBar.html")
         .then(response => response.text())
         .then(data => {
-            document.getElementById('progressBar-component').innerHTML += data;
+            document.getElementById('progress-bar-component').innerHTML += data;
             updateProgressBar(n)
         })
         .catch(error => console.error('Error loading the header:', error));
