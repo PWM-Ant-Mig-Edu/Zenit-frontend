@@ -23,15 +23,15 @@ function decrement(promotion) {
 
 // Función para actualizar el resumen de la compra
 function updateSummary() {
-    var totalBasic = parseInt(document.getElementById('quantity_promotion1').textContent) +
-        parseInt(document.getElementById('quantity_promotion2').textContent) +
-        parseInt(document.getElementById('quantity_promotion3').textContent) +
-        parseInt(document.getElementById('quantity_promotion4').textContent);
+    var totalBasic = parseInt(document.getElementById('quantity-promotion1').textContent) +
+        parseInt(document.getElementById('quantity-promotion2').textContent) +
+        parseInt(document.getElementById('quantity-promotion3').textContent) +
+        parseInt(document.getElementById('quantity-promotion4').textContent);
 
-    var totalPremium = parseInt(document.getElementById('quantity_promotion5').textContent) +
-        parseInt(document.getElementById('quantity_promotion6').textContent) +
-        parseInt(document.getElementById('quantity_promotion7').textContent) +
-        parseInt(document.getElementById('quantity_promotion8').textContent);
+    var totalPremium = parseInt(document.getElementById('quantity-promotion5').textContent) +
+        parseInt(document.getElementById('quantity-promotion6').textContent) +
+        parseInt(document.getElementById('quantity-promotion7').textContent) +
+        parseInt(document.getElementById('quantity-promotion8').textContent);
 
     document.getElementById('total_menus').textContent = totalBasic + totalPremium;
 

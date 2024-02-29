@@ -86,14 +86,14 @@ h1 {
     margin: 10px 0;
 }
 
-.entradas-input {
+.tickets-input {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
 
-.entradas-input button {
+.tickets-input button {
     padding: 5px 10px;
     border: none;
     background-color: var(--mainColor);
