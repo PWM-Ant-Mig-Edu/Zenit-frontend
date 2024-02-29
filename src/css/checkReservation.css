@@ -1,7 +1,7 @@
 /* Estilos CSS para el formulario de comprobación de reserva */
 @import url('colors.css');
 
-.comprobar-main-container {
+.check-main-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,24 +152,24 @@
 }
 
 
-.detalles-reserva-container {
+.reservation-details-container {
     align-self: center;
     width: 100%;
 }
 
-.detalles-reserva-container h2 {
+.reservation-details-container h2 {
     font-size: xx-large;
     margin-bottom: 10px;
     color: var(--mainColor);
 }
 
-.detalles-reserva-content p {
+.reservation-details-content p {
     margin-bottom: 10px;
     line-height: 1.5;
     font-size: large;
 }
 
-.detalles-reserva-footer {
+.reservation-details-footer {
     margin-top: 20px;
     font-style: italic;
     font-weight: bold;
@@ -180,14 +180,14 @@
 
 
 @media (max-width: 768px) {
-    .comprobar-main-container {
+    .check-main-container {
         width: 80%;
     }
     .comprobar-text-container img{
         display: none;
     }
 
-    .detalles-reserva-container{
+    .reservation-details-container{
         margin-top: 20px;
     }
 
@@ -198,7 +198,7 @@
 
 
 @media (max-width: 768px) {
-    .comprobar-main-container {
+    .check-main-container {
         width: 80%;
     }
     .comprobar-text-container img{
