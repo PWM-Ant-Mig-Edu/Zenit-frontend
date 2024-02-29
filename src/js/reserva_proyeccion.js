@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", loadHeaderComponent);
 
 function showReservar() {
     var registerComponent = document.getElementById("make-reservation-component");
-    var registerComponent2 = document.getElementById("reservar-component2");
+    var registerComponent2 = document.getElementById("make-reservation-component2");
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
 

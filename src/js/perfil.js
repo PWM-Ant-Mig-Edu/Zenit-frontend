@@ -2,7 +2,7 @@ function loadPerfilBotonesComponent() {
     fetch("../src/components/perfilBotones.html")
         .then(response => response.text())
         .then(data => {
-            document.getElementById('botones-perfil-component').innerHTML += data;
+            document.getElementById('buttons-profile-component').innerHTML += data;
         })
         .catch(error => console.error('Error cargando los botones del perfil:', error));
 }
@@ -10,7 +10,7 @@ function loadPerfilBotonesComponent() {
 document.addEventListener("DOMContentLoaded", loadPerfilBotonesComponent);
 
 function setActive(num) {
-    var padre = document.getElementById('botones-perfil-component');
+    var padre = document.getElementById('buttons-profile-component');
     var hijos = padre.children;
 
     for (var i = 0; i < hijos.length; i++) {

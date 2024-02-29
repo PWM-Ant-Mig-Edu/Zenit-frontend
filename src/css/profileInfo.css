@@ -1,6 +1,6 @@
 @import url('colors.css');
 
-.perfil-container {
+.profile-container {
     display: flex;
     width: 80%; /* Puedes ajustar el ancho según tus necesidades */
     border-radius: 10px;
@@ -13,7 +13,7 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
-#botones-perfil-component{
+#buttons-profile-component{
     display: table-row;
 }
 
@@ -35,7 +35,7 @@
     color: var(--mainColor);
 }
 
-.configuracion-perfil-container {
+.settings-profile-container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -45,26 +45,26 @@
     overflow-x: hidden;
 }
 
-.cabecera-perfil-container {
+.heading-profile-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.cabecera-perfil-container h1 {
+.heading-profile-container h1 {
     font-size: xx-large;
     color: var(--grayProfile);
 }
 
-.imagen-perfil {
+.profile-picture {
     width: 60px;
     height: auto;
     overflow: hidden;
     border-radius: 50%;
 }
 
-.imagen-perfil img {
+.profile-picture img {
     width: 100%;
     height: auto;
     display: block;
@@ -77,16 +77,16 @@
       
 }
 
-.datos-personales-container {
+.personal-data-container {
     margin-bottom: 20px;
 }
 
-.datos-personales-container h2 {
+.personal-data-container h2 {
     margin-bottom: 20px;
     font-size: x-large;
 }
 
-.datos-personales-grid {
+.personal-data-grid {
     display: grid;
     font-size: medium;
     grid-template-columns: repeat(3, 1fr);
@@ -110,17 +110,17 @@
     background-color: var(--mainColor);
 }
 
-.datos{
+.data{
     display: flex;
     margin-bottom: 20px;
 }
 
-.datos span {
+.data span {
     margin-right: 10px
 }
 
 
-.datos-contrasena-container {
+.password-data-container {
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -131,13 +131,13 @@
     margin-right: 16px;
 }
 
-.informacion-contrasena-container {
+.password-info-container {
     width: auto;
     border-left: 4px solid black;
     padding: 20px;
 }
 
-.informacion-contrasena-container h2, .informacion-contrasena-container li{
+.password-info-container h2, .password-info-container li{
     margin-bottom: 10px;
 }
 
@@ -151,7 +151,7 @@
 }
 
 
-.inputs-contrasena {
+.input-password {
     display: flex;
     width: 100%;
     align-items: flex-start;
@@ -160,22 +160,22 @@
     margin-bottom: 20px;
 }
 
-.inputs-contrasena h2 {
+.input-password h2 {
     font-size: x-large;
     margin-bottom: 5px;
 }
 
-.inputs-contrasena div{
+.input-password div{
     display: flex;
     align-items: center;
 }
 
-.inputs-contrasena input {
+.input-password input {
     margin-top: 4px;
     font-size: small;
 }
 
-.inputs-contrasena i {
+.input-password i {
     margin-left: 5px;
 }
 
@@ -261,7 +261,7 @@
     border-radius: 0 0 15px 15px;
 }
 
-.tarjeta-credito .datos {
+.tarjeta-credito .data {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
@@ -348,7 +348,7 @@
 }
 
 @media screen and (max-width: 1400px) {
-    .datos-personales-grid {
+    .personal-data-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
@@ -376,31 +376,31 @@
         flex-direction: column;
         align-items: center;
     }
-    .configuracion-perfil-container {
+    .settings-profile-container {
         min-height: 50vh;
     }
     
-    .datos-personales-grid {
+    .personal-data-grid {
         font-size: medium;
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .datos{
+    .data{
         flex-direction: column;
     }
 
-    .datos span {
+    .data span {
         margin-bottom: 10px;
         margin-right: 0px;
     }
 
-    .configuracion-perfil-container{
+    .settings-profile-container{
         margin-left: 30px;
     }
-    .datos-contrasena-container {
+    .password-data-container {
         flex-direction: column;
     }
-    .informacion-contrasena-container {
+    .password-info-container {
         border-left: 0px;
         
     }
@@ -408,7 +408,7 @@
 
 
 @media screen and (max-width: 800px) {
-    .cabecera-perfil-container h1 {
+    .heading-profile-container h1 {
         font-size: x-large;
         margin-bottom: 10px;
     }
@@ -418,18 +418,18 @@
         width: 80%;
     }
     
-    .inputs-contrasena h2 {
+    .input-password h2 {
         font-size: large;
     }
 
     .inputs-container h1 {
         font-size: large;
     }
-    .datos {
+    .data {
         width: auto ;
         margin-right: 0;
     }
-    .datos input {
+    .data input {
         width: 90%;
         margin-right: 0px;
     }
@@ -449,10 +449,10 @@
 }
 
 @media screen and (max-width: 551px) {
-    .configuracion-perfil-container{
+    .settings-profile-container{
         width: 80%;
     }
-    .perfil-container {
+    .profile-container {
         display: flex;
         flex-direction: column;
         padding: 0px;
@@ -469,13 +469,13 @@
         margin-bottom: 20px;
     }
 
-    .configuracion-perfil-container {
+    .settings-profile-container {
         margin: 0px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .cabecera-perfil-container {
+    .heading-profile-container {
         margin-top: 20px;
         width: 100%;
     }
@@ -515,7 +515,7 @@
 }
 
 @media screen and (max-width: 500px) {
-    .cabecera-perfil-container{
+    .heading-profile-container{
         flex-direction: column;
         align-items: center;
     }
