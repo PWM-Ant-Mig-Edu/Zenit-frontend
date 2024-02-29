@@ -20,78 +20,78 @@
 
 </head>
 <body>
-    <div id="popups" style="display: none;">
-        <div id="register-component"></div>
-        <div id="login-component"></div>
-        <div id="recuperar-contrasena-component"></div>
+<div id="popups" style="display: none;">
+    <div id="register-component"></div>
+    <div id="login-component"></div>
+    <div id="recuperar-contrasena-component"></div>
+</div>
+
+<div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
+
+    <div id="header-component"></div>
+
+    <div class="admin-title-container">
+        <div id="admin-buttons"></div>
     </div>
-
-    <div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
-
-        <div id="header-component"></div>
-
-        <div class="admin-title-container">
-            <div id="admin-botones"></div>
-        </div>
-        <div class="gestion-admin-container">
-            <div class="anadir-container">
-                <div class="datos-container">
-                    <img src="../src/assets/img/foto-vacia.png" alt="">
-                    <div class="inputs-anadir">
-                        <div class="input-anadir">
+    <div class="admin-management-container">
+        <div class="add-container">
+            <div class="data-container">
+                <img src="../src/assets/img/foto-vacia.png" alt="">
+                <div class="inputs-anadir">
+                    <div class="input-add">
                             <span>
                                 Título
                             </span>
-                            <input type="text" name="">
-                        </div>
-                        <div class="input-anadir">
+                        <input type="text" name="">
+                    </div>
+                    <div class="input-add">
                             <span>
                                 Género
                             </span>
-                            <input type="text" name="" id="">
-                        </div>
-                        <div class="input-anadir">
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="input-add">
                             <span>
                                 Director
                             </span>
-                            <input type="text" name="" >
-                        </div>
-                        <div class="input-anadir">
+                        <input type="text" name="">
+                    </div>
+                    <div class="input-add">
                             <span>
                                 Duración
                             </span>
-                            <input type="text" name="" >
-                        </div>
-                        <div class="input-anadir">
+                        <input type="text" name="">
+                    </div>
+                    <div class="input-add">
                             <span>
                                 Clasificación
                             </span>
-                            <input type="text" name="" >
-                        </div>
-                        <div class="input-anadir">
+                        <input type="text" name="">
+                    </div>
+                    <div class="input-add">
                             <span>
                                 Fecha de estreno
                             </span>
-                            <input type="text" name="">
-                        </div>
+                        <input type="text" name="">
                     </div>
                 </div>
-                <div class="datos-largos-container">
-                    <h2>Sinopsis</h2>
-                    <input type="text">
-                </div>
-                <div class="datos-largos-container">
-                    <h2>Elenco</h2>
-                    <input type="text">
-                </div>
+            </div>
+            <div class="large-data-container">
+                <h2>Sinopsis</h2>
+                <input type="text">
+            </div>
+            <div class="large-data-container">
+                <h2>Elenco</h2>
+                <input type="text">
             </div>
         </div>
-        <div class="botones-admin">
-            <button onclick="window.location.href = 'addSession.html'">Siguiente</button>
-        </div>
-
-        <div id="footer-component"></div>
     </div>
+    <div class="admin-buttons">
+        <button onclick="window.location.href = 'addSession.html'">Siguiente</button>
+    </div>
+
+    <div id="footer-component"></div>
+</div>
 </body>
 </html>
 

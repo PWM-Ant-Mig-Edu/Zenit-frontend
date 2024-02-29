@@ -70,7 +70,7 @@
     display: block;
 }
 
-.datos-container {
+.data-container {
     display: flex;
     flex-direction: column;
     width: 100%;  
@@ -314,7 +314,7 @@
 }
 
 /* HISTORIAL DE  COMPRAS */
-.datos-container-compras {
+.data-container-compras {
     overflow-x: hidden;
     margin-bottom: 20px;
 }

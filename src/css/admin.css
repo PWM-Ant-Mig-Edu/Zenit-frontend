@@ -1,6 +1,6 @@
 @import url('colors.css');
 
-#admin-botones{
+#admin-buttons{
     width: 100%;
 }
 
@@ -91,7 +91,7 @@
     font-weight: 800;
 }
 
-.gestion-admin-container  {
+.admin-management-container  {
     display: flex;
     flex: 1;
     align-items: center;
@@ -104,17 +104,17 @@
 }
 
 
-.anadir-container {
+.add-container {
     background-color: var(--mainColorDarker);
     border-radius: 8px;   
     padding: 20px;
     margin-top: 16px;
     width: 40%;
 }
-.anadir-container img {
+.add-container img {
     width: 40%;
 }
-.datos-container  {
+.data-container  {
     display: flex;
 }
 
@@ -123,37 +123,37 @@
     width: 50%;
     color: white;
 }
-.input-anadir select, .input-anadir input{
+.input-add select, .input-add input{
     width: 50%;
 }
 
-.input-anadir {
+.input-add {
     display: flex;
     justify-content:  space-between;
     margin-bottom: 8px;
 }
 
 
-.datos-largos-container {
+.large-data-container {
     margin-top: 8px;
     color: white;
 }
 
-.datos-largos-container h2 {
+.large-data-container h2 {
     font-size: large;
 }
-.datos-largos-container input{  
+.large-data-container input{
     margin-top: 4px;
     width: 100%;
     min-height: 3vh;
 }
 
-.botones-admin {
+.admin-buttons {
     align-self: flex-end; 
     margin:  16px 30px 16px 0;
 }
 
-.botones-admin button{
+.admin-buttons button{
     padding: 15px 25px;
     white-space: nowrap;
     border-style: hidden;
@@ -177,7 +177,7 @@
     margin-bottom: 4px;
 }
 
-.botones-admin-sesion {
+.admin-buttons-sesion {
     display: flex;
     align-self: flex-end;
 }
@@ -194,15 +194,15 @@
 }
 
 @media (max-width: 992px){
-    .anadir-container {
+    .add-container {
         width: 80%;
     }
 
-    .datos-container {
+    .data-container {
         flex-direction: column;
     }
 
-    .datos-container img{
+    .data-container img{
         align-self: center;
         margin-bottom: 20px;
     }
