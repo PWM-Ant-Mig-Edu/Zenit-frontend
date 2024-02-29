@@ -1,10 +1,10 @@
 
 
-.promocionesContainer {
+.promotions-container {
     margin: 16px 0px 16px 0px;
 }
 
-.promocionesGrid {
+.promotions-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 10px; /* Reducir el espacio entre las imágenes */
@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.promocionesGrid .promocion-item img {
+.promotions-grid .promocion-item img {
     border-radius: 10px;
     height: auto;
     width: 100%;
@@ -25,7 +25,7 @@
     display: inline-block;
 }
 
-.promocionesGrid#type1 img {
+.promotions-grid#type1 img {
     cursor: pointer;
 }
 
@@ -84,37 +84,37 @@
 }
 
 @media (max-width: 1920px) {
-    .promocionesGrid{
+    .promotions-grid{
         grid-template-columns: repeat(5, 1fr);
     }
 }
 
 @media (max-width: 1600px) {
-    .promocionesGrid{
+    .promotions-grid{
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (max-width: 1200px) {
-    .promocionesGrid{
+    .promotions-grid{
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 991px) {
-    .promocionesGrid{
+    .promotions-grid{
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 767px) {
-    .promocionesGrid{
+    .promotions-grid{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 479px) {
-    .promocionesGrid{
+    .promotions-grid{
         grid-template-columns: repeat(1, 1fr);
     }
 }

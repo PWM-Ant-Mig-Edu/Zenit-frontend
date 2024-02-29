@@ -7,23 +7,23 @@
     color: var(--mainColor)
 }
 
-.promocionesTitleContainer {
+.promotions-title-container {
     width: 80%;
     margin-left: 30px;
 }
 
-.promocionesTitleContainer span{
+.promotions-title-container span{
     color: #000;
     font-size: x-large;
 }
 
-.titlePromociones {
+.title-promotions {
     font-size: xx-large;
     margin-bottom: 4px;
     color: var(--mainColor);
 }
 
-.promocionesContainerAll {
+.promotions-content-container {
     text-align: center;
     margin-top: 30px;
     width: 90%;
@@ -31,20 +31,20 @@
     margin-right: auto;
 }
 
-.promocionesContainerAll .titlePromociones {
+.promotions-content-container .title-promotions {
     font-size: xx-large;
     justify-self: center;
 }
 
 @media (max-width: 767px) {
-    .promocionesTitleContainer {
+    .promotions-title-container {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 479px) {
-    .promocionesTitleContainer .title{
+    .promotions-title-container .title{
         font-size: xx-large;
     }
 }
