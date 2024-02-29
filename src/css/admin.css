@@ -45,7 +45,7 @@
     flex-direction: column;
     margin-top: 16px;
     width: 80%;
-    margin-left: 10px auto;
+    margin-left: 10px;
     flex: 1;
 }
 
@@ -118,7 +118,7 @@
     display: flex;
 }
 
-.inputs-anadir {
+.add-inputs {
     margin: auto;
     width: 50%;
     color: white;
@@ -164,20 +164,20 @@
     cursor: pointer;
 }
 
-.datos-sesion-container {
+.session-data-container {
     color: white;
 }
 
-.datos-sesion-container select {
+.session-data-container select {
     width: 100%;
     margin-bottom: 8px;
 }
 
-.datos-sesion-container h2 {
+.session-data-container h2 {
     margin-bottom: 4px;
 }
 
-.admin-buttons-sesion {
+.admin-buttons-session {
     display: flex;
     align-self: flex-end;
 }
@@ -207,7 +207,7 @@
         margin-bottom: 20px;
     }
 
-    .inputs-anadir{
+    .add-inputs{
         width: auto;
     }
 }

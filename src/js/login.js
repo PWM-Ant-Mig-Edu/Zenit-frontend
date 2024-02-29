@@ -11,7 +11,7 @@ function loadHeaderComponent() {
     fetch("../src/components/recuperar_contrasena.html")
         .then(response => response.text())
         .then(data => {
-            document.getElementById('recuperar-contrasena-component').innerHTML += data;
+            document.getElementById('reset-password-component').innerHTML += data;
         })
         .catch(error => console.error('Error loading the header:', error));
 }
@@ -45,7 +45,7 @@ function hideLogin() {
 }
 
 function showRecuperarContrasena() {
-    var recuperarContrasenaComponent = document.getElementById("recuperar-contrasena-component");
+    var recuperarContrasenaComponent = document.getElementById("reset-password-component");
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
   
@@ -58,7 +58,7 @@ function showRecuperarContrasena() {
 }
 
 function hideRecuperarContrasena() {
-    var recuperarContrasenaComponent = document.getElementById("recuperar-contrasena-component");
+    var recuperarContrasenaComponent = document.getElementById("reset-password-component");
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
   
