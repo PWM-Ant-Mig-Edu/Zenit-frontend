@@ -10,7 +10,7 @@ body {
 .left-section {
     flex: 0 0 75%; /* El div ocupa el 75% del espacio de su div padre */
     display: flex;
-    flex-direction: column; /* Organiza los elementos en columna */
+    flex-direction: column; /* Organiza los elementos en credit-card-subfield */
 }
 
 

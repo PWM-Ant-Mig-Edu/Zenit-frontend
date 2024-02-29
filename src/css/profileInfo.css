@@ -181,7 +181,7 @@
 
 
 /* PAGO*/
-.añadir-tarjeta-container{
+.add-credit-card-container{
     display: flex;
     margin-top: 40px;
     padding: 15px;
@@ -190,18 +190,18 @@
     gap: 50px;
 }
 
-.añadir-tarjeta-container h3{
+.add-credit-card-container h3{
     color: var(--grayProfile);
     margin-bottom: 10px;
     font-size: large;
 }
 
-.añadir-tarjeta-text div{
+.add-credit-card-text div{
     display: flex;
     gap: 10px;
 }
 
-.añadir-tarjeta-container button{
+.add-credit-card-container button{
     padding: 10px 20px;
     border-radius: 10px;
     background-color: var(--mainColor);
@@ -215,11 +215,11 @@
     white-space: nowrap;
 }
 
-.añadir-tarjeta-container button:hover {
+.add-credit-card-container button:hover {
     background-color: var(--mainColorDark);
 }
 
-.tarjetas-activas-grid{
+.active-credit-cards-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 20px;
@@ -228,7 +228,7 @@
     align-items: center;
 }
 
-.tarjeta-credito {
+.credit-card {
     width: 370px;
     height: 270px;
     background: linear-gradient(to bottom right, #0047ab, #00a4e4);
@@ -241,7 +241,7 @@
     margin-bottom: 50px;
 }
 
-.tarjeta-credito .chip {
+.credit-card .chip {
     width: 60px;
     height: 40px;
     background: linear-gradient(to bottom right, #ddd, #ccc);
@@ -251,7 +251,7 @@
     border-radius: 5px;
 }
 
-.tarjeta-credito .cinta {
+.credit-card .middle-card-line {
     width: 100%;
     height: 30px;
     background: linear-gradient(to bottom right, #ffcc00, #ff9900);
@@ -261,35 +261,35 @@
     border-radius: 0 0 15px 15px;
 }
 
-.tarjeta-credito .data {
+.credit-card .data {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
 }
 
-.tarjeta-credito .fila {
+.credit-card .credit-card-field {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.tarjeta-credito .columna {
+.credit-card .credit-card-subfield {
     display: flex;
     flex: 1;
     margin-right: 10px;
     align-items: center;
 }
 
-.tarjeta-credito label {
+.credit-card label {
     margin-right: 10px;
 }
 
-.tarjeta-credito label {
+.credit-card label {
     font-size: 12px;
 }
 
-.tarjeta-credito input {
+.credit-card input {
     width: 100%;
     padding: 8px;
     border: none;
@@ -298,7 +298,7 @@
     color: #333;
 }
 
-.eliminar-tarjeta-button{
+.delete-credit-card-button{
     position: absolute;
     bottom: 20px;
     right: 20px;
@@ -342,7 +342,7 @@
 }
 
 @media screen and (max-width: 2000px){
-    .tarjetas-activas-grid{
+    .active-credit-cards-grid{
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -352,27 +352,27 @@
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .añadir-tarjeta-container button{
+    .add-credit-card-container button{
         width: 60%;
     }
 
-    .tarjetas-activas-grid{
+    .active-credit-cards-grid{
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .tarjeta-credito {
+    .credit-card {
         width: 300px;
         margin-right: 0px;
         margin-bottom: 20px;
     }
 
-    .eliminar-tarjeta-button{
+    .delete-credit-card-button{
         bottom: 10px;
     }
 }   
 
 @media screen and (max-width: 1155px) {
-    .añadir-tarjeta-container{
+    .add-credit-card-container{
         flex-direction: column;
         align-items: center;
     }
@@ -414,7 +414,7 @@
     }
 
 
-    .añadir-tarjeta-container button{
+    .add-credit-card-container button{
         width: 80%;
     }
     
@@ -436,11 +436,11 @@
 }
 
 @media screen and (max-width: 700px) {
-    .tarjetas-activas-grid{
+    .active-credit-cards-grid{
         
     }
 
-    .tarjeta-credito {
+    .credit-card {
         width: 230px;
         margin-right: 0px;
         margin-bottom: 20px;
@@ -458,7 +458,7 @@
         padding: 0px;
     }
 
-    .añadir-tarjeta-container button{
+    .add-credit-card-container button{
         width: 100%;
         font-size: medium;
     }
@@ -488,27 +488,27 @@
         border-right: 0px;
     }
 
-    .tarjetas-activas-grid{
+    .active-credit-cards-grid{
         width: 100%;
     }
 
-    .tarjeta-credito{
+    .credit-card{
         width: 200px;
         height: 400px;
         margin-right: 0px;
         margin-bottom: 20px;
     }
 
-    .tarjeta-credito label {
+    .credit-card label {
         margin-bottom: 10px;
     }
 
-    .tarjeta-credito .fila {
+    .credit-card .credit-card-field {
         display: flex;
         flex-direction: column;
     }
 
-    .tarjeta-credito .columna {
+    .credit-card .credit-card-subfield {
         flex-direction: column;
         margin-bottom: 10px;
     }
@@ -528,28 +528,28 @@
 }
 
 @media screen and (max-width: 350px) {
-    .tarjeta-credito {
+    .credit-card {
         width: 120px;
         height: 400px;
         margin-bottom: 20px;
     }
 
-    .tarjeta-credito .fila {
+    .credit-card .credit-card-field {
         align-items: flex-start;
     }
 
-    .tarjeta-credito .columna {
+    .credit-card .credit-card-subfield {
         align-items: flex-start;
     }
 
-    .tarjeta-credito .eliminar-tarjeta-button {
+    .credit-card .delete-credit-card-button {
         bottom: 10px;
         right: auto ;
         left: auto;
         padding: 5px 10px;
     }
 
-    .añadir-tarjeta-container button {
+    .add-credit-card-container button {
         font-size: small;
     }
 }
