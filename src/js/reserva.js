@@ -79,16 +79,16 @@ function updateSummary() {
     let totalTicketsBasic = quantityChildrenBasic + quantityYouthsBasic + quantityAdultsBasic + quantitySeniorsBasic;
     let totalTicketsPremium = quantityChildrenPremium + quantityYouthsPremium + quantityAdultsPremium + quantitySeniorsPremium;
 
-    document.getElementById('quantity_children_basic').textContent = quantityChildrenBasic;
-    document.getElementById('quantity_youths_basic').textContent = quantityYouthsBasic;
-    document.getElementById('quantity_adults_basic').textContent = quantityAdultsBasic;
-    document.getElementById('quantity_seniors_basic').textContent = quantitySeniorsBasic;
+    document.getElementById('quantity-children-basic').textContent = quantityChildrenBasic;
+    document.getElementById('quantity-youths-basic').textContent = quantityYouthsBasic;
+    document.getElementById('quantity-adults-basic').textContent = quantityAdultsBasic;
+    document.getElementById('quantity-seniors-basic').textContent = quantitySeniorsBasic;
     document.getElementById('total_tickets_basic').textContent = totalTicketsBasic;
 
-    document.getElementById('quantity_children_premium').textContent = quantityChildrenPremium;
-    document.getElementById('quantity_youths_premium').textContent = quantityYouthsPremium;
-    document.getElementById('quantity_adults_premium').textContent = quantityAdultsPremium;
-    document.getElementById('quantity_seniors_premium').textContent = quantitySeniorsPremium;
+    document.getElementById('quantity-children-premium').textContent = quantityChildrenPremium;
+    document.getElementById('quantity-youths-premium').textContent = quantityYouthsPremium;
+    document.getElementById('quantity-adults-premium').textContent = quantityAdultsPremium;
+    document.getElementById('quantity-seniors-premium').textContent = quantitySeniorsPremium;
     document.getElementById('total_tickets_premium').textContent = totalTicketsPremium;
     // Calculation of the total price
     totalPrice = (quantityChildrenBasic + quantityYouthsBasic + quantityAdultsBasic + quantitySeniorsBasic) * priceBasic +

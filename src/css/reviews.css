@@ -1,6 +1,6 @@
 @import url('colors.css');
 
-.title-container .title-resena {
+.title-container .title-review {
     text-align: center;
     width: 100%;
     font-weight: 800;
@@ -21,7 +21,7 @@
     color: var(--mainColor);
 }
 
-.peliculaPanel  {
+.film-panel  {
     margin-top: 4px;
     display: flex;
     padding: 20px;
@@ -29,18 +29,18 @@
     color: #ffffff;
     border-radius: 8px;
 }
-.peliculaPanel img {
+.film-panel img {
     max-width: 20%; 
     height: 25vh;
 }
 
-.peliculaPanel button {
+.film-panel button {
     background-color: #E7E5DF;
     border-radius: 8px;
     align-self: flex-end;
     white-space: nowrap;
 }
-.peliculaPanel .datosPelicula {
+.film-panel .film-data {
     width: 100%;
     display: flex;
     align-items: center;
@@ -72,19 +72,19 @@
     margin-top: 16px;
 }
 
-.sinopsisContainer {
+.synopsis-container {
     display: flex;
     align-self: center;
     margin-top: 16px;
     flex-direction: column;
 }
 
-.sinopsisContainer h1{
+.synopsis-container h1{
     margin-bottom: 16px;
     font-size: x-large;
 }
 
-.sinopsisContainer span{
+.synopsis-container span{
     color: #000000;
 }
 
@@ -105,7 +105,7 @@
     border: 2px solid #4A9DEC;
     box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
 }
-.opiniones-container {
+.reviews-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -113,35 +113,34 @@
     margin-top: 16px;
 }
 
-.opiniones-container button, .ver-mas-container button {
+.reviews-container button, .see-more-container button {
     cursor: pointer;
     padding: 15px 25px;
     white-space: nowrap;
     border-style: hidden;
     border-radius: 10px;
-    padding-bottom: 15px  25px;
     font-weight: bolder;
     color: #000000;
     background-color: #E7E5DF;
 }
 
-.escribir-reseña-container {
+.write-review-container {
     display: flex;
     justify-content: flex-start;
     justify-self: self-start;
     width: 100%;
 }
 
-.escribir-reseña-container button{
+.write-review-container button{
     margin-left: 20px;
 }
 
-.opiniones-container h1{
+.reviews-container h1{
     font-size: x-large;
     margin-bottom: 16px;
 }
 
-.post {
+.review-post {
     border: 1px solid #E7E5DF;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     border-radius: 5px;
@@ -184,7 +183,7 @@
     align-items: flex-end;
 }
 
-.ver-mas-container {
+.see-more-container {
     display: flex;
     justify-content: center; 
     margin-top: 20px; 
@@ -192,22 +191,22 @@
 
 
 @media (max-width: 767px) {
-    .peliculaPanel {
+    .film-panel {
         flex-direction: column;
     }
-    .peliculaPanel img {
+    .film-panel img {
         width: 40%;
         align-self: center;
         margin-bottom: 16px;
     }
-    .title-container .title-resena {
+    .title-container .title-review {
         width: 85%;
         font-size: x-large;
     }
 }
 
 @media (max-width: 991px) {
-    .title-container .title-resena {
+    .title-container .title-review {
         width: 85%;
         font-size: xx-large;
     }
