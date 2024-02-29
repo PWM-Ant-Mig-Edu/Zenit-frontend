@@ -1,5 +1,5 @@
 function loadHeaderComponent() {
-    fetch("../src/components/reserva_proyeccion.html")
+    fetch("../src/components/reservationChooseCinema.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById('reservar-component').innerHTML += data;
