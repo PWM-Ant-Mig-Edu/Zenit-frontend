@@ -13,7 +13,7 @@
     justify-content: space-between;
 }
 
-.HeaderContainer{
+.header-container {
     width: 100%;
     font-family: 'Inter', sans-serif;
     display: flex;
@@ -31,7 +31,7 @@ a, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
-.LeftSideContainer{
+.left-side-container{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -148,14 +148,14 @@ a, a:visited, a:hover, a:active {
     cursor: pointer;
 }
 
-.ButtonContainer{
+.button-container{
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-right: 30px;
 }
 
-.ButtonContainer button{
+.button-container button{
     cursor: pointer;
     padding: 15px 25px;
     font-size: medium;
@@ -165,13 +165,13 @@ a, a:visited, a:hover, a:active {
     border-radius: 10px;
 }
 
-.ButtonContainer button:nth-child(1){
+.button-container button:nth-child(1){
     background-color: var(--mainColor);
     color: white;
     margin-right: 24px;
 }
 
-.ButtonContainer button:nth-child(2){
+.button-container button:nth-child(2){
     background-color: var(--elementColor);
     color: var(--mainTextBlack);
 }
@@ -233,11 +233,12 @@ a, a:visited, a:hover, a:active {
 
 
 @media (min-width: 767px) {
-    .MenuButton {
+    
+    .menu-button {
         display: none;
     }
 
-    .MenuContent {
+    .menu-content {
         display: flex;
         width: 100%;
         flex-direction: row;
@@ -246,7 +247,7 @@ a, a:visited, a:hover, a:active {
 }
 
 @media (max-width: 1600px) {
-    .HeaderContainer{
+    .header-container {
         font-size: medium;
     }
 
@@ -255,14 +256,14 @@ a, a:visited, a:hover, a:active {
         margin-right: 20px;
     }
 
-    .ButtonContainer button{
+    .button-container button{
         padding: 8px 18px;
         font-size: small;
     }
 }
 
 @media (max-width: 1200px) {
-    .HeaderContainer{
+    .header-container {
         font-size: small;
     }
 
@@ -271,7 +272,7 @@ a, a:visited, a:hover, a:active {
         margin-right: 20px;
     }
 
-    .ButtonContainer button{
+    .button-container button{
         padding: 5px 15px;
         font-size: small;
     }
@@ -285,11 +286,11 @@ a, a:visited, a:hover, a:active {
         margin-right: 20px;
     }
 
-    .ButtonContainer button{
+    .button-container button{
         font-size: x-small;
     }
 
-    .ButtonContainer button:nth-child(1){
+    .button-container button:nth-child(1){
         margin-right: 8px;
     }
 
@@ -299,22 +300,22 @@ a, a:visited, a:hover, a:active {
 }
 
 @media (max-width: 890px) {
-    .HeaderContainer{
+    .header-container {
         font-size: x-small;
     }
 
-    .ButtonContainer{
+    .button-container{
         margin-right: 20px;
     
     }
 }
 
 @media (max-width: 767px) {
-    .MenuContent {
+    .menu-content {
         display: none;
     }
 
-    .MenuButton {
+    .menu-button {
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -323,7 +324,7 @@ a, a:visited, a:hover, a:active {
         margin-right: 30px;
     }
 
-    .MenuButton svg{
+    .menu-button svg{
         align-self: center;
     }
 
@@ -331,7 +332,7 @@ a, a:visited, a:hover, a:active {
         width: 150px;
     }
 
-    .ButtonContainer{
+    .button-container{
         display: none;
     }
 }
@@ -351,7 +352,7 @@ a, a:visited, a:hover, a:active {
         gap: 15px;
     }
 
-    .MenuButton svg{
+    .menu-button svg{
         width: 20px;
         height: 20px;
     }
