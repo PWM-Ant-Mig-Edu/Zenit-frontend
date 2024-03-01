@@ -114,7 +114,7 @@
     padding: 10px 10px 10px 5px;
     display: block;
     width: 40%;
-    border: 0px; /* Eliminamos el borde */
+    border: 0px; 
     border-bottom: 1px solid #0A2239;
     background: transparent;
     outline:none;
