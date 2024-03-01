@@ -1,5 +1,5 @@
 function loadHeaderComponent() {
-    // Carga el componente de login
+
     fetch("../src/components/login.html")
         .then(response => response.text())
         .then(data => {
@@ -7,11 +7,17 @@ function loadHeaderComponent() {
         })
         .catch(error => console.error('Error loading the header:', error));
 
-    // Carga el componente de recuperar contraseña
     fetch("../src/components/resetPassword.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById('reset-password-component').innerHTML += data;
+        })
+        .catch(error => console.error('Error loading the header:', error));
+    
+    fetch("../src/components/register.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('register-component').innerHTML += data;
         })
         .catch(error => console.error('Error loading the header:', error));
 }
@@ -61,11 +67,9 @@ function hideRecuperarContrasena() {
     var recuperarContrasenaComponent = document.getElementById("reset-password-component");
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
-  
-    // Quita la clase del contenedor de popups para quitar el fondo borroso
+
     homeContainer.classList.remove("blurred-background");
-  
-    // Oculta el componente de recuperar contraseña
+
     popupsContainer.style.display = "none";
     recuperarContrasenaComponent.style.display = "none";
 }
@@ -75,10 +79,8 @@ function showRegister() {
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
   
-    // Agrega una clase al contenedor de popups para aplicar el fondo borroso
     homeContainer.classList.add("blurred-background");
   
-    // Muestra el componente de registro
     registerComponent.style.display = "block";
     popupsContainer.style.display = "block";
 }
@@ -88,10 +90,8 @@ function hideRegister() {
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
   
-    // Quita la clase del contenedor de popups para quitar el fondo borroso
     homeContainer.classList.remove("blurred-background");
   
-    // Oculta el componente de registro
     popupsContainer.style.display = "none";
     registerComponent.style.display = "none";
 }

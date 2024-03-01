@@ -26,7 +26,7 @@ function loadHeaderComponent() {
         .catch(error => console.error('Error loading the header:', error));
 }
 
-//document.addEventListener("DOMContentLoaded", loadHeaderComponent);
+document.addEventListener("DOMContentLoaded", loadHeaderComponent);
 
 
 
