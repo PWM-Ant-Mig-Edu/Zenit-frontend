@@ -1,4 +1,5 @@
 function toggleMenu() {
+    console.log("toggleMenu");
     var element = document.querySelector(".Dropdown");
     element.classList.toggle("show");
     var height = document.body.scrollHeight;
@@ -25,7 +26,10 @@ function loadHeaderComponent() {
         .catch(error => console.error('Error loading the header:', error));
 }
 
-document.addEventListener("DOMContentLoaded", loadHeaderComponent);
+//document.addEventListener("DOMContentLoaded", loadHeaderComponent);
+
+
+
 
 
 
