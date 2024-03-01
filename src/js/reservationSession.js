@@ -64,13 +64,11 @@ function mostrarHoras(dia, elemento) {
 }
 
 function seleccionarHora(elemento) {
-    // Quitar la clase 'selected' de todas las horas
     var horas = document.querySelectorAll('.proyeccion-hora-container');
     horas.forEach(function(hora) {
         hora.classList.remove('selected');
     });
 
-    // Agregar la clase 'selected' a la hora seleccionada
     elemento.classList.add('selected');
 }
 
