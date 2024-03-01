@@ -1,6 +1,6 @@
 @import url('colors.css');
 
-#admin-botones{
+#admin-buttons{
     width: 100%;
 }
 
@@ -45,7 +45,7 @@
     flex-direction: column;
     margin-top: 16px;
     width: 80%;
-    margin-left: 10px auto;
+    margin-left: 10px;
     flex: 1;
 }
 
@@ -62,14 +62,14 @@
     justify-content: center;
 }
 
-.estadisticas-admin-container {
+.statistics-admin-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
    
 }
 
-.estadistica {
+.statistic {
     display: flex;
     flex-direction: column;
     background-color: var(--mainColorDarker);
@@ -83,15 +83,15 @@
     text-align: center;
 }
 
-.estadistica span {
+.statistic span {
     margin: 0px 10px;
 }
 
-.estadistica > *:nth-child(1){
+.statistic > *:nth-child(1){
     font-weight: 800;
 }
 
-.gestion-admin-container  {
+.admin-management-container  {
     display: flex;
     flex: 1;
     align-items: center;
@@ -104,56 +104,56 @@
 }
 
 
-.anadir-container {
+.add-container {
     background-color: var(--mainColorDarker);
     border-radius: 8px;   
     padding: 20px;
     margin-top: 16px;
     width: 40%;
 }
-.anadir-container img {
+.add-container img {
     width: 40%;
 }
-.datos-container  {
+.data-container  {
     display: flex;
 }
 
-.inputs-anadir {
+.add-inputs {
     margin: auto;
     width: 50%;
     color: white;
 }
-.input-anadir select, .input-anadir input{
+.input-add select, .input-add input{
     width: 50%;
 }
 
-.input-anadir {
+.input-add {
     display: flex;
     justify-content:  space-between;
     margin-bottom: 8px;
 }
 
 
-.datos-largos-container {
+.large-data-container {
     margin-top: 8px;
     color: white;
 }
 
-.datos-largos-container h2 {
+.large-data-container h2 {
     font-size: large;
 }
-.datos-largos-container input{  
+.large-data-container input{
     margin-top: 4px;
     width: 100%;
     min-height: 3vh;
 }
 
-.botones-admin {
+.admin-buttons {
     align-self: flex-end; 
     margin:  16px 30px 16px 0;
 }
 
-.botones-admin button{
+.admin-buttons button{
     padding: 15px 25px;
     white-space: nowrap;
     border-style: hidden;
@@ -164,31 +164,23 @@
     cursor: pointer;
 }
 
-.datos-sesion-container {
+.session-data-container {
     color: white;
 }
 
-.datos-sesion-container select {
+.session-data-container select {
     width: 100%;
     margin-bottom: 8px;
 }
 
-.datos-sesion-container h2 {
+.session-data-container h2 {
     margin-bottom: 4px;
 }
 
-.botones-admin-sesion {
+.admin-buttons-session {
     display: flex;
     align-self: flex-end;
 }
-
-.grafico-container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    background-color: aliceblue;
-}
-
 
 .custom-chart {
     height: 20px;
@@ -202,20 +194,20 @@
 }
 
 @media (max-width: 992px){
-    .anadir-container {
+    .add-container {
         width: 80%;
     }
 
-    .datos-container {
+    .data-container {
         flex-direction: column;
     }
 
-    .datos-container img{
+    .data-container img{
         align-self: center;
         margin-bottom: 20px;
     }
 
-    .inputs-anadir{
+    .add-inputs{
         width: auto;
     }
 }
@@ -246,7 +238,7 @@
         margin-bottom: 20px;
     }
 
-    .estadisticas-admin-container {
+    .statistics-admin-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -265,7 +257,7 @@
 }
 
 @media (max-width: 400px) {
-    .estadisticas-admin-container {
+    .statistics-admin-container {
         display: flex;
         flex-direction: column;
     }

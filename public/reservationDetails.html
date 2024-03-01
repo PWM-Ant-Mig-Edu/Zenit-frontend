@@ -1,0 +1,92 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/formalizer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/reservation.css">
+    <script src="../src/js/header.js"></script>
+    <script src="../src/js/footer.js"></script>
+    <script src="../src/js/register.js"></script>
+    <script src="../src/js/login.js"></script>
+    <script src="../src/js/reservation.js"></script>
+    <script src="../src/js/reservationProgressBar.js"></script>
+    <script src="../src/js/reservationSummary.js"></script>
+
+</head>
+<body>
+<div id="popups" style="display: none;">
+    <div id="register-component"></div>
+    <div id="login-component"></div>
+    <div id="reset-password-component"></div>
+</div>
+<div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
+    <div id="header-component"></div>
+
+
+    <div class="reservation-container">
+        <div class="left-section">
+            <div class="return-button-container">
+                <h1>Proceso de Compra</h1>
+            </div>
+            <div id="progress-bar-component"></div>
+
+            <div class="detalles-compra-container">
+                <h2>
+                    Detalles de la  compra
+                </h2>
+                <div class="purchase-description">
+                    <div class="purchase-data">
+                        <span>Película: </span>
+                        <span>XXXXX</span>
+                    </div>
+                    <div class="purchase-data">
+                        <span>Reparto: </span>
+                        <span>XXXXX, XXXXX, XXXX</span>
+                    </div>
+                    <div class="purchase-data">
+                        <span>Fecha: </span>
+                        <span>XX/XX/XXXX</span>
+                    </div>
+                    <div class="purchase-data">
+                        <span>Hora: </span>
+                        <span>XX:XX</span>
+                    </div>
+                    <div class="purchase-data">
+                        <span>Cantidad entradas: </span>
+                        <span>XX</span>
+                    </div>
+                    <div class="purchase-data">
+                        <span>Butacas: </span>
+                        <span>XXX,XXX</span>
+                    </div>
+                    <div class="purchase-data">
+                        <span>Sala: </span>
+                        <span>XXX</span>
+                    </div>
+                    <div class="purchase-data">
+                        <span>Precio: </span>
+                        <span>XX€</span>
+                    </div>
+                </div>
+            </div>
+            <div class="reservation-buttons">
+                <a href="reservationData.html" onclick="back()">Retroceder</a>
+                <a href="#" onclick="back()">Avanzar</a>
+            </div>
+        </div>
+
+        <div id="summary-component"></div>
+    </div>
+
+
+    <div id="footer-component"></div>
+</div>
+
+<script>
+    loadProgressBarComponent(4)
+</script>
+
+</body>
+</html>

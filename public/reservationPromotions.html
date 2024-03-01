@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/formalizer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/reservation.css">
+    <script src="../src/js/header.js"></script>
+    <script src="../src/js/footer.js"></script>
+    <script src="../src/js/register.js"></script>
+    <script src="../src/js/login.js"></script>
+    <script src="../src/js/reserva_promotions.js"></script>
+    <script src="../src/js/reservationProgressBar.js"></script>
+    <script src="../src/js/reservationSummary.js"></script>
+
+    <title>Selección de Promociones y Menús</title>
+
+</head>
+<body>
+<div id="popups" style="display: none;">
+    <div id="register-component"></div>
+    <div id="login-component"></div>
+    <div id="reset-password-component"></div>
+</div>
+<div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
+    <div id="header-component"></div>
+
+
+    <div class="reservation-container">
+        <div class="left-section">
+            <div class="return-button-container">
+                <h1>Proceso de Compra</h1>
+            </div>
+
+            <div id="progress-bar-component"></div>
+
+            <div class="promotions-section">
+                <div class="promotions-grid">
+                    <!-- Primer promoción -->
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-1.png" alt="Promoción 1">
+                        <div class="tickets-input">
+                            <button onclick="decrement('promotion1')">-</button>
+                            <span id="quantity-promotion1">0</span>
+                            <button onclick="increment('promotion1')">+</button>
+                        </div>
+                    </div>
+                    <!-- Segunda promoción -->
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-2.png" alt="Promoción 2">
+                        <div class="tickets-input">
+                            <button onclick="decrement('promotion2')">-</button>
+                            <span id="quantity-promotion2">0</span>
+                            <button onclick="increment('promotion2')">+</button>
+                        </div>
+                    </div>
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-3.png" alt="Promoción 3">
+                        <div class="tickets-input">
+                            <button onclick="decrement('promotion3')">-</button>
+                            <span id="quantity-promotion3">0</span>
+                            <button onclick="increment('promotion3')">+</button>
+                        </div>
+                    </div>
+
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-4.png" alt="Promoción 4">
+                        <div class="tickets-input">
+                            <button onclick="decrement('promotion4')">-</button>
+                            <span id="quantity-promotion4">0</span>
+                            <button onclick="increment('promotion4')">+</button>
+                        </div>
+                    </div>
+
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-1.png" alt="Promoción 5">
+                        <div class="tickets-input">
+                            <button onclick="decrement('promotion5')">-</button>
+                            <span id="quantity-promotion5">0</span>
+                            <button onclick="increment('promotion5')">+</button>
+                        </div>
+                    </div>
+
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-2.png" alt="Promoción 6">
+                        <div class="tickets-input">
+                            <button onclick="decrement('promotion6')">-</button>
+                            <span id="quantity-promotion6">0</span>
+                            <button onclick="increment('promotion6')">+</button>
+                        </div>
+                    </div>
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-3.png" alt="Promoción 7">
+                        <div class="tickets-input">
+                            <button onclick="decrement('promotion7')">-</button>
+                            <span id="quantity-promotion7">0</span>
+                            <button onclick="increment('promotion7')">+</button>
+                        </div>
+                    </div>
+
+                    <div class="promotion-item">
+                        <img src="../src/assets/img/menu-4.png" alt="Promoción 8">
+                        <div class="tickets-input">
+                            <button onclick="decrement('promotion8')">-</button>
+                            <span id="quantity-promotion8">0</span>
+                            <button onclick="increment('promotion8')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reservation-buttons">
+                <a href="reservationTickets.html" onclick="back()">Retroceder</a>
+                <a href="reservationSeats.html" onclick="advance()">Avanzar</a>
+            </div>
+        </div>
+
+        <div id="summary-component"></div>
+    </div>
+
+
+    <div id="footer-component"></div>
+</div>
+
+
+<script>
+    loadProgressBarComponent(1); // Por ejemplo, inicializar en el paso 5
+</script>
+
+</body>
+</html>

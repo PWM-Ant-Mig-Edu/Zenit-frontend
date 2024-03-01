@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zenit ofrece la mejor experiencia cinematográfica con sonido envolvente y asientos cómodos. Ven y disfruta de los últimos estrenos con nosotros.">
+    <meta name="keywords" content="cine, películas, estrenos, entretenimiento, películas en alta definición.">
+    <meta name="author" content="Zenit">
+    <title>Zenit</title>
+    <link rel="stylesheet" href="../src/css/cinemas.css">
+    <link rel="stylesheet" href="../src/css/formalizer.css">
+    <link rel="stylesheet" href="../src/css/gridFilms.css">
+    <script src="../src/js/header.js"></script>
+    <script src="../src/js/footer.js"></script> 
+    <script src="../src/js/register.js"></script> 
+    <script src="../src/js/login.js"></script>
+    <script src="../src/js/films.js"></script>
+</head>
+<body>
+    
+    <div id="popups" style="display: none;">
+        <div id="register-component"></div>
+        <div id="login-component"></div>
+        <div id="make-reservation-component"></div>
+        <div id="reset-password-component"></div>
+    </div>
+    <div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
+        <div id="header-component"></div>
+
+        <div class="content-container"> 
+            <div class="FilmsContainer">
+                <h1 class="title-cinema">Cartelera de Zenit en [Cine]</h1>
+                <div class="FilmsContainer">
+                    <div class="FilmsGrid" id="type1"></div>
+                </div>
+            
+            </div>
+            <div class="cinemaInfo">
+                    <div class="location">
+                        <h1 class="title-cinema">Ubicación</h1>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.884110382787!2d-15.3972116!3d28.0286327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc40bd77b4651191%3A0x49527ec74be09603!2sLas%20terrazas%2C%2035220%2C%20Las%20Palmas!5e0!3m2!1ses!2ses!4v1644862032260!5m2!1ses!2ses"
+                            frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+                    </div>
+                    <div class="content-cinema-contact">
+                        <h1 class="title-cinema">Contacto</h1>
+                        <div>
+                            <h2 class="titleContact">Direccion:</h2>
+                            <span>Centro Comercial TOJI, Autovía GC-1, km 5,5, s/n, 35220 Telde, Las Palmas</span>
+                            <br>
+                            <h2 class="titleContact">NºTelefono:</h2>
+                            <span>999999999</span>
+                            <br>
+                            <h2 class="titleContact">E-mail:</h2>
+                            <span>ZenitTelde@gmail.com</span>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        <div id="footer-component"></div>
+    </div>
+</body>
+</html>

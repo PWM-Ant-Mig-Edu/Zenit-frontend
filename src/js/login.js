@@ -8,10 +8,10 @@ function loadHeaderComponent() {
         .catch(error => console.error('Error loading the header:', error));
 
     // Carga el componente de recuperar contraseña
-    fetch("../src/components/recuperar_contrasena.html")
+    fetch("../src/components/resetPassword.html")
         .then(response => response.text())
         .then(data => {
-            document.getElementById('recuperar-contrasena-component').innerHTML += data;
+            document.getElementById('reset-password-component').innerHTML += data;
         })
         .catch(error => console.error('Error loading the header:', error));
 }
@@ -45,7 +45,7 @@ function hideLogin() {
 }
 
 function showRecuperarContrasena() {
-    var recuperarContrasenaComponent = document.getElementById("recuperar-contrasena-component");
+    var recuperarContrasenaComponent = document.getElementById("reset-password-component");
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
   
@@ -58,7 +58,7 @@ function showRecuperarContrasena() {
 }
 
 function hideRecuperarContrasena() {
-    var recuperarContrasenaComponent = document.getElementById("recuperar-contrasena-component");
+    var recuperarContrasenaComponent = document.getElementById("reset-password-component");
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
   
@@ -95,3 +95,43 @@ function hideRegister() {
     popupsContainer.style.display = "none";
     registerComponent.style.display = "none";
 }
+
+
+function successLogin() {
+
+    var loginComponent = document.getElementById("login-component");
+    var loginImg = document.querySelector(".imagen-header");
+    console.log(loginImg);
+
+    var loginButtonMenuContent = document.querySelector(".MenuContent .ButtonContainer");
+    var loginButtonDropdown = document.querySelector(".Dropdown li");
+
+    var popupsContainer = document.getElementById("popups");
+    var homeContainer = document.querySelector(".wrapper-container");
+
+    homeContainer.classList.remove("blurred-background");
+
+    if (loginButtonMenuContent) {
+        popupsContainer.style.display = "none";
+        loginComponent.style.display = "none";
+        loginButtonMenuContent.style.display = "none";
+        loginImg.style.display = "block";
+    }
+
+    if (loginButtonDropdown) {
+        var liPerfil = document.getElementById("li Perfil");
+        if (liPerfil) {
+            liPerfil.style.display = "block";
+        }
+
+        var registerButtonDropdown = document.querySelector(".registerMobile");
+        var loginLinkDropdown = document.querySelector(".loginMobile");
+        if (registerButtonDropdown && loginLinkDropdown) {
+            registerButtonDropdown.style.display = "none";
+            loginLinkDropdown.style.display = "none";
+        }
+    }
+}
+
+
+

@@ -1,0 +1,555 @@
+@import url('colors.css');
+
+.profile-container {
+    display: flex;
+    width: 80%; /* Puedes ajustar el ancho según tus necesidades */
+    border-radius: 10px;
+    background-color: white;
+    margin: 30px auto;
+    padding: 0px 30px 10px 0px;
+    flex: 1;
+    color: black;
+    /* border gris flojo difuminado */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+#buttons-profile-component{
+    display: table-row;
+}
+
+.opciones-menu-container{
+    display: flex;
+    padding: 10px 10px;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    justify-content: center;
+    border-right: 1px solid rgb(181, 181, 181);
+    border-bottom: 1px  solid rgb(181, 181, 181);
+    font-weight: bolder;
+    color: grey;
+}
+
+#active {
+    border-right: 4px solid var(--mainColor);
+    color: var(--mainColor);
+}
+
+.settings-profile-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin: 20px 0px 0px 40px;
+    overflow-x: hidden;
+}
+
+.heading-profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.heading-profile-container h1 {
+    font-size: xx-large;
+    color: var(--grayProfile);
+}
+
+.profile-picture {
+    width: 60px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;  
+      
+}
+
+.personal-data-container {
+    margin-bottom: 20px;
+}
+
+.personal-data-container h2 {
+    margin-bottom: 20px;
+    font-size: x-large;
+}
+
+.personal-data-grid {
+    display: grid;
+    font-size: medium;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.button-container {
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+.button {
+    margin-bottom: 8px;
+    color: white;
+    cursor: pointer;
+    padding: 15px 25px;
+    font-size: medium;
+    font-weight: bolder;
+    white-space: nowrap;
+    border-style: hidden;
+    border-radius: 10px;
+    background-color: var(--mainColor);
+}
+
+.data{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.data span {
+    margin-right: 10px
+}
+
+
+.password-data-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.inputs-container {
+    width: auto; 
+    margin-right: 16px;
+}
+
+.password-info-container {
+    width: auto;
+    border-left: 4px solid black;
+    padding: 20px;
+}
+
+.password-info-container h2, .password-info-container li{
+    margin-bottom: 10px;
+}
+
+
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 16px;    
+}
+
+
+.input-password {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.input-password h2 {
+    font-size: x-large;
+    margin-bottom: 5px;
+}
+
+.input-password div{
+    display: flex;
+    align-items: center;
+}
+
+.input-password input {
+    margin-top: 4px;
+    font-size: small;
+}
+
+.input-password i {
+    margin-left: 5px;
+}
+
+
+/* PAGO*/
+.add-credit-card-container{
+    display: flex;
+    margin-top: 40px;
+    padding: 15px;
+    border: 1px solid var(--mainColor);
+    width: auto;
+    gap: 50px;
+}
+
+.add-credit-card-container h3{
+    color: var(--grayProfile);
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.add-credit-card-text div{
+    display: flex;
+    gap: 10px;
+}
+
+.add-credit-card-container button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--mainColor);
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-style: hidden;
+    width: 20%;
+    font-size: large;
+    white-space: nowrap;
+}
+
+.add-credit-card-container button:hover {
+    background-color: var(--mainColorDark);
+}
+
+.active-credit-cards-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+.credit-card {
+    width: 370px;
+    height: 270px;
+    background: linear-gradient(to bottom right, #0047ab, #00a4e4);
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    color: white;
+    position: relative;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+.credit-card .chip {
+    width: 60px;
+    height: 40px;
+    background: linear-gradient(to bottom right, #ddd, #ccc);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 5px;
+}
+
+.credit-card .middle-card-line {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom right, #ffcc00, #ff9900);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    border-radius: 0 0 15px 15px;
+}
+
+.credit-card .data {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.credit-card .credit-card-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.credit-card .credit-card-subfield {
+    display: flex;
+    flex: 1;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.credit-card label {
+    margin-right: 10px;
+}
+
+.credit-card label {
+    font-size: 12px;
+}
+
+.credit-card input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    color: #333;
+}
+
+.delete-credit-card-button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #ffcc00;
+    color: #333;
+    font-weight: bolder;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-style: hidden;
+    font-size: medium;
+}
+
+/* HISTORIAL DE  COMPRAS */
+.data-container-purchases {
+    overflow-x: hidden;
+    margin-bottom: 20px;
+}
+
+#purchase-history-table{
+    overflow-x: auto;
+}
+
+#purchase-history-table table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+#purchase-history-table th,
+#purchase-history-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#purchase-history-table th {
+    background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 2000px){
+    .active-credit-cards-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .personal-data-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .add-credit-card-container button{
+        width: 60%;
+    }
+
+    .active-credit-cards-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .credit-card {
+        width: 300px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .delete-credit-card-button{
+        bottom: 10px;
+    }
+}   
+
+@media screen and (max-width: 1155px) {
+    .add-credit-card-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .settings-profile-container {
+        min-height: 50vh;
+    }
+    
+    .personal-data-grid {
+        font-size: medium;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .data{
+        flex-direction: column;
+    }
+
+    .data span {
+        margin-bottom: 10px;
+        margin-right: 0px;
+    }
+
+    .settings-profile-container{
+        margin-left: 30px;
+    }
+    .password-data-container {
+        flex-direction: column;
+    }
+    .password-info-container {
+        border-left: 0px;
+        
+    }
+}   
+
+
+@media screen and (max-width: 800px) {
+    .heading-profile-container h1 {
+        font-size: x-large;
+        margin-bottom: 10px;
+    }
+
+
+    .add-credit-card-container button{
+        width: 80%;
+    }
+    
+    .input-password h2 {
+        font-size: large;
+    }
+
+    .inputs-container h1 {
+        font-size: large;
+    }
+    .data {
+        width: auto ;
+        margin-right: 0;
+    }
+    .data input {
+        width: 90%;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .active-credit-cards-grid{
+        
+    }
+
+    .credit-card {
+        width: 230px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 551px) {
+    .settings-profile-container{
+        width: 80%;
+    }
+    .profile-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .add-credit-card-container button{
+        width: 100%;
+        font-size: medium;
+    }
+
+    .button{
+        padding: 10px 10px;
+        align-self: center;
+        margin-bottom: 20px;
+    }
+
+    .settings-profile-container {
+        margin: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heading-profile-container {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .opciones-menu-container {
+        border-radius: 0%;
+        border-right: 0px;
+    }
+    #active {
+        color: var(--mainColor);
+        border-right: 0px;
+    }
+
+    .active-credit-cards-grid{
+        width: 100%;
+    }
+
+    .credit-card{
+        width: 200px;
+        height: 400px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .credit-card label {
+        margin-bottom: 10px;
+    }
+
+    .credit-card .credit-card-field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .credit-card .credit-card-subfield {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .heading-profile-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .inputs-container h1{
+        font-size: large    ;
+    }
+    .inputs-container input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .credit-card {
+        width: 120px;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    .credit-card .credit-card-field {
+        align-items: flex-start;
+    }
+
+    .credit-card .credit-card-subfield {
+        align-items: flex-start;
+    }
+
+    .credit-card .delete-credit-card-button {
+        bottom: 10px;
+        right: auto ;
+        left: auto;
+        padding: 5px 10px;
+    }
+
+    .add-credit-card-container button {
+        font-size: small;
+    }
+}

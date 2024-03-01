@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/formalizer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../src/css/reservation.css">
+    <link rel="stylesheet" href="../src/css/seats.css">
+    <script src="../src/js/header.js"></script>
+    <script src="../src/js/footer.js"></script>
+    <script src="../src/js/register.js"></script>
+    <script src="../src/js/login.js"></script>
+    <script src="../src/js/reservation.js"></script>
+    <script src="../src/js/reservationProgressBar.js"></script>
+    <script src="../src/js/reservationSummary.js"></script>
+    <script src="../src/js/butacas.js"></script>
+</head>
+<body>
+<div id="popups" style="display: none;">
+    <div id="register-component"></div>
+    <div id="login-component"></div>
+    <div id="reset-password-component"></div>
+</div>
+<div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
+    <div id="header-component"></div>
+
+
+    <div class="reservation-container">
+        <div class="left-section">
+            <div class="return-button-container">
+                <h1>Proceso de Compra</h1>
+            </div>
+            <div id="progress-bar-component"></div>
+
+            <div id="table-container"></div>
+            
+            <div class="reservation-buttons">
+                <a href="reservationPromotions.html" onclick="back()">Retroceder</a>
+                <a href="reservationData.html" onclick="back()">Avanzar</a>
+            </div>
+        </div>
+
+        <div id="summary-component"></div>
+        
+    </div>
+
+
+    <div id="footer-component"></div>
+</div>
+
+<script>
+    loadProgressBarComponent(2)
+</script>
+</body>
+</html>

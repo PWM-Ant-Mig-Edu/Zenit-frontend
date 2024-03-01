@@ -1,7 +1,7 @@
 <head>
     <link rel="stylesheet" href="../src/css/register.css">
 </head>
-<form class="form">
+<div class="form">
     <button class="close-button" onclick="hideRegister()">X</button>
     <p class="title">¡Regístrate!</p>
     <p class="message">Regístrate y obtén acceso a nuestra plataforma.</p>
@@ -30,6 +30,6 @@
         <input class="input" type="password" placeholder="" required="">
         <span>Confirmar contraseña</span>
     </label>
-    <button class="submit">Enviar</button>
+    <button class="submit" onclick="successLogin()">Enviar</button>
     <p class="signin">¿Ya tienes una cuenta? <a onclick="hideRegister(), showLogin()">Iniciar sesión</a> </p>
-</form>
+</div>

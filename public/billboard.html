@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zenit ofrece la mejor experiencia cinematográfica con sonido envolvente y asientos cómodos. Ven y disfruta de los últimos estrenos con nosotros.">
+    <meta name="keywords" content="cine, películas, estrenos, entretenimiento, películas en alta definición.">
+    <meta name="author" content="Zenit">
+    <title>Zenit</title>
+    <link rel="stylesheet" href="../src/css/billboard.css">
+    <link rel="stylesheet" href="../src/css/formalizer.css">
+    <link rel="stylesheet" href="../src/css/gridFilms.css">
+    <script src="../src/js/header.js"></script>
+    <script src="../src/js/footer.js"></script>
+    <script src="../src/js/register.js"></script>
+    <script src="../src/js/login.js"></script>
+    <script src="../src/js/films.js"></script>
+</head>
+<body>
+    
+    <div id="popups" style="display: none;">
+        <div id="register-component"></div>
+        <div id="login-component"></div>
+        <div id="make-reservation-component"></div>
+        <div id="reset-password-component"></div>
+    </div>
+    <div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
+        <div id="header-component"></div>
+
+        <div class="content-container">
+            <div class="filmsFilterContainer">
+                <div>
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria">
+                        <option value="comedy">Comedia</option>
+                        <option value="drama">Drama</option>
+                        <option value="action">Acción</option>
+                        <option value="terror">Terror</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="classification">Clasificación:</label>
+                    <select id="classification">
+                        <option value="all_audiences">Todos los Públicos</option>
+                        <option value="3">3</option>
+                        <option value="7">7</option>
+                        <option value="16">16</option>
+                        <option value="16">18</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="audio">Audio:</label>
+                    <select id="audio">
+                        <option value="spanish">Español</option>
+                        <option value="english">Inglés</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="format">Formato:</label>
+                    <select id="format">
+                        <option value="2D">2D</option>
+                        <option value="3D">3D</option>
+                        <option value="4D">4D</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="FilmsContainer">
+                <div class="FilmsGrid" id="type1"></div>
+            </div>
+    
+        </div>
+        
+        <div id="footer-component"></div>
+    </div>
+</body>
+</html>

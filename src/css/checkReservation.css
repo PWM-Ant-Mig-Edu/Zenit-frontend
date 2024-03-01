@@ -1,0 +1,211 @@
+/* Estilos CSS para el formulario de comprobación de reserva */
+@import url('colors.css');
+
+.check-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    flex: 1;
+    width: 40%;
+    align-self: center;
+    justify-content: center;
+}
+
+.check-text-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.check-form-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.check-text-container h2 {
+    font-size: xx-large;
+    margin-bottom: 10px;
+    color: var(--mainColor);
+}
+
+.check-text-container p {
+    margin-bottom: 10px;
+    font-size:  large;
+}
+
+.comprobar-container-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+.check-form-group {
+    position: relative;
+    margin-top: 20px;
+    width: 80%;
+    align-self: center;
+}
+
+.check-form-group .check-input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 40%;
+    border: none;
+    border-bottom: 1px solid #0A2239;
+    background: transparent;
+}
+
+
+.check-form-group .check-input:focus {
+    outline: none;
+}
+
+.check-form-group .check-label {
+    color: #0A2239;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 5px;
+    display: flex;
+}
+
+.check-form-group .label-char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * .05s);
+}
+
+.check-form-group .check-input:focus ~ .check-label .label-char,
+.check-form-group .check-input:valid ~ .check-label .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #0A2239;
+}
+
+.check-form-group .check-bar {
+    position: relative;
+    display: block;
+}
+
+/* Estilos para el label cuando el select tiene una opción seleccionada */
+.check-label.active .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #0A2239;
+}
+
+/* Ocultar la opción "Select an option" */
+.check-form-group .select option[disabled] {
+    display: none;
+}
+
+.check-form-group .select {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 40%;
+    border: 0px; /* Eliminamos el borde */
+    border-bottom: 1px solid #0A2239;
+    background: transparent;
+    outline:none;
+}
+
+.check-form-group .select:focus {
+    outline: none;
+}
+
+
+.comprobar-button {
+    width: 80%;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    text-align: center; /* Centrar el texto horizontalmente */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--mainColor);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+
+.comprobar-button:hover {
+    background-color: var(--mainColorDark);
+}
+
+.comprobar-button span {
+    vertical-align: middle;
+}
+
+
+.reservation-details-container {
+    align-self: center;
+    width: 100%;
+}
+
+.reservation-details-container h2 {
+    font-size: xx-large;
+    margin-bottom: 10px;
+    color: var(--mainColor);
+}
+
+.reservation-details-content p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: large;
+}
+
+.reservation-details-footer {
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: var(--mainColor);
+}
+
+
+
+@media (max-width: 768px) {
+    .check-main-container {
+        width: 80%;
+    }
+    .check-text-container img{
+        display: none;
+    }
+
+    .reservation-details-container{
+        margin-top: 20px;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .check-main-container {
+        width: 80%;
+    }
+    .check-text-container img{
+        display: none;
+    }
+
+    .check-label span {
+        font-size: small;
+    }
+}
