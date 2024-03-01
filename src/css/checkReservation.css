@@ -125,7 +125,7 @@
 }
 
 
-.comprobar-button {
+.check-button {
     width: 80%;
     align-self: center;
     align-content: center;
@@ -143,11 +143,11 @@
 }
 
 
-.comprobar-button:hover {
+.check-button:hover {
     background-color: var(--mainColorDark);
 }
 
-.comprobar-button span {
+.check-button span {
     vertical-align: middle;
 }
 

@@ -27,7 +27,7 @@
     width: 50%;
 }
 
-.proyeccion-container {
+.projection-container {
     background-color: var(--mainColorDarker);
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@
     font-weight: 600;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-.proyeccion-container-header {
+.projection-container-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -48,7 +48,7 @@
     border-bottom: 2px solid white;
     padding: 20px 0px;
 }
-.proyeccion-container-header button {
+.projection-container-header button {
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -57,11 +57,11 @@
     margin-right: 20px;
 }
 
-.proyeccion-container-header h1 {
+.projection-container-header h1 {
     margin-left: 20px;
     
 }
-.proyeccion-img {
+.projection-img {
     width: 30%;
     margin-top: 30px;
     margin-left: 30px;
@@ -69,7 +69,7 @@
      object-fit: cover;
 }
 
-.proyeccion-container-body {
+.projection-container-body {
     display: flex;
     flex-direction: row;
     width: auto;
@@ -79,7 +79,7 @@
     width: 100%;
 }
 
-.proyeccion-horas-container {
+.projection-hours-container {
     display: flex;
     flex-direction: column;
     height: 50%;
@@ -88,18 +88,18 @@
     margin-bottom: 30px;
     margin-right: 30px;
 }
-.proyeccion-horas-container h1 {
+.projection-hours-container h1 {
     padding: 20px;
     align-self: center;
     font-size: x-large;
 }
 
-.proyeccion-horas-container h2 {
+.projection-hours-container h2 {
     padding: 20px;
     align-self: center;
     text-decoration: underline;
 }
-.grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
+.grid-container-projection, .grid-container-horas, .grid-container-dias {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -111,7 +111,7 @@
 
 .grid-container-dias::-webkit-scrollbar,
 .grid-container-horas::-webkit-scrollbar,
-.grid-container-proyeccion::-webkit-scrollbar {
+.grid-container-projection::-webkit-scrollbar {
     width: 12px;
     height: 12px;
 }
@@ -119,14 +119,14 @@
 /* Track styles (background of the scrollbar) */
 .grid-container-dias::-webkit-scrollbar-track,
 .grid-container-horas::-webkit-scrollbar-track,
-.grid-container-proyeccion::-webkit-scrollbar-track {
+.grid-container-projection::-webkit-scrollbar-track {
     background: transparent;    
 }
 
 /* Handle styles (the draggable part of the scrollbar) */
 .grid-container-dias::-webkit-scrollbar-thumb,
 .grid-container-horas::-webkit-scrollbar-thumb,
-.grid-container-proyeccion::-webkit-scrollbar-thumb {
+.grid-container-projection::-webkit-scrollbar-thumb {
     background: white;
     border-radius: 6px;
 }
@@ -134,10 +134,10 @@
 /* Handle on hover */
 .grid-container-dias::-webkit-scrollbar-thumb:hover,
 .grid-container-horas::-webkit-scrollbar-thumb:hover,
-.grid-container-proyeccion::-webkit-scrollbar-thumb:hover  {
+.grid-container-projection::-webkit-scrollbar-thumb:hover  {
     background: #555;
 }
-.proyeccion-dia-container, .proyeccion-hora-container {
+.projection-days-container, .projection-hora-container {
     display: flex;
     flex-direction: column;
     background-size: 100% 100%;
@@ -151,18 +151,18 @@
     border: 1px solid white;
 }
 
-.proyeccion-dia-container.selected, .proyeccion-hora-container.selected {
+.projection-days-container.selected, .projection-hora-container.selected {
     background-color: white;
     color: var(--mainColor);
 }
 
-.botones-proyeccion {
+.botones-projection {
     display: flex;
     margin-top: 16px;
     gap: 50px;
 }
 
-.botones-proyeccion button{
+.botones-projection button{
     background-color:var(--mainColor);
     border: 0px solid white;
     cursor: pointer;
@@ -173,10 +173,10 @@
 }
 
 @media (max-width: 1400px) {
-    .proyeccion-horas-container{
+    .projection-hours-container{
         margin-right: 10px;
     }
-    .proyeccion-img{
+    .projection-img{
         margin-right: 10px;
         width: 30%;
     }
@@ -197,79 +197,79 @@
         width: 80%;
     }
 
-    .grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
+    .grid-container-projection, .grid-container-horas, .grid-container-dias {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .proyeccion-horas-container h1{
+    .projection-hours-container h1{
         padding: 20px 0px;
     }
 }
 
 @media (max-width: 767px) {
-    .proyeccion-container-header {
+    .projection-container-header {
         font-size: x-large;
     }
 
-    .proyeccion-horas-container h1 {
+    .projection-hours-container h1 {
         font-size: large;
     }
 
-    .proyeccion-dia-container, .proyeccion-hora-container {
+    .projection-days-container, .projection-hora-container {
         font-size: small;
     }
 
-    .proyeccion-container-body {
+    .projection-container-body {
         flex-direction: column;
     }
 
-    .proyeccion-img{
+    .projection-img{
         margin: 0px;
         margin-top: 20px;
     }
 
-    .grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
+    .grid-container-projection, .grid-container-horas, .grid-container-dias {
         grid-template-columns: repeat(3, 1fr);
     }
     
 }
 
 @media (max-width: 600px) {
-    .proyeccion-container-header {
+    .projection-container-header {
         font-size: large;
     }
 
-    .grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
+    .grid-container-projection, .grid-container-horas, .grid-container-dias {
         grid-template-columns: repeat(2, 1fr);
         max-height: 15vh;
     }
 
-    .botones-proyeccion button{
+    .botones-projection button{
         font-size: small;
         padding: 5px;
     }
 
-    .botones-proyeccion{
+    .botones-projection{
         gap: 10px;
     }
 }
 
 @media (max-width: 400px) {
 
-    .grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
+    .grid-container-projection, .grid-container-horas, .grid-container-dias {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media (min-height: 250px) and (max-height: 900px){
-    .proyeccion-horas-container h1, .proyeccion-horas-container h2{
+    .projection-hours-container h1, .projection-hours-container h2{
         padding: 10px;
     }
 }
 
 @media (min-height: 250px) and (max-height: 900px) and (max-width: 500px){
 
-    .grid-container-proyeccion, .grid-container-horas, .grid-container-dias {
+    .grid-container-projection, .grid-container-horas, .grid-container-dias {
         grid-template-columns: repeat(1, 1fr);
     }
 }

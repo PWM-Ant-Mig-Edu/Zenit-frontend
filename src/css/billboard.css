@@ -3,23 +3,23 @@
     flex: 1;
 }
 
-.filmsFilterContainer {
+.films-filter-Container {
     display: flex;
     justify-content: space-around;
     margin: 8px;
 }
 
-.filmsFilterContainer div {
+.films-filter-Container div {
     margin-bottom: 10px;
 }
 
-.filmsFilterContainer label {
+.films-filter-Container label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.filmsFilterContainer select {
+.films-filter-Container select {
     width: 100%; 
     padding: 0.5em; 
     font-size: 1rem; 
@@ -30,7 +30,7 @@
 }
 
 
-.filmsFilterContainer select option {
+.films-filter-Container select option {
     background-color: #fff;
     color: #333;
 }

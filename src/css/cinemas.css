@@ -12,15 +12,6 @@
     flex: 1;    
 }
 
-.title-cinema {
-    text-align: center;
-    width: 100%;
-    font-weight: 800;
-    font-size: xxx-large;
-    text-decoration: underline;
-    margin-bottom: 16px;
-}
-
 .location {
     display: flex;
     flex-direction: column;
@@ -50,7 +41,7 @@
     font-weight: 800;
 }
 
-.cinemaInfo  {
+.cinema-info  {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -60,12 +51,28 @@
 }
 
 
-.FilmsContainer {
+.cinema-films-container {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+} 
+
+.cinema-films-container h1 {
+    text-align: center;
+    width: 100%;
+    font-weight: 800;
+    font-size: xxx-large;
+    text-decoration: underline;
+    margin-bottom: 16px;
 }
 
+.content-cinema-contact h1, .location h1 {
+    text-align: center;
+    width: 100%;
+    font-weight: 800;
+    font-size: xx-large;
+    margin-bottom: 16px;
+}
 @media screen and (max-width: 1150px) {
 
     .location iframe {
@@ -79,7 +86,7 @@
         flex-direction: column;
     }
 
-    .cinemaInfo  {
+    .cinema-info  {
         display: flex;
         flex-direction: column;
         height: 100%;
@@ -97,14 +104,20 @@
 }
 
 @media (max-width: 767px) {
-    .title-cinema {
+    .cinema-films-container h1 {
         font-size: xx-large;
+    }
+    .content-cinema-contact h1, .location h1 {
+        font-size: x-large;
     }
     
 }
 
 @media (max-width: 479px) {
-    .title-cinema {
+    .cinema-films-container h1 {
         font-size: x-large;
+    }
+    .content-cinema-contact h1, .location h1 {
+        font-size: large;
     }
 }

@@ -1,6 +1,6 @@
 @import url('colors.css');
 
-.title-container .title-review {
+.title-container h1 {
     text-align: center;
     width: 100%;
     font-weight: 800;
@@ -199,15 +199,15 @@
         align-self: center;
         margin-bottom: 16px;
     }
-    .title-container .title-review {
-        width: 85%;
+    .title-container h1 {
+        width: 100%;
         font-size: x-large;
     }
 }
 
 @media (max-width: 991px) {
-    .title-container .title-review {
-        width: 85%;
+    .title-container h1 {
+        width: 100%;
         font-size: xx-large;
     }
 }
