@@ -8,41 +8,13 @@ body {
 }
 /* -----------------------------LEFT SECTION--------------------------------- */
 .left-section {
-    flex: 0 0 75%; /* El div ocupa el 75% del espacio de su div padre */
+    flex: 0 0 75%;
     display: flex;
-    flex-direction: column; /* Organiza los elementos en credit-card-subfield */
+    flex-direction: column;
 }
 
-
-
-/* -----------------------------RETURN BUTTON--------------------------------- */
-.return-button-container {
-    display: flex;
-    align-items: center;
-}
-
-.round-button {
-    width: 25px;
-    height: 25px;
-    background-color: var(--elementColor);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-.arrow {
-    width: 0;
-    height: 0;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    border-right: 9px solid var(--unselectedText);
-}
-
-h1 {
-    font-size: 20px;
+.left-section h1 {
+    font-size: x-large;
     color: #000000;
     margin: 0;
 }

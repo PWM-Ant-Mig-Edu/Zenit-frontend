@@ -2,14 +2,13 @@
 
 .profile-container {
     display: flex;
-    width: 80%; /* Puedes ajustar el ancho según tus necesidades */
+    width: 80%;
     border-radius: 10px;
     background-color: white;
     margin: 30px auto;
     padding: 0px 30px 10px 0px;
     flex: 1;
     color: black;
-    /* border gris flojo difuminado */
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
