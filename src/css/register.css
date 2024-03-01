@@ -1,7 +1,6 @@
-/* Estilo para el fondo borroso solo al contenedor de popups */
 .blurred-background {
-filter: blur(5px); /* Ajusta el valor de blur según tus preferencias */
-transition: filter 0.3s ease; /* Agrega una transición suave */
+filter: blur(5px);
+transition: filter 0.3s ease;
 }
 
 #popups {
@@ -23,8 +22,7 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 cursor: default;
-z-index: 9999; /* Asegura que esté encima de otros elementos */
-/* Agrega cualquier estilo adicional que desees para el componente de registro */
+z-index: 9999; 
 }
 
 .form {
@@ -32,7 +30,7 @@ z-index: 9999; /* Asegura que esté encima de otros elementos */
   flex-direction: column;
   gap: 10px;
   max-width: 350px;
-  padding: 20px 30px; /* Agregar relleno lateral de 30px */
+  padding: 20px 30px;
   border-radius: 20px;
   position: relative;
   background-color: var(--mainColorDarker);

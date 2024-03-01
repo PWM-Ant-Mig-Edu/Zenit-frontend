@@ -1,4 +1,3 @@
-/* Estilos CSS para el formulario de comprobación de reserva */
 @import url('colors.css');
 
 .check-main-container {
@@ -97,14 +96,14 @@
     display: block;
 }
 
-/* Estilos para el label cuando el select tiene una opción seleccionada */
+
 .check-label.active .label-char {
     transform: translateY(-20px);
     font-size: 14px;
     color: #0A2239;
 }
 
-/* Ocultar la opción "Select an option" */
+
 .check-form-group .select option[disabled] {
     display: none;
 }
@@ -114,7 +113,7 @@
     padding: 10px 10px 10px 5px;
     display: block;
     width: 40%;
-    border: 0px; /* Eliminamos el borde */
+    border: 0px;
     border-bottom: 1px solid #0A2239;
     background: transparent;
     outline:none;
@@ -130,7 +129,7 @@
     align-self: center;
     align-content: center;
     align-items: center;
-    text-align: center; /* Centrar el texto horizontalmente */
+    text-align: center;
     padding: 10px 20px;
     font-size: 16px;
     background-color: var(--mainColor);

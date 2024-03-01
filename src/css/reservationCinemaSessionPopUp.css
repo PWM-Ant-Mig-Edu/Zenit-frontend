@@ -116,14 +116,12 @@
     height: 12px;
 }
 
-/* Track styles (background of the scrollbar) */
 .grid-container-dias::-webkit-scrollbar-track,
 .grid-container-horas::-webkit-scrollbar-track,
 .grid-container-projection::-webkit-scrollbar-track {
     background: transparent;    
 }
 
-/* Handle styles (the draggable part of the scrollbar) */
 .grid-container-dias::-webkit-scrollbar-thumb,
 .grid-container-horas::-webkit-scrollbar-thumb,
 .grid-container-projection::-webkit-scrollbar-thumb {
@@ -131,7 +129,7 @@
     border-radius: 6px;
 }
 
-/* Handle on hover */
+
 .grid-container-dias::-webkit-scrollbar-thumb:hover,
 .grid-container-horas::-webkit-scrollbar-thumb:hover,
 .grid-container-projection::-webkit-scrollbar-thumb:hover  {
