@@ -1,5 +1,4 @@
 
-// Variables to keep track of the quantity of tickets and the total price
 let quantityChildrenBasic = 0;
 let quantityYouthsBasic = 0;
 let quantityAdultsBasic = 0;
@@ -12,7 +11,6 @@ let quantitySeniorsPremium = 0;
 
 let totalPrice = 0;
 
-// Function to increment the quantity of tickets
 function increment(type) {
     switch (type) {
         case 'children-basic':
@@ -43,7 +41,6 @@ function increment(type) {
     updateSummary();
 }
 
-// Function to decrement the quantity of tickets
 function decrement(type) {
     switch (type) {
         case 'children-basic':
@@ -74,7 +71,7 @@ function decrement(type) {
     updateSummary();
 }
 
-// Function to update the ticket summary
+
 function updateSummary() {
     let totalTicketsBasic = quantityChildrenBasic + quantityYouthsBasic + quantityAdultsBasic + quantitySeniorsBasic;
     let totalTicketsPremium = quantityChildrenPremium + quantityYouthsPremium + quantityAdultsPremium + quantitySeniorsPremium;
@@ -90,15 +87,13 @@ function updateSummary() {
     document.getElementById('quantity-adults-premium').textContent = quantityAdultsPremium;
     document.getElementById('quantity-seniors-premium').textContent = quantitySeniorsPremium;
     document.getElementById('total_tickets_premium').textContent = totalTicketsPremium;
-    // Calculation of the total price
+
     totalPrice = (quantityChildrenBasic + quantityYouthsBasic + quantityAdultsBasic + quantitySeniorsBasic) * priceBasic +
         (quantityChildrenPremium + quantityYouthsPremium + quantityAdultsPremium + quantitySeniorsPremium) * pricePremium;
     document.getElementById('total_price').textContent = totalPrice.toFixed(2);
 }
 
 
-
-// Define the prices per ticket type (adjust as necessary)
 const priceBasic = 5.00;
 const pricePremium = 10.00;
 

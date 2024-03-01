@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     var selectElement = document.querySelector('.check-form-group .select');
-    var label = selectElement.nextElementSibling.nextElementSibling; // Asumiendo que el label sigue al span .check-bar
+    var label = selectElement.nextElementSibling.nextElementSibling; 
 
     selectElement.addEventListener('change', function () {
-        if (this.selectedIndex > 0) { // Si se selecciona una opción válida (no la predeterminada)
+        if (this.selectedIndex > 0) {
             label.classList.add('active');
         } else {
             label.classList.remove('active');
@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (selectElement.selectedIndex > 0 && (correoInput.value.trim() !== '' || numeroInput.value.trim() !== '')) {
-            // haz un salto a otra página
             window.location.href = 'bookingDetails.html';
         } else {
             alert('Debes seleccionar el tipo de ticket y llenar al menos uno de los campos (correo o número).');

@@ -1,4 +1,5 @@
 function toggleMenu() {
+    console.log("toggleMenu");
     var element = document.querySelector(".Dropdown");
     element.classList.toggle("show");
     var height = document.body.scrollHeight;
@@ -26,6 +27,9 @@ function loadHeaderComponent() {
 }
 
 document.addEventListener("DOMContentLoaded", loadHeaderComponent);
+
+
+
 
 
 

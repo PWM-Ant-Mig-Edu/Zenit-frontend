@@ -3,7 +3,6 @@ var steps = document.querySelectorAll('.step');
 var step_names = document.querySelectorAll('.step-name');
 var progressBar = document.querySelector('.progress-line');
 
-// Función para incrementar la cantidad de una promoción
 function increment(promotion) {
     var quantityElement = document.getElementById('quantity_' + promotion);
     var currentQuantity = parseInt(quantityElement.textContent);
@@ -11,7 +10,6 @@ function increment(promotion) {
     updateSummary();
 }
 
-// Función para decrementar la cantidad de una promoción
 function decrement(promotion) {
     var quantityElement = document.getElementById('quantity_' + promotion);
     var currentQuantity = parseInt(quantityElement.textContent);
