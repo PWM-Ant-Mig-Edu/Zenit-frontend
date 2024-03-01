@@ -1,6 +1,6 @@
 @import url('colors.css');
 
-.FilmsContainer{
+.films-container{
     display: flex;
     width: 100%;
     align-items: center;
@@ -8,7 +8,7 @@
     margin: 20px 0px;
 }
 
-.FilmsGrid{
+.films-grid {
     display: grid;
     width: 90%;
     height: 90%;
@@ -16,13 +16,13 @@
     gap: 20px;
 }
 
-.FilmsGrid .film-item img{
+.films-grid .film-item img{
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.FilmsGrid#type1 img{
+.films-grid#type1 img{
     cursor: pointer;
 }
 
@@ -88,37 +88,37 @@
 
 
 @media (max-width: 1920px) {
-    .FilmsGrid{
+    .films-grid{
         grid-template-columns: repeat(5, 1fr);
     }
 }
 
 @media (max-width: 1600px) {
-    .FilmsGrid{
+    .films-grid{
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (max-width: 1200px) {
-    .FilmsGrid{
+    .films-grid{
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 991px) {
-    .FilmsGrid{
+    .films-grid{
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 767px) {
-    .FilmsGrid{
+    .films-grid{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 479px) {
-    .FilmsGrid{
+    .films-grid{
         grid-template-columns: repeat(1, 1fr);
     }
 }
