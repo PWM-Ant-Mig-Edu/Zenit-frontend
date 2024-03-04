@@ -17,10 +17,3 @@ width: 50px;
 height: 30px;
 fill: #434343;
 }
-
-@media screen and (max-width: 768px) {
-    #table-container {
-        width: 80%;
-        margin: 0 auto;
-    }
-}

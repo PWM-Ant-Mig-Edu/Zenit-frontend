@@ -175,36 +175,3 @@
     text-align: center;
     color: var(--mainColor);
 }
-
-
-
-@media (max-width: 768px) {
-    .check-main-container {
-        width: 80%;
-    }
-    .check-text-container img{
-        display: none;
-    }
-
-    .reservation-details-container{
-        margin-top: 20px;
-    }
-
-}
-
-
-
-
-
-@media (max-width: 768px) {
-    .check-main-container {
-        width: 80%;
-    }
-    .check-text-container img{
-        display: none;
-    }
-
-    .check-label span {
-        font-size: small;
-    }
-}

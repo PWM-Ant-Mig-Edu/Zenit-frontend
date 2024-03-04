@@ -188,26 +188,3 @@
     justify-content: center; 
     margin-top: 20px; 
 }
-
-
-@media (max-width: 767px) {
-    .film-panel {
-        flex-direction: column;
-    }
-    .film-panel img {
-        width: 40%;
-        align-self: center;
-        margin-bottom: 16px;
-    }
-    .title-container h1 {
-        width: 100%;
-        font-size: x-large;
-    }
-}
-
-@media (max-width: 991px) {
-    .title-container h1 {
-        width: 100%;
-        font-size: xx-large;
-    }
-}

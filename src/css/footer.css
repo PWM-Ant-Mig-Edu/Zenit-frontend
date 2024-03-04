@@ -70,24 +70,3 @@ footer {
     border-bottom-right-radius: 90px;
     padding: 15px 30px 25px 0px;
 }
-
-@media screen and (max-width: 1150px) {
-    .footer-section {
-        flex: 1 1 calc(33.33% - 20px);
-        margin-right: 20px;
-        margin-bottom: 20px;
-    }
-    .footer-section:nth-child(3) {
-        margin-right: 0;
-    }
-    
-    .footer-section.contact {
-        flex-basis: calc(100% - 20px);
-    }
-}
-
-@media screen and (max-width: 890px) {
-    .footer-section {
-        flex-basis: 100%;
-    }
-}
