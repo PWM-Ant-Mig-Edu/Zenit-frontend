@@ -29,9 +29,9 @@ Puedes encontrar los mockups para el sitio web [aquí](https://play.teleporthq.i
 - Frontend: HTML, CSS, JavaScript (Nativo)
 
 ## Miembros
-Miguel Escobedo Santana
-Antonio Aparicio González
-Eduardo Ortega Zerpa
+- Miguel Escobedo Santana
+- Antonio Aparicio González
+- Eduardo Ortega Zerpa
 
 ¡Gracias por revisar nuestro proyecto de Sitio web de Cines! Esperamos que disfrutes usándolo.
 
