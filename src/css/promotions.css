@@ -7,6 +7,12 @@
     color: var(--mainColor)
 }
 
+.wrapper-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .promotions-title-container {
     width: 80%;
     margin-left: 30px;
