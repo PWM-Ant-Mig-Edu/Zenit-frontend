@@ -40,14 +40,14 @@ function generateMovieHTML(pelicula, rol) {
     if (rol === 'admin') {
         overlayHTML = `
             <button onclick="showReservar()"><i class="fas fa-trash"></i>Eliminar</button>
-            <a href="${pelicula.resenas}" class="button-link">
+            <a href="${pelicula.reviewUrl}" class="button-link">
                 <i class="fas fa-pencil"></i> Editar
             </a>
         `;
     } else {
         overlayHTML = `
             <button onclick="showReservar()"><i class="fas fa-shopping-cart"></i>Reservar</button>
-            <a href="${pelicula.resenas}" class="button-link">
+            <a href="${pelicula.reviewUrl}" class="button-link">
                 <i class="fas fa-search"></i> Ver detalles
             </a>
         `;

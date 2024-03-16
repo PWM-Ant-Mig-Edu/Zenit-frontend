@@ -1,5 +1,9 @@
 @import url('colors.css');
 
+.wrapper-container{
+    flex: 1;
+}
+
 .title-container h1 {
     text-align: center;
     width: 100%;
@@ -28,6 +32,7 @@
     background-color: var(--mainColor);
     color: #ffffff;
     border-radius: 8px;
+    flex: 1;
 }
 .film-panel img {
     max-width: 60%; 
@@ -41,7 +46,6 @@
     white-space: nowrap;
 }
 .film-panel .film-data {
-    width: 100%;
     display: flex;
     align-items: center;
     margin-left: 16px;
@@ -74,18 +78,18 @@
 
 .synopsis-container {
     display: flex;
-    align-self: center;
-    margin-top: 16px;
+    margin-top: 30px;
     flex-direction: column;
 }
 
 .synopsis-container h1{
     margin-bottom: 16px;
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 .synopsis-container span{
     color: #000000;
+    font-size: 1.2em;
 }
 
 .input {
@@ -110,7 +114,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 30px;
 }
 
 .reviews-container button, .see-more-container button {
@@ -136,7 +140,7 @@
 }
 
 .reviews-container h1{
-    font-size: x-large;
+    font-size: xx-large;
     margin-bottom: 16px;
 }
 
@@ -158,6 +162,11 @@
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+}
+
+.post-header h1{
+    font-size: large;
+    margin-bottom: 0;
 }
 
 .profile-image {
@@ -195,7 +204,7 @@
         flex-direction: column;
     }
     .film-panel img {
-        width: 40%;
+        width: 60%;
         align-self: center;
         margin-bottom: 16px;
     }
@@ -203,6 +212,12 @@
         width: 100%;
         font-size: x-large;
     }
+
+    .film-panel .film-data {
+        margin-left: 0px;
+    }
+
+    
 }
 
 @media (max-width: 991px) {

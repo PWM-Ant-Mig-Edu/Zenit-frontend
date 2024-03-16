@@ -1,0 +1,132 @@
+{
+    "films": [
+        {
+            "img": "../src/assets/img/película1.jpg",
+            "name": "película1",
+            "sinopsis": "Sinopsis de película1",
+            "reviewUrl": "../public/reviews.html?name=película1",
+            "releaseDate": "2020-01-01",
+            "duration": "120 min",
+            "genders": ["Aventura", "Acción", "Ciencia Ficción"],
+            "director": "Director de película1",
+            "script": "Guionista de película1",
+            "cast": ["Actor1", "Actor2", "Actor3"],
+            "calification": 5,
+            "reviews": [
+                {
+                    "user": "Pepe",
+                    "content": "La película me pareció increíble. 10/10",
+                    "date": "3 days ago",
+                    "grade": 5,
+                    "img": "../src/assets/img/image_aca.jpg"
+                },
+                {
+                    "user": "Juan",
+                    "content": "La película me pareció increíble. 10/10",
+                    "date": "3 days ago",
+                    "grade": 5,
+                    "img": "../src/assets/img/image_aca.jpg"
+                },
+                {
+                    "user": "Pedro",
+                    "content": "La película me pareció increíble. 10/10",
+                    "date": "3 days ago",
+                    "grade": 5,
+                    "img": "../src/assets/img/image_aca.jpg"
+                }
+            ]
+        },
+        {
+            "img": "../src/assets/img/película2.jpg",
+            "name": "película2",
+            "sinopsis": "Sinopsis de película2",
+            "reviewUrl": "../public/reviews.html?name=película2",
+            "releaseDate": "2022-05-15",
+            "duration": "135 min",
+            "genders": ["Drama", "Romance"],
+            "director": "Director de película2",
+            "script": "Guionista de película2",
+            "cast": ["Actriz1", "Actor4", "Actriz2"],
+            "calification": 4,
+            "reviews": [
+                {
+                    "user": "Ana",
+                    "content": "Una historia muy conmovedora, me encantó.",
+                    "date": "2 days ago",
+                    "grade": 4,
+                    "img": "../src/assets/img/image_aca.jpg"
+                },
+                {
+                    "user": "Carlos",
+                    "content": "La actuación fue excelente, pero la trama pudo ser mejor.",
+                    "date": "1 week ago",
+                    "grade": 3,
+                    "img": "../src/assets/img/image_aca.jpg"
+                }
+            ]
+        },
+        {
+            "img": "../src/assets/img/película3.jpg",
+            "name": "película3",
+            "sinopsis": "Sinopsis de película3",
+            "reviewUrl": "../public/reviews.html?name=película3",
+            "releaseDate": "2023-07-20",
+            "duration": "110 min",
+            "genders": ["Comedia", "Drama"],
+            "director": "Director de película3",
+            "script": "Guionista de película3",
+            "cast": ["Actriz3", "Actor5", "Actor6"],
+            "calification": 4,
+            "reviews": [
+                {
+                    "user": "Laura",
+                    "content": "Una película muy divertida, la recomiendo.",
+                    "date": "1 day ago",
+                    "grade": 4,
+                    "img": "../src/assets/img/image_aca.jpg"
+                },
+                {
+                    "user": "Fernando",
+                    "content": "Entretenida, pero esperaba más.",
+                    "date": "5 days ago",
+                    "grade": 3,
+                    "img": "../src/assets/img/image_aca.jpg"
+                }
+            ]
+        },
+        {
+            "img": "../src/assets/img/película4.jpg",
+            "name": "película4",
+            "sinopsis": "Sinopsis de película4",
+            "reviewUrl": "../public/reviews.html?name=película4",
+            "releaseDate": "2024-09-10",
+            "duration": "105 min",
+            "genders": ["Thriller", "Misterio"],
+            "director": "Director de película4",
+            "script": "Guionista de película4",
+            "cast": ["Actriz4", "Actor7", "Actriz5"],
+            "calification": 3,
+            "reviews": [
+                {
+                    "user": "Roberto",
+                    "content": "Interesante, pero el final fue predecible.",
+                    "date": "4 days ago",
+                    "grade": 3,
+                    "img": "../src/assets/img/image_aca.jpg"
+                },
+                {
+                    "user": "María",
+                    "content": "Buena película de misterio, me mantuvo intrigada.",
+                    "date": "1 week ago",
+                    "grade": 4,
+                    "img": "../src/assets/img/image_aca.jpg"
+                }
+            ]
+        }
+    ],
+    "estrenos": [
+        { "img": "../src/assets/img/película9.jpg", "name": "película9" },
+        { "img": "../src/assets/img/película10.jpg", "name": "película10"},
+        { "img": "../src/assets/img/película11.jpg", "name": "película11" }
+    ]
+}
