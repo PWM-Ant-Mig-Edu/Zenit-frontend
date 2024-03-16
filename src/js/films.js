@@ -15,24 +15,34 @@ function cargarPeliculas(rol) {
         });
 }
 
-function cargarEstrenos(rol) {
+function cargarEstrenos() {
     const contenedor = document.getElementById('type2');
 
     if (!contenedor) return;
 
     contenedor.innerHTML = '';
 
-    fetch('../src/json/datos.json')
+    fetch('../src/json/films.json')
         .then(response => response.json())
         .then(data => {
             data.estrenos.forEach(pelicula => {
-                const peliculaHTML = generateMovieHTML(pelicula, rol);
+                const peliculaHTML = generateReleaseHTML(pelicula);
                 contenedor.innerHTML += peliculaHTML;
             });
         })
         .catch(error => {
             console.error('Error al cargar el JSON:', error);
         });
+}
+
+function generateReleaseHTML(pelicula) {
+    return `
+        <div class="film-item">
+            <div class="film-img">
+                <img src="${pelicula.img}" alt="${pelicula.name}">
+            </div>
+        </div>
+    `;
 }
 
 function generateMovieHTML(pelicula, rol) {
@@ -69,5 +79,5 @@ document.addEventListener('DOMContentLoaded', function() {
     const url = window.location.href;
     const isAdminPage = url.includes('adminManageBillboard.html');
     cargarPeliculas(isAdminPage ? 'admin' : '');
-    cargarEstrenos(isAdminPage ? 'admin' : '');
+    cargarEstrenos();
 });
