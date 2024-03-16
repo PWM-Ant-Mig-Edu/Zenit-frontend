@@ -1,0 +1,19 @@
+{
+    "statistics": [
+        { "name": "Usuarios Registrados", "value": 200 },
+        { "name": "Publicaciones", "value": 500 },
+        { "name": "Comentarios", "value": 1000 },
+        { "name": "Likes", "value": 300 },
+        { "name": "Seguidores", "value": 1000 },
+        { "name": "Visitantes Únicos", "value": 1500 }
+    ],
+    "chartData": [
+        { "label": "Lunes", "y": 20 },
+        { "label": "Martes", "y": 35 },
+        { "label": "Miércoles", "y": 40 },
+        { "label": "Jueves", "y": 55 },
+        { "label": "Viernes", "y": 30 },
+        { "label": "Sábado", "y": 45 },
+        { "label": "Domingo", "y": 25 }
+    ]
+}
