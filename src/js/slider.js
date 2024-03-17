@@ -20,11 +20,6 @@ function currentSlide(n) {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    showSlides(slideIndex);
-});
-
-
 function loadSliderComponent() {
     fetch("../src/components/slider.html")
         .then(response => response.text())
@@ -33,4 +28,9 @@ function loadSliderComponent() {
         })
         .catch(error => console.error('Error loading the header:', error));
 }
-document.addEventListener("DOMContentLoaded", loadSliderComponent);
+document.addEventListener("DOMContentLoaded", function() {
+    loadSliderComponent();
+    setTimeout(function() {
+        showSlides(slideIndex);
+    }, 1000);
+});
