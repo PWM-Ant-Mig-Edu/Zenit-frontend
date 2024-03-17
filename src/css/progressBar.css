@@ -1,6 +1,5 @@
 @import url('colors.css');
 
-/* -----------------------------PROGRESS BAR--------------------------------- */
 .progress-container {
     width: 80%;
     background-color: var(--backgroundColor);
@@ -26,7 +25,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 1; /* Coloca los círculos por encima de la línea interna */
+    z-index: 1;
 }
 
 .step-name {
@@ -37,7 +36,7 @@
 }
 
 .step.current > .step-name {
-    color: red; /* Color de texto rojo para el nombre del paso actual */
+    color: red;
 }
 
 .step.completed > .step-name,
@@ -89,7 +88,7 @@
     position: absolute;
     top: 50%;
     left: 0%;
-    z-index: 0; /* Coloca la línea interna detrás de todo */
+    z-index: 0;
 }
 
 .progress-line {
@@ -97,7 +96,7 @@
     height: 2px;
     background-color: var(--mainColor);
     position: absolute;
-    top: 50%; /* Alinea la barra de progreso verticalmente en el centro */
+    top: 50%;
     left: 0%;
-    z-index: 0; /* Coloca la barra de progreso encima de todo */
+    z-index: 0;
 }

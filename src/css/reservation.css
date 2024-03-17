@@ -92,11 +92,6 @@ body {
     border-radius: 10px;
 }
 
-
-
-
-/* Datos */
-
 .customer-data-container {
     display: flex;
     gap: 40px;
@@ -158,7 +153,6 @@ body {
 ====================================================================
 */
 
-/* Estilos para las secciones de promotions */
 .promotions-section {
     display: flex;
     flex-direction: column;
@@ -174,8 +168,6 @@ body {
 }
 
 
-
-/* Estilos para cada elemento de promoción */
 .promotion-item {
     display: flex;
     flex-direction: column;
@@ -210,7 +202,7 @@ body {
     }
 }
 
-/*  Detalles  de compra*/
+
 .detalles-compra-container {
     display: flex;
     flex-direction: column;
@@ -230,10 +222,10 @@ body {
     margin-bottom: 10px;;
 }
 @media screen and (max-width: 768px) {
-    /* Estilos para tabletas */
+
     .progress-container {
-        width: 70%; /* Hacer la barra de progreso más ancha en tabletas */
-        margin: 20px auto; /* Centrar la barra de progreso */
+        width: 70%;
+        margin: 20px auto;
     }
 
     .reservation-container {
@@ -254,7 +246,7 @@ body {
     }
 
     .tickets-section {
-        width: 80%; /* Ocupar el ancho completo en dispositivos más pequeños */
+        width: 80%;
         margin: 0px auto;
     }
 
@@ -298,7 +290,7 @@ body {
     }
     .menu-input span {
         font-size: 20px;
-        margin: 0 20px; /*TOP && BOTTOM  LEFT && RIGHT*/
+        margin: 0 20px;
     }
 
     .shipping-address-container, .payment-container {
@@ -309,9 +301,9 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    /* Estilos para teléfonos móviles */
+
     .progress-container {
-        width: 80%; /* Hacer la barra de progreso aún más ancha en teléfonos */
+        width: 80%;
         margin: 20px auto;
     }
 
@@ -334,7 +326,7 @@ body {
     }
 
     .ticket-row button {
-        margin-top: 10px; /* Espacio adicional para botones en dispositivos móviles */
+        margin-top: 10px;
     }
 
     .customer-data-container {
