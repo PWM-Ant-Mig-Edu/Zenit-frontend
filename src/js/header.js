@@ -17,6 +17,39 @@ function checkWidthAndAdjust() {
 }
 window.addEventListener('resize', checkWidthAndAdjust);
 
+
+function loginCheck() {
+    var loginComponent = document.getElementById("login-component");
+    var loginImg = document.querySelector(".imagen-header");
+
+    var loginButtonMenuContent = document.querySelector(".menu-content .button-container");
+    var loginButtonDropdown = document.querySelector(".Dropdown li");
+
+    var popupsContainer = document.getElementById("popups");
+
+
+    if (loginButtonMenuContent) {
+        popupsContainer.style.display = "none";
+        loginComponent.style.display = "none";
+        loginButtonMenuContent.style.display = "none";
+        loginImg.style.display = "block";
+    }
+
+    if (loginButtonDropdown) {
+        var liPerfil = document.getElementById("li Perfil");
+        if (liPerfil) {
+            liPerfil.style.display = "block";
+        }
+
+        var registerButtonDropdown = document.querySelector(".registerMobile");
+        var loginLinkDropdown = document.querySelector(".loginMobile");
+        if (registerButtonDropdown && loginLinkDropdown) {
+            registerButtonDropdown.style.display = "none";
+            loginLinkDropdown.style.display = "none";
+        }
+    }
+}
+
 function loadHeaderComponent() {
     fetch("../src/components/header.html")
         .then(response => response.text())
@@ -28,6 +61,22 @@ function loadHeaderComponent() {
 
 document.addEventListener("DOMContentLoaded", loadHeaderComponent);
 
+
+function loadHeaderComponent() {
+    fetch("../src/components/header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-component').innerHTML += data;
+
+            // Verificar si hay datos en sessionStorage y llamar a loginCheck si es así
+            if (sessionStorage.getItem('usuario')) {
+                loginCheck();
+            }
+        })
+        .catch(error => console.error('Error loading the header:', error));
+}
+
+document.addEventListener("DOMContentLoaded", loadHeaderComponent);
 
 
 

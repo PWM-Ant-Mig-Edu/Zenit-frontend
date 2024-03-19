@@ -95,9 +95,8 @@ function successLogin() {
 
     var loginComponent = document.getElementById("login-component");
     var loginImg = document.querySelector(".imagen-header");
-    console.log(loginImg);
 
-    var loginButtonMenuContent = document.querySelector(".MenuContent .ButtonContainer");
+    var loginButtonMenuContent = document.querySelector(".menu-content .button-container");
     var loginButtonDropdown = document.querySelector(".Dropdown li");
 
     var popupsContainer = document.getElementById("popups");
@@ -127,5 +126,66 @@ function successLogin() {
     }
 }
 
+function guardarUser() {
+    var nombre = document.getElementById("user-name").value;
+    var apellidos = document.getElementById("user-surname").value;
+    var email = document.getElementById("user-email").value;
+    var contrasena = document.getElementById("user-password").value;
+    var confirmarContrasena = document.getElementById("user-confirm-password").value;
 
+    if (contrasena !== confirmarContrasena) {
+        alert("Las contraseñas no coinciden");
+        return;
+    }
 
+    var usuario = {
+        nombre: nombre,
+        apellidos: apellidos,
+        email: email,
+        contrasena: contrasena
+    };
+
+    var usuariosGuardados = localStorage.getItem('usuarios');
+
+    if (!usuariosGuardados) {
+        usuariosGuardados = [];
+    } else {
+        usuariosGuardados = JSON.parse(usuariosGuardados);
+    }
+
+    usuariosGuardados.push(usuario);
+
+    var usuariosJSON = JSON.stringify(usuariosGuardados);
+
+    localStorage.setItem('usuarios', usuariosJSON);
+    sessionStorage.setItem('usuario', JSON.stringify(usuario));
+
+    successLogin();
+
+}
+
+function login() {
+    var email = document.getElementById("input-login-email").value;
+    var password = document.getElementById("input-login-password").value;
+
+    var usuariosGuardados = JSON.parse(localStorage.getItem('usuarios'));
+
+    if (usuariosGuardados) {
+        for (var i = 0; i < usuariosGuardados.length; i++) {
+            var usuario = usuariosGuardados[i];
+            if (email === usuario.email && password === usuario.contrasena) {
+                sessionStorage.setItem('usuario', JSON.stringify(usuario));
+                successLogin();
+                return;
+            }
+        }
+        alert("Correo electrónico o contraseña incorrectos");
+    } else {
+        alert("No hay usuarios almacenados en localStorage");
+    }
+}
+
+function logOut() {
+    sessionStorage.removeItem('usuario');
+    location.reload();
+}
