@@ -1,13 +1,28 @@
-function loadHeaderComponent() {
-    fetch("../src/components/reservationChooseCinema.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('make-reservation-component').innerHTML += data;
-        })
-        .catch(error => console.error('Error loading the header:', error));
-}
-document.addEventListener("DOMContentLoaded", loadHeaderComponent);
 
+function loadCinemas() {
+    fetch('../src/json/cinemas.json')
+        .then(response => response.json())
+        .then(data => {
+            const cinemasContainer = document.getElementById('cinemasContainer');
+
+            data.cinemas.forEach(cinema => {
+                const cinemaDiv = document.createElement('div');
+                cinemaDiv.classList.add('projection-days-container');
+                cinemaDiv.innerHTML = `
+                    <span>${cinema.name}</span>
+                `;
+                cinemasContainer.appendChild(cinemaDiv);
+
+                cinemaDiv.addEventListener('click', function() {
+                    hideReservar();
+                    showReservar2();
+                });
+            });
+        })
+        .catch(error => {
+            console.error('Error loading cinemas:', error);
+        });
+}
 
 
 
@@ -23,6 +38,8 @@ function showReservar() {
     registerComponent.style.display = "block";
     popupsContainer.style.display = "block";
     registerComponent2.style.display = "none";
+
+    loadCinemas();
 
 }
   
@@ -84,3 +101,7 @@ function checkSelection() {
         alert('Por favor selecciona un día y una hora');
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    loadCinemas();
+});
