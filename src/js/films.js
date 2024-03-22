@@ -1,13 +1,13 @@
-function cargarPeliculas(rol) {
-    const contenedor = document.getElementById('type1');
-    contenedor.innerHTML = '';
+function loadFilms(role) {
+    const filmsContainer = document.getElementById('films');
+    filmsContainer.innerHTML = '';
 
     fetch('../src/json/films.json')
         .then(response => response.json())
         .then(data => {
-            data.films.forEach(pelicula => {
-                const peliculaHTML = generateMovieHTML(pelicula, rol);
-                contenedor.innerHTML += peliculaHTML;
+            data.films.forEach(film => {
+                const filmHTML = generateMovieHTML(film, role);
+                filmsContainer.innerHTML += filmHTML;
             });
         })
         .catch(error => {
@@ -15,19 +15,39 @@ function cargarPeliculas(rol) {
         });
 }
 
-function cargarEstrenos() {
-    const contenedor = document.getElementById('type2');
+function getFilmById(filmId) {
+    filmId = parseInt(filmId);
+    return new Promise((resolve, reject) => {
+        fetch('../src/json/films.json')
+            .then(response => response.json())
+            .then(data => {
+                const film = data.films.find(film => film.id === filmId);
+                if (film) {
+                    resolve(film);
+                } else {
+                    reject(new Error('Película no encontrada'));
+                }
+            })
+            .catch(error => {
+                reject(error);
+            });
+    });
+}
 
-    if (!contenedor) return;
 
-    contenedor.innerHTML = '';
+function loadPremieres() {
+    const premieresContainer = document.getElementById('premieres');
+
+    if (!premieresContainer) return;
+
+    premieresContainer.innerHTML = '';
 
     fetch('../src/json/films.json')
         .then(response => response.json())
         .then(data => {
-            data.estrenos.forEach(pelicula => {
-                const peliculaHTML = generateReleaseHTML(pelicula);
-                contenedor.innerHTML += peliculaHTML;
+            data.premieres.forEach(premiere => {
+                const premiereHTML = generateReleaseHTML(premiere);
+                premieresContainer.innerHTML += premiereHTML;
             });
         })
         .catch(error => {
@@ -45,19 +65,21 @@ function generateReleaseHTML(pelicula) {
     `;
 }
 
-function generateMovieHTML(pelicula, rol) {
+function generateMovieHTML(film, rol) {
     let overlayHTML = '';
     if (rol === 'admin') {
+        console.log("Entering admin");
         overlayHTML = `
-            <button onclick="showReservar()"><i class="fas fa-trash"></i>Eliminar</button>
-            <a href="${pelicula.reviewUrl}" class="button-link">
+            <button onclick="showReservar('${film.id}')"><i class="fas fa-trash"></i>Eliminar</button>
+            <a href="${film.reviewUrl}" class="button-link">
                 <i class="fas fa-pencil"></i> Editar
             </a>
         `;
     } else {
+        console.log("Entering none");
         overlayHTML = `
-            <button onclick="showReservar()"><i class="fas fa-shopping-cart"></i>Reservar</button>
-            <a href="${pelicula.reviewUrl}" class="button-link">
+            <button onclick="showReservar('${film.id}')"><i class="fas fa-shopping-cart"></i>Reservar</button>
+            <a href="${film.reviewUrl}" class="button-link">
                 <i class="fas fa-search"></i> Ver detalles
             </a>
         `;
@@ -66,7 +88,7 @@ function generateMovieHTML(pelicula, rol) {
     return `
         <div class="film-item">
             <div class="film-img">
-                <img src="${pelicula.img}" alt="${pelicula.name}">
+                <img src="${film.img}" alt="${film.name}">
                 <div class="overlay">
                     ${overlayHTML}
                 </div>
@@ -78,6 +100,6 @@ function generateMovieHTML(pelicula, rol) {
 document.addEventListener('DOMContentLoaded', function() {
     const url = window.location.href;
     const isAdminPage = url.includes('adminManageBillboard.html');
-    cargarPeliculas(isAdminPage ? 'admin' : '');
-    cargarEstrenos();
+    loadFilms(isAdminPage ? 'admin' : '');
+    loadPremieres();
 });

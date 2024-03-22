@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const url = window.location.href;
-    const promociones = ['type1', 'type2', 'type3'];
+    const promociones = ['films', 'premieres', 'promotions'];
     const categorias = ['promotions', 'specialPromotions', 'upcomingPromotions'];
 
     if(url.includes('adminManagePromotions.html')) {
-        cargarPromociones('type1', 1, 'admin');
+        cargarPromociones('films', 1, 'admin');
     }
     promociones.forEach((tipo, index) => {
         cargarPromociones(tipo, index + 1, 'user');
