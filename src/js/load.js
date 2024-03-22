@@ -1,9 +1,9 @@
-function cargarEstructura() {
-    fetch("../src/components/reservationChooseCinema.html").then(response => {
+export function loadComponentJS(src, componentId) {
+    fetch(src).then(response => {
         return response.text();
     }).then(data => {
     
-        const app = document.getElementById("make-reservation-component");
+        const app = document.getElementById(componentId);
         app.innerHTML = data;
     
         var scripts = app.querySelectorAll("script");
@@ -33,7 +33,3 @@ function cargarEstructura() {
         console.warn('Something went wrong.', err);
     });  
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-    cargarEstructura();
-});

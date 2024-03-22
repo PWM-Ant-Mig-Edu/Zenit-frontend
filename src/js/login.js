@@ -1,29 +1,3 @@
-function loadHeaderComponent() {
-
-    fetch("../src/components/login.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('login-component').innerHTML += data;
-        })
-        .catch(error => console.error('Error loading the header:', error));
-
-    fetch("../src/components/resetPassword.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('reset-password-component').innerHTML += data;
-        })
-        .catch(error => console.error('Error loading the header:', error));
-    
-    fetch("../src/components/register.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('register-component').innerHTML += data;
-        })
-        .catch(error => console.error('Error loading the header:', error));
-}
-
-document.addEventListener("DOMContentLoaded", loadHeaderComponent);
-
 function showLogin() {
     var loginComponent = document.getElementById("login-component");
     var popupsContainer = document.getElementById("popups");
