@@ -125,27 +125,6 @@ function successLogin() {
         }
     }
 }
-function validarCorreo(email) {
-    // Expresión regular para validar el correo electrónico
-    var regexCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    return regexCorreo.test(email);
-}
-
-function validarContrasena(contrasena) {
-    // Expresión regular para validar la contraseña
-    var regexContrasena = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
-    return regexContrasena.test(contrasena);
-}
-
-function usuarioExistente(email, usuariosGuardados) {
-    // Verificar si ya existe un usuario con el correo electrónico proporcionado
-    for (var i = 0; i < usuariosGuardados.length; i++) {
-        if (usuariosGuardados[i].email === email) {
-            return true;
-        }
-    }
-    return false;
-}
 
 function guardarUser() {
     var nombre = document.getElementById("user-name").value;
@@ -156,30 +135,18 @@ function guardarUser() {
 
     if (contrasena !== confirmarContrasena) {
         alert("Las contraseñas no coinciden");
-        return;
-    }
-
-    if (!validarCorreo(email)) {
-        alert("El correo electrónico no es válido");
-        return;
-    }
-
-    if (!validarContrasena(contrasena)) {
-        alert("La contraseña no cumple con los requisitos");
-        return;
+        return false;
     }
 
     var usuariosGuardados = localStorage.getItem('usuarios');
+    var usuarios = usuariosGuardados ? JSON.parse(usuariosGuardados) : [];
 
-    if (!usuariosGuardados) {
-        usuariosGuardados = [];
-    } else {
-        usuariosGuardados = JSON.parse(usuariosGuardados);
-    }
-
-    if (usuarioExistente(email, usuariosGuardados)) {
-        alert("Ya existe un usuario con este correo electrónico");
-        return;
+    // Verificar si ya existe un usuario con el correo electrónico proporcionado
+    for (var i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].email === email) {
+            alert("Ya existe un usuario con este correo electrónico");
+            return false;
+        }
     }
 
     var usuario = {
@@ -189,15 +156,16 @@ function guardarUser() {
         contrasena: contrasena
     };
 
-    usuariosGuardados.push(usuario);
+    usuarios.push(usuario);
 
-    var usuariosJSON = JSON.stringify(usuariosGuardados);
-
-    localStorage.setItem('usuarios', usuariosJSON);
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
     sessionStorage.setItem('usuario', JSON.stringify(usuario));
 
     successLogin();
+
+    return true;
 }
+
 
 
 
