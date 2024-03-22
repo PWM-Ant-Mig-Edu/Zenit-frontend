@@ -1,12 +1,15 @@
 {
     "films": [
         {
+            "id": 1,
             "img": "../src/assets/img/película1.jpg",
-            "name": "película1",
+            "name": "DUNE",
             "sinopsis": "Sinopsis de película1",
             "reviewUrl": "../public/reviews.html?name=película1",
             "releaseDate": "2020-01-01",
             "duration": "120 min",
+            "schedules": ["15:00", "18:00", "21:00"],
+            "cinemas": ["1", "2", "3"],
             "genders": ["Aventura", "Acción", "Ciencia Ficción"],
             "director": "Director de película1",
             "script": "Guionista de película1",
@@ -37,12 +40,15 @@
             ]
         },
         {
+            "id": 2,
             "img": "../src/assets/img/película2.jpg",
-            "name": "película2",
+            "name": "SOUL",
             "sinopsis": "Sinopsis de película2",
             "reviewUrl": "../public/reviews.html?name=película2",
             "releaseDate": "2022-05-15",
             "duration": "135 min",
+            "schedules": ["14:00", "17:00", "20:00"],
+            "cinemas": ["2", "3", "5"],
             "genders": ["Drama", "Romance"],
             "director": "Director de película2",
             "script": "Guionista de película2",
@@ -66,12 +72,15 @@
             ]
         },
         {
+            "id": 3,
             "img": "../src/assets/img/película3.jpg",
-            "name": "película3",
+            "name": "ONE LOVE - BOB MARLEY",
             "sinopsis": "Sinopsis de película3",
             "reviewUrl": "../public/reviews.html?name=película3",
             "releaseDate": "2023-07-20",
             "duration": "110 min",
+            "schedules": ["16:00", "19:00", "22:00"],
+            "cinemas": ["1", "4", "5"],
             "genders": ["Comedia", "Drama"],
             "director": "Director de película3",
             "script": "Guionista de película3",
@@ -95,12 +104,15 @@
             ]
         },
         {
+            "id": 4,
             "img": "../src/assets/img/película4.jpg",
-            "name": "película4",
+            "name": "MADAME WEB",
             "sinopsis": "Sinopsis de película4",
             "reviewUrl": "../public/reviews.html?name=película4",
             "releaseDate": "2024-09-10",
             "duration": "105 min",
+            "schedules": ["13:00", "16:00", "19:00"],
+            "cinemas": ["2", "3", "5"],
             "genders": ["Thriller", "Misterio"],
             "director": "Director de película4",
             "script": "Guionista de película4",
@@ -124,7 +136,7 @@
             ]
         }
     ],
-    "estrenos": [
+    "premieres": [
         { "img": "../src/assets/img/película9.jpg", "name": "película9" },
         { "img": "../src/assets/img/película10.jpg", "name": "película10"},
         { "img": "../src/assets/img/película11.jpg", "name": "película11" }

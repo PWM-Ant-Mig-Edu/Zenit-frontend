@@ -1,36 +1,66 @@
-function loadHeaderComponent() {
-    fetch("../src/components/reservationChooseCinema.html")
-        .then(response => response.text())
+function loadCinemas(film = '') {
+    fetch('../src/json/cinemas.json')
+        .then(response => response.json())
         .then(data => {
-            document.getElementById('make-reservation-component').innerHTML += data;
+            const cinemasContainer = document.getElementById('cinemasContainer');
+
+            data.cinemas.forEach(cinema => {
+                const cinemaDiv = document.createElement('div');
+                cinemaDiv.classList.add('projection-days-container');
+                cinemaDiv.innerHTML = `
+                    <span>${cinema.name}</span>
+                `;
+                cinemasContainer.appendChild(cinemaDiv);
+
+                cinemaDiv.addEventListener('click', function () {
+                    hideReservar();
+                    showReservar2();
+                });
+            });
         })
-        .catch(error => console.error('Error loading the header:', error));
+        .catch(error => {
+            console.error('Error loading cinemas:', error);
+        });
 }
-document.addEventListener("DOMContentLoaded", loadHeaderComponent);
 
 
+function showReservar(film_id = '') {
+    console.log("Called showReservarNew", film_id);
+    // We get the movie by its id
+    getFilmById(film_id).then(film => {
+        console.log('Película encontrada:', film);
+        // Hacer algo con la película
+        var makeReservationComponent = document.getElementById("make-reservation-component");
+        console.log("makeReservationComponent", makeReservationComponent);
+        var makeReservationComponent2 = document.getElementById("make-reservation-component2");
+        var popupsContainer = document.getElementById("popups");
+        var homeContainer = document.querySelector(".wrapper-container");
 
+        // Show the popup
+        homeContainer.classList.add("blurred-background");
+        makeReservationComponent.style.display = "block";
+        popupsContainer.style.display = "block";
+        makeReservationComponent2.style.display = "none";
 
-function showReservar() {
-    var registerComponent = document.getElementById("make-reservation-component");
-    var registerComponent2 = document.getElementById("make-reservation-component2");
-    var popupsContainer = document.getElementById("popups");
-    var homeContainer = document.querySelector(".wrapper-container");
+        // Modify the film name and image
+        var filmName = makeReservationComponent.querySelector("#film-name");
+        filmName.textContent = film.name;
+        var filmImage = makeReservationComponent.querySelector("#film-image");
+        filmImage.src = film.img;
 
-    homeContainer.classList.add("blurred-background");
-  
+        loadCinemas(film_id);
 
-    registerComponent.style.display = "block";
-    popupsContainer.style.display = "block";
-    registerComponent2.style.display = "none";
+    }).catch(error => {
+            console.error('Error:', error.message);
+        });
 
 }
-  
+
 function hideReservar() {
     var registerComponent = document.getElementById("make-reservation-component");
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
-  
+
     homeContainer.classList.remove("blurred-background");
 
     registerComponent.style.display = "none";
@@ -44,19 +74,19 @@ function mostrarHoras(dia, elemento) {
     var horasDia = document.getElementById('horas-' + dia);
     var dias = document.querySelectorAll('.proyeccion-dia-container');
 
-    horasGrid.forEach(function(hora) {
+    horasGrid.forEach(function (hora) {
         hora.style.display = 'none';
     });
 
-    horas.forEach(function(hora) {
+    horas.forEach(function (hora) {
         hora.classList.remove('selected');
     });
-    
+
     if (horasDia) {
         horasDia.style.display = 'grid';
     }
-    
-    dias.forEach(function(dia) {
+
+    dias.forEach(function (dia) {
         dia.classList.remove('selected');
     });
 
@@ -64,13 +94,11 @@ function mostrarHoras(dia, elemento) {
 }
 
 function seleccionarHora(elemento) {
-    // Quitar la clase 'selected' de todas las horas
     var horas = document.querySelectorAll('.proyeccion-hora-container');
-    horas.forEach(function(hora) {
+    horas.forEach(function (hora) {
         hora.classList.remove('selected');
     });
 
-    // Agregar la clase 'selected' a la hora seleccionada
     elemento.classList.add('selected');
 }
 
@@ -84,3 +112,7 @@ function checkSelection() {
         alert('Por favor selecciona un día y una hora');
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    loadCinemas();
+});

@@ -37,6 +37,7 @@ function loadCinemaData(cinemaName) {
         });
 }
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const cinemaName = urlParams.get('name');
