@@ -135,7 +135,18 @@ function guardarUser() {
 
     if (contrasena !== confirmarContrasena) {
         alert("Las contraseñas no coinciden");
-        return;
+        return false;
+    }
+
+    var usuariosGuardados = localStorage.getItem('usuarios');
+    var usuarios = usuariosGuardados ? JSON.parse(usuariosGuardados) : [];
+
+    // Verificar si ya existe un usuario con el correo electrónico proporcionado
+    for (var i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].email === email) {
+            alert("Ya existe un usuario con este correo electrónico");
+            return false;
+        }
     }
 
     var usuario = {
@@ -145,24 +156,18 @@ function guardarUser() {
         contrasena: contrasena
     };
 
-    var usuariosGuardados = localStorage.getItem('usuarios');
+    usuarios.push(usuario);
 
-    if (!usuariosGuardados) {
-        usuariosGuardados = [];
-    } else {
-        usuariosGuardados = JSON.parse(usuariosGuardados);
-    }
-
-    usuariosGuardados.push(usuario);
-
-    var usuariosJSON = JSON.stringify(usuariosGuardados);
-
-    localStorage.setItem('usuarios', usuariosJSON);
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
     sessionStorage.setItem('usuario', JSON.stringify(usuario));
 
     successLogin();
 
+    return true;
 }
+
+
+
 
 function login() {
     var email = document.getElementById("input-login-email").value;

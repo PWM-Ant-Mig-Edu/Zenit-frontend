@@ -25,7 +25,7 @@ cursor: default;
 z-index: 9999; 
 }
 
-.form {
+form {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -92,15 +92,16 @@ z-index: 9999;
 
 .flex {
   display: flex;
+  flex-direction: column;
   width: 100%;
   gap: 20px;
 }
 
-.form label {
+form label {
   position: relative;
 }
 
-.form label .input {
+form label .input {
   background-color: white;
   color: gray;
   width: 100%;
@@ -110,7 +111,7 @@ z-index: 9999;
   border-radius: 10px;
 }
 
-.form label .input + span {
+form label .input + span {
   color: #0b2741;
   position: absolute;
   left: 10px;
@@ -120,13 +121,13 @@ z-index: 9999;
   transition: 0.3s ease;
 }
 
-.form label .input:placeholder-shown + span {
+form label .input:placeholder-shown + span {
   top: 12.5px;
   font-size: 0.9em;
 }
 
-.form label .input:focus + span,
-.form label .input:valid + span {
+form label .input:focus + span,
+form label .input:valid + span {
   color: #00bfff;
   top: 4px;
   font-size: 0.7em;

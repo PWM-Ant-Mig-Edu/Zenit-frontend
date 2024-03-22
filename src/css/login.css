@@ -27,7 +27,7 @@ z-index: 9999; /* Asegura que esté encima de otros elementos */
 /* Agrega cualquier estilo adicional que desees para el componente de registro */
 }
 
-.form-container-login {
+.form{
 height: 500px;
 background-color: var(--mainColorDarker);
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -164,6 +164,7 @@ color: #fff;
 
 .google-login-button-login {
 background-color: white;
+color: black;
 }
 
 .apple-icon-login,
