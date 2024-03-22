@@ -125,6 +125,27 @@ function successLogin() {
         }
     }
 }
+function validarCorreo(email) {
+    // Expresión regular para validar el correo electrónico
+    var regexCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return regexCorreo.test(email);
+}
+
+function validarContrasena(contrasena) {
+    // Expresión regular para validar la contraseña
+    var regexContrasena = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+    return regexContrasena.test(contrasena);
+}
+
+function usuarioExistente(email, usuariosGuardados) {
+    // Verificar si ya existe un usuario con el correo electrónico proporcionado
+    for (var i = 0; i < usuariosGuardados.length; i++) {
+        if (usuariosGuardados[i].email === email) {
+            return true;
+        }
+    }
+    return false;
+}
 
 function guardarUser() {
     var nombre = document.getElementById("user-name").value;
@@ -138,12 +159,15 @@ function guardarUser() {
         return;
     }
 
-    var usuario = {
-        nombre: nombre,
-        apellidos: apellidos,
-        email: email,
-        contrasena: contrasena
-    };
+    if (!validarCorreo(email)) {
+        alert("El correo electrónico no es válido");
+        return;
+    }
+
+    if (!validarContrasena(contrasena)) {
+        alert("La contraseña no cumple con los requisitos");
+        return;
+    }
 
     var usuariosGuardados = localStorage.getItem('usuarios');
 
@@ -153,6 +177,18 @@ function guardarUser() {
         usuariosGuardados = JSON.parse(usuariosGuardados);
     }
 
+    if (usuarioExistente(email, usuariosGuardados)) {
+        alert("Ya existe un usuario con este correo electrónico");
+        return;
+    }
+
+    var usuario = {
+        nombre: nombre,
+        apellidos: apellidos,
+        email: email,
+        contrasena: contrasena
+    };
+
     usuariosGuardados.push(usuario);
 
     var usuariosJSON = JSON.stringify(usuariosGuardados);
@@ -161,8 +197,9 @@ function guardarUser() {
     sessionStorage.setItem('usuario', JSON.stringify(usuario));
 
     successLogin();
-
 }
+
+
 
 function login() {
     var email = document.getElementById("input-login-email").value;
