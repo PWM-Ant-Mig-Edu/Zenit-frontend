@@ -35,5 +35,5 @@ function cargarEstructura() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    cargarEstructura();
+     cargarEstructura();
 });

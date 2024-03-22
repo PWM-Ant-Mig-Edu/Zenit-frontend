@@ -1,5 +1,4 @@
-
-function loadCinemas() {
+function loadCinemas(film = '') {
     fetch('../src/json/cinemas.json')
         .then(response => response.json())
         .then(data => {
@@ -13,7 +12,7 @@ function loadCinemas() {
                 `;
                 cinemasContainer.appendChild(cinemaDiv);
 
-                cinemaDiv.addEventListener('click', function() {
+                cinemaDiv.addEventListener('click', function () {
                     hideReservar();
                     showReservar2();
                 });
@@ -25,29 +24,43 @@ function loadCinemas() {
 }
 
 
+function showReservar(film_id = '') {
+    console.log("Called showReservarNew", film_id);
+    // We get the movie by its id
+    getFilmById(film_id).then(film => {
+        console.log('Película encontrada:', film);
+        // Hacer algo con la película
+        var makeReservationComponent = document.getElementById("make-reservation-component");
+        console.log("makeReservationComponent", makeReservationComponent);
+        var makeReservationComponent2 = document.getElementById("make-reservation-component2");
+        var popupsContainer = document.getElementById("popups");
+        var homeContainer = document.querySelector(".wrapper-container");
 
-function showReservar() {
-    var registerComponent = document.getElementById("make-reservation-component");
-    var registerComponent2 = document.getElementById("make-reservation-component2");
-    var popupsContainer = document.getElementById("popups");
-    var homeContainer = document.querySelector(".wrapper-container");
+        // Show the popup
+        homeContainer.classList.add("blurred-background");
+        makeReservationComponent.style.display = "block";
+        popupsContainer.style.display = "block";
+        makeReservationComponent2.style.display = "none";
 
-    homeContainer.classList.add("blurred-background");
-  
+        // Modify the film name and image
+        var filmName = makeReservationComponent.querySelector("#film-name");
+        filmName.textContent = film.name;
+        var filmImage = makeReservationComponent.querySelector("#film-image");
+        filmImage.src = film.img;
 
-    registerComponent.style.display = "block";
-    popupsContainer.style.display = "block";
-    registerComponent2.style.display = "none";
+        loadCinemas(film_id);
 
-    loadCinemas();
+    }).catch(error => {
+            console.error('Error:', error.message);
+        });
 
 }
-  
+
 function hideReservar() {
     var registerComponent = document.getElementById("make-reservation-component");
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
-  
+
     homeContainer.classList.remove("blurred-background");
 
     registerComponent.style.display = "none";
@@ -61,19 +74,19 @@ function mostrarHoras(dia, elemento) {
     var horasDia = document.getElementById('horas-' + dia);
     var dias = document.querySelectorAll('.proyeccion-dia-container');
 
-    horasGrid.forEach(function(hora) {
+    horasGrid.forEach(function (hora) {
         hora.style.display = 'none';
     });
 
-    horas.forEach(function(hora) {
+    horas.forEach(function (hora) {
         hora.classList.remove('selected');
     });
-    
+
     if (horasDia) {
         horasDia.style.display = 'grid';
     }
-    
-    dias.forEach(function(dia) {
+
+    dias.forEach(function (dia) {
         dia.classList.remove('selected');
     });
 
@@ -82,7 +95,7 @@ function mostrarHoras(dia, elemento) {
 
 function seleccionarHora(elemento) {
     var horas = document.querySelectorAll('.proyeccion-hora-container');
-    horas.forEach(function(hora) {
+    horas.forEach(function (hora) {
         hora.classList.remove('selected');
     });
 
@@ -100,6 +113,6 @@ function checkSelection() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     loadCinemas();
 });
