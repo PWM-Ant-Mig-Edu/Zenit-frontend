@@ -1,9 +1,0 @@
-function loadAdminBotonesComponent() {
-    fetch("../src/components/adminButtons.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('admin-buttons').innerHTML += data;
-        })
-        .catch(error => console.error('Error al cargar los botones del admin:', error));
-}
-document.addEventListener("DOMContentLoaded", loadAdminBotonesComponent);
