@@ -9,11 +9,6 @@ export function loadBasics() {
     loadComponentJS('../src/components/resetPassword.html', 'reset-password-component');
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    loadBasics();
-    setTimeout(checkLogin, 100);
-});
-
 function checkLogin() {
     var  header = document.getElementById( "header-component" );
     if (header) {
@@ -55,3 +50,17 @@ function checkLogin() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    loadBasics();
+    
+    var headerObserver = new MutationObserver(function(mutationsList, observer) {
+        for(var mutation of mutationsList) {
+            if (mutation.type === 'childList' && mutation.target.id === 'header-component') {
+                checkLogin();
+                observer.disconnect(); // Detener la observación después de que se haya cargado el componente
+            }
+        }
+    });
+    
+    headerObserver.observe(document.body, { childList: true, subtree: true });
+});
