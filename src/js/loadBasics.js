@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         for(var mutation of mutationsList) {
             if (mutation.type === 'childList' && mutation.target.id === 'header-component') {
                 checkLogin();
-                observer.disconnect(); // Detener la observación después de que se haya cargado el componente
+                observer.disconnect();
             }
         }
     });

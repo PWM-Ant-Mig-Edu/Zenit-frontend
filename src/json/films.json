@@ -140,5 +140,10 @@
         { "img": "../src/assets/img/película9.jpg", "name": "película9" },
         { "img": "../src/assets/img/película10.jpg", "name": "película10"},
         { "img": "../src/assets/img/película11.jpg", "name": "película11" }
+    ],
+    "banners": [
+        { "img": "../src/assets/img/banner1.jpg", "name": "slider1" },
+        { "img": "../src/assets/img/banner2.jpg", "name": "slider2"},
+        { "img": "../src/assets/img/banner3.jpeg", "name": "slider3" }      
     ]
 }
