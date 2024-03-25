@@ -32,8 +32,12 @@
                 <div class="heading-profile-container">
                     <h1>Información Perfil</h1>
                     <div class="profile-picture">
-                        <img src="../src/assets/img/image_aca.jpg" alt="">
-                    </div>
+                        <img id="profile-image" src="../src/assets/img/image_aca.jpg" alt="">
+                        <label for="file-input" id="clip-overlay">
+                            <i class="fas fa-paperclip"></i>
+                        </label>
+                        <input type="file" id="file-input" style="display: none;">
+                    </div>                    
                 </div>
                 <div class="personal-data-container">
                     <h2>Detalles de cuenta</h2>
@@ -70,9 +74,9 @@
                         </div>
                     </div>
                 </div>
-            <div class="button-container">
-                <button class="button">Aplicar cambios</button>
-                <button class="button" onclick="logOut()">Desconectar</button>
+            <div class="button-container-profile">
+                <button class="buttonProfile">Aplicar cambios</button>
+                <button class="buttonProfile" onclick="logOut()">Desconectar</button>
             </div>
             </div>
         </div>

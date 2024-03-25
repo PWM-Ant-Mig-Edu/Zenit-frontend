@@ -14,8 +14,13 @@
 }
 
 .promotions-title-container {
-    width: 80%;
-    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 0px auto;
+    gap: 20px;
 }
 
 .promotions-title-container span{
@@ -27,6 +32,7 @@
     font-size: xx-large;
     margin-bottom: 4px;
     color: var(--mainColor);
+    text-align: center;
 }
 
 .promotions-content-container {

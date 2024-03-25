@@ -1,14 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const url = window.location.href;
-    const promociones = ['films', 'premieres', 'promotions'];
-    const categorias = ['promotions', 'specialPromotions', 'upcomingPromotions'];
+    const promociones = ['promotions', 'special', 'upcoming'];
 
     if(url.includes('adminManagePromotions.html')) {
-        cargarPromociones('films', 1, 'admin');
+        promociones.forEach((tipo, index) => {
+            cargarPromociones(tipo, index + 1, 'admin');
+        });
+    }else{
+        promociones.forEach((tipo, index) => {
+            console.log(tipo, index);
+            cargarPromociones(tipo, index + 1, 'user');
+        });
     }
-    promociones.forEach((tipo, index) => {
-        cargarPromociones(tipo, index + 1, 'user');
-    });
+
 });
 
 function cargarPromociones(tipo, categoria, rol) {

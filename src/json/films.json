@@ -1,7 +1,7 @@
 {
     "films": [
         {
-            "id": 1,
+            "id": "1",
             "img": "../src/assets/img/película1.jpg",
             "name": "DUNE",
             "sinopsis": "Sinopsis de película1",
@@ -38,7 +38,7 @@
             ]
         },
         {
-            "id": 2,
+            "id": "2",
             "img": "../src/assets/img/película2.jpg",
             "name": "SOUL",
             "sinopsis": "Sinopsis de película2",
@@ -68,7 +68,7 @@
             ]
         },
         {
-            "id": 3,
+            "id": "3",
             "img": "../src/assets/img/película3.jpg",
             "name": "ONE LOVE - BOB MARLEY",
             "sinopsis": "Sinopsis de película3",
@@ -98,7 +98,7 @@
             ]
         },
         {
-            "id": 4,
+            "id": "4",
             "img": "../src/assets/img/película4.jpg",
             "name": "MADAME WEB",
             "sinopsis": "Sinopsis de película4",
