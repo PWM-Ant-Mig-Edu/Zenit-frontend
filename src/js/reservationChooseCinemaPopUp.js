@@ -1,4 +1,5 @@
 function loadCinemas(film) {
+    console.log("Film", film);
     fetch('../src/json/cinemas.json')
         .then(response => response.json())
         .then(data => {
@@ -6,8 +7,10 @@ function loadCinemas(film) {
 
             data.cinemas.forEach(cinema => {
                 const cinemaDiv = document.createElement('div');
-                cinemaDiv.classList.add('projection-days-container');
-                const movie = cinema.movies.find(movie => movie.name === film.name);
+                cinemaDiv.classList.add('projection-day-container');
+
+                const movie = cinema.movies.find(movie => movie.id === film.id);
+
                 if (movie) {
                     cinemaDiv.innerHTML = `
                         <span>${cinema.name}</span>
@@ -16,7 +19,7 @@ function loadCinemas(film) {
 
                     cinemaDiv.addEventListener('click', function () {
                         hideChooseCinemaPopUp();
-                        showChooseSessionPopUp(cinema, film);
+                        showChooseSessionPopUp(cinema.id, film.id);
                     });
                 }
             });
