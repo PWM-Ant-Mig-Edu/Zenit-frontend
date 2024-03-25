@@ -75,8 +75,6 @@ function toggleSelection(event) {
 
 function showAvailableHours(day, cinemaId, movieId) {
 
-    cinemaId = parseInt(cinemaId);
-    movieId = parseInt(movieId);
 
     fetch('../src/json/cinemas.json')
         .then(response => response.json())

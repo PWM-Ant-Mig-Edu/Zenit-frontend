@@ -49,7 +49,6 @@ function loadFilmsByCinema() {
 }
 
 function getFilmById(filmId) {
-    filmId = parseInt(filmId);
     return new Promise((resolve, reject) => {
         fetch('../src/json/films.json')
             .then(response => response.json())
