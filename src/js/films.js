@@ -70,7 +70,7 @@ function generateMovieHTML(film, rol) {
     if (rol === 'admin') {
         console.log("Entering admin");
         overlayHTML = `
-            <button onclick="showReservar('${film.id}')"><i class="fas fa-trash"></i>Eliminar</button>
+            <button onclick="showChooseCinemaPopUp('${film.id}')"><i class="fas fa-trash"></i>Eliminar</button>
             <a href="${film.reviewUrl}" class="button-link">
                 <i class="fas fa-pencil"></i> Editar
             </a>
@@ -78,7 +78,7 @@ function generateMovieHTML(film, rol) {
     } else {
         console.log("Entering none");
         overlayHTML = `
-            <button onclick="showReservar('${film.id}')"><i class="fas fa-shopping-cart"></i>Reservar</button>
+            <button onclick="showChooseCinemaPopUp('${film.id}')"><i class="fas fa-shopping-cart"></i>Reservar</button>
             <a href="${film.reviewUrl}" class="button-link">
                 <i class="fas fa-search"></i> Ver detalles
             </a>

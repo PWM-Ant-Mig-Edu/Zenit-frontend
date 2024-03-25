@@ -1,16 +1,16 @@
 <head>
     <link rel="stylesheet" href="../src/css/reservationCinemaSessionPopUp.css">
-    <script src="../src/js/reservationSession2.js"></script>
+    <script src="../src/js/reservationChooseSessionPopUp.js"></script>
 </head>
 <div class="projection-container">
     <div class="projection-container-header">
         <h1>DETALLES DE PROYECCIÓN</h1>
-        <button onclick="hideReservar2()">X</button>
+        <button onclick="hideChooseSessionPopUp()">X</button>
     </div>
     <div class="projection-container-body">
-        <img id="session-img" alt="" class="projection-img">
+        <img src="../src/assets/img/unknown-film.png" alt="" class="projection-img" id="film-image">
         <div class="projection-hours-container">
-            <h1>[Titulo de la pelicula]</h1>
+            <h1 id="film-name">[Titulo de la pelicula]</h1>
             <h2>Elige tu dia</h2>
 
             <div class="grid-container-dias"></div>
