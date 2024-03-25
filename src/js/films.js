@@ -68,7 +68,7 @@ function getFilmById(filmId) {
 }
 
 
-function loadPremieres() {
+function loadPremieres(role) {
     const premieresContainer = document.getElementById('premieres');
 
     if (!premieresContainer) return;
@@ -79,7 +79,7 @@ function loadPremieres() {
         .then(response => response.json())
         .then(data => {
             data.premieres.forEach(premiere => {
-                const premiereHTML = generateReleaseHTML(premiere);
+                const premiereHTML = generateReleaseHTML(premiere, role);
                 premieresContainer.innerHTML += premiereHTML;
             });
         })
@@ -88,7 +88,23 @@ function loadPremieres() {
         });
 }
 
-function generateReleaseHTML(pelicula) {
+function generateReleaseHTML(pelicula, rol) {
+    if (rol === 'admin') {
+        console.log("Entering admin");
+        return `
+            <div class="film-item">
+                <div class="film-img">
+                    <img src="${pelicula.img}" alt="${pelicula.name}">
+                    <div class="overlay">
+                        <button onclick="deleteMovieFromJSON('${pelicula.id}')"><i class="fas fa-trash"></i>Eliminar</button>
+                        <a href="${pelicula.reviewUrl}" class="button-link">
+                            <i class="fas fa-pencil"></i> Editar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
     return `
         <div class="film-item">
             <div class="film-img">
@@ -96,6 +112,7 @@ function generateReleaseHTML(pelicula) {
             </div>
         </div>
     `;
+    
 }
 
 function generateMovieHTML(film, rol) {
@@ -103,7 +120,7 @@ function generateMovieHTML(film, rol) {
     if (rol === 'admin') {
         console.log("Entering admin");
         overlayHTML = `
-            <button onclick="showChooseCinemaPopUp('${film.id}')"><i class="fas fa-trash"></i>Eliminar</button>
+            <button onclick="deleteMovieFromJSON('${film.id}')"><i class="fas fa-trash"></i>Eliminar</button>
             <a href="${film.reviewUrl}" class="button-link">
                 <i class="fas fa-pencil"></i> Editar
             </a>
@@ -129,13 +146,45 @@ function generateMovieHTML(film, rol) {
     `;
 }
 
+function deleteMovieFromJSON(filmId) {
+    if (confirm('¿Estás seguro de que deseas eliminar esta película?'))  {
+        fetch('../src/json/films.json')
+            .then(response => response.json())
+            .then(data => {
+                // Encuentra la película con el ID dado
+                const movieToDelete = data.films.find(film => film.id === filmId);
+                if (movieToDelete) {
+                    console.log('Se eliminará la película:', movieToDelete.name);
+                } else {
+                    console.log('No se encontró ninguna película con el ID dado.');
+                    return; // No hay película para eliminar, salimos de la función
+                }
+
+                // Filtrar los elementos del JSON para excluir el que se quiere eliminar
+                data.films = data.films.filter(film => film.id !== filmId);
+                
+                // Actualizar la interfaz con los datos filtrados
+                const isAdminPage = window.location.href.includes('adminManageBillboard.html');
+                loadFilms(isAdminPage ? 'admin' : '');
+
+            })
+            .then(() => {
+                console.log('La película ha sido eliminada del archivo JSON.');
+            })
+            .catch(error => {
+                console.error('Error al cargar o actualizar el JSON:', error);
+            });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const url = window.location.href;
     const isAdminPage = url.includes('adminManageBillboard.html');
+
     if (cinemaName) {
         loadFilmsByCinema();
     } else {
         loadFilms(isAdminPage ? 'admin' : '');
     }
-    loadPremieres();
+    loadPremieres(isAdminPage ? 'admin' : '');
 });

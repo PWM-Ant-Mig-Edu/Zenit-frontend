@@ -135,7 +135,7 @@
 .grid-container-projection::-webkit-scrollbar-thumb:hover  {
     background: #555;
 }
-.projection-days-container, .projection-hora-container {
+.projection-day-container, .projection-hour-container {
     display: flex;
     flex-direction: column;
     background-size: 100% 100%;
@@ -149,7 +149,7 @@
     border: 1px solid white;
 }
 
-.projection-days-container.selected, .projection-hora-container.selected {
+.projection-day-container.selected, .projection-hour-container.selected {
     background-color: white;
     color: var(--mainColor);
 }
@@ -213,7 +213,7 @@
         font-size: large;
     }
 
-    .projection-days-container, .projection-hora-container {
+    .projection-day-container, .projection-hour-container {
         font-size: small;
     }
 
