@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var cineSelect = document.getElementById('check-cinema-ticket');
     var correoInput = document.getElementById('check-ticket-email');
     var numeroInput = document.getElementById('check-ticket-number');
-    var enviarButton = document.querySelector('.comprobar-button');
+    var enviarButton = document.querySelector('.check-button');
 
     enviarButton.addEventListener('click', function (event) {
         event.preventDefault(); 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (selectElement.selectedIndex > 0 && (correoInput.value.trim() !== '' || numeroInput.value.trim() !== '')) {
-            window.location.href = 'bookingDetails.html';
+            window.location.href = './bookingDetails.html';
         } else {
             alert('Debes seleccionar el tipo de ticket y llenar al menos uno de los campos (correo o número).');
         }

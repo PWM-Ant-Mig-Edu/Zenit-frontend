@@ -38,7 +38,7 @@
 
 
 @media (max-width: 767px) {
-    .filmsFilterContainer {
+    .films-filter-Container {
         flex-direction: column;
         width: 80%;
         margin-left: auto;
