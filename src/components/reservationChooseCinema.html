@@ -1,11 +1,11 @@
 <head>
     <link rel="stylesheet" href="../src/css/reservationCinemaSessionPopUp.css">
-    <script src="../src/js/reservationSession.js"></script>
+    <script src="../src/js/reservationChooseCinemaPopUp.js"></script>
 </head>
 <div class="projection-container">
     <div class="projection-container-header">
         <h1>DETALLES DE PROYECCIÓN</h1>
-        <button onclick="hideReservar(true)">X</button>
+        <button onclick="hideChooseCinemaPopUp(); clearCinemas()">X</button>
     </div>
     <div class="projection-container-body">
         <img src="../src/assets/img/unknown-film.png" alt="" class="projection-img" id="film-image">
@@ -13,7 +13,7 @@
             <h1 id="film-name">[Titulo de la pelicula]</h1>
             <h2>Salas Disponibles</h2>
             <div class="grid-container-projection" id="cinemasContainer"> 
-                <!-- <div class="projection-days-container" onclick="{{hideReservar(), showReservar2()}}">
+                <!-- <div class="projection-days-container" onclick="{{showChooseCinemaPopUp(), showChooseSessionPopUp()}}">
                     <span>CINE</span>
                     <span>CIUDAD</span>
                 </div> -->

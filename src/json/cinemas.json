@@ -23,7 +23,10 @@
                     "sessions": [
                         {"day": "Tuesday", "time": "16:00", "hall": "Laser"},
                         {"day": "Tuesday", "time": "19:00", "hall": "Atmos"},
-                        {"day": "Tuesday", "time": "22:00", "hall": "Laser Atmos"}
+                        {"day": "Tuesday", "time": "22:00", "hall": "Laser Atmos"},
+                        {"day": "Wednesday", "time": "14:00", "hall": "Laser"},
+                        {"day": "Wednesday", "time": "17:00", "hall": "Atmos"},
+                        {"day": "Wednesday", "time": "20:00", "hall": "Laser Atmos"}
                     ]
                 }
             ]

@@ -7,7 +7,7 @@ function loadCinemas(film) {
             data.cinemas.forEach(cinema => {
                 const cinemaDiv = document.createElement('div');
                 cinemaDiv.classList.add('projection-days-container');
-                const movie = cinema.movies.find(movie => movie.name === film.name); 
+                const movie = cinema.movies.find(movie => movie.name === film.name);
                 if (movie) {
                     cinemaDiv.innerHTML = `
                         <span>${cinema.name}</span>
@@ -15,8 +15,8 @@ function loadCinemas(film) {
                     cinemasContainer.appendChild(cinemaDiv);
 
                     cinemaDiv.addEventListener('click', function () {
-                        hideReservar(false);
-                        showReservar2(cinema, film);
+                        hideChooseCinemaPopUp();
+                        showChooseSessionPopUp(cinema, film);
                     });
                 }
             });
@@ -26,33 +26,33 @@ function loadCinemas(film) {
         });
 }
 
-function showReservar(film_id = '') {
+function showChooseCinemaPopUp(film_id = '') {
     getFilmById(film_id).then(film => {
-        var makeReservationComponent = document.getElementById("make-reservation-component");
-        var makeReservationComponent2 = document.getElementById("make-reservation-component2");
+        var chooseCinemaComponent = document.getElementById("choose-cinema-component");
+        var chooseSessionComponent = document.getElementById("choose-session-component");
         var popupsContainer = document.getElementById("popups");
         var homeContainer = document.querySelector(".wrapper-container");
 
         homeContainer.classList.add("blurred-background");
-        makeReservationComponent.style.display = "block";
+        chooseCinemaComponent.style.display = "block";
         popupsContainer.style.display = "block";
-        makeReservationComponent2.style.display = "none";
+        chooseSessionComponent.style.display = "none";
 
-        var filmName = makeReservationComponent.querySelector("#film-name");
+        const filmName = chooseCinemaComponent.querySelector('#film-name');
         filmName.textContent = film.name;
-        var filmImage = makeReservationComponent.querySelector("#film-image");
-        filmImage.src = film.img;
+        const sessionImg = chooseCinemaComponent.querySelector('#film-image');
+        sessionImg.src = film.img;
 
         loadCinemas(film);
 
     }).catch(error => {
-            console.error('Error:', error.message);
-        });
+        console.error('Error:', error.message);
+    });
 
 }
 
-function hideReservar(close = false) {
-    var registerComponent = document.getElementById("make-reservation-component");
+function hideChooseCinemaPopUp() {
+    var registerComponent = document.getElementById("choose-cinema-component");
     var popupsContainer = document.getElementById("popups");
     var homeContainer = document.querySelector(".wrapper-container");
 
@@ -60,10 +60,6 @@ function hideReservar(close = false) {
 
     registerComponent.style.display = "none";
     popupsContainer.style.display = "none";
-
-    if (close) {
-        clearCinemas();
-    }
 }
 
 function clearCinemas() {
