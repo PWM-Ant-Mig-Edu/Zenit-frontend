@@ -10,8 +10,10 @@
     <link rel="stylesheet" href="../src/css/cinemas.css">
     <link rel="stylesheet" href="../src/css/formalizer.css">
     <link rel="stylesheet" href="../src/css/gridFilms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="../src/js/films.js"></script>
     <script src="../src/js/cinemas.js"></script>
+    <script type="module" src="../src/js/loadReservation.js"></script>
     <script type="module" src="../src/js/loadBasics.js"></script>
 
 </head>
@@ -20,8 +22,9 @@
     <div id="popups" style="display: none;">
         <div id="register-component"></div>
         <div id="login-component"></div>
-        <div id="choose-cinema-component"></div>
         <div id="reset-password-component"></div>
+        <div id="choose-cinema-component" style="display: none;"></div>
+        <div id="choose-session-component" style="display: none;"></div>
     </div>
     <div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
         <div id="header-component"></div>

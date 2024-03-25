@@ -10,10 +10,8 @@ function loadCinemaData(cinemaName) {
     fetch('../src/json/cinemas.json')
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             const cinema = data.cinemas.find(cinema => cinema.name === cinemaName);
 
-            console.log(cinema);
 
             if(!cinema) return;
 
