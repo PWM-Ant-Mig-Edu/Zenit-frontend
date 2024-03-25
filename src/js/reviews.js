@@ -66,7 +66,7 @@ fetch('../src/json/films.json')
             .then(response => response.json())
             .then(data => {
                 const pelicula = data.films.find(film => film.name === nombrePelicula);
-                console.log(pelicula);
+                console.log(nombrePelicula);
                 if (pelicula) {
                     cargarTitulo(pelicula.name);
                     cargarDatosPelicula(pelicula);

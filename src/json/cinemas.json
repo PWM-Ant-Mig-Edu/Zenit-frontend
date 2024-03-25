@@ -8,7 +8,25 @@
                 "address": "Calle Triana, 35, 35002 Las Palmas de Gran Canaria",
                 "phone": "+34928322111",
                 "email": "info@zenitlaspalmas.com"
-            }
+            },
+            "movies": [
+                {
+                    "name": "DUNE",
+                    "sessions": [
+                        {"day": "Monday", "time": "15:00", "hall": "Laser"},
+                        {"day": "Monday", "time": "18:00", "hall": "Atmos"},
+                        {"day": "Monday", "time": "21:00", "hall": "Laser Atmos"}
+                    ]
+                },
+                {
+                    "name": "ONE LOVE - BOB MARLEY",
+                    "sessions": [
+                        {"day": "Tuesday", "time": "16:00", "hall": "Laser"},
+                        {"day": "Tuesday", "time": "19:00", "hall": "Atmos"},
+                        {"day": "Tuesday", "time": "22:00", "hall": "Laser Atmos"}
+                    ]
+                }
+            ]
         },
         {
             "id": "2",
@@ -18,7 +36,25 @@
                 "address": "Calle Francisco Gourié, 5, 35200 Telde, Las Palmas",
                 "phone": "+34928111222",
                 "email": "info@zenittelde.com"
-            }
+            },
+            "movies": [
+                {
+                    "name": "SOUL",
+                    "sessions": [
+                        {"day": "Wednesday", "time": "14:00", "hall": "Laser"},
+                        {"day": "Wednesday", "time": "17:00", "hall": "Atmos"},
+                        {"day": "Wednesday", "time": "20:00", "hall": "Laser Atmos"}
+                    ]
+                },
+                {
+                    "name": "MADAME WEB",
+                    "sessions": [
+                        {"day": "Thursday", "time": "13:00", "hall": "Laser"},
+                        {"day": "Thursday", "time": "16:00", "hall": "Atmos"},
+                        {"day": "Thursday", "time": "19:00", "hall": "Laser Atmos"}
+                    ]
+                }
+            ]
         },
         {
             "id": "3",
@@ -28,7 +64,25 @@
                 "address": "Plaza del Pino, s/n, 35330 Teror, Las Palmas",
                 "phone": "+34928333444",
                 "email": "info@zenitteror.com"
-            }
+            },
+            "movies": [
+                {
+                    "name": "DUNE",
+                    "sessions": [
+                        {"day": "Monday", "time": "15:00", "hall": "Laser"},
+                        {"day": "Monday", "time": "18:00", "hall": "Atmos"},
+                        {"day": "Monday", "time": "21:00", "hall": "Laser Atmos"}
+                    ]
+                },
+                {
+                    "name": "ONE LOVE - BOB MARLEY",
+                    "sessions": [
+                        {"day": "Tuesday", "time": "16:00", "hall": "Laser"},
+                        {"day": "Tuesday", "time": "19:00", "hall": "Atmos"},
+                        {"day": "Tuesday", "time": "22:00", "hall": "Laser Atmos"}
+                    ]
+                }
+            ]
         },
         {
             "id": "4",
@@ -38,7 +92,8 @@
                 "address": "Calle Alcalde Suárez Franchy, 37, 35110 Vecindario, Las Palmas",
                 "phone": "+34928444555",
                 "email": "info@zenitvecindario.com"
-            }
+            },
+            "movies": []
         },
         {
             "id": "5",
@@ -48,7 +103,8 @@
                 "address": "Avenida de Galdar, 24, 35100 Maspalomas, Las Palmas",
                 "phone": "+34928555666",
                 "email": "info@zenitmaspalomas.com"
-            }
+            },
+            "movies": []
         }
     ]
 }

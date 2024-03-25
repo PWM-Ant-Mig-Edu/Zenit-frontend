@@ -8,109 +8,17 @@
         <button onclick="hideReservar2()">X</button>
     </div>
     <div class="projection-container-body">
-        <img src="../src/assets/img/unknown-film.jpg" alt="" class="projection-img">
+        <img id="session-img" alt="" class="projection-img">
         <div class="projection-hours-container">
             <h1>[Titulo de la pelicula]</h1>
             <h2>Elige tu dia</h2>
-            <div class="grid-container-dias"> 
-                <div class="projection-days-container" onclick="mostrarHoras('lunes', this)">
-                    <span>XX/XX/XXXX</span>
-                    <span>Lunes</span>
-                </div>
-                <div class="projection-days-container" onclick="mostrarHoras('martes', this)">
-                    <span>XX/XX/XXXX</span>
-                    <span>Martes</span>
-                </div>
-                <div class="projection-days-container" onclick="mostrarHoras('miércoles', this)">
-                    <span>XX/XX/XXXX</span>
-                    <span>Miercoles</span>
-                </div>
-                <div class="projection-days-container" onclick="mostrarHoras('jueves', this)">
-                    <span>XX/XX/XXXX</span>
-                    <span>Jueves</span>
-                </div>
-                <div class="projection-days-container" onclick="mostrarHoras('viernes', this)">
-                    <span>XX/XX/XXXX</span>
-                    <span>Viernes</span>
-                </div>
-                <div class="projection-days-container" onclick="mostrarHoras('sábado', this)">
-                    <span>XX/XX/XXXX</span>
-                    <span>Sábado</span>
-                </div>
-            </div>  
+
+            <div class="grid-container-dias"></div>
+
             <h2>Selecciona la hora</h2>
-            <div id="horas-lunes" class="grid-container-horas" style="display: none;">  
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-            </div>
-            <div id="horas-martes" class="grid-container-horas" style="display: none;"> 
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-            </div>  
-            <div id="horas-miércoles" class="grid-container-horas"> 
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-            </div>
-            <div id="horas-jueves" class="grid-container-horas" style="display: none;"> 
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-            </div>
-            <div id="horas-viernes" class="grid-container-horas" style="display: none;"> 
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-            </div>
-            <div id="horas-sábado" class="grid-container-horas" style="display: none;"> 
-                <div class="projection-hora-container" onclick="seleccionarHora(this)">
-                    <span>XX:XX</span>
-                    <span>Laser Atmos</span>
-                </div>
-            </div>
+            
+            <div class="grid-container-horas"></div>
+            
             <div class="botones-projection">
                 <button onclick="switchOverlay()">Volver</button>
                 <button onclick="checkSelection()">Siguiente</button>
