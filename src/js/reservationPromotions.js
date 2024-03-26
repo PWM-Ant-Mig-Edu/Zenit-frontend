@@ -20,6 +20,7 @@ function decrement(promotion) {
 }
 
 function updateSummary() {
+
     var totalBasic = parseInt(document.getElementById('quantity-promotion1').textContent) +
         parseInt(document.getElementById('quantity-promotion2').textContent) +
         parseInt(document.getElementById('quantity-promotion3').textContent) +

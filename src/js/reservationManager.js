@@ -1,25 +1,61 @@
+import {updateSummary} from "./loadSummary.js";
+
 class TicketSaver {
-    constructor() {
-        this.basicTickets = {
-            children: 0,
-            young: 0,
-            adults: 0,
-            seniors: 0
-        };
-        this.premiumTickets = {
-            children: 0,
-            young: 0,
-            adults: 0,
-            seniors: 0
-        };
+    constructor(data) {
+
+        if (data) {
+            this.basicTickets = data.basicTickets;
+            this.premiumTickets = data.premiumTickets;
+        } else {
+            this.basicTickets = {
+                children: 0,
+                youths: 0,
+                adults: 0,
+                seniors: 0
+            };
+            this.premiumTickets = {
+                children: 0,
+                youths: 0,
+                adults: 0,
+                seniors: 0
+            };
+        }
     }
 
-    addBasicTicket(category, quantity) {
-        this.basicTickets[category.toLowerCase()] += quantity;
+    getTotalBasicTickets(){
+        return this.basicTickets.children + this.basicTickets.youths + this.basicTickets.adults + this.basicTickets.seniors;
     }
 
-    addPremiumTicket(category, quantity) {
-        this.premiumTickets[category.toLowerCase()] += quantity;
+    getTotalPremiumTickets(){
+        return this.premiumTickets.children + this.premiumTickets.youths + this.premiumTickets.adults + this.premiumTickets.seniors;
+    }
+
+    addBasicTicket(category) {
+        this.basicTickets[category.toLowerCase()] += 1;
+        this.updateTicketPanel();
+        updateSummary();
+    }
+
+    addPremiumTicket(category) {
+        this.premiumTickets[category.toLowerCase()] += 1;
+        this.updateTicketPanel();
+        updateSummary();
+    }
+
+    removeBasicTicket(category) {
+        if (this.basicTickets[category.toLowerCase()] >= 1){
+            this.basicTickets[category.toLowerCase()] -= 1;
+        }
+        this.updateTicketPanel();
+        updateSummary();
+    }
+
+    removePremiumTicket(category) {
+        if (this.premiumTickets[category.toLowerCase()] >= 1){
+            this.premiumTickets[category.toLowerCase()] -= 1;
+        }
+        this.updateTicketPanel();
+        updateSummary();
     }
 
     cost() {
@@ -40,7 +76,7 @@ class TicketSaver {
         // Definir los precios de los tickets según la categoría y si son premium o no
         const ticketPrices = {
             children: 5,
-            young: 10,
+            youths: 10,
             adults: 15,
             seniors: 10
         };
@@ -51,55 +87,101 @@ class TicketSaver {
     clear(){
         this.basicTickets = {
             children: 0,
-            young: 0,
+            youths: 0,
             adults: 0,
             seniors: 0
         };
         this.premiumTickets = {
             children: 0,
-            young: 0,
+            youths: 0,
             adults: 0,
             seniors: 0
         };
 
     }
+    updateTicketPanel(){
+        // ---------------- BASIC TICKETS ----------------
+        document.getElementById('quantity-children-basic').textContent = this.basicTickets.children;
+        document.getElementById('quantity-youths-basic').textContent = this.basicTickets.youths;
+        document.getElementById('quantity-adults-basic').textContent = this.basicTickets.adults;
+        document.getElementById('quantity-seniors-basic').textContent = this.basicTickets.seniors;
+
+        // ---------------- PREMIUM TICKETS ----------------
+        document.getElementById('quantity-children-premium').textContent = this.premiumTickets.children;
+        document.getElementById('quantity-youths-premium').textContent = this.premiumTickets.youths;
+        document.getElementById('quantity-adults-premium').textContent = this.premiumTickets.adults;
+        document.getElementById('quantity-seniors-premium').textContent = this.premiumTickets.seniors;
+
+    }
 }
 
 class PromotionSaver {
-    constructor() {
-        this.selectedPromotions = [];
+    constructor(data) {
+        if (data) {
+            this.selectedPromotions = data.selectedPromotions;
+        } else {
+            this.selectedPromotions = { };
+        }
     }
 
     addPromotion(promotion) {
-        this.selectedPromotions.push(promotion);
+        if (!this.selectedPromotions[promotion]){
+            this.selectedPromotions[promotion] = 1;
+        } else {
+            this.selectedPromotions[promotion] += 1;
+        }
+        this.updatePromotionPanel();
+        updateSummary();
+    }
+
+    deletePromotion(promotion){
+        if (this.selectedPromotions[promotion] >= 1){
+            this.selectedPromotions[promotion] -= 1;
+        }
+        this.updatePromotionPanel();
+        updateSummary();
+    }
+
+    updatePromotionPanel() {
+        Object.entries(this.selectedPromotions).forEach(([promotion, quantity]) => {
+            var quantityElement = document.getElementById('quantity-' + promotion);
+            quantityElement.textContent = quantity.toString();
+        });
     }
 
     cost() {
         // Definir los precios de las promociones y calcular el costo total
-        const promotionPrices = {
-            '2x1 en palomitas': 8,
-            'Descuento en combos': 10
-            // Agrega más promociones con sus precios aquí si es necesario
-        };
+        const promotionTypes = {
+            'type1': 5,
+            'type2': 10
+        }
         let totalCost = 0;
-        this.selectedPromotions.forEach(promotion => {
-            totalCost += promotionPrices[promotion];
+
+        Object.entries(this.selectedPromotions).forEach(([promotion, quantity]) => {
+            totalCost += quantity * promotionTypes['type1'];
         });
+
         return totalCost;
     }
 
     clear(){
-        this.selectedPromotions = [];
+        this.selectedPromotions = {};
+
     }
 }
 
-class Seats {
-    constructor() {
-        this.selectedSeats = [];
+class SeatSaver {
+    constructor(data) {
+        if (data) {
+            this.selectedSeats = data.selectedSeats;
+        } else {
+            this.selectedSeats = [];
+        }
     }
 
     addSeat(seat) {
         this.selectedSeats.push(seat);
+
     }
 
     cost() {
@@ -110,17 +192,26 @@ class Seats {
 
     clear(){
         this.selectedSeats = [];
+
+    }
+
+    updateSeatsPanel() {
+
     }
 }
 
 class PaymentSaver {
-    constructor() {
-        this.paymentInfo = {
-            cardNumber: '',
-            cardHolder: '',
-            expirationDate: '',
-            cvv: ''
-        };
+    constructor(data) {
+        if (data) {
+            this.paymentInfo = data.paymentInfo;
+        } else {
+            this.paymentInfo = {
+                cardNumber: '',
+                cardHolder: '',
+                expirationDate: '',
+                cvv: ''
+            };
+        }
     }
 
     addPaymentInfo(cardNumber, cardHolder, expirationDate, cvv) {
@@ -136,26 +227,53 @@ class PaymentSaver {
 
 }
 
-class ReservationManager {
-    constructor() {
-        this.ticketSaver = new TicketSaver();
-        this.promotionSaver = new PromotionSaver();
-        this.seats = new Seats();
-        this.paymentSaver = new PaymentSaver();
+export class ReservationManager {
+    constructor(data = null) {
+        if (data) {
+            // Si se proporcionan datos, inicializa la instancia con esos datos
+            this.ticketSaver = new TicketSaver(data.ticketSaver);
+            this.promotionSaver = new PromotionSaver(data.promotionSaver);
+            this.seatSaver = new SeatSaver(data.seatSaver);
+            this.paymentSaver = new PaymentSaver(data.paymentSaver);
+        } else {
+            // Si no se proporcionan datos, crea una instancia vacía
+            this.ticketSaver = new TicketSaver();
+            this.promotionSaver = new PromotionSaver();
+            this.seatSaver = new SeatSaver();
+            this.paymentSaver = new PaymentSaver();
+        }
     }
+
+
 
     finalPrice() {
         const ticketCost = this.ticketSaver.cost();
         const promotionCost = this.promotionSaver.cost();
-        const seatCost = this.seats.cost();
+        const seatCost = this.seatSaver.cost();
+
+        console.log("ticketCost: ", ticketCost);
+        console.log("promotionCost: ", promotionCost);
+        console.log("seatCost: ", seatCost);
+
 
         return ticketCost + promotionCost + seatCost;
     }
+
+    saveToLocalStorage(){
+        localStorage.setItem('reservationManager', JSON.stringify(this));
+    }
+
+    deleteFromLocalStorage(){
+        localStorage.removeItem('reservationManager');
+    }
+
+
+
+
 }
 
-// Ejemplo de uso
-const reservationManager = new ReservationManager();
 
+/*
 // Agregar tickets
 reservationManager.ticketSaver.addBasicTicket('niños', 2);
 reservationManager.ticketSaver.addPremiumTicket('adults', 3);
@@ -167,9 +285,7 @@ reservationManager.promotionSaver.addPromotion('2x1 en palomitas');
 reservationManager.seats.addSeat('A1');
 reservationManager.seats.addSeat('B3');
 
-// Agregar información de pago
-reservationManager.paymentSaver.addPaymentInfo(/* información de pago */);
-
 // Calcular precio final
 const finalPrice = reservationManager.finalPrice();
 console.log('Precio final:', finalPrice);
+*/
