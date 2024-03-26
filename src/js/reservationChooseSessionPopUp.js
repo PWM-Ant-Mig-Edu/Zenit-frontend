@@ -139,7 +139,7 @@ function checkSelection() {
 
     if (selectedCinemaId && selectedFilmId && selectedDay && selectedHour) {
         // FIXME: Check route definition /Zenit-frontend/public/ may not always be the same
-        window.location.href = window.location.origin + "/Zenit-frontend/public/reservationTickets.html?cinema=" + selectedCinemaId + "&film=" + selectedFilmId + "&day=" + selectedDay + "&hour=" + selectedHour;
+        window.location.href = window.location.origin + "/Zenit-frontend/public/reservationStep1Tickets.html?cinema=" + selectedCinemaId + "&film=" + selectedFilmId + "&day=" + selectedDay + "&hour=" + selectedHour;
 
 
     } else {
