@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (window.location.pathname.includes("Step4")) {
                 //window.reservationManager.paymentSaver.updatePaymentPanel();
             } else if (window.location.pathname.includes("Step5")) {
-                window.reservationManager.detailSaver.updateConfirmationPanel();
+                window.reservationManager.updateConfirmationPanel();
             }
             updateSummary();
         }

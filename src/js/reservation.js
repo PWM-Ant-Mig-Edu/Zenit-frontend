@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.reservationManager = new ReservationManager(savedData);
     } else {
         window.reservationManager = new ReservationManager();
+        localStorage.setItem('reservationManager', JSON.stringify(window.reservationManager));
     }
     console.log("reservationManager: ", window.reservationManager);
     //updateSummary(); // Asegúrate de llamar a updateSummary una vez que el objeto esté listo

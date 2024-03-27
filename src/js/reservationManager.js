@@ -362,8 +362,7 @@ class PaymentSaver {
 }
 
 class DetailSaver {
-    constructor(data, reservationManager) {
-        this.reservationManager = reservationManager;
+    constructor(data) {
         if (data) {
             this.details = data.details;
         } else {
@@ -378,16 +377,7 @@ class DetailSaver {
 
     }
 
-    updateConfirmationPanel() {
-        document.getElementById('movie-title').textContent = this.details.movie;
-        document.getElementById('date').textContent = this.details.date;
-        document.getElementById('time').textContent = this.details.time;
-        document.getElementById('cinema').textContent = this.details.cinema;
-        document.getElementById('hall').textContent = this.details.hall;
-        document.getElementById('seats').textContent = this.reservationManager.seatSaver.getSelectedSeatsWithCodes().join(', ');
 
-
-    }
 
     retrieveDetailsFromURL() {
         const url = window.location.href;
@@ -459,15 +449,26 @@ export class ReservationManager {
             this.promotionSaver = new PromotionSaver(data.promotionSaver);
             this.seatSaver = new SeatSaver(data.seatSaver);
             this.paymentSaver = new PaymentSaver(data.paymentSaver);
-            this.detailSaver = new DetailSaver(data.detailSaver, this);
+            this.detailSaver = new DetailSaver(data.detailSaver);
         } else {
             // Si no se proporcionan datos, crea una instancia vacía
             this.ticketSaver = new TicketSaver();
             this.promotionSaver = new PromotionSaver();
             this.seatSaver = new SeatSaver();
             this.paymentSaver = new PaymentSaver();
-            this.detailSaver = new DetailSaver(null, this);
+            this.detailSaver = new DetailSaver();
         }
+    }
+
+    updateConfirmationPanel() {
+        document.getElementById('movie-title').textContent = this.detailSaver.details.movie;
+        document.getElementById('date').textContent = this.detailSaver.details.date;
+        document.getElementById('time').textContent = this.detailSaver.details.time;
+        document.getElementById('cinema').textContent = this.detailSaver.details.cinema;
+        document.getElementById('hall').textContent = this.detailSaver.details.hall;
+        document.getElementById('seats').textContent = this.seatSaver.getSelectedSeatsWithCodes().join(', ');
+
+
     }
 
 
