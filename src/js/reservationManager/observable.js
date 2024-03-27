@@ -11,7 +11,9 @@ export class Observable {
         this.observers = this.observers.filter(obs => obs !== observer);
     }
 
-    notifyObservers() {
-        this.observers.forEach(observer => observer.update());
+    async notifyObservers() {
+        for (const observer of this.observers) {
+            await observer.update();
+        }
     }
 }
