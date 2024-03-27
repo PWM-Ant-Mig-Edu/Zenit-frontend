@@ -6,6 +6,7 @@ export async function loadSummary() {
 }
 
 export function updateSummary() {
+    document.getElementById('summary-film-title').textContent = window.reservationManager.detailSaver.details.movie;
     document.getElementById('total_tickets_basic').textContent = window.reservationManager.ticketSaver.getTotalBasicTickets().toString();
     document.getElementById('total_tickets_premium').textContent = window.reservationManager.ticketSaver.getTotalPremiumTickets().toString();
     document.getElementById('total_price').textContent = window.reservationManager.finalPrice().toFixed(2);
@@ -13,9 +14,9 @@ export function updateSummary() {
 
 document.addEventListener('DOMContentLoaded', function () {
     loadSummary().then(
-        r => {
-            updateSummary();
+        async r => {
             if (window.location.pathname.includes("Step1")) {
+                await window.reservationManager.detailSaver.retrieveDetailsFromURL();
                 window.reservationManager.ticketSaver.updateTicketPanel();
             } else if (window.location.pathname.includes("Step2")) {
                 window.reservationManager.promotionSaver.updatePromotionPanel();
@@ -24,8 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (window.location.pathname.includes("Step4")) {
                 //window.reservationManager.paymentSaver.updatePaymentPanel();
             } else if (window.location.pathname.includes("Step5")) {
-                //window.reservationManager.confirmationSaver.updateConfirmationPanel();
+                window.reservationManager.detailSaver.updateConfirmationPanel();
             }
+            updateSummary();
         }
     );
 

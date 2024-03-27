@@ -92,6 +92,7 @@ function showAvailableHours(day, cinemaId, movieId) {
                 const horaDiv = document.createElement('div');
                 horaDiv.classList.add('projection-hour-container');
                 horaDiv.setAttribute('data-hour', session.time);
+                horaDiv.setAttribute('data-hall', session.hall);
                 horaDiv.setAttribute('onclick', 'setAsSelectedHour(this)');
                 horaDiv.innerHTML = `
                     <span>${session.time}</span>
@@ -131,15 +132,22 @@ function checkSelection() {
     const selectedHour = chooseSessionComponent.querySelector('.projection-hour-container.selected')
         .getAttribute('data-hour');
 
+    const selectedHall = chooseSessionComponent.querySelector('.projection-hour-container.selected')
+        .getAttribute('data-hall');
+
     // Print all 4 data
     console.log("SelectedCinemaId: ", selectedCinemaId);
     console.log("SelectedFilmId: ", selectedFilmId);
     console.log("SelectedDay: ", selectedDay);
     console.log("SelectedHour: ", selectedHour);
 
-    if (selectedCinemaId && selectedFilmId && selectedDay && selectedHour) {
+    if (selectedCinemaId && selectedFilmId && selectedDay && selectedHour && selectedHall) {
         // FIXME: Check route definition /Zenit-frontend/public/ may not always be the same
-        window.location.href = window.location.origin + "/Zenit-frontend/public/reservationStep1Tickets.html?cinema=" + selectedCinemaId + "&film=" + selectedFilmId + "&day=" + selectedDay + "&hour=" + selectedHour;
+        window.location.href = window.location.origin + "/Zenit-frontend/public/reservationStep1Tickets.html?cinema=" + selectedCinemaId +
+            "&film=" + selectedFilmId +
+            "&day=" + selectedDay +
+            "&hour=" + selectedHour +
+            "&hall=" + selectedHall;
 
 
     } else {

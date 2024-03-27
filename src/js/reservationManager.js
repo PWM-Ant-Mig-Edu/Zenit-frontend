@@ -193,9 +193,6 @@ class SeatSaver {
         const row = seat.charCodeAt(0) - 65; // Convertir letra a número ASCII y restar 65 para obtener el índice de fila
         const col = parseInt(seat.slice(1)) - 1; // Obtener el número de columna
 
-        console.log("Row: ", row, " Col: ", col);
-        console.log("Seat: ", seat);
-
         // Verificar si el asiento está disponible (-1) o ya está ocupado (1)
         if (this.selectedSeats[row][col] === 0) {
             this.selectedSeats[row][col] = 1; // Marcar el asiento como ocupado
@@ -274,13 +271,25 @@ class SeatSaver {
                 }
             }
         }
+    }
 
+    getSelectedSeatsWithCodes(){
+        let selectedSeats = [];
+        for (let i = 0; i < this.selectedSeats.length; i++) {
+            for (let j = 0; j < this.selectedSeats[i].length; j++) {
+                if (this.selectedSeats[i][j] === 1) {
+                    selectedSeats.push(this.getSeatCode(i, j));
+                }
+            }
+        }
+        return selectedSeats;
 
     }
 }
 
 class PaymentSaver {
     constructor(data) {
+
         if (data) {
             this.paymentInfo = data.paymentInfo;
             this.customerInfo = data.customerInfo;
@@ -330,8 +339,9 @@ class PaymentSaver {
         //     const payLink = document.getElementById('payLink');
         //     payLink.href = "reservationStep5Details.html";
         // }
-        
+
     }
+
     clear() {
         this.customerInfo = {
             name: '',
@@ -351,6 +361,96 @@ class PaymentSaver {
     }
 }
 
+class DetailSaver {
+    constructor(data, reservationManager) {
+        this.reservationManager = reservationManager;
+        if (data) {
+            this.details = data.details;
+        } else {
+            this.details = {
+                movie: '',
+                date: '',
+                time: '',
+                cinema: '',
+                hall: ''
+            };
+        }
+
+    }
+
+    updateConfirmationPanel() {
+        document.getElementById('movie-title').textContent = this.details.movie;
+        document.getElementById('date').textContent = this.details.date;
+        document.getElementById('time').textContent = this.details.time;
+        document.getElementById('cinema').textContent = this.details.cinema;
+        document.getElementById('hall').textContent = this.details.hall;
+        document.getElementById('seats').textContent = this.reservationManager.seatSaver.getSelectedSeatsWithCodes().join(', ');
+
+
+    }
+
+    retrieveDetailsFromURL() {
+        const url = window.location.href;
+        const queryString = url.split('?')[1]; // Obtiene la parte de la URL después del símbolo '?'
+        const urlParams = new URLSearchParams(queryString);
+        const cinemaId = urlParams.get('cinema');
+        const movieId = urlParams.get('film');
+        const day = urlParams.get('day');
+        const hour = urlParams.get('hour');
+        const hall = urlParams.get('hall');
+
+        if (cinemaId && movieId && day && hour) {
+            this.getCinemaName(cinemaId)
+                .then(cinema => {
+                    this.details.cinema = cinema;
+                    console.log("Cinema: ", cinema);
+                    return this.getMovieName(movieId);
+                })
+                .then(movie => {
+                    this.details.movie = movie;
+                    console.log("Movie: ", movie);
+                    this.details.date = day;
+                    this.details.time = hour;
+                    this.details.hall = hall;
+                    console.log("Details: ", this.details);
+                })
+                .catch(error => {
+                    console.error("Error retrieving details from URL:", error);
+                });
+        } else {
+            console.error("Error retrieving details from URL");
+        }
+    }
+
+
+    async getCinemaName(cinemaId) {
+        try {
+            const response = await fetch('../src/json/cinemas.json');
+            const data = await response.json();
+            const cinema = data.cinemas.find(cinema => cinema.id === cinemaId);
+            console.log("Cinema Name: ", cinema.name);
+            return cinema.name;
+        } catch (error) {
+            console.error('Error loading cinemas:', error);
+            throw error;
+        }
+    }
+
+    async getMovieName(movieId) {
+        try {
+            const response = await fetch('../src/json/films.json');
+            const data = await response.json();
+            const movie = data.films.find(movie => movie.id === movieId);
+            console.log("Movie Name: ", movie.name);
+            return movie.name;
+        } catch (error) {
+            console.error('Error loading movies:', error);
+            throw error;
+        }
+    }
+
+}
+
 export class ReservationManager {
     constructor(data = null) {
         if (data) {
@@ -359,12 +459,14 @@ export class ReservationManager {
             this.promotionSaver = new PromotionSaver(data.promotionSaver);
             this.seatSaver = new SeatSaver(data.seatSaver);
             this.paymentSaver = new PaymentSaver(data.paymentSaver);
+            this.detailSaver = new DetailSaver(data.detailSaver, this);
         } else {
             // Si no se proporcionan datos, crea una instancia vacía
             this.ticketSaver = new TicketSaver();
             this.promotionSaver = new PromotionSaver();
             this.seatSaver = new SeatSaver();
             this.paymentSaver = new PaymentSaver();
+            this.detailSaver = new DetailSaver(null, this);
         }
     }
 
@@ -373,12 +475,6 @@ export class ReservationManager {
         const ticketCost = this.ticketSaver.cost();
         const promotionCost = this.promotionSaver.cost();
         const seatCost = this.seatSaver.cost();
-
-        console.log("ticketCost: ", ticketCost);
-        console.log("promotionCost: ", promotionCost);
-        console.log("seatCost: ", seatCost);
-
-
         return ticketCost + promotionCost + seatCost;
     }
 
