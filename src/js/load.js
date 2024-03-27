@@ -1,41 +1,41 @@
-export function loadComponentJS(src, componentId) {
-    fetch(src)
-        .then(response => {
-            return response.text();
-        })
-        .then(data => {
-            const app = document.getElementById(componentId);
-            app.innerHTML = data;
+export async function loadComponentJS(src, componentId) {
+    try {
+        const response = await fetch(src);
+        const data = await response.text();
 
-            var scripts = app.querySelectorAll("script");
+        const app = document.getElementById(componentId);
+        app.innerHTML = data;
 
-            if (scripts !== null && scripts.length > 0) {
-                var loadScript = index => {
-                    if (index < scripts.length) {
-                        var newScript = document.createElement("script");
+        const scripts = app.querySelectorAll("script");
 
-                        if (scripts[index].innerText) {
-                            var inlineScript = document.createTextNode(scripts[index].innerText);
-                            newScript.appendChild(inlineScript);
-                        } else {
-                            if (scripts[index].src) {
-                                newScript.src = scripts[index].src;
-                            }
-                        }
-                        scripts[index].parentNode.removeChild(scripts[index]);
-                        if (newScript.src) {
-                            newScript.addEventListener("load", event => loadScript(index + 1));
-                            newScript.addEventListener("error", event => loadScript(index + 1));
-                        }
-                        app.appendChild(newScript);
+        if (scripts !== null && scripts.length > 0) {
+            const loadScript = async index => {
+                if (index < scripts.length) {
+                    const newScript = document.createElement("script");
+
+                    if (scripts[index].innerText) {
+                        const inlineScript = document.createTextNode(scripts[index].innerText);
+                        newScript.appendChild(inlineScript);
                     }
-                };
+                    else {
+                        newScript.src = scripts[index].src;
+                    }
+                    scripts[index].parentNode.removeChild(scripts[index]);
 
-                loadScript(0);
+                    await new Promise((resolve, reject) => {
+                        newScript.addEventListener("load", resolve);
+                        newScript.addEventListener("error", reject);
+                        app.appendChild(newScript);
+                    });
+
+                    await loadScript(index + 1);
+                }
             }
-        })
-        .catch(err => {
-            console.warn('Something went wrong.', err);
-        });
+
+            await loadScript(0);
+        }
+    } catch (err) {
+        console.warn('Something went wrong.', err);
+    }
 }
 

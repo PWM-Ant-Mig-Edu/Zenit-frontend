@@ -1,9 +1,9 @@
 import { loadComponentJS } from "../js/load.js";
 
-export function loadProfileButtons() {
-    loadComponentJS('../src/components/profileButtons.html', 'buttons-profile-component');
+export async function loadProfileButtons() {
+    await loadComponentJS('../src/components/profileButtons.html', 'buttons-profile-component');
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    loadProfileButtons();
+document.addEventListener('DOMContentLoaded', async function () {
+    await loadProfileButtons();
 });

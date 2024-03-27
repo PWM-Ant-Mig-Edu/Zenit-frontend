@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="../src/css/formalizer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../src/css/reservation.css">
-    <script src="../src/js/reservation.js"></script>
     <script src="../src/js/reservationProgressBar.js"></script>
     <script type="module" src="../src/js/loadSummary.js"></script>
     <script type="module" src="../src/js/loadBasics.js"></script>
@@ -34,41 +33,35 @@
                 <div class="purchase-description">
                     <div class="purchase-data">
                         <span>Película: </span>
-                        <span>XXXXX</span>
-                    </div>
-                    <div class="purchase-data">
-                        <span>Reparto: </span>
-                        <span>XXXXX, XXXXX, XXXX</span>
+                        <span id = 'movie-title'>XXXXX</span>
                     </div>
                     <div class="purchase-data">
                         <span>Fecha: </span>
-                        <span>XX/XX/XXXX</span>
+                        <span id='date'>XX/XX/XXXX</span>
                     </div>
                     <div class="purchase-data">
                         <span>Hora: </span>
-                        <span>XX:XX</span>
+                        <span id = 'time'>XX:XX</span>
                     </div>
                     <div class="purchase-data">
-                        <span>Cantidad entradas: </span>
-                        <span>XX</span>
+                        <span>Cine: </span>
+                        <span id = 'cinema'>XXX</span>
                     </div>
-                    <div class="purchase-data">
-                        <span>Butacas: </span>
-                        <span>XXX,XXX</span>
-                    </div>
+
                     <div class="purchase-data">
                         <span>Sala: </span>
-                        <span>XXX</span>
+                        <span id = 'hall'>XXX</span>
                     </div>
+
                     <div class="purchase-data">
-                        <span>Precio: </span>
-                        <span>XX€</span>
+                        <span>Butacas: </span>
+                        <span id = 'seats'>XXX,XXX</span>
                     </div>
                 </div>
             </div>
             <div class="reservation-buttons">
-                <a href="reservationData.html" onclick="back()">Retroceder</a>
-                <a href="#" onclick="back()">Avanzar</a>
+                <a onclick="window.reservationManager.previousStep()">Retroceder</a>
+                <a onclick="window.reservationManager.nextStep()">Avanzar</a>
             </div>
         </div>
 

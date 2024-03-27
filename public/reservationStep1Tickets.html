@@ -6,11 +6,9 @@
     <link rel="stylesheet" href="../src/css/formalizer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../src/css/reservation.css">
-    <script src="../src/js/reservation.js"></script>
     <script src="../src/js/reservationProgressBar.js"></script>
     <script type="module" src="../src/js/loadSummary.js"></script>
     <script type="module" src="../src/js/loadBasics.js"></script>
-
 </head>
 <body>
 <div id="popups" style="display: none;">
@@ -33,35 +31,35 @@
                     <div class="ticket-row">
                         <span>Niños (menor 8 años)</span>
                         <div class="tickets-input">
-                            <button onclick="decrement('children-basic')">-</button>
+                            <button onclick="window.reservationManager.ticketSaver.removeBasicTicket('children')">-</button>
                             <span id="quantity-children-basic">0</span>
-                            <button onclick="increment('children-basic')">+</button>
+                            <button onclick="window.reservationManager.ticketSaver.addBasicTicket('children')">+</button>
                         </div>
 
                     </div>
                     <div class="ticket-row">
                         <span>Jóvenes (entre 8-18 años)</span>
                         <div class="tickets-input">
-                            <button onclick="decrement('youths-basic')">-</button>
+                            <button onclick="window.reservationManager.ticketSaver.removeBasicTicket('youths')">-</button>
                             <span id="quantity-youths-basic">0</span>
-                            <button onclick="increment('youths-basic')">+</button>
+                            <button onclick="window.reservationManager.ticketSaver.addBasicTicket('youths')">+</button>
                         </div>
 
                     </div>
                     <div class="ticket-row">
                         <span>Adultos (entre 18-65 años)</span>
                         <div class="tickets-input">
-                            <button onclick="decrement('adults-basic')">-</button>
+                            <button onclick="window.reservationManager.ticketSaver.removeBasicTicket('adults')">-</button>
                             <span id="quantity-adults-basic">0</span>
-                            <button onclick="increment('adults-basic')">+</button>
+                            <button onclick="window.reservationManager.ticketSaver.addBasicTicket('adults')">+</button>
                         </div>
                     </div>
                     <div class="ticket-row">
                         <span>Ancianos (mayor de 65 años)</span>
                         <div class="tickets-input">
-                            <button onclick="decrement('seniors-basic')">-</button>
+                            <button onclick="window.reservationManager.ticketSaver.removeBasicTicket('seniors')">-</button>
                             <span id="quantity-seniors-basic">0</span>
-                            <button onclick="increment('seniors-basic')">+</button>
+                            <button onclick="window.reservationManager.ticketSaver.addBasicTicket('seniors')">+</button>
                         </div>
                     </div>
                 </div>
@@ -70,42 +68,42 @@
                     <div class="ticket-row">
                         <span>Niños (menor 8 años)</span>
                         <div class="tickets-input">
-                            <button onclick="decrement('children-premium')">-</button>
+                            <button onclick="window.reservationManager.ticketSaver.removePremiumTicket('children')">-</button>
                             <span id="quantity-children-premium">0</span>
-                            <button onclick="increment('children-premium')">+</button>
+                            <button onclick="window.reservationManager.ticketSaver.addPremiumTicket('children')">+</button>
                         </div>
 
                     </div>
                     <div class="ticket-row">
                         <span>Jóvenes (entre 8-18 años)</span>
                         <div class="tickets-input">
-                            <button onclick="decrement('youths-premium')">-</button>
+                            <button onclick="window.reservationManager.ticketSaver.removePremiumTicket('youths')">-</button>
                             <span id="quantity-youths-premium">0</span>
-                            <button onclick="increment('youths-premium')">+</button>
+                            <button onclick="window.reservationManager.ticketSaver.addPremiumTicket('youths')">+</button>
                         </div>
 
                     </div>
                     <div class="ticket-row">
                         <span>Adultos (entre 18-65 años)</span>
                         <div class="tickets-input">
-                            <button onclick="decrement('adults-premium')">-</button>
+                            <button onclick="window.reservationManager.ticketSaver.removePremiumTicket('adults')">-</button>
                             <span id="quantity-adults-premium">0</span>
-                            <button onclick="increment('adults-premium')">+</button>
+                            <button onclick="window.reservationManager.ticketSaver.addPremiumTicket('adults')">+</button>
                         </div>
                     </div>
                     <div class="ticket-row">
                         <span>Ancianos (mayor de 65 años)</span>
                         <div class="tickets-input">
-                            <button onclick="decrement('seniors-premium')">-</button>
+                            <button onclick="window.reservationManager.ticketSaver.removePremiumTicket('seniors')">-</button>
                             <span id="quantity-seniors-premium">0</span>
-                            <button onclick="increment('seniors-premium')">+</button>
+                            <button onclick="window.reservationManager.ticketSaver.addPremiumTicket('seniors')">+</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="reservation-buttons">
-                <a href="billboard.html" onclick="back()">Retroceder</a>
-                <a href="reservationPromotions.html" onclick="advance()">Avanzar</a>
+                <a onclick="window.reservationManager.previousStep()">Retroceder</a>
+                <a onclick="window.reservationManager.nextStep()">Avanzar</a>
             </div>
         </div>
 
@@ -119,6 +117,7 @@
 
 <script>
     loadProgressBarComponent(0);
+
 </script>
 
 </body>
