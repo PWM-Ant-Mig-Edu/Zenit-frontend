@@ -55,10 +55,10 @@ export class SeatSaver {
 
         // Verificar si la fila y columna están dentro de los límites
         if (row >= 0 && row < letras.length && column >= 0 && column < 8) {
-            const letra = letras[row];
-            const codigoAsiento = (column + 1) + letra;
-            // NOTE: Really important to convert to chars, or else won't work
-            return codigoAsiento.charAt(1) + codigoAsiento.charAt(0);
+            const letter = letras[row];
+            const number = column + 1; // Los índices de columna comienzan en 0, pero los números de asiento en 1
+            const seatCode = letter + number;
+            return seatCode; // Formato correcto [fila][columna], como A1
         } else {
             return "Posición de asiento inválida";
         }
