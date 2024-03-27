@@ -1,35 +1,40 @@
-export function loadComponentJS(src, componentId) {
-    fetch(src).then(response => {
-        return response.text();
-    }).then(data => {
-    
+export async function loadComponentJS(src, componentId) {
+    try {
+        const response = await fetch(src);
+        const data = await response.text();
+
         const app = document.getElementById(componentId);
         app.innerHTML = data;
-    
-        var scripts = app.querySelectorAll("script");
-    
+
+        const scripts = app.querySelectorAll("script");
+
         if (scripts !== null && scripts.length > 0) {
-            var loadScript = index => {
+            const loadScript = async index => {
                 if (index < scripts.length) {
-                    var newScript = document.createElement("script");
-    
+                    const newScript = document.createElement("script");
+
                     if (scripts[index].innerText) {
-                        var inlineScript = document.createTextNode(scripts[index].innerText);
+                        const inlineScript = document.createTextNode(scripts[index].innerText);
                         newScript.appendChild(inlineScript);
                     }
                     else {
                         newScript.src = scripts[index].src;
                     }
                     scripts[index].parentNode.removeChild(scripts[index]);
-                    newScript.addEventListener("load", event => loadScript(index + 1));
-                    newScript.addEventListener("error", event => loadScript(index + 1));
-                    app.appendChild(newScript);
+
+                    await new Promise((resolve, reject) => {
+                        newScript.addEventListener("load", resolve);
+                        newScript.addEventListener("error", reject);
+                        app.appendChild(newScript);
+                    });
+
+                    await loadScript(index + 1);
                 }
             }
-    
-            loadScript(0);
+
+            await loadScript(0);
         }
-    }).catch(err => {
+    } catch (err) {
         console.warn('Something went wrong.', err);
-    });  
+    }
 }

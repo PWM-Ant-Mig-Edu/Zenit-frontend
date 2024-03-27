@@ -1,8 +1,8 @@
 import { loadComponentJS } from "../js/load.js";
 
 
-export function loadSummary() {
-    loadComponentJS('../src/components/reservationSummary.html', 'summary-component');
+export async function loadSummary() {
+    await loadComponentJS('../src/components/reservationSummary.html', 'summary-component');
 }
 
 export function updateSummary() {
@@ -12,22 +12,21 @@ export function updateSummary() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    loadSummary();
-    // Configura un temporizador para esperar antes de ejecutar updateSummary.
-    setTimeout(() => {
-        // Después del retardo, llama a updateSummary.
-        updateSummary();
-        if (window.location.pathname.includes("Step1")) {
-            window.reservationManager.ticketSaver.updateTicketPanel();
-        } else if (window.location.pathname.includes("Step2")) {
-            window.reservationManager.promotionSaver.updatePromotionPanel();
-        } else if (window.location.pathname.includes("Step3")) {
-            window.reservationManager.seatSaver.updateSeatsPanel();
-        } else if (window.location.pathname.includes("Step4")) {
-            //window.reservationManager.paymentSaver.updatePaymentPanel();
-        } else if (window.location.pathname.includes("Step5")) {
-            //window.reservationManager.confirmationSaver.updateConfirmationPanel();
+    loadSummary().then(
+        r => {
+            updateSummary();
+            if (window.location.pathname.includes("Step1")) {
+                window.reservationManager.ticketSaver.updateTicketPanel();
+            } else if (window.location.pathname.includes("Step2")) {
+                window.reservationManager.promotionSaver.updatePromotionPanel();
+            } else if (window.location.pathname.includes("Step3")) {
+                window.reservationManager.seatSaver.updateSeatsPanel();
+            } else if (window.location.pathname.includes("Step4")) {
+                //window.reservationManager.paymentSaver.updatePaymentPanel();
+            } else if (window.location.pathname.includes("Step5")) {
+                //window.reservationManager.confirmationSaver.updateConfirmationPanel();
+            }
         }
-    }, 1000); // Ajusta el retardo a 1000 milisegundos (1 segundo) o lo que sea adecuado.
+    );
 
 });

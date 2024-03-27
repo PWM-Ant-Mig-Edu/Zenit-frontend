@@ -175,14 +175,52 @@ class SeatSaver {
         if (data) {
             this.selectedSeats = data.selectedSeats;
         } else {
-            this.selectedSeats = [];
+            this.selectedSeats = [
+                [0,0,-1,0,0,0,0,0], // A
+                [0,0,-1,0,0,0,0,0], // B
+                [0,0,-1,0,0,0,0,0], // C
+                [0,0,-1,0,0,0,0,0], // D
+                [0,0,-1,0,0,0,0,0], // E
+                [0,0,-1,0,0,0,0,0], // F
+                [0,0,-1,0,0,0,0,0]  // G
+            ];
         }
     }
 
     addSeat(seat) {
-        this.selectedSeats.push(seat);
+        // Obtener la fila y la columna del asiento
+        const row = seat.charCodeAt(0) - 65; // Convertir letra a número ASCII y restar 65 para obtener el índice de fila
+        const col = parseInt(seat.slice(1)) - 1; // Obtener el número de columna
+
+        console.log("Row: ", row, " Col: ", col);
+        console.log("Seat: ", seat);
+
+        // Verificar si el asiento está disponible (-1) o ya está ocupado (1)
+        if (this.selectedSeats[row][col] === 0) {
+            this.selectedSeats[row][col] = 1; // Marcar el asiento como ocupado
+            document.getElementById(seat).style.fill = "green";
+        } else if (this.selectedSeats[row][col] === 1) {
+            this.removeSeat(seat);
+        } else {
+            alert("Seat is not available.");
+        }
 
     }
+
+    removeSeat(seat) {
+        // Obtener la fila y la columna del asiento
+        const row = seat.charCodeAt(0) - 65; // Convertir letra a número ASCII y restar 65 para obtener el índice de fila
+        const col = parseInt(seat.slice(1)) - 1; // Obtener el número de columna
+
+        // Verificar si el asiento está ocupado (1) para liberarlo
+        if (this.selectedSeats[row][col] === 1) {
+            this.selectedSeats[row][col] = 0; // Marcar el asiento como libre
+            document.getElementById(seat).style.fill = "gray";
+        } else {
+            console.log("Seat is not occupied or unavailable.");
+        }
+    }
+
 
     cost() {
         // Definir el costo de los asientos y calcular el costo total
@@ -195,7 +233,37 @@ class SeatSaver {
 
     }
 
+    // Función para obtener el código de asiento para una fila y columna específicas
+    getSeatCode(row, column) {
+        const letras = 'ABCDEFGH'; // Letras para las filas
+
+        // Verificar si la fila y columna están dentro de los límites
+        if (row >= 0 && row < letras.length && column >= 0 && column < 8) {
+            const letra = letras[row];
+            const codigoAsiento = (column + 1) + letra;
+            // NOTE: Really important to convert to chars, or else won't work
+            return codigoAsiento.charAt(1) + codigoAsiento.charAt(0);
+        } else {
+            return "Posición de asiento inválida";
+        }
+    }
     updateSeatsPanel() {
+        // Go over seats and update their color
+        for (let i = 0; i < this.selectedSeats.length; i++) {
+            for (let j = 0; j < this.selectedSeats[i].length; j++) {
+                const seatCode = this.getSeatCode(i, j);
+                const seatElement = document.getElementById(seatCode);
+
+                if (this.selectedSeats[i][j] === 1) {
+                    seatElement.style.fill = "green";
+                } else if (this.selectedSeats[i][j] === 0) {
+                    seatElement.style.fill = "gray";
+                } else {
+                    seatElement.style.fill = "red";
+                }
+            }
+        }
+
 
     }
 }

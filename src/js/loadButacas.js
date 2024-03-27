@@ -1,9 +1,14 @@
 import { loadComponentJS } from '../js/load.js';
+import {createSeats} from "./createSeats.js";
 
-export function loadButacas() {
-    loadComponentJS("../src/components/seats.html", "table-container");
+export async function loadButacas() {
+    await loadComponentJS("../src/components/seats.html", "table-container");
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadButacas();
+    loadButacas().then(r => {
+        createSeats(['A', 'B', 'C', 'D', 'E', 'F', 'G'], [1, 8]);
+    });
+
+
 });

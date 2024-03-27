@@ -1,12 +1,12 @@
 import { loadComponentJS } from './load.js';
 
-export function loadBasics() {
+export async function loadBasics() {
     // Cargar los componentes básicos
-    loadComponentJS('../src/components/header.html', 'header-component');
-    loadComponentJS('../src/components/footer.html', 'footer-component');
-    loadComponentJS('../src/components/login.html', 'login-component');
-    loadComponentJS('../src/components/register.html', 'register-component');
-    loadComponentJS('../src/components/resetPassword.html', 'reset-password-component');
+    await loadComponentJS('../src/components/header.html', 'header-component');
+    await loadComponentJS('../src/components/footer.html', 'footer-component');
+    await loadComponentJS('../src/components/login.html', 'login-component');
+    await loadComponentJS('../src/components/register.html', 'register-component');
+    await loadComponentJS('../src/components/resetPassword.html', 'reset-password-component');
 }
 
 function checkLogin() {
@@ -50,8 +50,8 @@ function checkLogin() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    loadBasics();
+document.addEventListener('DOMContentLoaded', async function () {
+    await loadBasics();
     
     var headerObserver = new MutationObserver(function(mutationsList, observer) {
         for(var mutation of mutationsList) {
