@@ -9,7 +9,6 @@
     <script src="../src/js/reservationProgressBar.js"></script>
     <script type="module" src="../src/js/loadSummary.js"></script>
     <script type="module" src="../src/js/loadBasics.js"></script>
-    <script type="module" src="../src/js/reservation.js"></script>
 
 </head>
 <body>
@@ -26,7 +25,7 @@
             <h1>Proceso de Compra</h1>
 
             <div id="progress-bar-component"></div>
-            <form id="paymentForm"  method="POST" onsubmit="handleFormSubmission(); return false;">
+            <form id="paymentForm"  method="POST" onsubmit="window.reservationManager.goToStep5(); return false;">
                 <div class="customer-data-container">
                     <div class="shipping-address-container">
                         <h2>Direccion de envio</h2>
@@ -85,7 +84,7 @@
 
                 <div class="reservation-buttons">
                     <a href="reservationStep3Seats.html"
-                       onclick="window.reservationManager.paymentSaver.clear(); window.reservationManager.saveToLocalStorage()">Retroceder</a>
+                       onclick="window.reservationManager.previousStep()">Retroceder</a>
                     <button class=type='submit' id="payLink">Pagar</button>
                 </div>
             </form>
@@ -101,15 +100,6 @@
     loadProgressBarComponent(3)
 </script>
 
-<script>
-    function handleFormSubmission() {
-        // Realizar acciones necesarias (recopilar información, etc.)
-        window.reservationManager.paymentSaver.collectCustomerAndPaymentInfo();
-        window.reservationManager.saveToLocalStorage();
-        // Redirigir a la página deseada
-        window.location.href = 'reservationStep5Details.html';
-    }
-</script>
 
 </body>
 </html>

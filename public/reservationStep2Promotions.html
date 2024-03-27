@@ -9,7 +9,7 @@
     <script src="../src/js/reservationProgressBar.js"></script>
     <script type="module" src="../src/js/loadSummary.js"></script>
     <script type="module" src="../src/js/loadBasics.js"></script>
-    <script type="module" src="../src/js/reservation.js"></script>
+
 
     <title>Selección de Promociones y Menús</title>
 
@@ -119,9 +119,9 @@
                 </div>
             </div>
             <div class="reservation-buttons">
-                <a href="reservationStep1Tickets.html" onclick="window.reservationManager.saveToLocalStorage()">Retroceder</a>
+                <a onclick="window.reservationManager.previousStep()">Retroceder</a>
                 <a href="reservationStep3Seats.html"
-                   onclick="window.reservationManager.saveToLocalStorage()">Avanzar</a>
+                   onclick="window.reservationManager.nextStep()">Avanzar</a>
             </div>
         </div>
 

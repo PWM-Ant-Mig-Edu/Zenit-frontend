@@ -19,7 +19,7 @@ export function createSeats(rangoFilas, rangoColumnas) {
             let colorAsiento = determinarColorAsiento(fila, i);
 
             // Añade el asiento a la tabla
-            html += `<td onclick="window.reservationManager.seatSaver.addSeat('${fila}${i}')">` +
+            html += `<td onclick="window.reservationManager.seatSaver.changeSeatStatus('${fila}${i}')">` +
                 `<svg class="si-glyph-chair-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.5 17 17">` +
                 `<g stroke="none" stroke-width="1" fill-rule="evenodd">` +
                 `<g transform="translate(4.000000, 0.000000)" fill="${colorAsiento}" id="${fila}${i}">` +

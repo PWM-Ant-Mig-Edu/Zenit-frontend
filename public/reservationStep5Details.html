@@ -9,7 +9,6 @@
     <script src="../src/js/reservationProgressBar.js"></script>
     <script type="module" src="../src/js/loadSummary.js"></script>
     <script type="module" src="../src/js/loadBasics.js"></script>
-    <script type="module" src="../src/js/reservation.js"></script>
 
 </head>
 <body>
@@ -61,8 +60,8 @@
                 </div>
             </div>
             <div class="reservation-buttons">
-                <a href="reservationStep4Data.html" onclick="back()">Retroceder</a>
-                <a href="#" onclick="back()">Avanzar</a>
+                <a onclick="window.reservationManager.previousStep()">Retroceder</a>
+                <a onclick="window.reservationManager.nextStep()">Avanzar</a>
             </div>
         </div>
 
