@@ -20,69 +20,75 @@
 </div>
 <div class="wrapper-container" style="display: flex; flex-direction: column; min-height: 100vh;">
     <div id="header-component"></div>
-    
+
     <div class="reservation-container">
         <div class="left-section">
             <h1>Proceso de Compra</h1>
 
             <div id="progress-bar-component"></div>
+            <form id="paymentForm"  method="POST" onsubmit="handleFormSubmission(); return false;">
+                <div class="customer-data-container">
+                    <div class="shipping-address-container">
+                        <h2>Direccion de envio</h2>
+                        <div class="input-field">
+                            <span>Nombre completo:</span>
+                            <input type="text" id="full-name" name='full-name' placeholder="Nombre Completo" required/>
+                        </div>
+                        <div class="input-field">
+                            <span>Correo Electrónico:</span>
+                            <input type="email" id="email" name='email' placeholder="Correo Electrónico" required/>
+                        </div>
+                        <div class="grid-container-additional-data">
+                            <div class="input-field">
+                                <span>Teléfono:</span>
+                                <input type="text" id="phone" name='phone' placeholder="Teléfono" required/>
+                            </div>
+                            <div class="input-field">
+                                <span>Ciudad:</span>
+                                <input type="text" id="city" name='city' placeholder="Ciudad" required/>
+                            </div>
+                            <div class="input-field">
+                                <span>CP:</span>
+                                <input type="text" id="postcode" name='postcode' placeholder="Código Postal" required/>
+                            </div>
+                            <div class="input-field">
+                                <span>Provincia:</span>
+                                <input type="text" id="province" name='province' placeholder="Provincia" required/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-container">
+                        <h2>Datos de pago</h2>
+                        <div class="input-field">
+                            <span>Nombre titular:</span>
+                            <input type="text" id="card-holder" name='card-holder' placeholder="Nombre titular"
+                                   required/>
+                        </div>
+                        <div class="input-field">
+                            <span>Número de la tarjeta:</span>
+                            <input type="text" id="card-number" name='card-number' placeholder="Número de la tarjeta:"
+                                   required/>
+                        </div>
+                        <div class="grid-container-additional-data">
+                            <div class="input-field">
+                                <span>Fecha de expiración:</span>
+                                <input type="text" id="expiration-date" name='expiration-date'
+                                       placeholder="Fecha de expiración" required/>
+                            </div>
+                            <div class="input-field">
+                                <span>CVV:</span>
+                                <input type="text" id="cvv" name='cvv' placeholder="CVV" required/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="customer-data-container">
-                <div class="shipping-address-container">
-                    <h2>Direccion de envio</h2>
-                    <div class="input-field">
-                        <span>Nombre completo:</span>
-                        <input type="text" name="full-name" placeholder="Nombre Completo" />
-                    </div>
-                    <div class="input-field">
-                        <span>Correo Electrónico:</span>
-                        <input type="text" name="full-name" placeholder="Correo Electrónico" />
-                    </div>
-                    <div class="grid-container-additional-data">
-                        <div class="input-field">
-                            <span>Teléfono:</span>
-                            <input type="text" name="phone" placeholder="Teléfono" />
-                        </div>
-                        <div class="input-field">
-                            <span>Ciudad:</span>
-                            <input type="text" name="city" placeholder="Ciudad" />
-                        </div>
-                        <div class="input-field">
-                            <span>CP:</span>
-                            <input type="text" name="post-code" placeholder="Código Postal" />
-                        </div>
-                        <div class="input-field">
-                            <span>Provincia:</span>
-                            <input type="text" name="province" placeholder="Provincia" />
-                        </div>
-                    </div>
+                <div class="reservation-buttons">
+                    <a href="reservationStep3Seats.html"
+                       onclick="window.reservationManager.paymentSaver.clear(); window.reservationManager.saveToLocalStorage()">Retroceder</a>
+                    <button class=type='submit' id="payLink">Pagar</button>
                 </div>
-                <div class="payment-container">
-                    <h2>Datos de pago</h2>
-                    <div class="input-field">
-                        <span>Nombre titular:</span>
-                        <input type="text" name="full-name" placeholder="Nombre titular" />
-                    </div>
-                    <div class="input-field">
-                        <span>Número de la tarjeta:</span>
-                        <input type="text" name="full-name" placeholder="Número de la tarjeta:" />
-                    </div>
-                    <div class="grid-container-additional-data">
-                        <div class="input-field">
-                            <span>Fecha de expiración:</span>
-                            <input type="text" name="expiration-date" placeholder="Fecha de expiración" />
-                        </div>
-                        <div class="input-field">
-                            <span>CVV:</span>
-                            <input type="text" name="cvv" placeholder="CVV" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="reservation-buttons">
-                <a href="reservationStep3Seats.html" onclick="back()">Retroceder</a>
-                <a href="reservationStep5Details.html" onclick="back()">Pagar</a>
-            </div>
+            </form>
         </div>
 
         <div id="summary-component"></div>
@@ -93,6 +99,16 @@
 </div>
 <script>
     loadProgressBarComponent(3)
+</script>
+
+<script>
+    function handleFormSubmission() {
+        // Realizar acciones necesarias (recopilar información, etc.)
+        window.reservationManager.paymentSaver.collectCustomerAndPaymentInfo();
+        window.reservationManager.saveToLocalStorage();
+        // Redirigir a la página deseada
+        window.location.href = 'reservationStep5Details.html';
+    }
 </script>
 
 </body>
