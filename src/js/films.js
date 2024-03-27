@@ -31,12 +31,12 @@ function loadFilmsByCinema() {
                 console.error('Cinema not found');
                 return;
             }
-            const cinemaFilms = cinema.movies.map(movie => movie.id);
+            const cinemaFilms = cinema.movies.map(movie => movie.name);
 
             fetch('../src/json/films.json')
                 .then(response => response.json())
                 .then(data => {
-                    const cinemaMovies = data.films.filter(film => cinemaFilms.includes(film.id));
+                    const cinemaMovies = data.films.filter(film => cinemaFilms.includes(film.name));
                     
                     cinemaMovies.forEach(film => {
                         const filmHTML = generateMovieHTML(film, "member");

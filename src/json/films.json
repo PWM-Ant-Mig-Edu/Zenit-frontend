@@ -19,21 +19,21 @@
                     "content": "La película me pareció increíble. 10/10",
                     "date": "3 days ago",
                     "grade": 5,
-                    "img": "../src/assets/img/image-user.png"
+                    "img": "../src/assets/img/image_aca.jpg"
                 },
                 {
                     "user": "Juan",
                     "content": "La película me pareció increíble. 10/10",
                     "date": "3 days ago",
                     "grade": 5,
-                    "img": "../src/assets/img/image-user.png"
+                    "img": "../src/assets/img/image_aca.jpg"
                 },
                 {
                     "user": "Pedro",
                     "content": "La película me pareció increíble. 10/10",
                     "date": "3 days ago",
                     "grade": 5,
-                    "img": "../src/assets/img/image-user.png"
+                    "img": "../src/assets/img/image_aca.jpg"
                 }
             ]
         },
@@ -56,14 +56,14 @@
                     "content": "Una historia muy conmovedora, me encantó.",
                     "date": "2 days ago",
                     "grade": 4,
-                    "img": "../src/assets/img/image-user.png"
+                    "img": "../src/assets/img/image_aca.jpg"
                 },
                 {
                     "user": "Carlos",
                     "content": "La actuación fue excelente, pero la trama pudo ser mejor.",
                     "date": "1 week ago",
                     "grade": 3,
-                    "img": "../src/assets/img/image-user.png"
+                    "img": "../src/assets/img/image_aca.jpg"
                 }
             ]
         },
@@ -86,14 +86,14 @@
                     "content": "Una película muy divertida, la recomiendo.",
                     "date": "1 day ago",
                     "grade": 4,
-                    "img": "../src/assets/img/image-user.png"
+                    "img": "../src/assets/img/image_aca.jpg"
                 },
                 {
                     "user": "Fernando",
                     "content": "Entretenida, pero esperaba más.",
                     "date": "5 days ago",
                     "grade": 3,
-                    "img": "../src/assets/img/image-user.png"
+                    "img": "../src/assets/img/image_aca.jpg"
                 }
             ]
         },
@@ -116,14 +116,14 @@
                     "content": "Interesante, pero el final fue predecible.",
                     "date": "4 days ago",
                     "grade": 3,
-                    "img": "../src/assets/img/image-user.png"
+                    "img": "../src/assets/img/image_aca.jpg"
                 },
                 {
                     "user": "María",
                     "content": "Buena película de misterio, me mantuvo intrigada.",
                     "date": "1 week ago",
                     "grade": 4,
-                    "img": "../src/assets/img/image-user.png"
+                    "img": "../src/assets/img/image_aca.jpg"
                 }
             ]
         }

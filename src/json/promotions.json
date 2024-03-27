@@ -1,38 +1,14 @@
 {
     "promotions": [
-        { 
-            "img": "../src/assets/img/menu-1.png", 
-            "name": "promocion1", 
-            "resenas": "../public/addPromotion.html?name=promocion1" 
-        },
-        { 
-            "img": "../src/assets/img/menu-2.png", 
-            "name": "promocion2", 
-            "resenas": "../public/addPromotion.html?name=promocion2" 
-        }
+        { "img": "../src/assets/img/menu-1.png", "name": "promocion1", "resenas": "../public/addPromotion.html?name=promocion1" },
+        { "img": "../src/assets/img/menu-2.png", "name": "promocion2", "resenas": "../public/addPromotion.html?name=promocion2" }
     ],
     "specialPromotions": [
-        { 
-            "img": "../src/assets/img/menu-3.png", 
-            "name": "promocion3", 
-            "resenas": "../public/addPromotion.html?name=promocion3" 
-        },
-        { 
-            "img": "../src/assets/img/menu-4.png", 
-            "name": "promocion4", 
-            "resenas": "../public/addPromotion.html?name=promocion4" 
-        }
+        { "img": "../src/assets/img/menu-3.png", "name": "promocion3", "resenas": "../public/addPromotion.html?name=promocion3" },
+        { "img": "../src/assets/img/menu-4.png", "name": "promocion4", "resenas": "../public/addPromotion.html?name=promocion4" }
     ],
     "upcomingPromotions": [
-        { 
-            "img": "../src/assets/img/promocion1.jpg", 
-            "name": "promocion5", 
-            "resenas": "../public/addPromotion.html?name=promocion5" 
-        },
-        { 
-            "img": "../src/assets/img/promocion2.jpg", 
-            "name": "promocion6", 
-            "resenas": "../public/addPromotion.html?name=promocion6" 
-        }
+        { "img": "../src/assets/img/promocion1.jpg", "name": "promocion5", "resenas": "../public/addPromotion.html?name=promocion5" },
+        { "img": "../src/assets/img/promocion2.jpg", "name": "promocion6", "resenas": "../public/addPromotion.html?name=promocion6" }
     ]
 }
